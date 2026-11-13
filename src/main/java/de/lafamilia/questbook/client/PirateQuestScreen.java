@@ -27,6 +27,9 @@ public final class PirateQuestScreen extends Screen {
     private FtbQuestBridge.Status cachedFtb = FtbQuestBridge.Status.absent("Noch nicht verbunden");
     private long lastFtbCheckNanos;
     private float scale, x0, y0;
+    // Physical pixels per design pixel; helps render vanilla glyphs on exact pixel boundaries.
+    private float screenPixelRatio = 1f;
+    private float pixelsPerDesignPixel = 1f;
     private FtbEditorBridge.Snapshot editorData = FtbEditorBridge.Snapshot.unavailable("Noch nicht geladen");
     private long lastEditorPoll;
     private boolean editMode = false;
@@ -165,9 +168,13 @@ public final class PirateQuestScreen extends Screen {
 
     private static Identifier tex(String name) { return Identifier.of(MOD, name); }
     private void layout() {
+        screenPixelRatio = (float) client.getWindow().getScaleFactor();
+        if (!Float.isFinite(screenPixelRatio) || screenPixelRatio <= 0f) screenPixelRatio = 1f;
         scale = Math.min((float)width / W, (float)height / H);
-        x0 = (width - W * scale) / 2f;
-        y0 = (height - H * scale) / 2f;
+        pixelsPerDesignPixel = scale * screenPixelRatio;
+        // Align the canvas to physical framebuffer pixels (not fractional GUI units).
+        x0 = Math.round((width - W * scale) * 0.5f * screenPixelRatio) / screenPixelRatio;
+        y0 = Math.round((height - H * scale) * 0.5f * screenPixelRatio) / screenPixelRatio;
     }
     private void picture(DrawContext dc, Identifier id, int x, int y, int w, int h) {
         dc.drawTexture(id, x, y, 0f, 0f, w, h, w, h);
@@ -182,22 +189,42 @@ public final class PirateQuestScreen extends Screen {
         fill(dc, x + w - size, y, size, h, color);
     }
     private int strWidth(String content) { return client.textRenderer.getWidth(content); }
+
+    /** Render text at exact physical 2x/3x/... bitmap font scale, never at fractional pixel size. */
+    private int fontPixelFactor(float zoom) {
+        int ideal = Math.round(zoom * pixelsPerDesignPixel);
+        // Tiny technical status notes may use 1x; actual quest labels use at least 2x.
+        return Math.max(zoom < 0.98f ? 1 : 2, Math.min(6, ideal));
+    }
+    private float fontDesignFactor(float zoom) {
+        return fontPixelFactor(zoom) / Math.max(0.001f, pixelsPerDesignPixel);
+    }
+    private int textWidth(String content, float zoom) {
+        return Math.round(strWidth(content) * fontDesignFactor(zoom));
+    }
     private void text(DrawContext dc, String s, int x, int y, int color, float zoom) {
+        if (s == null || s.isEmpty()) return;
+        // Current outer canvas transform is x0 + x * scale in GUI coordinates.
+        // Snap the origin to physical pixels before drawing the font.
+        float px = Math.round((x0 + x * scale) * screenPixelRatio) / screenPixelRatio;
+        float py = Math.round((y0 + y * scale) * screenPixelRatio) / screenPixelRatio;
         dc.getMatrices().push();
-        dc.getMatrices().translate(x, y, 0);
-        dc.getMatrices().scale(zoom, zoom, 1);
+        dc.getMatrices().translate((px - x0) / scale, (py - y0) / scale, 0);
+        // Integer physical-pixel font sampling avoids blurred fractional scaling.
+        float fontScaleInCanvas = fontDesignFactor(zoom);
+        dc.getMatrices().scale(fontScaleInCanvas, fontScaleInCanvas, 1f);
         dc.drawText(client.textRenderer, s, 0, 0, color, true);
         dc.getMatrices().pop();
     }
     private void center(DrawContext dc, String s, int x, int y, int color, float zoom) {
-        text(dc, s, x - Math.round(strWidth(s) * zoom / 2f), y, color, zoom);
+        text(dc, s, x - textWidth(s, zoom) / 2, y, color, zoom);
     }
     private void para(DrawContext dc, String s, int x, int y, int maxW, int maxLines, int color, float zoom, int spacing) {
         if (s == null || s.isBlank()) return;
         int line = 0; StringBuilder current = new StringBuilder();
         for (String word : s.split("\\s+")) {
             String next = current.isEmpty() ? word : current + " " + word;
-            if (strWidth(next) * zoom > maxW && !current.isEmpty()) {
+            if (textWidth(next, zoom) > maxW && !current.isEmpty()) {
                 text(dc, current.toString(), x, y + line * spacing, color, zoom);
                 if (++line >= maxLines) return;
                 current = new StringBuilder(word);
@@ -304,7 +331,7 @@ public final class PirateQuestScreen extends Screen {
         StringBuilder row=new StringBuilder(); int n=0;
         for (String word:s.split("\\s+")) {
             String next=row.isEmpty()?word:row+" "+word;
-            if(strWidth(next)*z>maxW&&!row.isEmpty()) {
+            if(textWidth(next,z)>maxW&&!row.isEmpty()) {
                 center(dc,row.toString(),cx,y+n*step,col,z);
                 if(++n>=limit)return; row=new StringBuilder(word);
             }else row=new StringBuilder(next);
