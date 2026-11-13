@@ -7,6 +7,11 @@ on:
     paths:
       - 'LaFamilia_PiratenQuestbuch_Fabric1211_Alpha04_LeereGUI_FTB.zip'
       - 'BUILD_TRIGGER.md'
+      - 'src/**'
+      - 'build.gradle'
+      - 'gradle.properties'
+      - 'tests/**'
+      - '.github/workflows/import-build-questbook.yml'
 
 permissions:
   contents: write
@@ -28,7 +33,9 @@ jobs:
         run: |
           set -euo pipefail
           ARCHIVE="LaFamilia_PiratenQuestbuch_Fabric1211_Alpha04_LeereGUI_FTB.zip"
-          if [ -f "$ARCHIVE" ]; then
+          # Only import the original archive once. Later source-code fixes in GitHub
+          # must never be overwritten by the old, unpatched ZIP.
+          if [ -f "$ARCHIVE" ] && [ ! -f src/main/java/de/lafamilia/questbook/client/PirateQuestScreen.java ]; then
             echo "Importiere Projekt aus $ARCHIVE"
             unzip -oq "$ARCHIVE" -d .
             test -f build.gradle
@@ -54,6 +61,8 @@ jobs:
                 echo "::warning::Quellcode konnte nicht zurückgeschrieben werden. Build läuft trotzdem mit den entpackten Dateien."
               fi
             fi
+          else
+            echo "Vorhandenen Repository-Quellcode verwenden (ZIP-Import übersprungen)."
           fi
           test -f build.gradle || { echo "::error::Projekt-ZIP fehlt. Bitte die Alpha-0.4.0-ZIP ins Repository hochladen."; exit 1; }
           test -d src/main/resources/assets/lafamilia_questbook/textures/icons || { echo "::error::Die Quest-Icons fehlen."; exit 1; }
