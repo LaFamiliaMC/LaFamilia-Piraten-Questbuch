@@ -5,6 +5,7 @@ import de.lafamilia.questbook.client.PirateQuestScreen;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.Screen;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Pseudo;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
@@ -15,6 +16,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
  * The selected UI never modifies FTB server data or reward claim state.
  * SHIFT while opening the FTB book bypasses our GUI for editors and debugging.
  */
+@Pseudo
 @Mixin(targets = "dev.ftb.mods.ftbquests.client.ClientQuestFile", remap = false)
 public abstract class ClientQuestFileMixin {
     @Inject(method = "openQuestGui", at = @At("HEAD"), cancellable = true, remap = false)
