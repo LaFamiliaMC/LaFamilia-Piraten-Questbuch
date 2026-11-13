@@ -153,7 +153,7 @@ final class FtbEditorBridge {
             if (!permitted()) return "Keine FTB-Editorberechtigung";
             if (prerequisite.id() == dependent.id()) return "Eine Quest kann nicht von sich selbst abhängen";
             if (dependent.dependencies().contains(prerequisite.id())) return "Diese Verbindung existiert bereits";
-            if (pathFromTo(dependent.id(), prerequisite.id(), chapter, new java.util.HashSet<>())) {
+            if (pathFromTo(prerequisite.id(), dependent.id(), chapter, new java.util.HashSet<>())) {
                 return "Verbindung würde einen Quest-Zyklus erzeugen";
             }
             Class<?> obj = Class.forName("dev.ftb.mods.ftbquests.quest.QuestObject");
