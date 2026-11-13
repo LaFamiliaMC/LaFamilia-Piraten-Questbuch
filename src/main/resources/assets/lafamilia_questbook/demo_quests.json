@@ -1,5 +1,5 @@
 {
-  "status": "DEMO – keine echten Serverfortschritte oder vergebene Belohnungen",
+  "status": "UI-KATALOG MIT 52 DEMO-QUESTS; FTB-Teamfortschritt nur bei exakter ID-Zuordnung.",
   "texture_size": [
     1671,
     941
@@ -9,90 +9,90 @@
       "id": "piraten_hauptgeschichte",
       "label": "Piraten-Hauptgeschichte",
       "rect": {
-        "x": 13,
-        "y": 159,
-        "w": 342,
-        "h": 61
+        "x": 22,
+        "y": 164,
+        "w": 345,
+        "h": 51
       }
     },
     {
       "id": "piraten_nebenquests",
       "label": "Piraten-Nebenquests",
       "rect": {
-        "x": 15,
-        "y": 218,
-        "w": 338,
-        "h": 56
+        "x": 22,
+        "y": 216,
+        "w": 345,
+        "h": 51
       }
     },
     {
       "id": "taegliche_piratenauftraege",
       "label": "Tägliche Piratenaufträge",
       "rect": {
-        "x": 17,
-        "y": 270,
-        "w": 337,
-        "h": 61
+        "x": 22,
+        "y": 268,
+        "w": 345,
+        "h": 51
       }
     },
     {
       "id": "woechentliche_piratenauftraege",
       "label": "Wöchentliche Piratenaufträge",
       "rect": {
-        "x": 17,
-        "y": 325,
-        "w": 337,
-        "h": 59
+        "x": 22,
+        "y": 320,
+        "w": 345,
+        "h": 51
       }
     },
     {
       "id": "geheimnisse_und_erfolge",
       "label": "Geheimnisse und Erfolge",
       "rect": {
-        "x": 16,
-        "y": 381,
-        "w": 337,
-        "h": 59
+        "x": 22,
+        "y": 372,
+        "w": 345,
+        "h": 51
       }
     },
     {
       "id": "farming_und_landwirtschaft",
       "label": "Farming & Landwirtschaft",
       "rect": {
-        "x": 16,
-        "y": 434,
-        "w": 338,
-        "h": 60
+        "x": 22,
+        "y": 424,
+        "w": 345,
+        "h": 51
       }
     },
     {
       "id": "mining_und_rohstoffe",
       "label": "Mining und Rohstoffe",
       "rect": {
-        "x": 16,
-        "y": 491,
-        "w": 338,
-        "h": 60
+        "x": 22,
+        "y": 476,
+        "w": 345,
+        "h": 51
       }
     },
     {
       "id": "holzfaellen",
       "label": "Holzfällen",
       "rect": {
-        "x": 16,
-        "y": 545,
-        "w": 339,
-        "h": 60
+        "x": 22,
+        "y": 528,
+        "w": 345,
+        "h": 51
       }
     },
     {
       "id": "bauen_und_handwerk",
       "label": "Bauen und Handwerk",
       "rect": {
-        "x": 15,
-        "y": 600,
-        "w": 340,
-        "h": 60
+        "x": 22,
+        "y": 580,
+        "w": 345,
+        "h": 51
       }
     }
   ],
@@ -116,9 +116,9 @@
         "w": 129,
         "h": 139
       },
-      "icon": "textures/gui/masked_cards/ruf_der_piraten.png",
+      "icon": "textures/icons/01_piraten_hauptgeschichte/01_piratenkapitaen.png",
       "state": "demo_completed",
-      "render_reference_card": true,
+      "render_reference_card": false,
       "ftb_quest_id": ""
     },
     {
@@ -139,9 +139,9 @@
         "w": 133,
         "h": 138
       },
-      "icon": "textures/gui/masked_cards/erreiche_den_hafen.png",
+      "icon": "textures/icons/01_piraten_hauptgeschichte/02_gekreuzte_saebel.png",
       "state": "demo_completed",
-      "render_reference_card": true,
+      "render_reference_card": false,
       "ftb_quest_id": ""
     },
     {
@@ -163,9 +163,9 @@
         "w": 141,
         "h": 156
       },
-      "icon": "textures/gui/masked_cards/kapitaen_tharion.png",
+      "icon": "textures/icons/01_piraten_hauptgeschichte/03_schatzkarte.png",
       "state": "demo_completed",
-      "render_reference_card": true,
+      "render_reference_card": false,
       "ftb_quest_id": ""
     },
     {
@@ -187,9 +187,9 @@
         "w": 135,
         "h": 142
       },
-      "icon": "textures/gui/masked_cards/eigenes_schiff.png",
+      "icon": "textures/icons/01_piraten_hauptgeschichte/04_kompass.png",
       "state": "demo_unfinished",
-      "render_reference_card": true,
+      "render_reference_card": false,
       "ftb_quest_id": ""
     },
     {
@@ -210,9 +210,9 @@
         "w": 135,
         "h": 140
       },
-      "icon": "textures/gui/masked_cards/neue_horizonte.png",
+      "icon": "textures/icons/01_piraten_hauptgeschichte/05_fernrohr.png",
       "state": "demo_unfinished",
-      "render_reference_card": true,
+      "render_reference_card": false,
       "ftb_quest_id": ""
     },
     {
@@ -234,9 +234,9 @@
         "w": 142,
         "h": 144
       },
-      "icon": "textures/gui/masked_cards/piratencrew_versammeln.png",
+      "icon": "textures/icons/01_piraten_hauptgeschichte/06_piratenschiff.png",
       "state": "demo_unfinished",
-      "render_reference_card": true,
+      "render_reference_card": false,
       "ftb_quest_id": ""
     },
     {
@@ -258,9 +258,9 @@
         "w": 144,
         "h": 143
       },
-      "icon": "textures/gui/masked_cards/weg_zur_freibeuterbasis.png",
+      "icon": "textures/icons/01_piraten_hauptgeschichte/07_schatztruhe.png",
       "state": "demo_unfinished",
-      "render_reference_card": true,
+      "render_reference_card": false,
       "ftb_quest_id": ""
     },
     {
@@ -282,9 +282,9 @@
         "w": 143,
         "h": 145
       },
-      "icon": "textures/gui/masked_cards/verlorene_schatzkarte.png",
+      "icon": "textures/icons/01_piraten_hauptgeschichte/08_rubin.png",
       "state": "demo_unfinished",
-      "render_reference_card": true,
+      "render_reference_card": false,
       "ftb_quest_id": ""
     },
     {
@@ -306,9 +306,9 @@
         "w": 167,
         "h": 148
       },
-      "icon": "textures/gui/masked_cards/schatzhoehle.png",
+      "icon": "textures/icons/01_piraten_hauptgeschichte/09_krone.png",
       "state": "demo_unfinished",
-      "render_reference_card": true,
+      "render_reference_card": false,
       "ftb_quest_id": ""
     },
     {
@@ -330,9 +330,9 @@
         "w": 145,
         "h": 152
       },
-      "icon": "textures/gui/masked_cards/schatz_von_la_familia.png",
+      "icon": "textures/icons/01_piraten_hauptgeschichte/10_siegelrolle.png",
       "state": "demo_unfinished",
-      "render_reference_card": true,
+      "render_reference_card": false,
       "ftb_quest_id": ""
     },
     {
@@ -354,9 +354,9 @@
         "w": 170,
         "h": 147
       },
-      "icon": "textures/gui/masked_cards/schwimmende_fluch.png",
+      "icon": "textures/icons/01_piraten_hauptgeschichte/11_piratenflagge.png",
       "state": "demo_unfinished",
-      "render_reference_card": true,
+      "render_reference_card": false,
       "ftb_quest_id": ""
     },
     {
@@ -378,9 +378,9 @@
         "w": 269,
         "h": 187
       },
-      "icon": "textures/gui/masked_cards/legende_erwacht.png",
+      "icon": "textures/icons/01_piraten_hauptgeschichte/12_steuerrad.png",
       "state": "demo_unfinished",
-      "render_reference_card": true,
+      "render_reference_card": false,
       "ftb_quest_id": ""
     },
     {

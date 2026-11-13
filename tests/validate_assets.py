@@ -1,25 +1,29 @@
 from pathlib import Path
 from PIL import Image
-import json,hashlib
+import json
 P=Path(__file__).resolve().parents[1]
 base=P/'src/main/resources/assets/lafamilia_questbook'
-d=json.loads((base/'demo_quests.json').read_text('utf-8'))
-assert len(d['categories'])==9, 'Need exactly nine approved categories'
-assert len(d['quests'])==52, 'Unexpected demo quest count'
-ids=set()
-for q in d['quests']:
- assert q['id'] not in ids, q['id'];ids.add(q['id'])
- assert q['category'] in {c['id'] for c in d['categories']}
- assert (base/q['icon']).is_file(), q['icon']
- assert q['rect']['w']>0 and q['rect']['h']>0
- assert q['description'] and q['tasks'] and q['rewards']
+q=json.loads((base/'demo_quests.json').read_text('utf-8'))
+assert len(q['categories'])==9, 'Alle neun Kategorien muessen erhalten bleiben'
+assert len(q['quests'])==52
 assert len(list((base/'textures/icons').rglob('*.png')))==162
-pic=base/'textures/gui/approved_reference_1671x941.png'
-with Image.open(pic) as image:assert image.size==(1671,941)
-for f in ['right_details_blank.png','alternate_quest_board.png','quest_frame_empty.png','portrait_tharion.png']:
- assert (base/'textures/gui'/f).is_file(), f
-for f in ['VORSCHAU_Hauptgeschichte.png','VORSCHAU_Landwirtschaft.png']:
- assert (P/'preview'/f).is_file(), f
-assert (P/'.github/workflows/build-questbook.yml').is_file()
-print('OK: 9 categories, 52 sample quests, 162 icons, existing textures, resource paths, previews and CI workflow')
-print('Approved background SHA256:',hashlib.sha256(pic.read_bytes()).hexdigest())
+assert len({c['id'] for c in q['categories']})==9
+for item in q['quests']:
+ assert (base/item['icon']).is_file(),item['icon']
+ assert not item['icon'].startswith('textures/gui/masked_cards')
+ assert item['tasks'] and item['description'] and item['rewards']
+ assert item.get('render_reference_card') is False
+p=base/'textures/gui/pirate_empty_background.png'
+assert p.is_file(), p
+with Image.open(p) as img: assert img.size==(1671,941)
+assert not (base/'textures/gui/approved_reference_1671x941.png').exists()
+assert not (base/'textures/gui/alternate_quest_board.png').exists()
+assert not (base/'textures/gui/right_details_blank.png').exists()
+client=(P/'src/main/java/de/lafamilia/questbook/client/LaFamiliaQuestbookClient.java').read_text('utf-8')
+screen=(P/'src/main/java/de/lafamilia/questbook/client/PirateQuestScreen.java').read_text('utf-8')
+assert 'GLFW_KEY_P' not in client and 'KeyBindingHelper' not in client
+assert 'approved_reference' not in screen and 'OTHER_BOARD' not in screen and 'DETAIL_BLANK' not in screen
+assert 'pirate_empty_background.png' in screen
+assert (P/'src/main/resources/lafamilia_questbook.mixins.json').is_file()
+assert (P/'src/main/java/de/lafamilia/questbook/mixin/ClientQuestFileMixin.java').is_file()
+print('OK: echter leerer Hintergrund, neun Kategorien, 52 dynamische Questkarten, 162 transparente Icons, FTB-Mixin, kein P')

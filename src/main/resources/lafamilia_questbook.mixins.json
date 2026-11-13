@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "package": "de.lafamilia.questbook.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "ClientQuestFileMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

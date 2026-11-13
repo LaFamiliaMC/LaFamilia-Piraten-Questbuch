@@ -3,16 +3,24 @@
   "id": "lafamilia_questbook",
   "version": "${version}",
   "name": "La Familia Piraten-Questbuch",
-  "description": "Clientseitige grafische Vorschau der La Familia Piraten-Questbuch-Oberflaeche. Optionale nur-lesende FTB-Quests-Anbindung im Alpha-Test.",
-  "authors": ["La Familia"],
+  "description": "Eigenes Piraten-Questbuch mit leerer dekorativer Grundgrafik und FTB-Quests-Oeffnung (Client-Demo fuer Fabric 1.21.1).",
+  "authors": [
+    "La Familia"
+  ],
   "environment": "client",
   "entrypoints": {
-    "client": ["de.lafamilia.questbook.client.LaFamiliaQuestbookClient"]
+    "client": [
+      "de.lafamilia.questbook.client.LaFamiliaQuestbookClient"
+    ]
   },
   "depends": {
     "fabricloader": ">=0.19.5",
     "minecraft": "~1.21.1",
     "java": ">=21",
-    "fabric-api": "*"
-  }
+    "fabric-api": "*",
+    "ftbquests": "*"
+  },
+  "mixins": [
+    "lafamilia_questbook.mixins.json"
+  ]
 }
