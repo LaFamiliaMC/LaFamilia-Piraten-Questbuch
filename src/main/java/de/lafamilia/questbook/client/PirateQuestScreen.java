@@ -2,6 +2,7 @@ package de.lafamilia.questbook.client;
 
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.client.gui.widget.TextFieldWidget;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.fabricmc.loader.api.FabricLoader;
@@ -26,11 +27,140 @@ public final class PirateQuestScreen extends Screen {
     private FtbQuestBridge.Status cachedFtb = FtbQuestBridge.Status.absent("Noch nicht verbunden");
     private long lastFtbCheckNanos;
     private float scale, x0, y0;
+    private FtbEditorBridge.Snapshot editorData = FtbEditorBridge.Snapshot.unavailable("Noch nicht geladen");
+    private long lastEditorPoll;
+    private boolean editMode = false;
+    private int chapterIndex = 0;
+    private long cameraChapter = -1;
+    private double cameraX, cameraY, pixelsPerUnit = 64.0;
+    private FtbEditorBridge.QuestView selectedReal;
+    private FtbEditorBridge.QuestView draggingReal;
+    private double draggingStartX, draggingStartY, draggingOffsetX, draggingOffsetY;
+    private long linkingFrom = -1L;
+    private boolean renaming;
+    private TextFieldWidget nameField;
+    private String editorMessage = "";
+    private long messageUntil;
+
 
     public PirateQuestScreen() {
         super(Text.literal("La Familia Piraten-Questbuch"));
         selected = catalog.find("kapitaen_tharion");
         if (selected == null) selected = catalog.forCategory(category).stream().findFirst().orElse(null);
+    }
+
+
+    @Override protected void init() {
+        super.init();
+        layout();
+        nameField = new TextFieldWidget(textRenderer,
+            Math.round(x0 + 1328 * scale), Math.round(y0 + 699 * scale),
+            Math.max(110, Math.round(270 * scale)), 22, Text.literal("Neuer Questname"));
+        nameField.setMaxLength(90);
+        nameField.setVisible(false);
+        addDrawableChild(nameField);
+    }
+
+    private void notifyEditor(String msg) {
+        editorMessage = msg;
+        messageUntil = System.nanoTime() + 5_000_000_000L;
+    }
+
+    private void refreshEditor(boolean force) {
+        long now = System.nanoTime();
+        if (!force && now - lastEditorPoll < 900_000_000L) return;
+        lastEditorPoll = now;
+        long oldChapterId = currentChapter() == null ? -1 : currentChapter().id();
+        long selectedId = selectedReal == null ? -1 : selectedReal.id();
+        FtbEditorBridge.Snapshot data = FtbEditorBridge.read();
+        editorData = data;
+        if (!data.editor() && editMode) {
+            editMode = false;
+            renaming = false;
+            if (nameField != null) nameField.setVisible(false);
+            notifyEditor("FTB-Editorberechtigung ist nicht mehr aktiv");
+        }
+        if (data.chapters().isEmpty()) {
+            chapterIndex = 0;
+            selectedReal = null;
+            return;
+        }
+        int restored = -1;
+        for (int i = 0; i < data.chapters().size(); i++) {
+            if (data.chapters().get(i).id() == oldChapterId) { restored = i; break; }
+        }
+        if (restored >= 0) chapterIndex = restored;
+        chapterIndex = Math.max(0, Math.min(chapterIndex, data.chapters().size()-1));
+        FtbEditorBridge.ChapterView chapter = data.chapters().get(chapterIndex);
+        selectedReal = chapter.quests().stream().filter(q -> q.id() == selectedId).findFirst()
+            .orElseGet(() -> chapter.quests().stream().findFirst().orElse(null));
+        if (cameraChapter != chapter.id()) cameraChapter = -1;
+    }
+
+    private FtbEditorBridge.ChapterView currentChapter() {
+        if (editorData.chapters().isEmpty()) return null;
+        int idx = Math.max(0, Math.min(chapterIndex, editorData.chapters().size()-1));
+        return editorData.chapters().get(idx);
+    }
+
+    private void fitCamera() {
+        FtbEditorBridge.ChapterView chapter = currentChapter();
+        if (chapter == null || cameraChapter == chapter.id()) return;
+        cameraChapter = chapter.id();
+        if (chapter.quests().isEmpty()) {
+            cameraX = cameraY = 0;
+            pixelsPerUnit = 75;
+            return;
+        }
+        double minX=Double.POSITIVE_INFINITY, maxX=Double.NEGATIVE_INFINITY;
+        double minY=Double.POSITIVE_INFINITY, maxY=Double.NEGATIVE_INFINITY;
+        for (FtbEditorBridge.QuestView quest: chapter.quests()) {
+            minX = Math.min(minX, quest.x()); maxX = Math.max(maxX, quest.x());
+            minY = Math.min(minY, quest.y()); maxY = Math.max(maxY, quest.y());
+        }
+        cameraX=(minX+maxX)*.5;
+        cameraY=(minY+maxY)*.5;
+        pixelsPerUnit = Math.max(7.5, Math.min(88,
+            Math.min(735/(maxX-minX+3), 465/(maxY-minY+3))));
+    }
+
+    private double nodeX(FtbEditorBridge.QuestView q) { return 841+(q.x()-cameraX)*pixelsPerUnit; }
+    private double nodeY(FtbEditorBridge.QuestView q) { return 500+(q.y()-cameraY)*pixelsPerUnit; }
+    private QuestCatalog.Rect realRect(FtbEditorBridge.QuestView q) {
+        int x=(int)Math.round(nodeX(q) - 64), y=(int)Math.round(nodeY(q) - 65);
+        if (draggingReal != null && q.id()==draggingReal.id()) {
+            x+=(int)Math.round(draggingOffsetX);
+            y+=(int)Math.round(draggingOffsetY);
+        }
+        return new QuestCatalog.Rect(x,y,128,130);
+    }
+
+    private void editorButton(DrawContext dc,String title,int x,int y,int w,int h,boolean active) {
+        fill(dc,x,y,w,h,active?0xF0442D1D:0xDD271E1B);
+        edge(dc,x,y,w,h,2,active?0xFFF5C56B:0xFFAA783B);
+        center(dc,title,x+w/2,y+7,0xFFFFE7B0,1.0f);
+    }
+
+    private void beginRename() {
+        if (selectedReal==null || nameField==null) return;
+        renaming = true;
+        nameField.setText(selectedReal.title());
+        nameField.setVisible(true);
+        setFocused(nameField);
+        nameField.setFocused(true);
+    }
+
+    private void finishRename(boolean submit) {
+        if (!renaming) return;
+        if (submit && selectedReal != null) {
+            String error=FtbEditorBridge.rename(selectedReal,nameField.getText());
+            notifyEditor(error.isBlank()?"Questtitel an FTB Quests gesendet":error);
+            if (error.isBlank()) refreshEditor(true);
+        }
+        renaming = false;
+        nameField.setVisible(false);
+        nameField.setFocused(false);
+        setFocused(null);
     }
 
     private static Identifier tex(String name) { return Identifier.of(MOD, name); }
