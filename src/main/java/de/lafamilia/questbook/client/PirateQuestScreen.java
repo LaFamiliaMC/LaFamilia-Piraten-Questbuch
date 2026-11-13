@@ -217,7 +217,7 @@ public final class PirateQuestScreen extends Screen {
     @Override
     public void render(DrawContext dc, int mouseX, int mouseY, float delta) {
         layout();
-        // NEVER use the legacy composite: this new bitmap has only scene and empty decorations.
+        refreshEditor(false);
         dc.getMatrices().push();
         dc.getMatrices().translate(x0, y0, 0);
         dc.getMatrices().scale(scale, scale, 1f);
@@ -225,9 +225,23 @@ public final class PirateQuestScreen extends Screen {
         float mx = (mouseX - x0) / scale, my = (mouseY - y0) / scale;
         renderCategoryMenu(dc, mx, my);
         renderHeader(dc);
-        renderTree(dc, mx, my);
+        if (editMode) {
+            fitCamera();
+            renderEditorTree(dc, mx, my);
+            renderEditorToolbar(dc);
+        } else {
+            renderTree(dc, mx, my);
+        }
         renderDetails(dc);
+        if (editorData.editor() && !editMode) {
+            editorButton(dc,"FTB Bearbeiten",1061,209,186,30,true);
+        }
+        if (!editorMessage.isBlank() && System.nanoTime() < messageUntil) {
+            fill(dc,470,897,755,24,0xDD241811);
+            center(dc,editorMessage,848,901,0xFFFFDF9B,1.15f);
+        }
         dc.getMatrices().pop();
+        super.render(dc,mouseX,mouseY,delta);
     }
     private void renderHeader(DrawContext dc) {
         String label = catalog.categories.stream().filter(c -> c.id().equals(category))
@@ -305,7 +319,97 @@ public final class PirateQuestScreen extends Screen {
         }
         return cachedFtb;
     }
+
+    private void renderEditorToolbar(DrawContext dc) {
+        FtbEditorBridge.ChapterView chapter=currentChapter();
+        fill(dc,424,199,822,44,0xD827201B);
+        edge(dc,424,199,822,44,2,0xFFB98A4A);
+        String t=chapter==null?"Kein FTB Kapitel":chapter.title();
+        if (t.length()>43) t=t.substring(0,40)+"...";
+        text(dc,"FTB "+(chapterIndex+1)+"/"+editorData.chapters().size()+": "+t,445,213,0xFFFFE8BE,1.3f);
+        editorButton(dc,"<",948,206,35,30,false);
+        editorButton(dc,">",988,206,35,30,false);
+        editorButton(dc,"+ Quest",1028,206,95,30,false);
+        editorButton(dc,"Speichern",1129,206,110,30,false);
+    }
+
+    private void renderEditorTree(DrawContext dc,float mx,float my) {
+        FtbEditorBridge.ChapterView chapter=currentChapter();
+        if (chapter==null) {
+            center(dc,editorData.message().isBlank()?
+                "Noch keine FTB-Kapitel vorhanden – im FTB-Editor anlegen":editorData.message(),
+                835,475,0xFFFFE9B0,1.7f);
+            return;
+        }
+        List<FtbEditorBridge.QuestView> quests=chapter.quests();
+        if (quests.isEmpty()) {
+            center(dc,"Dieses FTB-Kapitel ist leer. Klicke auf + Quest.",838,492,0xFFFFE9B0,1.8f);
+        }
+        for (FtbEditorBridge.QuestView dependent:quests) for(long depId:dependent.dependencies()) {
+            FtbEditorBridge.QuestView prerequisite=quests.stream().filter(q->q.id()==depId).findFirst().orElse(null);
+            if(prerequisite!=null) {
+                QuestCatalog.Rect a=realRect(prerequisite),b=realRect(dependent);
+                line(dc,a.x()+a.w()/2,a.y()+a.h()/2,b.x()+b.w()/2,b.y()+b.h()/2);
+            }
+        }
+        List<QuestCatalog.Quest> demoIcons=catalog.forCategory(category);
+        int index=0;
+        for (FtbEditorBridge.QuestView q: quests) {
+            QuestCatalog.Rect r=realRect(q);
+            if(r.x()+r.w()<405||r.x()>1261||r.y()+r.h()<247||r.y()>864) {index++;continue;}
+            picture(dc,QUEST_FRAME,r.x(),r.y(),r.w(),r.h());
+            if(!demoIcons.isEmpty()) {
+                picture(dc,tex(demoIcons.get(index%demoIcons.size()).icon()),
+                    r.x()+31,r.y()+9,66,65);
+            }
+            paraCentered(dc,q.title(),r.x()+r.w()/2,r.y()+88,r.w()-12,2,0xFFFFDFA6,1.2f,16);
+            if(q==selectedReal||r.contains(mx,my)) {
+                edge(dc,r.x()+2,r.y()+2,r.w()-4,r.h()-4,3,0xFFFFD36C);
+            }
+            if(linkingFrom==q.id()) center(dc,"Quelle",r.x()+r.w()/2,r.y()-15,0xFFFFF1A1,1.1f);
+            index++;
+        }
+    }
+
+    private void renderRealDetails(DrawContext dc) {
+        if(selectedReal==null) {
+            text(dc,"FTB-Quest bearbeiten",1324,227,0xFF422915,1.5f);
+            para(dc,"Wähle links eine echte FTB-Quest aus. Benutze + Quest zum Erstellen.",1324,349,274,8,0xFF563417,1.4f,21);
+        } else {
+            FtbQuestBridge.Status status=FtbQuestBridge.read(Long.toUnsignedString(selectedReal.id(),16));
+            para(dc,selectedReal.title(),1324,229,278,3,0xFF392213,1.72f,23);
+            text(dc,"FTB-ID: "+Long.toUnsignedString(selectedReal.id(),16).toUpperCase(),
+                1325,295,0xFF76502E,1.05f);
+            fill(dc,1322,324,292,2,0xB8884B2E);
+            if(status.connected()) {
+                para(dc,status.description().isBlank()?"Keine Beschreibung":status.description(),
+                    1325,344,275,5,0xFF503018,1.18f,19);
+                text(dc,"Aufgaben",1325,452,0xFF4A2C15,1.8f);
+                int taskY=491;
+                for(int i=0;i<Math.min(3,status.tasks().size());i++) {
+                    para(dc,"- "+status.tasks().get(i),1325,taskY,269,2,0xFF54361D,1.12f,16);
+                    taskY+=37;
+                }
+                text(dc,"Belohnungen",1325,616,0xFF4A2C15,1.8f);
+                int rewardY=646;
+                for(int i=0;i<Math.min(2,status.rewards().size());i++) {
+                    para(dc,"- "+status.rewards().get(i),1325,rewardY,270,1,0xFF54361D,1.1f,17);
+                    rewardY+=21;
+                }
+            } else para(dc,status.label(),1325,352,280,4,0xFF76502E,1.18f,20);
+        }
+        if(renaming) {
+            editorButton(dc,"OK",1474,701,59,28,true);
+            editorButton(dc,"X",1540,701,53,28,false);
+        } else {
+            editorButton(dc,"Titel ändern",1325,698,132,31,false);
+            editorButton(dc,linkingFrom>=0?"Ziel wählen...":"Verbinden",1465,698,139,31,false);
+        }
+        editorButton(dc,"FTB-Editor öffnen",1344,753,252,37,false);
+    }
+
     private void renderDetails(DrawContext dc) {
+        if(editMode) {renderRealDetails(dc);return;}
         if(selected==null)return;
         // Right parchment is part of BACKGROUND and deliberately contains NO baked content.
         FtbQuestBridge.Status status=ftbStatus();
