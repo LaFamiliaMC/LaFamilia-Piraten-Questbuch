@@ -1,25 +1,26 @@
-# La Familia – Piraten-Questbuch (Fabric 1.21.1)
+# La Familia Piraten-Questbuch – Alpha 0.4.0 (Fabric 1.21.1)
 
-Dieses Repository ist für die **eigene Piraten-Questbuch-GUI** bestimmt, unabhängig vom Launcher und Modpack.
+Das bisherige, komplett beschriftete GUI-Bild wird **nicht mehr** als Hintergrund verwendet.
+Die neue Alpha enthält eine eigene **leere Piraten-Grundgrafik**. Menübeschriftungen, Quest-Icons, Verbindungen und Questinformationen werden separat gerendert.
 
-## Aktueller Stand
-- Originalvorlage: festgelegtes La-Familia-Piraten-Questbuch
-- 9 unveränderte Quest-Kategorien, 162 vorhandene PNG-Icons
-- Alpha-0.3.0-Quellcode: 52 **Demo**-Questkarten; keine fertigen 762 echten Quests
-- Optionale, nur lesende FTB-Quests-Brücke (noch nicht im Spiel getestet)
-- Keine automatische Installation an Spieler, solange der Build/Spieltest aussteht
+## Einmaliger Import der neuen Alpha
 
-## Einmaliger Import der Alpha 0.3.0
-1. Lade das Projekt-ZIP aus dem Chat herunter:
-   `LaFamilia_PiratenQuestbuch_Fabric1211_GitHubTest_V03_Quellcode.zip`
-2. Im GitHub-Repository **Add file → Upload files** öffnen.
-3. **Das ZIP selbst** (ungeöffnet, nicht entpacken) in das Repository hochladen und mit **Commit changes** bestätigen.
-4. Der Workflow **Import + Build La Familia Piraten-Questbuch (Fabric 1.21.1)** startet automatisch.
-5. Der Workflow entpackt das ZIP, prüft Grafikdateien und Beispieldaten, übernimmt nach Möglichkeit die Quelldateien in `main`, kompiliert mit Java 21/Gradle und veröffentlicht erst bei Erfolg die JAR unter **Actions → Artifacts**.
+1. Lade `LaFamilia_PiratenQuestbuch_Fabric1211_Alpha04_LeereGUI_FTB.zip` aus dem Chat herunter.
+2. Öffne in GitHub **Add file → Upload files** auf der Hauptbranch `main`.
+3. Lade **das vollständige ZIP unverändert** in das Repository hoch und bestätige mit **Commit changes**.
+4. Der Workflow **Import + Build La Familia Piraten-Questbuch (Fabric 1.21.1)** verarbeitet das ZIP, entfernt die alten Grafik-Ressourcen, übernimmt den Quellcode und baut mit Java 21.
+5. Prüfe **Actions**. Nur wenn der Build erfolgreich ist, erscheint die Datei `lafamilia-piratenquestbuch-0.4.0-alpha.1.jar` im Artifact **LaFamilia-PiratenQuestbuch-Fabric1211-Alpha04**.
 
-Wenn das automatische Übernehmen der Quelldateien wegen GitHub-Berechtigungen fehlschlägt, kann das erste Kompilieren trotzdem stattfinden. Der Workflow meldet dies im Log.
+## Was 0.4.0 technisch ändern soll
 
-## Testhinweis
-Diese frühe Alpha darf **noch nicht als automatisches Launcher-Update** an Spieler verteilt werden. Zuerst muss der Build fehlerfrei durchlaufen und die GUI in einem separaten Minecraft-1.21.1-Fabric-Testclient geprüft werden.
+- **Kein extra P-Hotkey**: Die Mod klinkt sich in die normale FTB-Quests-Öffnung ein.
+- Rechts nur ein **leeres Pergament**, darauf dynamische Infos zur gewählten Quest.
+- In der Mitte **dynamische** Rahmen, Icons, Namen, leuchtende Verbindungen; kein altes Questbaum-Bild.
+- Neun ursprünglich bestätigte Kategorien unverändert.
+- Für die echte FTB-Questverwaltung bleibt FTB Quests verantwortlich. Halte **Shift** beim Öffnen gedrückt, oder wähle rechts **FTB-Questbuch öffnen**, um die native Ansicht für Admin-Aufgaben zu verwenden.
 
-Das Questbuch ist **keine zweite Quest-Engine**: FTB Quests soll Fortschritt und Belohnungen verwalten; unsere Client-Mod die besondere Oberfläche. EasyNPC und ExtraQuests werden anschließend angebunden.
+## Test- und Sicherheitsstand
+
+Dies ist **noch kein im Minecraft-Spiel verifizierter Build**. Die modifizierte FTB-Öffnungsroutine (Mixin) muss auf dem Fabric-1.21.1-Client mit den installierten FTB-Quests-Mods getestet werden.
+Die 52 enthaltenen Questkarten sind Demo-Daten: 0 reale FTB-Quest-IDs sind gemappt, keine 762 Quests sind bisher implementiert.
+Bitte vorerst **nicht als automatisches Launcher-Update an Spieler verteilen**.
