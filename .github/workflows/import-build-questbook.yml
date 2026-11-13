@@ -6,7 +6,6 @@ on:
     branches: [main]
     paths:
       - 'LaFamilia_PiratenQuestbuch_Fabric1211_GitHubTest_V03_Quellcode.zip'
-      - '.github/workflows/import-build-questbook.yml'
 
 permissions:
   contents: write
