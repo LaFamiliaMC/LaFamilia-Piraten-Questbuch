@@ -97,18 +97,18 @@ jobs:
 
       - name: Prüfe fertige Mod-JAR
         run: |
-          test -s build/libs/lafamilia-piratenquestbuch-0.5.0-alpha.1.jar
-          jar tf build/libs/lafamilia-piratenquestbuch-0.5.0-alpha.1.jar | grep -q 'fabric.mod.json'
-          jar tf build/libs/lafamilia-piratenquestbuch-0.5.0-alpha.1.jar | grep -q 'de/lafamilia/questbook/client/PirateQuestScreen.class'
-          jar tf build/libs/lafamilia-piratenquestbuch-0.5.0-alpha.1.jar | grep -q 'de/lafamilia/questbook/mixin/ClientQuestFileMixin.class'
-          jar tf build/libs/lafamilia-piratenquestbuch-0.5.0-alpha.1.jar | grep -q 'de/lafamilia/questbook/client/FtbEditorBridge.class'
-          jar tf build/libs/lafamilia-piratenquestbuch-0.5.0-alpha.1.jar | grep -q 'assets/lafamilia_questbook/textures/gui/pirate_empty_background.png'
-          ! jar tf build/libs/lafamilia-piratenquestbuch-0.5.0-alpha.1.jar | grep -q 'approved_reference_1671x941.png'
+          test -s build/libs/lafamilia-piratenquestbuch-0.5.1-alpha.1.jar
+          jar tf build/libs/lafamilia-piratenquestbuch-0.5.1-alpha.1.jar | grep -q 'fabric.mod.json'
+          jar tf build/libs/lafamilia-piratenquestbuch-0.5.1-alpha.1.jar | grep -q 'de/lafamilia/questbook/client/PirateQuestScreen.class'
+          jar tf build/libs/lafamilia-piratenquestbuch-0.5.1-alpha.1.jar | grep -q 'de/lafamilia/questbook/mixin/ClientQuestFileMixin.class'
+          jar tf build/libs/lafamilia-piratenquestbuch-0.5.1-alpha.1.jar | grep -q 'de/lafamilia/questbook/client/FtbEditorBridge.class'
+          jar tf build/libs/lafamilia-piratenquestbuch-0.5.1-alpha.1.jar | grep -q 'assets/lafamilia_questbook/textures/gui/pirate_empty_background.png'
+          ! jar tf build/libs/lafamilia-piratenquestbuch-0.5.1-alpha.1.jar | grep -q 'approved_reference_1671x941.png'
 
       - name: Alpha-Test-JAR bereitstellen
         uses: actions/upload-artifact@v6
         with:
-          name: LaFamilia-PiratenQuestbuch-Fabric1211-Alpha05
-          path: build/libs/lafamilia-piratenquestbuch-0.5.0-alpha.1.jar
+          name: LaFamilia-PiratenQuestbuch-Fabric1211-Alpha051
+          path: build/libs/lafamilia-piratenquestbuch-0.5.1-alpha.1.jar
           retention-days: 30
           if-no-files-found: error
