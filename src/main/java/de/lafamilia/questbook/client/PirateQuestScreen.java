@@ -299,8 +299,8 @@ public final class PirateQuestScreen extends Screen {
                     c.id().equals(category) ? 3 : 2,
                     c.id().equals(category) ? 0xFFF7D364 : 0x88F7D364);
             }
-            QuestCatalog.Quest first = catalog.forCategory(c.id()).stream().findFirst().orElse(null);
-            if (first != null) picture(dc, tex(first.icon()), r.x()+14, r.y()+7, 43, 39);
+            QuestCatalog.Quest categoryIconQuest = catalog.forCategory(c.id()).stream().findFirst().orElse(null);
+            if (categoryIconQuest != null) picture(dc, tex(categoryIconQuest.icon()), r.x()+14, r.y()+7, 43, 39);
             // On a readable 2x pixel grid, a few German category titles require two lines.
             // Keep text inside the existing decorative button instead of shrinking it to illegibility.
             String label = c.label();
