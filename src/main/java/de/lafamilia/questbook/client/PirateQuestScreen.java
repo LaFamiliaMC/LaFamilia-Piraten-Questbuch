@@ -454,22 +454,158 @@ public final class PirateQuestScreen extends Screen {
         }
     }
     @Override public boolean mouseClicked(double mouseX,double mouseY,int button) {
-        if (button != 0) return super.mouseClicked(mouseX,mouseY,button);
         layout();
         double mx=(mouseX-x0)/scale,my=(mouseY-y0)/scale;
+
+        if (button == 1 && editMode && linkingFrom >= 0) {
+            linkingFrom = -1;
+            notifyEditor("Verknüpfung abgebrochen");
+            return true;
+        }
+
+        if (button == 0 && renaming) {
+            if(mx>=1474&&mx<1533&&my>=701&&my<729) { finishRename(true);return true; }
+            if(mx>=1540&&mx<1593&&my>=701&&my<729) { finishRename(false);return true; }
+            return super.mouseClicked(mouseX,mouseY,button);
+        }
+
+        if (button==0 && editorData.editor() && !editMode &&
+                mx>=1061&&mx<1247&&my>=209&&my<239) {
+            editMode=true;
+            linkingFrom=-1;
+            refreshEditor(true);
+            cameraChapter=-1;
+            notifyEditor("FTB-Editor aktiv – echte Kapitel, Quests und Serverrechte");
+            return true;
+        }
+
+        if (editMode) {
+            if(button==0 && mx>=948&&mx<1023&&my>=206&&my<236) {
+                if(!editorData.chapters().isEmpty()) {
+                    int delta=mx<983?-1:1;
+                    chapterIndex=Math.floorMod(chapterIndex+delta,editorData.chapters().size());
+                    selectedReal=null;
+                    draggingReal=null;
+                    cameraChapter=-1;
+                    linkingFrom=-1;
+                }
+                return true;
+            }
+            if(button==0 && mx>=1028&&mx<1123&&my>=206&&my<236) {
+                FtbEditorBridge.ChapterView c=currentChapter();
+                if(c==null) notifyEditor("Bitte zuerst im FTB-Editor ein Kapitel anlegen");
+                else {
+                    fitCamera();
+                    String result=FtbEditorBridge.create(c,cameraX,cameraY);
+                    notifyEditor(result.isBlank()?"Neue FTB-Quest an den Server gesendet (Checkmark-Aufgabe)":result);
+                    if(result.isBlank()) lastEditorPoll=0;
+                }
+                return true;
+            }
+            if(button==0 && mx>=1129&&mx<1239&&my>=206&&my<236) {
+                String result=FtbEditorBridge.save();
+                notifyEditor(result.isBlank()?"Speichern beim FTB-Server angefordert":result);
+                return true;
+            }
+            if(button==0 && mx>=1325&&mx<1457&&my>=698&&my<729) {
+                beginRename();return true;
+            }
+            if(button==0 && mx>=1465&&mx<1604&&my>=698&&my<729) {
+                if(selectedReal==null) notifyEditor("Bitte zuerst eine Quest auswählen");
+                else {
+                    linkingFrom=linkingFrom<0?selectedReal.id():-1;
+                    notifyEditor(linkingFrom>=0?"Jetzt die Folgequest anklicken":"Verknüpfung abgebrochen");
+                }
+                return true;
+            }
+            if(button==0 && mx>=1344&&mx<1596&&my>=753&&my<790) {
+                openOriginalFtb();return true;
+            }
+            if(button==0) {
+                FtbEditorBridge.ChapterView ch=currentChapter();
+                if(ch!=null) for(FtbEditorBridge.QuestView quest:ch.quests()) {
+                    if(realRect(quest).contains(mx,my)) {
+                        if(linkingFrom>=0) {
+                            FtbEditorBridge.QuestView source=ch.quests().stream()
+                                .filter(v->v.id()==linkingFrom).findFirst().orElse(null);
+                            if(source!=null) {
+                                String result=FtbEditorBridge.connect(source,quest,ch);
+                                notifyEditor(result.isBlank()?"Questabhängigkeit an FTB-Server gesendet":result);
+                            } else notifyEditor("Quellquest nicht mehr vorhanden");
+                            linkingFrom=-1;
+                            lastEditorPoll=0;
+                        } else {
+                            selectedReal=quest;
+                            draggingReal=quest;
+                            draggingStartX=mx;
+                            draggingStartY=my;
+                            draggingOffsetX=draggingOffsetY=0;
+                        }
+                        return true;
+                    }
+                }
+            }
+            for(QuestCatalog.Category c:catalog.categories)if(button==0&&c.rect().contains(mx,my)) {
+                category=c.id();
+                linkingFrom=-1;
+                notifyEditor("Kategorie: "+c.label()+" – FTB-Kapitel über < > auswählen");
+                return true;
+            }
+            return super.mouseClicked(mouseX,mouseY,button);
+        }
+
+        if (button != 0) return super.mouseClicked(mouseX,mouseY,button);
         for (QuestCatalog.Category c:catalog.categories) if(c.rect().contains(mx,my)) {
             category=c.id(); selected=catalog.forCategory(category).stream().findFirst().orElse(null);
             lastFtbQuest=null;return true;
         }
-        for (QuestCatalog.Quest q:catalog.forCategory(category)) if(q.rect().contains(mx,my)) {
-            selected=q;lastFtbQuest=null;return true;
+        for (QuestCatalog.Quest quest:catalog.forCategory(category)) if(quest.rect().contains(mx,my)) {
+            selected=quest;lastFtbQuest=null;return true;
         }
-        if (mx>=1352&&mx<1591&&my>=755&&my<789) { openOriginalFtb();return true; }
+        if(mx>=1352&&mx<1591&&my>=755&&my<789) {openOriginalFtb();return true;}
         return super.mouseClicked(mouseX,mouseY,button);
     }
+
+    @Override public boolean mouseDragged(double mouseX,double mouseY,int button,double deltaX,double deltaY) {
+        if(editMode && button==0 && draggingReal!=null) {
+            draggingOffsetX=(mouseX-x0)/scale-draggingStartX;
+            draggingOffsetY=(mouseY-y0)/scale-draggingStartY;
+            return true;
+        }
+        return super.mouseDragged(mouseX,mouseY,button,deltaX,deltaY);
+    }
+
+    @Override public boolean mouseReleased(double mouseX,double mouseY,int button) {
+        if(editMode && button==0 && draggingReal!=null) {
+            double dx=draggingOffsetX,dy=draggingOffsetY;
+            if(Math.abs(dx)+Math.abs(dy)>5) {
+                FtbEditorBridge.ChapterView c=currentChapter();
+                if(c!=null) {
+                    String result=FtbEditorBridge.move(draggingReal,c,
+                        draggingReal.x()+dx/pixelsPerUnit,draggingReal.y()+dy/pixelsPerUnit);
+                    notifyEditor(result.isBlank()?"Neue Questposition an FTB-Server gesendet":result);
+                    lastEditorPoll=0;
+                }
+            }
+            draggingReal=null;
+            draggingOffsetX=draggingOffsetY=0;
+            return true;
+        }
+        return super.mouseReleased(mouseX,mouseY,button);
+    }
+
     @Override public boolean shouldPause() { return false; }
     @Override public boolean keyPressed(int keyCode,int scanCode,int modifiers) {
-        if(keyCode==256) {close();return true;}
+        if(renaming) {
+            if(keyCode==257 || keyCode==335) {finishRename(true);return true;}
+            if(keyCode==256) {finishRename(false);return true;}
+            return super.keyPressed(keyCode,scanCode,modifiers);
+        }
+        if(keyCode==256) {
+            if(linkingFrom>=0) {linkingFrom=-1;return true;}
+            if(editMode) {editMode=false;draggingReal=null;return true;}
+            close();return true;
+        }
         return super.keyPressed(keyCode,scanCode,modifiers);
     }
 }
