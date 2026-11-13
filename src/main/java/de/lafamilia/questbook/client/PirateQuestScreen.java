@@ -251,6 +251,20 @@ public final class PirateQuestScreen extends Screen {
             fill(dc, x-2, y-2, 5, 5, 0xFFFFC551);
         }
     }
+    /**
+     * Minecraft 1.21.1's Screen.render() calls renderBackground() before drawing
+     * child widgets. Because our render() paints the entire pirate interface before
+     * calling super.render(), the vanilla background blur would blur the *already
+     * drawn questbook* including every icon, frame and letter.
+     *
+     * This screen draws its own opaque background, so never blur the framebuffer.
+     * Keep super.render() in render() to preserve standard interactive widgets.
+     */
+    @Override
+    public void renderBackground(DrawContext context, int mouseX, int mouseY, float delta) {
+        // Deliberately empty: no GameRenderer.renderBlur() on our GUI.
+    }
+
     @Override
     public void render(DrawContext dc, int mouseX, int mouseY, float delta) {
         layout();
