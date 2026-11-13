@@ -5,7 +5,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'LaFamilia_PiratenQuestbuch_Fabric1211_GitHubTest_V03_Quellcode.zip'
+      - 'LaFamilia_PiratenQuestbuch_Fabric1211_Alpha04_LeereGUI_FTB.zip'
       - 'BUILD_TRIGGER.md'
 
 permissions:
@@ -23,11 +23,11 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Importiere Alpha 0.3.0 aus ZIP
+      - name: Importiere Alpha 0.4.0 aus ZIP
         shell: bash
         run: |
           set -euo pipefail
-          ARCHIVE="LaFamilia_PiratenQuestbuch_Fabric1211_GitHubTest_V03_Quellcode.zip"
+          ARCHIVE="LaFamilia_PiratenQuestbuch_Fabric1211_Alpha04_LeereGUI_FTB.zip"
           if [ -f "$ARCHIVE" ]; then
             echo "Importiere Projekt aus $ARCHIVE"
             unzip -oq "$ARCHIVE" -d .
@@ -36,12 +36,18 @@ jobs:
             test -f gradle.properties
             test -f src/main/resources/fabric.mod.json
             test -f src/main/java/de/lafamilia/questbook/client/PirateQuestScreen.java
-            test -s src/main/resources/assets/lafamilia_questbook/textures/gui/approved_reference_1671x941.png
+            test -s src/main/resources/assets/lafamilia_questbook/textures/gui/pirate_empty_background.png
+            # Alte, mit Quests beschriftete Komplettgrafik wirklich entfernen.
+            rm -f src/main/resources/assets/lafamilia_questbook/textures/gui/approved_reference_1671x941.png
+            rm -f src/main/resources/assets/lafamilia_questbook/textures/gui/alternate_quest_board.png
+            rm -f src/main/resources/assets/lafamilia_questbook/textures/gui/right_details_blank.png
+            rm -rf src/main/resources/assets/lafamilia_questbook/textures/gui/masked_cards
+            rm -rf src/main/resources/assets/lafamilia_questbook/textures/gui/regions
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add -- build.gradle settings.gradle gradle.properties src tests preview README_DE.md gui_layout.json FTB_QUEST_ID_ZUORDNUNG.csv .gitignore
             if ! git diff --cached --quiet; then
-              git commit -m "Import La Familia Piraten-Questbuch Alpha 0.3.0 with approved graphics"
+              git commit -m "Import La Familia Piraten-Questbuch Alpha 0.4.0 with truly blank UI and FTB opening"
               if git push; then
                 echo "Quellcode erfolgreich in main übernommen."
               else
@@ -49,7 +55,7 @@ jobs:
               fi
             fi
           fi
-          test -f build.gradle || { echo "::error::Projekt-ZIP fehlt. Bitte die Alpha-0.3.0-Quellcode-ZIP ins Repository hochladen."; exit 1; }
+          test -f build.gradle || { echo "::error::Projekt-ZIP fehlt. Bitte die Alpha-0.4.0-ZIP ins Repository hochladen."; exit 1; }
           test -d src/main/resources/assets/lafamilia_questbook/textures/icons || { echo "::error::Die Quest-Icons fehlen."; exit 1; }
 
       - name: Java 21 einrichten
@@ -81,14 +87,17 @@ jobs:
 
       - name: Prüfe fertige Mod-JAR
         run: |
-          test -s build/libs/lafamilia-piratenquestbuch-0.3.0-alpha.1.jar
-          jar tf build/libs/lafamilia-piratenquestbuch-0.3.0-alpha.1.jar | grep -q 'fabric.mod.json'
-          jar tf build/libs/lafamilia-piratenquestbuch-0.3.0-alpha.1.jar | grep -q 'de/lafamilia/questbook/client/PirateQuestScreen.class'
+          test -s build/libs/lafamilia-piratenquestbuch-0.4.0-alpha.1.jar
+          jar tf build/libs/lafamilia-piratenquestbuch-0.4.0-alpha.1.jar | grep -q 'fabric.mod.json'
+          jar tf build/libs/lafamilia-piratenquestbuch-0.4.0-alpha.1.jar | grep -q 'de/lafamilia/questbook/client/PirateQuestScreen.class'
+          jar tf build/libs/lafamilia-piratenquestbuch-0.4.0-alpha.1.jar | grep -q 'de/lafamilia/questbook/mixin/ClientQuestFileMixin.class'
+          jar tf build/libs/lafamilia-piratenquestbuch-0.4.0-alpha.1.jar | grep -q 'assets/lafamilia_questbook/textures/gui/pirate_empty_background.png'
+          ! jar tf build/libs/lafamilia-piratenquestbuch-0.4.0-alpha.1.jar | grep -q 'approved_reference_1671x941.png'
 
       - name: Alpha-Test-JAR bereitstellen
         uses: actions/upload-artifact@v4
         with:
-          name: LaFamilia-PiratenQuestbuch-Fabric1211-Alpha03
-          path: build/libs/lafamilia-piratenquestbuch-0.3.0-alpha.1.jar
+          name: LaFamilia-PiratenQuestbuch-Fabric1211-Alpha04
+          path: build/libs/lafamilia-piratenquestbuch-0.4.0-alpha.1.jar
           retention-days: 30
           if-no-files-found: error
