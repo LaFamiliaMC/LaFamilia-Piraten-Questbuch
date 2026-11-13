@@ -1,0 +1,86 @@
+name: Import + Build La Familia Piraten-Questbuch (Fabric 1.21.1)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'LaFamilia_PiratenQuestbuch_Fabric1211_GitHubTest_V03_Quellcode.zip'
+      - '.github/workflows/import-build-questbook.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: questbook-import-build
+  cancel-in-progress: false
+
+jobs:
+  import-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Importiere Alpha 0.3.0 aus ZIP
+        shell: bash
+        run: |
+          set -euo pipefail
+          ARCHIVE="LaFamilia_PiratenQuestbuch_Fabric1211_GitHubTest_V03_Quellcode.zip"
+          if [ -f "$ARCHIVE" ]; then
+            echo "Importiere Projekt aus $ARCHIVE"
+            unzip -oq "$ARCHIVE" -d .
+            test -f build.gradle
+            test -f settings.gradle
+            test -f gradle.properties
+            test -f src/main/resources/fabric.mod.json
+            test -f src/main/java/de/lafamilia/questbook/client/PirateQuestScreen.java
+            test -s src/main/resources/assets/lafamilia_questbook/textures/gui/approved_reference_1671x941.png
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -- .github build.gradle settings.gradle gradle.properties src tests preview README_DE.md gui_layout.json FTB_QUEST_ID_ZUORDNUNG.csv .gitignore
+            if ! git diff --cached --quiet; then
+              git commit -m "Import La Familia Piraten-Questbuch Alpha 0.3.0 with approved graphics"
+              if git push; then
+                echo "Quellcode erfolgreich in main übernommen."
+              else
+                echo "::warning::Quellcode konnte nicht zurückgeschrieben werden. Build läuft trotzdem mit den entpackten Dateien."
+              fi
+            fi
+          fi
+          test -f build.gradle || { echo "::error::Projekt-ZIP fehlt. Bitte die Alpha-0.3.0-Quellcode-ZIP ins Repository hochladen."; exit 1; }
+          test -d src/main/resources/assets/lafamilia_questbook/textures/icons || { echo "::error::Die Quest-Icons fehlen."; exit 1; }
+
+      - name: Java 21 einrichten
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Python-Dateien und Grafiken prüfen
+        run: |
+          python3 tests/validate_assets.py
+          python3 tests/validate_ftb_mapping.py
+
+      - name: Gradle 8.10.2 einrichten
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.10.2'
+
+      - name: Fabric-Mod-JAR kompilieren
+        run: gradle --no-daemon clean build --stacktrace
+
+      - name: Prüfe fertige Mod-JAR
+        run: |
+          test -s build/libs/lafamilia-piratenquestbuch-0.3.0-alpha.1.jar
+          jar tf build/libs/lafamilia-piratenquestbuch-0.3.0-alpha.1.jar | grep -q 'fabric.mod.json'
+          jar tf build/libs/lafamilia-piratenquestbuch-0.3.0-alpha.1.jar | grep -q 'de/lafamilia/questbook/client/PirateQuestScreen.class'
+
+      - name: Alpha-Test-JAR bereitstellen
+        uses: actions/upload-artifact@v4
+        with:
+          name: LaFamilia-PiratenQuestbuch-Fabric1211-Alpha03
+          path: build/libs/lafamilia-piratenquestbuch-0.3.0-alpha.1.jar
+          retention-days: 30
+          if-no-files-found: error
