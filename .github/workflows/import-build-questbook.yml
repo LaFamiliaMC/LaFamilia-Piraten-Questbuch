@@ -104,7 +104,7 @@ jobs:
           ! jar tf build/libs/lafamilia-piratenquestbuch-0.4.0-alpha.1.jar | grep -q 'approved_reference_1671x941.png'
 
       - name: Alpha-Test-JAR bereitstellen
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: LaFamilia-PiratenQuestbuch-Fabric1211-Alpha04
           path: build/libs/lafamilia-piratenquestbuch-0.4.0-alpha.1.jar
