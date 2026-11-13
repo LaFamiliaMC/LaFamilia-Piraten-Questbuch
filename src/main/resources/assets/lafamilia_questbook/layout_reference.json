@@ -1,0 +1,412 @@
+{
+  "format": "lafamilia-questbook-layout-v1",
+  "minecraft": "1.21.1",
+  "loader": "fabric",
+  "canvas": {
+    "width": 1671,
+    "height": 941,
+    "scaling": "uniform-contain-letterbox",
+    "origin": "top-left"
+  },
+  "approved_design_file": "textures/gui/approved_reference_1671x941.png",
+  "scene_with_cutouts": "textures/gui/scene_with_layer_cutouts.png",
+  "categories": [
+    {
+      "id": "piraten_hauptgeschichte",
+      "label": "Piraten-Hauptgeschichte",
+      "rect": {
+        "x": 13,
+        "y": 159,
+        "w": 342,
+        "h": 61
+      },
+      "asset": "textures/gui/navigation/piraten_hauptgeschichte.png",
+      "extraction": "pixel-exact reference crop",
+      "alpha_isolated": false
+    },
+    {
+      "id": "piraten_nebenquests",
+      "label": "Piraten-Nebenquests",
+      "rect": {
+        "x": 15,
+        "y": 218,
+        "w": 338,
+        "h": 56
+      },
+      "asset": "textures/gui/navigation/piraten_nebenquests.png",
+      "extraction": "pixel-exact reference crop",
+      "alpha_isolated": false
+    },
+    {
+      "id": "taegliche_piratenauftraege",
+      "label": "Tägliche Piratenaufträge",
+      "rect": {
+        "x": 17,
+        "y": 270,
+        "w": 337,
+        "h": 61
+      },
+      "asset": "textures/gui/navigation/taegliche_piratenauftraege.png",
+      "extraction": "pixel-exact reference crop",
+      "alpha_isolated": false
+    },
+    {
+      "id": "woechentliche_piratenauftraege",
+      "label": "Wöchentliche Piratenaufträge",
+      "rect": {
+        "x": 17,
+        "y": 325,
+        "w": 337,
+        "h": 59
+      },
+      "asset": "textures/gui/navigation/woechentliche_piratenauftraege.png",
+      "extraction": "pixel-exact reference crop",
+      "alpha_isolated": false
+    },
+    {
+      "id": "geheimnisse_und_erfolge",
+      "label": "Geheimnisse und Erfolge",
+      "rect": {
+        "x": 16,
+        "y": 381,
+        "w": 337,
+        "h": 59
+      },
+      "asset": "textures/gui/navigation/geheimnisse_und_erfolge.png",
+      "extraction": "pixel-exact reference crop",
+      "alpha_isolated": false
+    },
+    {
+      "id": "farming_und_landwirtschaft",
+      "label": "Farming & Landwirtschaft",
+      "rect": {
+        "x": 16,
+        "y": 434,
+        "w": 338,
+        "h": 60
+      },
+      "asset": "textures/gui/navigation/farming_und_landwirtschaft.png",
+      "extraction": "pixel-exact reference crop",
+      "alpha_isolated": false
+    },
+    {
+      "id": "mining_und_rohstoffe",
+      "label": "Mining und Rohstoffe",
+      "rect": {
+        "x": 16,
+        "y": 491,
+        "w": 338,
+        "h": 60
+      },
+      "asset": "textures/gui/navigation/mining_und_rohstoffe.png",
+      "extraction": "pixel-exact reference crop",
+      "alpha_isolated": false
+    },
+    {
+      "id": "holzfaellen",
+      "label": "Holzfällen",
+      "rect": {
+        "x": 16,
+        "y": 545,
+        "w": 339,
+        "h": 60
+      },
+      "asset": "textures/gui/navigation/holzfaellen.png",
+      "extraction": "pixel-exact reference crop",
+      "alpha_isolated": false
+    },
+    {
+      "id": "bauen_und_handwerk",
+      "label": "Bauen und Handwerk",
+      "rect": {
+        "x": 15,
+        "y": 600,
+        "w": 340,
+        "h": 60
+      },
+      "asset": "textures/gui/navigation/bauen_und_handwerk.png",
+      "extraction": "pixel-exact reference crop",
+      "alpha_isolated": false
+    }
+  ],
+  "quest_cards_reference": [
+    {
+      "id": "ruf_der_piraten",
+      "label": "Der Ruf der Piraten",
+      "rect": {
+        "x": 443,
+        "y": 277,
+        "w": 129,
+        "h": 139
+      },
+      "asset": "textures/gui/quest_cards/ruf_der_piraten.png",
+      "extraction": "pixel-exact reference crop",
+      "alpha_isolated": false
+    },
+    {
+      "id": "erreiche_den_hafen",
+      "label": "Erreiche den Hafen",
+      "rect": {
+        "x": 609,
+        "y": 278,
+        "w": 133,
+        "h": 138
+      },
+      "asset": "textures/gui/quest_cards/erreiche_den_hafen.png",
+      "extraction": "pixel-exact reference crop",
+      "alpha_isolated": false
+    },
+    {
+      "id": "kapitaen_tharion",
+      "label": "Kapitän Tharion",
+      "rect": {
+        "x": 785,
+        "y": 255,
+        "w": 141,
+        "h": 156
+      },
+      "asset": "textures/gui/quest_cards/kapitaen_tharion.png",
+      "extraction": "pixel-exact reference crop",
+      "alpha_isolated": false
+    },
+    {
+      "id": "eigenes_schiff",
+      "label": "Ein eigenes Schiff",
+      "rect": {
+        "x": 962,
+        "y": 276,
+        "w": 135,
+        "h": 142
+      },
+      "asset": "textures/gui/quest_cards/eigenes_schiff.png",
+      "extraction": "pixel-exact reference crop",
+      "alpha_isolated": false
+    },
+    {
+      "id": "neue_horizonte",
+      "label": "Neue Horizonte",
+      "rect": {
+        "x": 1135,
+        "y": 279,
+        "w": 135,
+        "h": 140
+      },
+      "asset": "textures/gui/quest_cards/neue_horizonte.png",
+      "extraction": "pixel-exact reference crop",
+      "alpha_isolated": false
+    },
+    {
+      "id": "piratencrew_versammeln",
+      "label": "Die Piratencrew versammeln",
+      "rect": {
+        "x": 567,
+        "y": 425,
+        "w": 142,
+        "h": 144
+      },
+      "asset": "textures/gui/quest_cards/piratencrew_versammeln.png",
+      "extraction": "pixel-exact reference crop",
+      "alpha_isolated": false
+    },
+    {
+      "id": "weg_zur_freibeuterbasis",
+      "label": "Weg zur Freibeuterbasis",
+      "rect": {
+        "x": 780,
+        "y": 425,
+        "w": 144,
+        "h": 143
+      },
+      "asset": "textures/gui/quest_cards/weg_zur_freibeuterbasis.png",
+      "extraction": "pixel-exact reference crop",
+      "alpha_isolated": false
+    },
+    {
+      "id": "verlorene_schatzkarte",
+      "label": "Die verlorene Schatzkarte",
+      "rect": {
+        "x": 1010,
+        "y": 424,
+        "w": 143,
+        "h": 145
+      },
+      "asset": "textures/gui/quest_cards/verlorene_schatzkarte.png",
+      "extraction": "pixel-exact reference crop",
+      "alpha_isolated": false
+    },
+    {
+      "id": "schatzhoehle",
+      "label": "Die Schatzhöhle entdecken",
+      "rect": {
+        "x": 537,
+        "y": 580,
+        "w": 167,
+        "h": 148
+      },
+      "asset": "textures/gui/quest_cards/schatzhoehle.png",
+      "extraction": "pixel-exact reference crop",
+      "alpha_isolated": false
+    },
+    {
+      "id": "schatz_von_la_familia",
+      "label": "Der Schatz von La Familia",
+      "rect": {
+        "x": 778,
+        "y": 578,
+        "w": 145,
+        "h": 152
+      },
+      "asset": "textures/gui/quest_cards/schatz_von_la_familia.png",
+      "extraction": "pixel-exact reference crop",
+      "alpha_isolated": false
+    },
+    {
+      "id": "schwimmende_fluch",
+      "label": "Der schwimmende Fluch",
+      "rect": {
+        "x": 1005,
+        "y": 582,
+        "w": 170,
+        "h": 147
+      },
+      "asset": "textures/gui/quest_cards/schwimmende_fluch.png",
+      "extraction": "pixel-exact reference crop",
+      "alpha_isolated": false
+    },
+    {
+      "id": "legende_erwacht",
+      "label": "Die Legende erwacht",
+      "rect": {
+        "x": 711,
+        "y": 713,
+        "w": 269,
+        "h": 187
+      },
+      "asset": "textures/gui/quest_cards/legende_erwacht.png",
+      "extraction": "pixel-exact reference crop",
+      "alpha_isolated": false
+    }
+  ],
+  "fixed_regions": [
+    {
+      "id": "left_logo",
+      "label": "Left Logo",
+      "rect": {
+        "x": 9,
+        "y": 3,
+        "w": 345,
+        "h": 157
+      },
+      "asset": "textures/gui/regions/left_logo.png",
+      "extraction": "pixel-exact reference crop",
+      "alpha_isolated": false
+    },
+    {
+      "id": "chapter_header",
+      "label": "Chapter Header",
+      "rect": {
+        "x": 642,
+        "y": 9,
+        "w": 481,
+        "h": 206
+      },
+      "asset": "textures/gui/regions/chapter_header.png",
+      "extraction": "pixel-exact reference crop",
+      "alpha_isolated": false
+    },
+    {
+      "id": "right_quest_information",
+      "label": "Right Quest Information",
+      "rect": {
+        "x": 1282,
+        "y": 168,
+        "w": 367,
+        "h": 678
+      },
+      "asset": "textures/gui/regions/right_quest_information.png",
+      "extraction": "pixel-exact reference crop",
+      "alpha_isolated": false
+    },
+    {
+      "id": "bottom_left_decoration",
+      "label": "Bottom Left Decoration",
+      "rect": {
+        "x": 0,
+        "y": 659,
+        "w": 365,
+        "h": 279
+      },
+      "asset": "textures/gui/regions/bottom_left_decoration.png",
+      "extraction": "pixel-exact reference crop",
+      "alpha_isolated": false
+    },
+    {
+      "id": "bottom_right_decoration",
+      "label": "Bottom Right Decoration",
+      "rect": {
+        "x": 1158,
+        "y": 699,
+        "w": 503,
+        "h": 241
+      },
+      "asset": "textures/gui/regions/bottom_right_decoration.png",
+      "extraction": "pixel-exact reference crop",
+      "alpha_isolated": false
+    },
+    {
+      "id": "center_scene",
+      "label": "Center Scene",
+      "rect": {
+        "x": 360,
+        "y": 0,
+        "w": 927,
+        "h": 939
+      },
+      "asset": "textures/gui/regions/center_scene.png",
+      "extraction": "pixel-exact reference crop",
+      "alpha_isolated": false
+    }
+  ],
+  "quest_detail_subregions": {
+    "portrait_kapitaen_tharion": {
+      "x": 1310,
+      "y": 207,
+      "width": 105,
+      "height": 122
+    },
+    "description_reference": {
+      "x": 1411,
+      "y": 204,
+      "width": 204,
+      "height": 212
+    },
+    "objectives_reference": {
+      "x": 1308,
+      "y": 412,
+      "width": 309,
+      "height": 124
+    },
+    "rewards_reference": {
+      "x": 1309,
+      "y": 529,
+      "width": 312,
+      "height": 184
+    },
+    "completion_button_reference": {
+      "x": 1318,
+      "y": 706,
+      "width": 300,
+      "height": 81
+    }
+  },
+  "connectors_strategy": "render from dependency graph in GUI: do not use painted lines as game state",
+  "layers_order": [
+    "scene/background",
+    "left category buttons",
+    "quest connections",
+    "quest cards",
+    "right info panel",
+    "texts / item sprites / progress / status"
+  ],
+  "note": "Exact reference crops reconstruct original screenshot perfectly, but the source image is flattened: a true clean harbor plate and individually alpha-separated artwork require redrawing/inpainting and asset approval."
+}

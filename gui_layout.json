@@ -1,0 +1,149 @@
+{
+  "resolution": [
+    1671,
+    941
+  ],
+  "categories": {
+    "piraten_hauptgeschichte": {
+      "x": 13,
+      "y": 159,
+      "w": 342,
+      "h": 61
+    },
+    "piraten_nebenquests": {
+      "x": 15,
+      "y": 218,
+      "w": 338,
+      "h": 56
+    },
+    "taegliche_piratenauftraege": {
+      "x": 17,
+      "y": 270,
+      "w": 337,
+      "h": 61
+    },
+    "woechentliche_piratenauftraege": {
+      "x": 17,
+      "y": 325,
+      "w": 337,
+      "h": 59
+    },
+    "geheimnisse_und_erfolge": {
+      "x": 16,
+      "y": 381,
+      "w": 337,
+      "h": 59
+    },
+    "farming_und_landwirtschaft": {
+      "x": 16,
+      "y": 434,
+      "w": 338,
+      "h": 60
+    },
+    "mining_und_rohstoffe": {
+      "x": 16,
+      "y": 491,
+      "w": 338,
+      "h": 60
+    },
+    "holzfaellen": {
+      "x": 16,
+      "y": 545,
+      "w": 339,
+      "h": 60
+    },
+    "bauen_und_handwerk": {
+      "x": 15,
+      "y": 600,
+      "w": 340,
+      "h": 60
+    }
+  },
+  "main_quest_rects": {
+    "ruf_der_piraten": {
+      "x": 443,
+      "y": 277,
+      "w": 129,
+      "h": 139
+    },
+    "erreiche_den_hafen": {
+      "x": 609,
+      "y": 278,
+      "w": 133,
+      "h": 138
+    },
+    "kapitaen_tharion": {
+      "x": 785,
+      "y": 255,
+      "w": 141,
+      "h": 156
+    },
+    "eigenes_schiff": {
+      "x": 962,
+      "y": 276,
+      "w": 135,
+      "h": 142
+    },
+    "neue_horizonte": {
+      "x": 1135,
+      "y": 279,
+      "w": 135,
+      "h": 140
+    },
+    "piratencrew_versammeln": {
+      "x": 567,
+      "y": 425,
+      "w": 142,
+      "h": 144
+    },
+    "weg_zur_freibeuterbasis": {
+      "x": 780,
+      "y": 425,
+      "w": 144,
+      "h": 143
+    },
+    "verlorene_schatzkarte": {
+      "x": 1010,
+      "y": 424,
+      "w": 143,
+      "h": 145
+    },
+    "schatzhoehle": {
+      "x": 537,
+      "y": 580,
+      "w": 167,
+      "h": 148
+    },
+    "schatz_von_la_familia": {
+      "x": 778,
+      "y": 578,
+      "w": 145,
+      "h": 152
+    },
+    "schwimmende_fluch": {
+      "x": 1005,
+      "y": 582,
+      "w": 170,
+      "h": 147
+    },
+    "legende_erwacht": {
+      "x": 711,
+      "y": 713,
+      "w": 269,
+      "h": 187
+    }
+  },
+  "right_panel": {
+    "x": 1282,
+    "y": 168,
+    "w": 367,
+    "h": 678
+  },
+  "center_panel": {
+    "x": 411,
+    "y": 235,
+    "w": 848,
+    "h": 646
+  },
+  "coordinates_are": "source pixels; scale to game window"
+}

@@ -1,0 +1,1307 @@
+{
+  "status": "DEMO – keine echten Serverfortschritte oder vergebene Belohnungen",
+  "texture_size": [
+    1671,
+    941
+  ],
+  "categories": [
+    {
+      "id": "piraten_hauptgeschichte",
+      "label": "Piraten-Hauptgeschichte",
+      "rect": {
+        "x": 13,
+        "y": 159,
+        "w": 342,
+        "h": 61
+      }
+    },
+    {
+      "id": "piraten_nebenquests",
+      "label": "Piraten-Nebenquests",
+      "rect": {
+        "x": 15,
+        "y": 218,
+        "w": 338,
+        "h": 56
+      }
+    },
+    {
+      "id": "taegliche_piratenauftraege",
+      "label": "Tägliche Piratenaufträge",
+      "rect": {
+        "x": 17,
+        "y": 270,
+        "w": 337,
+        "h": 61
+      }
+    },
+    {
+      "id": "woechentliche_piratenauftraege",
+      "label": "Wöchentliche Piratenaufträge",
+      "rect": {
+        "x": 17,
+        "y": 325,
+        "w": 337,
+        "h": 59
+      }
+    },
+    {
+      "id": "geheimnisse_und_erfolge",
+      "label": "Geheimnisse und Erfolge",
+      "rect": {
+        "x": 16,
+        "y": 381,
+        "w": 337,
+        "h": 59
+      }
+    },
+    {
+      "id": "farming_und_landwirtschaft",
+      "label": "Farming & Landwirtschaft",
+      "rect": {
+        "x": 16,
+        "y": 434,
+        "w": 338,
+        "h": 60
+      }
+    },
+    {
+      "id": "mining_und_rohstoffe",
+      "label": "Mining und Rohstoffe",
+      "rect": {
+        "x": 16,
+        "y": 491,
+        "w": 338,
+        "h": 60
+      }
+    },
+    {
+      "id": "holzfaellen",
+      "label": "Holzfällen",
+      "rect": {
+        "x": 16,
+        "y": 545,
+        "w": 339,
+        "h": 60
+      }
+    },
+    {
+      "id": "bauen_und_handwerk",
+      "label": "Bauen und Handwerk",
+      "rect": {
+        "x": 15,
+        "y": 600,
+        "w": 340,
+        "h": 60
+      }
+    }
+  ],
+  "quests": [
+    {
+      "id": "ruf_der_piraten",
+      "category": "piraten_hauptgeschichte",
+      "title": "Der Ruf der Piraten",
+      "description": "Ein alter Brief führt dich an den Hafen von La Familia. Dein Abenteuer beginnt.",
+      "tasks": [
+        "Finde die Flaschenpost (0/1)",
+        "Begib dich zum Hafen (0/1)"
+      ],
+      "rewards": [
+        "250 Münzen",
+        "Piratenkompass"
+      ],
+      "rect": {
+        "x": 443,
+        "y": 277,
+        "w": 129,
+        "h": 139
+      },
+      "icon": "textures/gui/masked_cards/ruf_der_piraten.png",
+      "state": "demo_completed",
+      "render_reference_card": true,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "erreiche_den_hafen",
+      "category": "piraten_hauptgeschichte",
+      "title": "Erreiche den Hafen",
+      "description": "Suche den Hafen und folge der Spur der alten Freibeuter.",
+      "tasks": [
+        "Erreiche den Hafen von La Familia (0/1)"
+      ],
+      "rewards": [
+        "100 Münzen",
+        "Neues Kapitel"
+      ],
+      "rect": {
+        "x": 609,
+        "y": 278,
+        "w": 133,
+        "h": 138
+      },
+      "icon": "textures/gui/masked_cards/erreiche_den_hafen.png",
+      "state": "demo_completed",
+      "render_reference_card": true,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "kapitaen_tharion",
+      "category": "piraten_hauptgeschichte",
+      "title": "Kapitän Tharion",
+      "description": "Der alte Kapitän Tharion wartet am Hafen. Höre seine Geschichte und hilf ihm, eine neue Crew aufzustellen.",
+      "tasks": [
+        "Sprich mit Kapitän Tharion (0/1)",
+        "Höre seine Geschichte (0/1)"
+      ],
+      "rewards": [
+        "250 Münzen",
+        "Rang: Freibeuter"
+      ],
+      "rect": {
+        "x": 785,
+        "y": 255,
+        "w": 141,
+        "h": 156
+      },
+      "icon": "textures/gui/masked_cards/kapitaen_tharion.png",
+      "state": "demo_completed",
+      "render_reference_card": true,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "eigenes_schiff",
+      "category": "piraten_hauptgeschichte",
+      "title": "Ein eigenes Schiff",
+      "description": "Jede Piratencrew braucht ein eigenes Schiff. Bereite dich auf die erste Reise vor.",
+      "tasks": [
+        "Sammle Baumaterialien (0/1)",
+        "Sprich mit dem Schiffbauer (0/1)"
+      ],
+      "rewards": [
+        "250 Münzen",
+        "Freischaltung: Schiffbau"
+      ],
+      "rect": {
+        "x": 962,
+        "y": 276,
+        "w": 135,
+        "h": 142
+      },
+      "icon": "textures/gui/masked_cards/eigenes_schiff.png",
+      "state": "demo_unfinished",
+      "render_reference_card": true,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "neue_horizonte",
+      "category": "piraten_hauptgeschichte",
+      "title": "Neue Horizonte",
+      "description": "Jenseits des Hafens wartet eine unbekannte Welt voller Inseln und Geheimnisse.",
+      "tasks": [
+        "Entdecke eine neue Region (0/1)"
+      ],
+      "rewards": [
+        "500 Münzen",
+        "Eine Schatzkarte"
+      ],
+      "rect": {
+        "x": 1135,
+        "y": 279,
+        "w": 135,
+        "h": 140
+      },
+      "icon": "textures/gui/masked_cards/neue_horizonte.png",
+      "state": "demo_unfinished",
+      "render_reference_card": true,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "piratencrew_versammeln",
+      "category": "piraten_hauptgeschichte",
+      "title": "Die Piratencrew versammeln",
+      "description": "Finde verlässliche Freibeuter, bevor du das offene Meer erkundest.",
+      "tasks": [
+        "Sprich mit dem Quartiermeister (0/1)",
+        "Rekrutiere deine Crew (0/1)"
+      ],
+      "rewards": [
+        "250 Münzen",
+        "Crew-Abzeichen"
+      ],
+      "rect": {
+        "x": 567,
+        "y": 425,
+        "w": 142,
+        "h": 144
+      },
+      "icon": "textures/gui/masked_cards/piratencrew_versammeln.png",
+      "state": "demo_unfinished",
+      "render_reference_card": true,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "weg_zur_freibeuterbasis",
+      "category": "piraten_hauptgeschichte",
+      "title": "Weg zur Freibeuterbasis",
+      "description": "Der Kompass weist dir den Weg zur geheimen Basis der Freibeuter.",
+      "tasks": [
+        "Folge den Hinweisen (0/1)",
+        "Finde die Basis (0/1)"
+      ],
+      "rewards": [
+        "300 Münzen",
+        "Neuer Handlungsstrang"
+      ],
+      "rect": {
+        "x": 780,
+        "y": 425,
+        "w": 144,
+        "h": 143
+      },
+      "icon": "textures/gui/masked_cards/weg_zur_freibeuterbasis.png",
+      "state": "demo_unfinished",
+      "render_reference_card": true,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "verlorene_schatzkarte",
+      "category": "piraten_hauptgeschichte",
+      "title": "Die verlorene Schatzkarte",
+      "description": "Eine uralte Karte zeigt den Weg zu einem verlorenen Piratenschatz.",
+      "tasks": [
+        "Finde die Schatzkarte (0/1)",
+        "Bringe sie zu Tharion (0/1)"
+      ],
+      "rewards": [
+        "350 Münzen",
+        "Schatzhinweis"
+      ],
+      "rect": {
+        "x": 1010,
+        "y": 424,
+        "w": 143,
+        "h": 145
+      },
+      "icon": "textures/gui/masked_cards/verlorene_schatzkarte.png",
+      "state": "demo_unfinished",
+      "render_reference_card": true,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "schatzhoehle",
+      "category": "piraten_hauptgeschichte",
+      "title": "Die Schatzhöhle entdecken",
+      "description": "In einer verborgenen Höhle liegen Relikte der verschwundenen Crew.",
+      "tasks": [
+        "Erkunde die Höhle (0/1)",
+        "Finde das Relikt (0/1)"
+      ],
+      "rewards": [
+        "500 Münzen",
+        "Seltenes Relikt"
+      ],
+      "rect": {
+        "x": 537,
+        "y": 580,
+        "w": 167,
+        "h": 148
+      },
+      "icon": "textures/gui/masked_cards/schatzhoehle.png",
+      "state": "demo_unfinished",
+      "render_reference_card": true,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "schatz_von_la_familia",
+      "category": "piraten_hauptgeschichte",
+      "title": "Der Schatz von La Familia",
+      "description": "Die Spur führt zu einem sagenumwobenen Schatz.",
+      "tasks": [
+        "Finde die Schatztruhe (0/1)",
+        "Sichere den Fund (0/1)"
+      ],
+      "rewards": [
+        "750 Münzen",
+        "Schatzabzeichen"
+      ],
+      "rect": {
+        "x": 778,
+        "y": 578,
+        "w": 145,
+        "h": 152
+      },
+      "icon": "textures/gui/masked_cards/schatz_von_la_familia.png",
+      "state": "demo_unfinished",
+      "render_reference_card": true,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "schwimmende_fluch",
+      "category": "piraten_hauptgeschichte",
+      "title": "Der schwimmende Fluch",
+      "description": "Ein fremdes Schiff wird von einem alten Fluch heimgesucht.",
+      "tasks": [
+        "Untersuche das Schiff (0/1)",
+        "Finde die Ursache (0/1)"
+      ],
+      "rewards": [
+        "650 Münzen",
+        "Dunkle Seekarte"
+      ],
+      "rect": {
+        "x": 1005,
+        "y": 582,
+        "w": 170,
+        "h": 147
+      },
+      "icon": "textures/gui/masked_cards/schwimmende_fluch.png",
+      "state": "demo_unfinished",
+      "render_reference_card": true,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "legende_erwacht",
+      "category": "piraten_hauptgeschichte",
+      "title": "Die Legende erwacht",
+      "description": "Stelle dich dem Geheimnis hinter dem Fluch von La Familia.",
+      "tasks": [
+        "Vereine die Hinweise (0/1)",
+        "Kehre zu Tharion zurück (0/1)"
+      ],
+      "rewards": [
+        "1000 Münzen",
+        "La Familia Legende"
+      ],
+      "rect": {
+        "x": 711,
+        "y": 713,
+        "w": 269,
+        "h": 187
+      },
+      "icon": "textures/gui/masked_cards/legende_erwacht.png",
+      "state": "demo_unfinished",
+      "render_reference_card": true,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "piraten_nebenquests_01",
+      "category": "piraten_nebenquests",
+      "title": "Die Nachricht im Sand",
+      "description": "Demo-Quest für Piraten-Nebenquests: Die Nachricht im Sand. Die endgültigen Ziele folgen aus den ausgewerteten Mod-Daten und der Questplanung.",
+      "tasks": [
+        "Sammle passende Mod-Gegenstände (0/1)"
+      ],
+      "rewards": [
+        "100 Münzen",
+        "Beispielbelohnung"
+      ],
+      "rect": {
+        "x": 482,
+        "y": 302,
+        "w": 144,
+        "h": 146
+      },
+      "icon": "textures/icons/02_piraten_nebenquests/01_questrolle.png",
+      "state": "demo_unfinished",
+      "render_reference_card": false,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "piraten_nebenquests_02",
+      "category": "piraten_nebenquests",
+      "title": "Verlorene Fracht",
+      "description": "Demo-Quest für Piraten-Nebenquests: Verlorene Fracht. Die endgültigen Ziele folgen aus den ausgewerteten Mod-Daten und der Questplanung.",
+      "tasks": [
+        "Erkunde das Gebiet (0/1)"
+      ],
+      "rewards": [
+        "200 Münzen",
+        "Beispielbelohnung"
+      ],
+      "rect": {
+        "x": 658,
+        "y": 302,
+        "w": 144,
+        "h": 146
+      },
+      "icon": "textures/icons/02_piraten_nebenquests/02_npc_auftrag.png",
+      "state": "demo_unfinished",
+      "render_reference_card": false,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "piraten_nebenquests_03",
+      "category": "piraten_nebenquests",
+      "title": "Der geheimnisvolle Händler",
+      "description": "Demo-Quest für Piraten-Nebenquests: Der geheimnisvolle Händler. Die endgültigen Ziele folgen aus den ausgewerteten Mod-Daten und der Questplanung.",
+      "tasks": [
+        "Sprich mit dem Questgeber (0/1)"
+      ],
+      "rewards": [
+        "300 Münzen",
+        "Beispielbelohnung"
+      ],
+      "rect": {
+        "x": 845,
+        "y": 302,
+        "w": 144,
+        "h": 146
+      },
+      "icon": "textures/icons/02_piraten_nebenquests/03_roter_edelstein.png",
+      "state": "demo_unfinished",
+      "render_reference_card": false,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "piraten_nebenquests_04",
+      "category": "piraten_nebenquests",
+      "title": "Die verschwundene Crew",
+      "description": "Demo-Quest für Piraten-Nebenquests: Die verschwundene Crew. Die endgültigen Ziele folgen aus den ausgewerteten Mod-Daten und der Questplanung.",
+      "tasks": [
+        "Sammle passende Mod-Gegenstände (0/1)"
+      ],
+      "rewards": [
+        "400 Münzen",
+        "Beispielbelohnung"
+      ],
+      "rect": {
+        "x": 1024,
+        "y": 302,
+        "w": 144,
+        "h": 146
+      },
+      "icon": "textures/icons/02_piraten_nebenquests/04_magischer_trank.png",
+      "state": "demo_unfinished",
+      "render_reference_card": false,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "piraten_nebenquests_05",
+      "category": "piraten_nebenquests",
+      "title": "Der Auftrag des Smutje",
+      "description": "Demo-Quest für Piraten-Nebenquests: Der Auftrag des Smutje. Die endgültigen Ziele folgen aus den ausgewerteten Mod-Daten und der Questplanung.",
+      "tasks": [
+        "Erkunde das Gebiet (0/1)"
+      ],
+      "rewards": [
+        "500 Münzen",
+        "Beispielbelohnung"
+      ],
+      "rect": {
+        "x": 850,
+        "y": 512,
+        "w": 144,
+        "h": 146
+      },
+      "icon": "textures/icons/02_piraten_nebenquests/05_goldmuenze.png",
+      "state": "demo_unfinished",
+      "render_reference_card": false,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "taegliche_piratenauftraege_01",
+      "category": "taegliche_piratenauftraege",
+      "title": "Der erste Tagesauftrag",
+      "description": "Demo-Quest für Tägliche Piratenaufträge: Der erste Tagesauftrag. Die endgültigen Ziele folgen aus den ausgewerteten Mod-Daten und der Questplanung.",
+      "tasks": [
+        "Sammle passende Mod-Gegenstände (0/1)"
+      ],
+      "rewards": [
+        "100 Münzen",
+        "Beispielbelohnung"
+      ],
+      "rect": {
+        "x": 482,
+        "y": 302,
+        "w": 144,
+        "h": 146
+      },
+      "icon": "textures/icons/03_taegliche_piratenauftraege/01_tageskalender.png",
+      "state": "demo_unfinished",
+      "render_reference_card": false,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "taegliche_piratenauftraege_02",
+      "category": "taegliche_piratenauftraege",
+      "title": "Fische für die Taverne",
+      "description": "Demo-Quest für Tägliche Piratenaufträge: Fische für die Taverne. Die endgültigen Ziele folgen aus den ausgewerteten Mod-Daten und der Questplanung.",
+      "tasks": [
+        "Erkunde das Gebiet (0/1)"
+      ],
+      "rewards": [
+        "200 Münzen",
+        "Beispielbelohnung"
+      ],
+      "rect": {
+        "x": 658,
+        "y": 302,
+        "w": 144,
+        "h": 146
+      },
+      "icon": "textures/icons/03_taegliche_piratenauftraege/02_sonnenaufgang.png",
+      "state": "demo_unfinished",
+      "render_reference_card": false,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "taegliche_piratenauftraege_03",
+      "category": "taegliche_piratenauftraege",
+      "title": "Kokosnüsse sammeln",
+      "description": "Demo-Quest für Tägliche Piratenaufträge: Kokosnüsse sammeln. Die endgültigen Ziele folgen aus den ausgewerteten Mod-Daten und der Questplanung.",
+      "tasks": [
+        "Sprich mit dem Questgeber (0/1)"
+      ],
+      "rewards": [
+        "300 Münzen",
+        "Beispielbelohnung"
+      ],
+      "rect": {
+        "x": 845,
+        "y": 302,
+        "w": 144,
+        "h": 146
+      },
+      "icon": "textures/icons/03_taegliche_piratenauftraege/03_nacht.png",
+      "state": "demo_unfinished",
+      "render_reference_card": false,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "taegliche_piratenauftraege_04",
+      "category": "taegliche_piratenauftraege",
+      "title": "Hafenlieferung",
+      "description": "Demo-Quest für Tägliche Piratenaufträge: Hafenlieferung. Die endgültigen Ziele folgen aus den ausgewerteten Mod-Daten und der Questplanung.",
+      "tasks": [
+        "Sammle passende Mod-Gegenstände (0/1)"
+      ],
+      "rewards": [
+        "400 Münzen",
+        "Beispielbelohnung"
+      ],
+      "rect": {
+        "x": 1024,
+        "y": 302,
+        "w": 144,
+        "h": 146
+      },
+      "icon": "textures/icons/03_taegliche_piratenauftraege/04_taschenuhr.png",
+      "state": "demo_unfinished",
+      "render_reference_card": false,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "taegliche_piratenauftraege_05",
+      "category": "taegliche_piratenauftraege",
+      "title": "Proviant abgeben",
+      "description": "Demo-Quest für Tägliche Piratenaufträge: Proviant abgeben. Die endgültigen Ziele folgen aus den ausgewerteten Mod-Daten und der Questplanung.",
+      "tasks": [
+        "Erkunde das Gebiet (0/1)"
+      ],
+      "rewards": [
+        "500 Münzen",
+        "Beispielbelohnung"
+      ],
+      "rect": {
+        "x": 850,
+        "y": 512,
+        "w": 144,
+        "h": 146
+      },
+      "icon": "textures/icons/03_taegliche_piratenauftraege/05_sanduhr.png",
+      "state": "demo_unfinished",
+      "render_reference_card": false,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "woechentliche_piratenauftraege_01",
+      "category": "woechentliche_piratenauftraege",
+      "title": "Die Wochenreise",
+      "description": "Demo-Quest für Wöchentliche Piratenaufträge: Die Wochenreise. Die endgültigen Ziele folgen aus den ausgewerteten Mod-Daten und der Questplanung.",
+      "tasks": [
+        "Sammle passende Mod-Gegenstände (0/1)"
+      ],
+      "rewards": [
+        "100 Münzen",
+        "Beispielbelohnung"
+      ],
+      "rect": {
+        "x": 482,
+        "y": 302,
+        "w": 144,
+        "h": 146
+      },
+      "icon": "textures/icons/04_woechentliche_piratenauftraege/01_auftragsliste.png",
+      "state": "demo_unfinished",
+      "render_reference_card": false,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "woechentliche_piratenauftraege_02",
+      "category": "woechentliche_piratenauftraege",
+      "title": "Wertvolle Erze",
+      "description": "Demo-Quest für Wöchentliche Piratenaufträge: Wertvolle Erze. Die endgültigen Ziele folgen aus den ausgewerteten Mod-Daten und der Questplanung.",
+      "tasks": [
+        "Erkunde das Gebiet (0/1)"
+      ],
+      "rewards": [
+        "200 Münzen",
+        "Beispielbelohnung"
+      ],
+      "rect": {
+        "x": 658,
+        "y": 302,
+        "w": 144,
+        "h": 146
+      },
+      "icon": "textures/icons/04_woechentliche_piratenauftraege/02_wochenkalender.png",
+      "state": "demo_unfinished",
+      "render_reference_card": false,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "woechentliche_piratenauftraege_03",
+      "category": "woechentliche_piratenauftraege",
+      "title": "Das verlorene Relikt",
+      "description": "Demo-Quest für Wöchentliche Piratenaufträge: Das verlorene Relikt. Die endgültigen Ziele folgen aus den ausgewerteten Mod-Daten und der Questplanung.",
+      "tasks": [
+        "Sprich mit dem Questgeber (0/1)"
+      ],
+      "rewards": [
+        "300 Münzen",
+        "Beispielbelohnung"
+      ],
+      "rect": {
+        "x": 845,
+        "y": 302,
+        "w": 144,
+        "h": 146
+      },
+      "icon": "textures/icons/04_woechentliche_piratenauftraege/03_wochenziele.png",
+      "state": "demo_unfinished",
+      "render_reference_card": false,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "woechentliche_piratenauftraege_04",
+      "category": "woechentliche_piratenauftraege",
+      "title": "Wächter besiegen",
+      "description": "Demo-Quest für Wöchentliche Piratenaufträge: Wächter besiegen. Die endgültigen Ziele folgen aus den ausgewerteten Mod-Daten und der Questplanung.",
+      "tasks": [
+        "Sammle passende Mod-Gegenstände (0/1)"
+      ],
+      "rewards": [
+        "400 Münzen",
+        "Beispielbelohnung"
+      ],
+      "rect": {
+        "x": 1024,
+        "y": 302,
+        "w": 144,
+        "h": 146
+      },
+      "icon": "textures/icons/04_woechentliche_piratenauftraege/04_zeitlimit.png",
+      "state": "demo_unfinished",
+      "render_reference_card": false,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "woechentliche_piratenauftraege_05",
+      "category": "woechentliche_piratenauftraege",
+      "title": "Schatzjäger-Prüfung",
+      "description": "Demo-Quest für Wöchentliche Piratenaufträge: Schatzjäger-Prüfung. Die endgültigen Ziele folgen aus den ausgewerteten Mod-Daten und der Questplanung.",
+      "tasks": [
+        "Erkunde das Gebiet (0/1)"
+      ],
+      "rewards": [
+        "500 Münzen",
+        "Beispielbelohnung"
+      ],
+      "rect": {
+        "x": 850,
+        "y": 512,
+        "w": 144,
+        "h": 146
+      },
+      "icon": "textures/icons/04_woechentliche_piratenauftraege/05_wiederholung.png",
+      "state": "demo_unfinished",
+      "render_reference_card": false,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "geheimnisse_und_erfolge_01",
+      "category": "geheimnisse_und_erfolge",
+      "title": "Der versiegelte Raum",
+      "description": "Demo-Quest für Geheimnisse und Erfolge: Der versiegelte Raum. Die endgültigen Ziele folgen aus den ausgewerteten Mod-Daten und der Questplanung.",
+      "tasks": [
+        "Sammle passende Mod-Gegenstände (0/1)"
+      ],
+      "rewards": [
+        "100 Münzen",
+        "Beispielbelohnung"
+      ],
+      "rect": {
+        "x": 482,
+        "y": 302,
+        "w": 144,
+        "h": 146
+      },
+      "icon": "textures/icons/05_geheimnisse_und_erfolge/01_offenes_entdeckerbuch.png",
+      "state": "demo_unfinished",
+      "render_reference_card": false,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "geheimnisse_und_erfolge_02",
+      "category": "geheimnisse_und_erfolge",
+      "title": "Ein alter Kompass",
+      "description": "Demo-Quest für Geheimnisse und Erfolge: Ein alter Kompass. Die endgültigen Ziele folgen aus den ausgewerteten Mod-Daten und der Questplanung.",
+      "tasks": [
+        "Erkunde das Gebiet (0/1)"
+      ],
+      "rewards": [
+        "200 Münzen",
+        "Beispielbelohnung"
+      ],
+      "rect": {
+        "x": 658,
+        "y": 302,
+        "w": 144,
+        "h": 146
+      },
+      "icon": "textures/icons/05_geheimnisse_und_erfolge/02_magisches_buch.png",
+      "state": "demo_unfinished",
+      "render_reference_card": false,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "geheimnisse_und_erfolge_03",
+      "category": "geheimnisse_und_erfolge",
+      "title": "Vergessene Ruinen",
+      "description": "Demo-Quest für Geheimnisse und Erfolge: Vergessene Ruinen. Die endgültigen Ziele folgen aus den ausgewerteten Mod-Daten und der Questplanung.",
+      "tasks": [
+        "Sprich mit dem Questgeber (0/1)"
+      ],
+      "rewards": [
+        "300 Münzen",
+        "Beispielbelohnung"
+      ],
+      "rect": {
+        "x": 845,
+        "y": 302,
+        "w": 144,
+        "h": 146
+      },
+      "icon": "textures/icons/05_geheimnisse_und_erfolge/03_zaubertrank.png",
+      "state": "demo_unfinished",
+      "render_reference_card": false,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "geheimnisse_und_erfolge_04",
+      "category": "geheimnisse_und_erfolge",
+      "title": "Das Unterwassergeheimnis",
+      "description": "Demo-Quest für Geheimnisse und Erfolge: Das Unterwassergeheimnis. Die endgültigen Ziele folgen aus den ausgewerteten Mod-Daten und der Questplanung.",
+      "tasks": [
+        "Sammle passende Mod-Gegenstände (0/1)"
+      ],
+      "rewards": [
+        "400 Münzen",
+        "Beispielbelohnung"
+      ],
+      "rect": {
+        "x": 1024,
+        "y": 302,
+        "w": 144,
+        "h": 146
+      },
+      "icon": "textures/icons/05_geheimnisse_und_erfolge/04_goldstern.png",
+      "state": "demo_unfinished",
+      "render_reference_card": false,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "geheimnisse_und_erfolge_05",
+      "category": "geheimnisse_und_erfolge",
+      "title": "Seltene Artefakte",
+      "description": "Demo-Quest für Geheimnisse und Erfolge: Seltene Artefakte. Die endgültigen Ziele folgen aus den ausgewerteten Mod-Daten und der Questplanung.",
+      "tasks": [
+        "Erkunde das Gebiet (0/1)"
+      ],
+      "rewards": [
+        "500 Münzen",
+        "Beispielbelohnung"
+      ],
+      "rect": {
+        "x": 850,
+        "y": 512,
+        "w": 144,
+        "h": 146
+      },
+      "icon": "textures/icons/05_geheimnisse_und_erfolge/05_lorbeerkranz.png",
+      "state": "demo_unfinished",
+      "render_reference_card": false,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "farming_und_landwirtschaft_01",
+      "category": "farming_und_landwirtschaft",
+      "title": "Die erste Aussaat",
+      "description": "Demo-Quest für Farming & Landwirtschaft: Die erste Aussaat. Die endgültigen Ziele folgen aus den ausgewerteten Mod-Daten und der Questplanung.",
+      "tasks": [
+        "Sammle passende Mod-Gegenstände (0/1)"
+      ],
+      "rewards": [
+        "100 Münzen",
+        "Beispielbelohnung"
+      ],
+      "rect": {
+        "x": 482,
+        "y": 302,
+        "w": 144,
+        "h": 146
+      },
+      "icon": "textures/icons/06_farming_und_landwirtschaft/01_weizen.png",
+      "state": "demo_unfinished",
+      "render_reference_card": false,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "farming_und_landwirtschaft_02",
+      "category": "farming_und_landwirtschaft",
+      "title": "Kokosnüsse ernten",
+      "description": "Demo-Quest für Farming & Landwirtschaft: Kokosnüsse ernten. Die endgültigen Ziele folgen aus den ausgewerteten Mod-Daten und der Questplanung.",
+      "tasks": [
+        "Erkunde das Gebiet (0/1)"
+      ],
+      "rewards": [
+        "200 Münzen",
+        "Beispielbelohnung"
+      ],
+      "rect": {
+        "x": 658,
+        "y": 302,
+        "w": 144,
+        "h": 146
+      },
+      "icon": "textures/icons/06_farming_und_landwirtschaft/02_karotte.png",
+      "state": "demo_unfinished",
+      "render_reference_card": false,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "farming_und_landwirtschaft_03",
+      "category": "farming_und_landwirtschaft",
+      "title": "Frischen Fisch kochen",
+      "description": "Demo-Quest für Farming & Landwirtschaft: Frischen Fisch kochen. Die endgültigen Ziele folgen aus den ausgewerteten Mod-Daten und der Questplanung.",
+      "tasks": [
+        "Sprich mit dem Questgeber (0/1)"
+      ],
+      "rewards": [
+        "300 Münzen",
+        "Beispielbelohnung"
+      ],
+      "rect": {
+        "x": 845,
+        "y": 302,
+        "w": 144,
+        "h": 146
+      },
+      "icon": "textures/icons/06_farming_und_landwirtschaft/03_kartoffel.png",
+      "state": "demo_unfinished",
+      "render_reference_card": false,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "farming_und_landwirtschaft_04",
+      "category": "farming_und_landwirtschaft",
+      "title": "Vorräte anlegen",
+      "description": "Demo-Quest für Farming & Landwirtschaft: Vorräte anlegen. Die endgültigen Ziele folgen aus den ausgewerteten Mod-Daten und der Questplanung.",
+      "tasks": [
+        "Sammle passende Mod-Gegenstände (0/1)"
+      ],
+      "rewards": [
+        "400 Münzen",
+        "Beispielbelohnung"
+      ],
+      "rect": {
+        "x": 1024,
+        "y": 302,
+        "w": 144,
+        "h": 146
+      },
+      "icon": "textures/icons/06_farming_und_landwirtschaft/04_rote_beete.png",
+      "state": "demo_unfinished",
+      "render_reference_card": false,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "farming_und_landwirtschaft_05",
+      "category": "farming_und_landwirtschaft",
+      "title": "Die große Ernte",
+      "description": "Demo-Quest für Farming & Landwirtschaft: Die große Ernte. Die endgültigen Ziele folgen aus den ausgewerteten Mod-Daten und der Questplanung.",
+      "tasks": [
+        "Erkunde das Gebiet (0/1)"
+      ],
+      "rewards": [
+        "500 Münzen",
+        "Beispielbelohnung"
+      ],
+      "rect": {
+        "x": 850,
+        "y": 512,
+        "w": 144,
+        "h": 146
+      },
+      "icon": "textures/icons/06_farming_und_landwirtschaft/05_kirschen.png",
+      "state": "demo_unfinished",
+      "render_reference_card": false,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "mining_und_rohstoffe_01",
+      "category": "mining_und_rohstoffe",
+      "title": "Der erste Erzfund",
+      "description": "Demo-Quest für Mining und Rohstoffe: Der erste Erzfund. Die endgültigen Ziele folgen aus den ausgewerteten Mod-Daten und der Questplanung.",
+      "tasks": [
+        "Sammle passende Mod-Gegenstände (0/1)"
+      ],
+      "rewards": [
+        "100 Münzen",
+        "Beispielbelohnung"
+      ],
+      "rect": {
+        "x": 482,
+        "y": 302,
+        "w": 144,
+        "h": 146
+      },
+      "icon": "textures/icons/07_mining_und_rohstoffe/01_eisenerz.png",
+      "state": "demo_unfinished",
+      "render_reference_card": false,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "mining_und_rohstoffe_02",
+      "category": "mining_und_rohstoffe",
+      "title": "Kupfer für die Werft",
+      "description": "Demo-Quest für Mining und Rohstoffe: Kupfer für die Werft. Die endgültigen Ziele folgen aus den ausgewerteten Mod-Daten und der Questplanung.",
+      "tasks": [
+        "Erkunde das Gebiet (0/1)"
+      ],
+      "rewards": [
+        "200 Münzen",
+        "Beispielbelohnung"
+      ],
+      "rect": {
+        "x": 658,
+        "y": 302,
+        "w": 144,
+        "h": 146
+      },
+      "icon": "textures/icons/07_mining_und_rohstoffe/02_golderz.png",
+      "state": "demo_unfinished",
+      "render_reference_card": false,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "mining_und_rohstoffe_03",
+      "category": "mining_und_rohstoffe",
+      "title": "Diamanten aus der Tiefe",
+      "description": "Demo-Quest für Mining und Rohstoffe: Diamanten aus der Tiefe. Die endgültigen Ziele folgen aus den ausgewerteten Mod-Daten und der Questplanung.",
+      "tasks": [
+        "Sprich mit dem Questgeber (0/1)"
+      ],
+      "rewards": [
+        "300 Münzen",
+        "Beispielbelohnung"
+      ],
+      "rect": {
+        "x": 845,
+        "y": 302,
+        "w": 144,
+        "h": 146
+      },
+      "icon": "textures/icons/07_mining_und_rohstoffe/03_diamanterz.png",
+      "state": "demo_unfinished",
+      "render_reference_card": false,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "mining_und_rohstoffe_04",
+      "category": "mining_und_rohstoffe",
+      "title": "Eine unbekannte Höhle",
+      "description": "Demo-Quest für Mining und Rohstoffe: Eine unbekannte Höhle. Die endgültigen Ziele folgen aus den ausgewerteten Mod-Daten und der Questplanung.",
+      "tasks": [
+        "Sammle passende Mod-Gegenstände (0/1)"
+      ],
+      "rewards": [
+        "400 Münzen",
+        "Beispielbelohnung"
+      ],
+      "rect": {
+        "x": 1024,
+        "y": 302,
+        "w": 144,
+        "h": 146
+      },
+      "icon": "textures/icons/07_mining_und_rohstoffe/04_smaragderz.png",
+      "state": "demo_unfinished",
+      "render_reference_card": false,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "mining_und_rohstoffe_05",
+      "category": "mining_und_rohstoffe",
+      "title": "Der Meisterschmied",
+      "description": "Demo-Quest für Mining und Rohstoffe: Der Meisterschmied. Die endgültigen Ziele folgen aus den ausgewerteten Mod-Daten und der Questplanung.",
+      "tasks": [
+        "Erkunde das Gebiet (0/1)"
+      ],
+      "rewards": [
+        "500 Münzen",
+        "Beispielbelohnung"
+      ],
+      "rect": {
+        "x": 850,
+        "y": 512,
+        "w": 144,
+        "h": 146
+      },
+      "icon": "textures/icons/07_mining_und_rohstoffe/05_redstoneerz.png",
+      "state": "demo_unfinished",
+      "render_reference_card": false,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "holzfaellen_01",
+      "category": "holzfaellen",
+      "title": "Holz für die Crew",
+      "description": "Demo-Quest für Holzfällen: Holz für die Crew. Die endgültigen Ziele folgen aus den ausgewerteten Mod-Daten und der Questplanung.",
+      "tasks": [
+        "Sammle passende Mod-Gegenstände (0/1)"
+      ],
+      "rewards": [
+        "100 Münzen",
+        "Beispielbelohnung"
+      ],
+      "rect": {
+        "x": 482,
+        "y": 302,
+        "w": 144,
+        "h": 146
+      },
+      "icon": "textures/icons/08_holzfaellen/01_eichenstamm.png",
+      "state": "demo_unfinished",
+      "render_reference_card": false,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "holzfaellen_02",
+      "category": "holzfaellen",
+      "title": "Stämme für den Kai",
+      "description": "Demo-Quest für Holzfällen: Stämme für den Kai. Die endgültigen Ziele folgen aus den ausgewerteten Mod-Daten und der Questplanung.",
+      "tasks": [
+        "Erkunde das Gebiet (0/1)"
+      ],
+      "rewards": [
+        "200 Münzen",
+        "Beispielbelohnung"
+      ],
+      "rect": {
+        "x": 658,
+        "y": 302,
+        "w": 144,
+        "h": 146
+      },
+      "icon": "textures/icons/08_holzfaellen/02_birkenstamm.png",
+      "state": "demo_unfinished",
+      "render_reference_card": false,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "holzfaellen_03",
+      "category": "holzfaellen",
+      "title": "Seltene Baumarten",
+      "description": "Demo-Quest für Holzfällen: Seltene Baumarten. Die endgültigen Ziele folgen aus den ausgewerteten Mod-Daten und der Questplanung.",
+      "tasks": [
+        "Sprich mit dem Questgeber (0/1)"
+      ],
+      "rewards": [
+        "300 Münzen",
+        "Beispielbelohnung"
+      ],
+      "rect": {
+        "x": 845,
+        "y": 302,
+        "w": 144,
+        "h": 146
+      },
+      "icon": "textures/icons/08_holzfaellen/03_fichtenstamm.png",
+      "state": "demo_unfinished",
+      "render_reference_card": false,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "holzfaellen_04",
+      "category": "holzfaellen",
+      "title": "Werkholz herstellen",
+      "description": "Demo-Quest für Holzfällen: Werkholz herstellen. Die endgültigen Ziele folgen aus den ausgewerteten Mod-Daten und der Questplanung.",
+      "tasks": [
+        "Sammle passende Mod-Gegenstände (0/1)"
+      ],
+      "rewards": [
+        "400 Münzen",
+        "Beispielbelohnung"
+      ],
+      "rect": {
+        "x": 1024,
+        "y": 302,
+        "w": 144,
+        "h": 146
+      },
+      "icon": "textures/icons/08_holzfaellen/04_akazienstamm.png",
+      "state": "demo_unfinished",
+      "render_reference_card": false,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "holzfaellen_05",
+      "category": "holzfaellen",
+      "title": "Der große Schiffsbau",
+      "description": "Demo-Quest für Holzfällen: Der große Schiffsbau. Die endgültigen Ziele folgen aus den ausgewerteten Mod-Daten und der Questplanung.",
+      "tasks": [
+        "Erkunde das Gebiet (0/1)"
+      ],
+      "rewards": [
+        "500 Münzen",
+        "Beispielbelohnung"
+      ],
+      "rect": {
+        "x": 850,
+        "y": 512,
+        "w": 144,
+        "h": 146
+      },
+      "icon": "textures/icons/08_holzfaellen/05_mangrovenstamm.png",
+      "state": "demo_unfinished",
+      "render_reference_card": false,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "bauen_und_handwerk_01",
+      "category": "bauen_und_handwerk",
+      "title": "Werkbank des Freibeuters",
+      "description": "Demo-Quest für Bauen und Handwerk: Werkbank des Freibeuters. Die endgültigen Ziele folgen aus den ausgewerteten Mod-Daten und der Questplanung.",
+      "tasks": [
+        "Sammle passende Mod-Gegenstände (0/1)"
+      ],
+      "rewards": [
+        "100 Münzen",
+        "Beispielbelohnung"
+      ],
+      "rect": {
+        "x": 482,
+        "y": 302,
+        "w": 144,
+        "h": 146
+      },
+      "icon": "textures/icons/09_bauen_und_handwerk/01_werkbank.png",
+      "state": "demo_unfinished",
+      "render_reference_card": false,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "bauen_und_handwerk_02",
+      "category": "bauen_und_handwerk",
+      "title": "Seile und Tauwerk",
+      "description": "Demo-Quest für Bauen und Handwerk: Seile und Tauwerk. Die endgültigen Ziele folgen aus den ausgewerteten Mod-Daten und der Questplanung.",
+      "tasks": [
+        "Erkunde das Gebiet (0/1)"
+      ],
+      "rewards": [
+        "200 Münzen",
+        "Beispielbelohnung"
+      ],
+      "rect": {
+        "x": 658,
+        "y": 302,
+        "w": 144,
+        "h": 146
+      },
+      "icon": "textures/icons/09_bauen_und_handwerk/02_ofen.png",
+      "state": "demo_unfinished",
+      "render_reference_card": false,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "bauen_und_handwerk_03",
+      "category": "bauen_und_handwerk",
+      "title": "Eine sichere Truhe",
+      "description": "Demo-Quest für Bauen und Handwerk: Eine sichere Truhe. Die endgültigen Ziele folgen aus den ausgewerteten Mod-Daten und der Questplanung.",
+      "tasks": [
+        "Sprich mit dem Questgeber (0/1)"
+      ],
+      "rewards": [
+        "300 Münzen",
+        "Beispielbelohnung"
+      ],
+      "rect": {
+        "x": 845,
+        "y": 302,
+        "w": 144,
+        "h": 146
+      },
+      "icon": "textures/icons/09_bauen_und_handwerk/03_amboss.png",
+      "state": "demo_unfinished",
+      "render_reference_card": false,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "bauen_und_handwerk_04",
+      "category": "bauen_und_handwerk",
+      "title": "Der erste Bauplatz",
+      "description": "Demo-Quest für Bauen und Handwerk: Der erste Bauplatz. Die endgültigen Ziele folgen aus den ausgewerteten Mod-Daten und der Questplanung.",
+      "tasks": [
+        "Sammle passende Mod-Gegenstände (0/1)"
+      ],
+      "rewards": [
+        "400 Münzen",
+        "Beispielbelohnung"
+      ],
+      "rect": {
+        "x": 1024,
+        "y": 302,
+        "w": 144,
+        "h": 146
+      },
+      "icon": "textures/icons/09_bauen_und_handwerk/04_steinsaege.png",
+      "state": "demo_unfinished",
+      "render_reference_card": false,
+      "ftb_quest_id": ""
+    },
+    {
+      "id": "bauen_und_handwerk_05",
+      "category": "bauen_und_handwerk",
+      "title": "Die Hafensiedlung",
+      "description": "Demo-Quest für Bauen und Handwerk: Die Hafensiedlung. Die endgültigen Ziele folgen aus den ausgewerteten Mod-Daten und der Questplanung.",
+      "tasks": [
+        "Erkunde das Gebiet (0/1)"
+      ],
+      "rewards": [
+        "500 Münzen",
+        "Beispielbelohnung"
+      ],
+      "rect": {
+        "x": 850,
+        "y": 512,
+        "w": 144,
+        "h": 146
+      },
+      "icon": "textures/icons/09_bauen_und_handwerk/05_schmiedetisch.png",
+      "state": "demo_unfinished",
+      "render_reference_card": false,
+      "ftb_quest_id": ""
+    }
+  ]
+}

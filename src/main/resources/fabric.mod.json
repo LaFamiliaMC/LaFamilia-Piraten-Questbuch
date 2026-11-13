@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "lafamilia_questbook",
+  "version": "${version}",
+  "name": "La Familia Piraten-Questbuch",
+  "description": "Clientseitige grafische Vorschau der La Familia Piraten-Questbuch-Oberflaeche. Optionale nur-lesende FTB-Quests-Anbindung im Alpha-Test.",
+  "authors": ["La Familia"],
+  "environment": "client",
+  "entrypoints": {
+    "client": ["de.lafamilia.questbook.client.LaFamiliaQuestbookClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
