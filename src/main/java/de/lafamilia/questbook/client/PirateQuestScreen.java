@@ -219,6 +219,16 @@ public final class PirateQuestScreen extends Screen {
     private void center(DrawContext dc, String s, int x, int y, int color, float zoom) {
         text(dc, s, x - textWidth(s, zoom) / 2, y, color, zoom);
     }
+    private String fitText(String message, int maxWidth, float zoom) {
+        if (textWidth(message,zoom) <= maxWidth) return message;
+        String suffix = "…";
+        String value = message;
+        while (!value.isEmpty() && textWidth(value+suffix,zoom)>maxWidth) {
+            value = value.substring(0,value.length()-1);
+        }
+        return value+suffix;
+    }
+
     private void para(DrawContext dc, String s, int x, int y, int maxW, int maxLines, int color, float zoom, int spacing) {
         if (s == null || s.isBlank()) return;
         int line = 0; StringBuilder current = new StringBuilder();
@@ -291,8 +301,30 @@ public final class PirateQuestScreen extends Screen {
             }
             QuestCatalog.Quest first = catalog.forCategory(c.id()).stream().findFirst().orElse(null);
             if (first != null) picture(dc, tex(first.icon()), r.x()+14, r.y()+7, 43, 39);
-            float z = Math.min(1.83f, 257f / Math.max(1, strWidth(c.label())));
-            text(dc, c.label(), r.x()+76, r.y()+19, 0xFFFFF0CB, z);
+            // On a readable 2x pixel grid, a few German category titles require two lines.
+            // Keep text inside the existing decorative button instead of shrinking it to illegibility.
+            String label = c.label();
+            int maxLabelWidth = r.w() - 86;
+            float z = 1.65f;
+            if (textWidth(label, z) <= maxLabelWidth) {
+                text(dc, label, r.x()+75, r.y()+18, 0xFFFFF0CB, z);
+            } else {
+                String[] words = label.split(" ");
+                String first = "";
+                String second = "";
+                for (String word : words) {
+                    if (second.isEmpty() && (first.isEmpty() ||
+                        textWidth(first + " " + word, z) <= maxLabelWidth)) {
+                        first = first.isEmpty() ? word : first + " " + word;
+                    } else second = second.isEmpty() ? word : second + " " + word;
+                }
+                if (second.isEmpty() && words.length > 1) {
+                    int pos=first.lastIndexOf(' ');
+                    second=first.substring(pos+1); first=first.substring(0,pos);
+                }
+                text(dc, fitText(first,maxLabelWidth,z),r.x()+75,r.y()+7,0xFFFFF0CB,z);
+                text(dc, fitText(second,maxLabelWidth,z),r.x()+75,r.y()+27,0xFFFFF0CB,z);
+            }
         }
     }
     private void renderTree(DrawContext dc, float mx, float my) {
@@ -313,11 +345,12 @@ public final class PirateQuestScreen extends Screen {
         for (QuestCatalog.Quest q : items) {
             QuestCatalog.Rect r=q.rect();
             picture(dc, QUEST_FRAME, r.x(), r.y(), r.w(), r.h());
-            int iconSize = Math.min(83, Math.min(r.w()-34, r.h()-54));
-            picture(dc, tex(q.icon()), r.x()+(r.w()-iconSize)/2, r.y()+9, iconSize, iconSize);
+            // Reserve three full, readable font lines below the icon.
+            int iconSize = Math.max(20,Math.min(72,Math.min(r.w()-32,r.h()-68)));
+            picture(dc, tex(q.icon()), r.x()+(r.w()-iconSize)/2, r.y()+7, iconSize, iconSize);
             String label = q.title();
-            paraCentered(dc, label, r.x()+r.w()/2, r.y()+r.h()-43, r.w()-19,
-                2, 0xFFFFE6AA, 1.05f, 15);
+            paraCentered(dc, label, r.x()+r.w()/2, r.y()+r.h()-60, r.w()-19,
+                3, 0xFFFFE6AA, 1.10f, 18);
             FtbQuestBridge.Status status = (q==selected) ? ftbStatus() : null;
             if (status != null && status.connected() && status.completed())
                 center(dc, "✓", r.x()+r.w()-19, r.y()+8, 0xFF42FF72, 2.2f);
@@ -332,8 +365,12 @@ public final class PirateQuestScreen extends Screen {
         for (String word:s.split("\\s+")) {
             String next=row.isEmpty()?word:row+" "+word;
             if(textWidth(next,z)>maxW&&!row.isEmpty()) {
+                if (n == limit - 1) {
+                    center(dc,fitText(row.toString()+"…",maxW,z),cx,y+n*step,col,z);
+                    return;
+                }
                 center(dc,row.toString(),cx,y+n*step,col,z);
-                if(++n>=limit)return; row=new StringBuilder(word);
+                n++; row=new StringBuilder(word);
             }else row=new StringBuilder(next);
         }
         if(!row.isEmpty()&&n<limit)center(dc,row.toString(),cx,y+n*step,col,z);
@@ -389,7 +426,7 @@ public final class PirateQuestScreen extends Screen {
                 picture(dc,tex(demoIcons.get(index%demoIcons.size()).icon()),
                     r.x()+31,r.y()+9,66,65);
             }
-            paraCentered(dc,q.title(),r.x()+r.w()/2,r.y()+88,r.w()-12,2,0xFFFFDFA6,1.2f,16);
+            paraCentered(dc,q.title(),r.x()+r.w()/2,r.y()+r.h()-60,r.w()-12,3,0xFFFFDFA6,1.12f,18);
             if(q==selectedReal||r.contains(mx,my)) {
                 edge(dc,r.x()+2,r.y()+2,r.w()-4,r.h()-4,3,0xFFFFD36C);
             }
@@ -468,7 +505,7 @@ public final class PirateQuestScreen extends Screen {
         edge(dc,1352,755,239,34,3,0xFFD4B36D);
         center(dc,"FTB-Questbuch öffnen",1471,766,0xFFFFEAC8,1.42f);
         if(status.connected()) text(dc,status.label(),1323,738,0xFF4F371F,0.93f);
-        else text(dc,"Demo · FTB-Quest-ID noch nicht zugeordnet",1323,739,0xFF62442A,0.82f);
+        else text(dc,"Demo · ohne FTB-ID",1323,734,0xFF62442A,1.18f);
     }
     private void openOriginalFtb() {
         if (!FabricLoader.getInstance().isModLoaded("ftbquests")) return;
