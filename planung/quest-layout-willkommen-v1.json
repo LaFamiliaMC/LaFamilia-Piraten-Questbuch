@@ -33,7 +33,16 @@
           "assigned_station": "Kapitän",
           "npc_uuid": null,
           "logical_dependencies": [],
-          "shape": "hexagon"
+          "shape": "hexagon",
+          "rank_reward": {
+            "reward_type": "ftbquests:stage",
+            "stage": "lafamilia_rank_01_landratte",
+            "display_title": "Landratte",
+            "trigger": "after first NPC dialog quest completion / reward claim",
+            "once_per_player": true,
+            "note": "Stage Reward in FTB Quests; verify reward autocollection and per-player behavior with actual server before deployment."
+          },
+          "quest_text_addendum": "Der Kapitän erkennt dich als Landratte an – deinen ersten Rang in La Familia. Dieser Rang bildet den Anfang einer serverweiten Ranglaufbahn."
         },
         {
           "planning_id": "LF-L01-Q02",
@@ -1024,7 +1033,17 @@
           "logical_dependencies": [
             "LF-L08-Q01"
           ],
-          "shape": "hexagon"
+          "shape": "hexagon",
+          "rank_reward": {
+            "reward_type": "ftbquests:stage",
+            "stage": "lafamilia_rank_02_deckjunge",
+            "display_title": "Deckjunge",
+            "trigger": "intro quest finale completion / reward claim",
+            "once_per_player": true,
+            "replaces_stage": "lafamilia_rank_01_landratte",
+            "note": "Alte Rangstage nach Vergabe entfernen; nur einen aktiven Rang je Spieler behalten."
+          },
+          "quest_text_addendum": "Du wirst zum Deckjungen befördert. Landratte war bereits der Rang der ersten Quest, nicht erst der Abschluss."
         },
         {
           "planning_id": "LF-L08-Q03",
@@ -1106,5 +1125,21 @@
     "count_icons": 10,
     "assigned_quest_count": 25,
     "note": "Zehn separate PNG-Icons sind als ZIP in der zugehörigen Chat-Konversation verfügbar; die Bilddateien selbst wurden noch nicht auf GitHub hochgeladen. Mapping ist eine Planung, kein ausgeführter FTB-Quests-Import."
+  },
+  "rank_design": {
+    "scheme_ref": "planung/rangsystem-und-bosskonzept-v1.json",
+    "first_quest_id": "LF-L01-Q01",
+    "first_rank": "Landratte",
+    "intro_end_quest_id": "LF-L08-Q02",
+    "intro_end_rank": "Deckjunge",
+    "global_quest_target": 2000,
+    "rank_valid_for": "alle Kapitel des Gesamtquestbuchs",
+    "game_stages_over_permissions_plugin": true
+  },
+  "world_design": {
+    "user_decision": "Keine selbstgebauten oder eigens von uns erstellten Dungeons für Quests",
+    "allow": "Vorhandene Dungeons/Strukturen, Dimensionen und Bossgegner der tatsächlich installierten Mods plus Vanilla",
+    "boss_npc_policy": "Vorhandene Mod-Bosse und ggf. existierende Boss-NPCs nutzen; genaue Auswahl nach Modpack-Analyse, keine erfundenen Boss-IDs",
+    "distinction": "EasyNPC-Shop/Dialogfiguren sind Questgeber; kein automatischer Bosskampf durch bloßen NPC-Eintrag."
   }
 }
