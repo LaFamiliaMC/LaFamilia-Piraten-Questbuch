@@ -9,7 +9,7 @@
     "main_quest_line": "Pro Kapitel nur die beiden Hauptquests mit sichtbarer horizontaler Linie verbinden",
     "optional_quests": "Vier Nebenquests pro Kapitel in unterer Reihe; optional, keine sichtbaren Linien",
     "inter_chapter": "Fortschritts-Abhängigkeit zwischen Hauptquests verschiedener Kapitel, ohne sichtbare Quer-Verbindungen auf derselben Seite",
-    "unlocking": "Nebenquests dürfen mit Kapitelstart oder Storyfortschritt freigeschaltet werden; unsichtbare Abhängigkeiten separat prüfen",
+    "unlocking": "Jede optionale Quest hat eine verborgene (linienlose) logische Abhängigkeit von der ersten Hauptquest ihres Kapitels; Kapitel-Hauptquests 1 benötigen jeweils den zweiten Hauptquest des Vorgängerkapitels.",
     "background": "Leere Piratenhafen-Dekoration ohne vorgezeichnete Icons, Questfenster oder Texte",
     "shop_preservation": "Bestehende Händler-Shops und deren Preise nicht ändern",
     "note": "UUID-Zuordnungen aus früheren Shop-Chats; vor Echtimport mit Server-Shopkonfiguration verifizieren"
@@ -31,7 +31,9 @@
           "hide_dependency_lines": false,
           "optional": false,
           "assigned_station": "Kapitän",
-          "npc_uuid": null
+          "npc_uuid": null,
+          "logical_dependencies": [],
+          "shape": "hexagon"
         },
         {
           "planning_id": "LF-L01-Q02",
@@ -45,7 +47,11 @@
           "hide_dependency_lines": false,
           "optional": false,
           "assigned_station": "Hafenmeister",
-          "npc_uuid": null
+          "npc_uuid": null,
+          "logical_dependencies": [
+            "LF-L01-Q01"
+          ],
+          "shape": "hexagon"
         },
         {
           "planning_id": "LF-L01-Q03",
@@ -59,7 +65,11 @@
           "hide_dependency_lines": true,
           "optional": true,
           "assigned_station": "Hafenwache",
-          "npc_uuid": null
+          "npc_uuid": null,
+          "logical_dependencies": [
+            "LF-L01-Q01"
+          ],
+          "shape": "circle"
         },
         {
           "planning_id": "LF-L01-Q04",
@@ -73,7 +83,11 @@
           "hide_dependency_lines": true,
           "optional": true,
           "assigned_station": "Hafenmeister",
-          "npc_uuid": null
+          "npc_uuid": null,
+          "logical_dependencies": [
+            "LF-L01-Q01"
+          ],
+          "shape": "circle"
         },
         {
           "planning_id": "LF-L01-Q05",
@@ -87,7 +101,11 @@
           "hide_dependency_lines": true,
           "optional": true,
           "assigned_station": "Kapitän",
-          "npc_uuid": null
+          "npc_uuid": null,
+          "logical_dependencies": [
+            "LF-L01-Q01"
+          ],
+          "shape": "circle"
         },
         {
           "planning_id": "LF-L01-Q06",
@@ -101,7 +119,11 @@
           "hide_dependency_lines": true,
           "optional": true,
           "assigned_station": "Hafenglocke",
-          "npc_uuid": null
+          "npc_uuid": null,
+          "logical_dependencies": [
+            "LF-L01-Q01"
+          ],
+          "shape": "circle"
         }
       ]
     },
@@ -121,7 +143,11 @@
           "hide_dependency_lines": false,
           "optional": false,
           "assigned_station": "Fässer & Schiffsvorräte",
-          "npc_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d"
+          "npc_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
+          "logical_dependencies": [
+            "LF-L01-Q02"
+          ],
+          "shape": "hexagon"
         },
         {
           "planning_id": "LF-L02-Q02",
@@ -135,7 +161,11 @@
           "hide_dependency_lines": false,
           "optional": false,
           "assigned_station": "Holzfäller",
-          "npc_uuid": "b424fb91-290c-422e-9475-970a1fc4ec64"
+          "npc_uuid": "b424fb91-290c-422e-9475-970a1fc4ec64",
+          "logical_dependencies": [
+            "LF-L02-Q01"
+          ],
+          "shape": "hexagon"
         },
         {
           "planning_id": "LF-L02-Q03",
@@ -149,7 +179,11 @@
           "hide_dependency_lines": true,
           "optional": true,
           "assigned_station": "Fässer & Schiffsvorräte",
-          "npc_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d"
+          "npc_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
+          "logical_dependencies": [
+            "LF-L02-Q01"
+          ],
+          "shape": "circle"
         },
         {
           "planning_id": "LF-L02-Q04",
@@ -163,7 +197,11 @@
           "hide_dependency_lines": true,
           "optional": true,
           "assigned_station": "Fässer & Schiffsvorräte",
-          "npc_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d"
+          "npc_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
+          "logical_dependencies": [
+            "LF-L02-Q01"
+          ],
+          "shape": "circle"
         },
         {
           "planning_id": "LF-L02-Q05",
@@ -177,7 +215,11 @@
           "hide_dependency_lines": true,
           "optional": true,
           "assigned_station": "Betten & Schränke",
-          "npc_uuid": "b0c6014c-28f4-46f8-840c-cd6fa958d7d9"
+          "npc_uuid": "b0c6014c-28f4-46f8-840c-cd6fa958d7d9",
+          "logical_dependencies": [
+            "LF-L02-Q01"
+          ],
+          "shape": "circle"
         },
         {
           "planning_id": "LF-L02-Q06",
@@ -191,7 +233,11 @@
           "hide_dependency_lines": true,
           "optional": true,
           "assigned_station": "Kerzen & Laternen",
-          "npc_uuid": "492d0ebe-2b7c-4b18-b7e5-5276e8e5a21f"
+          "npc_uuid": "492d0ebe-2b7c-4b18-b7e5-5276e8e5a21f",
+          "logical_dependencies": [
+            "LF-L02-Q01"
+          ],
+          "shape": "circle"
         }
       ]
     },
@@ -211,7 +257,11 @@
           "hide_dependency_lines": false,
           "optional": false,
           "assigned_station": "Ackerbauhändler",
-          "npc_uuid": "4d47e0db-5ca7-463a-b45e-b43edf3dc7d9"
+          "npc_uuid": "4d47e0db-5ca7-463a-b45e-b43edf3dc7d9",
+          "logical_dependencies": [
+            "LF-L02-Q02"
+          ],
+          "shape": "hexagon"
         },
         {
           "planning_id": "LF-L03-Q02",
@@ -225,7 +275,11 @@
           "hide_dependency_lines": false,
           "optional": false,
           "assigned_station": "Geschirr & Küchenwaren",
-          "npc_uuid": "b9150d76-1221-40eb-9736-867be277fdef"
+          "npc_uuid": "b9150d76-1221-40eb-9736-867be277fdef",
+          "logical_dependencies": [
+            "LF-L03-Q01"
+          ],
+          "shape": "hexagon"
         },
         {
           "planning_id": "LF-L03-Q03",
@@ -239,7 +293,11 @@
           "hide_dependency_lines": true,
           "optional": true,
           "assigned_station": "Ackerbauhändler",
-          "npc_uuid": "4d47e0db-5ca7-463a-b45e-b43edf3dc7d9"
+          "npc_uuid": "4d47e0db-5ca7-463a-b45e-b43edf3dc7d9",
+          "logical_dependencies": [
+            "LF-L03-Q01"
+          ],
+          "shape": "circle"
         },
         {
           "planning_id": "LF-L03-Q04",
@@ -253,7 +311,11 @@
           "hide_dependency_lines": true,
           "optional": true,
           "assigned_station": "Fischerei (Aufgabe)",
-          "npc_uuid": null
+          "npc_uuid": null,
+          "logical_dependencies": [
+            "LF-L03-Q01"
+          ],
+          "shape": "circle"
         },
         {
           "planning_id": "LF-L03-Q05",
@@ -267,7 +329,11 @@
           "hide_dependency_lines": true,
           "optional": true,
           "assigned_station": "Geschirr & Küchenwaren",
-          "npc_uuid": "b9150d76-1221-40eb-9736-867be277fdef"
+          "npc_uuid": "b9150d76-1221-40eb-9736-867be277fdef",
+          "logical_dependencies": [
+            "LF-L03-Q01"
+          ],
+          "shape": "circle"
         },
         {
           "planning_id": "LF-L03-Q06",
@@ -281,7 +347,11 @@
           "hide_dependency_lines": true,
           "optional": true,
           "assigned_station": "Fässer & Schiffsvorräte",
-          "npc_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d"
+          "npc_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
+          "logical_dependencies": [
+            "LF-L03-Q01"
+          ],
+          "shape": "circle"
         }
       ]
     },
@@ -301,7 +371,11 @@
           "hide_dependency_lines": false,
           "optional": false,
           "assigned_station": "Natur- und Pflanzenhändler",
-          "npc_uuid": "ea1411ed-9189-495a-96e1-35c0a49291bb"
+          "npc_uuid": "ea1411ed-9189-495a-96e1-35c0a49291bb",
+          "logical_dependencies": [
+            "LF-L03-Q02"
+          ],
+          "shape": "hexagon"
         },
         {
           "planning_id": "LF-L04-Q02",
@@ -315,7 +389,11 @@
           "hide_dependency_lines": false,
           "optional": false,
           "assigned_station": "Stein- und Erdhändler",
-          "npc_uuid": "90bad3cc-0327-4c95-998c-edcba16f477e"
+          "npc_uuid": "90bad3cc-0327-4c95-998c-edcba16f477e",
+          "logical_dependencies": [
+            "LF-L04-Q01"
+          ],
+          "shape": "hexagon"
         },
         {
           "planning_id": "LF-L04-Q03",
@@ -329,7 +407,11 @@
           "hide_dependency_lines": true,
           "optional": true,
           "assigned_station": "Holzfäller",
-          "npc_uuid": "b424fb91-290c-422e-9475-970a1fc4ec64"
+          "npc_uuid": "b424fb91-290c-422e-9475-970a1fc4ec64",
+          "logical_dependencies": [
+            "LF-L04-Q01"
+          ],
+          "shape": "circle"
         },
         {
           "planning_id": "LF-L04-Q04",
@@ -343,7 +425,11 @@
           "hide_dependency_lines": true,
           "optional": true,
           "assigned_station": "Stein- und Erdhändler",
-          "npc_uuid": "90bad3cc-0327-4c95-998c-edcba16f477e"
+          "npc_uuid": "90bad3cc-0327-4c95-998c-edcba16f477e",
+          "logical_dependencies": [
+            "LF-L04-Q01"
+          ],
+          "shape": "circle"
         },
         {
           "planning_id": "LF-L04-Q05",
@@ -357,7 +443,11 @@
           "hide_dependency_lines": true,
           "optional": true,
           "assigned_station": "Werkzeug & Werkstattbedarf",
-          "npc_uuid": "34cf18e4-8c19-4d49-97fb-49b1a7ef9909"
+          "npc_uuid": "34cf18e4-8c19-4d49-97fb-49b1a7ef9909",
+          "logical_dependencies": [
+            "LF-L04-Q01"
+          ],
+          "shape": "circle"
         },
         {
           "planning_id": "LF-L04-Q06",
@@ -371,7 +461,11 @@
           "hide_dependency_lines": true,
           "optional": true,
           "assigned_station": "Decocraft Nature",
-          "npc_uuid": "c9f6d74e-35ba-4083-8688-013d7ecbd161"
+          "npc_uuid": "c9f6d74e-35ba-4083-8688-013d7ecbd161",
+          "logical_dependencies": [
+            "LF-L04-Q01"
+          ],
+          "shape": "circle"
         }
       ]
     },
@@ -391,7 +485,11 @@
           "hide_dependency_lines": false,
           "optional": false,
           "assigned_station": "Werkzeug & Werkstattbedarf",
-          "npc_uuid": "34cf18e4-8c19-4d49-97fb-49b1a7ef9909"
+          "npc_uuid": "34cf18e4-8c19-4d49-97fb-49b1a7ef9909",
+          "logical_dependencies": [
+            "LF-L04-Q02"
+          ],
+          "shape": "hexagon"
         },
         {
           "planning_id": "LF-L05-Q02",
@@ -405,7 +503,11 @@
           "hide_dependency_lines": false,
           "optional": false,
           "assigned_station": "Tische & Stühle",
-          "npc_uuid": "94a2eb3d-4056-4be0-a1f9-00f2db3fdb66"
+          "npc_uuid": "94a2eb3d-4056-4be0-a1f9-00f2db3fdb66",
+          "logical_dependencies": [
+            "LF-L05-Q01"
+          ],
+          "shape": "hexagon"
         },
         {
           "planning_id": "LF-L05-Q03",
@@ -419,7 +521,11 @@
           "hide_dependency_lines": true,
           "optional": true,
           "assigned_station": "Werkzeug & Werkstattbedarf",
-          "npc_uuid": "34cf18e4-8c19-4d49-97fb-49b1a7ef9909"
+          "npc_uuid": "34cf18e4-8c19-4d49-97fb-49b1a7ef9909",
+          "logical_dependencies": [
+            "LF-L05-Q01"
+          ],
+          "shape": "circle"
         },
         {
           "planning_id": "LF-L05-Q04",
@@ -433,7 +539,11 @@
           "hide_dependency_lines": true,
           "optional": true,
           "assigned_station": "Werkzeug & Werkstattbedarf",
-          "npc_uuid": "34cf18e4-8c19-4d49-97fb-49b1a7ef9909"
+          "npc_uuid": "34cf18e4-8c19-4d49-97fb-49b1a7ef9909",
+          "logical_dependencies": [
+            "LF-L05-Q01"
+          ],
+          "shape": "circle"
         },
         {
           "planning_id": "LF-L05-Q05",
@@ -447,7 +557,11 @@
           "hide_dependency_lines": true,
           "optional": true,
           "assigned_station": "Fässer & Schiffsvorräte",
-          "npc_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d"
+          "npc_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
+          "logical_dependencies": [
+            "LF-L05-Q01"
+          ],
+          "shape": "circle"
         },
         {
           "planning_id": "LF-L05-Q06",
@@ -461,7 +575,11 @@
           "hide_dependency_lines": true,
           "optional": true,
           "assigned_station": "Tische & Stühle",
-          "npc_uuid": "94a2eb3d-4056-4be0-a1f9-00f2db3fdb66"
+          "npc_uuid": "94a2eb3d-4056-4be0-a1f9-00f2db3fdb66",
+          "logical_dependencies": [
+            "LF-L05-Q01"
+          ],
+          "shape": "circle"
         }
       ]
     },
@@ -481,7 +599,11 @@
           "hide_dependency_lines": false,
           "optional": false,
           "assigned_station": "Fässer & Schiffsvorräte",
-          "npc_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d"
+          "npc_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
+          "logical_dependencies": [
+            "LF-L05-Q02"
+          ],
+          "shape": "hexagon"
         },
         {
           "planning_id": "LF-L06-Q02",
@@ -495,7 +617,11 @@
           "hide_dependency_lines": false,
           "optional": false,
           "assigned_station": "Kuriositäten & Reliquien",
-          "npc_uuid": "5cebee17-e91c-4832-b573-ac3e3a16bbac"
+          "npc_uuid": "5cebee17-e91c-4832-b573-ac3e3a16bbac",
+          "logical_dependencies": [
+            "LF-L06-Q01"
+          ],
+          "shape": "hexagon"
         },
         {
           "planning_id": "LF-L06-Q03",
@@ -509,7 +635,11 @@
           "hide_dependency_lines": true,
           "optional": true,
           "assigned_station": "Stein- und Erdhändler",
-          "npc_uuid": "90bad3cc-0327-4c95-998c-edcba16f477e"
+          "npc_uuid": "90bad3cc-0327-4c95-998c-edcba16f477e",
+          "logical_dependencies": [
+            "LF-L06-Q01"
+          ],
+          "shape": "circle"
         },
         {
           "planning_id": "LF-L06-Q04",
@@ -523,7 +653,11 @@
           "hide_dependency_lines": true,
           "optional": true,
           "assigned_station": "Decocraft Nature",
-          "npc_uuid": "c9f6d74e-35ba-4083-8688-013d7ecbd161"
+          "npc_uuid": "c9f6d74e-35ba-4083-8688-013d7ecbd161",
+          "logical_dependencies": [
+            "LF-L06-Q01"
+          ],
+          "shape": "circle"
         },
         {
           "planning_id": "LF-L06-Q05",
@@ -537,7 +671,11 @@
           "hide_dependency_lines": true,
           "optional": true,
           "assigned_station": "Plüschtiere & Kuscheltiere",
-          "npc_uuid": "af27de02-95ad-4f31-9729-7d8a692ef457"
+          "npc_uuid": "af27de02-95ad-4f31-9729-7d8a692ef457",
+          "logical_dependencies": [
+            "LF-L06-Q01"
+          ],
+          "shape": "circle"
         },
         {
           "planning_id": "LF-L06-Q06",
@@ -551,7 +689,11 @@
           "hide_dependency_lines": true,
           "optional": true,
           "assigned_station": "Fässer & Schiffsvorräte",
-          "npc_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d"
+          "npc_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
+          "logical_dependencies": [
+            "LF-L06-Q01"
+          ],
+          "shape": "circle"
         }
       ]
     },
@@ -571,7 +713,11 @@
           "hide_dependency_lines": false,
           "optional": false,
           "assigned_station": "Bücher & Karten",
-          "npc_uuid": "90f7528c-02f2-434c-82a0-6337b0892bc5"
+          "npc_uuid": "90f7528c-02f2-434c-82a0-6337b0892bc5",
+          "logical_dependencies": [
+            "LF-L06-Q02"
+          ],
+          "shape": "hexagon"
         },
         {
           "planning_id": "LF-L07-Q02",
@@ -585,7 +731,11 @@
           "hide_dependency_lines": false,
           "optional": false,
           "assigned_station": "Wegsteine & Teleporter",
-          "npc_uuid": "fd396e7e-311d-4681-a2f2-1ce03df1401d"
+          "npc_uuid": "fd396e7e-311d-4681-a2f2-1ce03df1401d",
+          "logical_dependencies": [
+            "LF-L07-Q01"
+          ],
+          "shape": "hexagon"
         },
         {
           "planning_id": "LF-L07-Q03",
@@ -599,7 +749,11 @@
           "hide_dependency_lines": true,
           "optional": true,
           "assigned_station": "Bücher & Karten",
-          "npc_uuid": "90f7528c-02f2-434c-82a0-6337b0892bc5"
+          "npc_uuid": "90f7528c-02f2-434c-82a0-6337b0892bc5",
+          "logical_dependencies": [
+            "LF-L07-Q01"
+          ],
+          "shape": "circle"
         },
         {
           "planning_id": "LF-L07-Q04",
@@ -613,7 +767,11 @@
           "hide_dependency_lines": true,
           "optional": true,
           "assigned_station": "Wegsteine & Teleporter",
-          "npc_uuid": "fd396e7e-311d-4681-a2f2-1ce03df1401d"
+          "npc_uuid": "fd396e7e-311d-4681-a2f2-1ce03df1401d",
+          "logical_dependencies": [
+            "LF-L07-Q01"
+          ],
+          "shape": "circle"
         },
         {
           "planning_id": "LF-L07-Q05",
@@ -627,7 +785,11 @@
           "hide_dependency_lines": true,
           "optional": true,
           "assigned_station": "Portalwächter",
-          "npc_uuid": null
+          "npc_uuid": null,
+          "logical_dependencies": [
+            "LF-L07-Q01"
+          ],
+          "shape": "circle"
         },
         {
           "planning_id": "LF-L07-Q06",
@@ -641,7 +803,11 @@
           "hide_dependency_lines": true,
           "optional": true,
           "assigned_station": "Portalwächter",
-          "npc_uuid": null
+          "npc_uuid": null,
+          "logical_dependencies": [
+            "LF-L07-Q01"
+          ],
+          "shape": "circle"
         }
       ]
     },
@@ -661,7 +827,11 @@
           "hide_dependency_lines": false,
           "optional": false,
           "assigned_station": "Hafenmeister",
-          "npc_uuid": null
+          "npc_uuid": null,
+          "logical_dependencies": [
+            "LF-L07-Q02"
+          ],
+          "shape": "hexagon"
         },
         {
           "planning_id": "LF-L08-Q02",
@@ -675,7 +845,11 @@
           "hide_dependency_lines": false,
           "optional": false,
           "assigned_station": "Kapitän",
-          "npc_uuid": null
+          "npc_uuid": null,
+          "logical_dependencies": [
+            "LF-L08-Q01"
+          ],
+          "shape": "hexagon"
         },
         {
           "planning_id": "LF-L08-Q03",
@@ -689,7 +863,11 @@
           "hide_dependency_lines": true,
           "optional": true,
           "assigned_station": "Hafenmeister",
-          "npc_uuid": null
+          "npc_uuid": null,
+          "logical_dependencies": [
+            "LF-L08-Q01"
+          ],
+          "shape": "circle"
         },
         {
           "planning_id": "LF-L08-Q04",
@@ -703,7 +881,11 @@
           "hide_dependency_lines": true,
           "optional": true,
           "assigned_station": "Kapitän",
-          "npc_uuid": null
+          "npc_uuid": null,
+          "logical_dependencies": [
+            "LF-L08-Q01"
+          ],
+          "shape": "circle"
         },
         {
           "planning_id": "LF-L08-Q05",
@@ -717,7 +899,11 @@
           "hide_dependency_lines": true,
           "optional": true,
           "assigned_station": "Kapitän",
-          "npc_uuid": null
+          "npc_uuid": null,
+          "logical_dependencies": [
+            "LF-L08-Q01"
+          ],
+          "shape": "circle"
         },
         {
           "planning_id": "LF-L08-Q06",
@@ -731,7 +917,11 @@
           "hide_dependency_lines": true,
           "optional": true,
           "assigned_station": "Kapitän",
-          "npc_uuid": null
+          "npc_uuid": null,
+          "logical_dependencies": [
+            "LF-L08-Q01"
+          ],
+          "shape": "circle"
         }
       ]
     }
