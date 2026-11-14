@@ -40,7 +40,8 @@
             "display_title": "Landratte",
             "trigger": "after first NPC dialog quest completion / reward claim",
             "once_per_player": true,
-            "note": "Stage Reward in FTB Quests; verify reward autocollection and per-player behavior with actual server before deployment."
+            "note": "Stage Reward in FTB Quests; verify reward autocollection and per-player behavior with actual server before deployment.",
+            "icon": "assets/lafamilia/textures/ftbquests/raenge/rang_01_landratte.png"
           },
           "quest_text_addendum": "Der Kapitän erkennt dich als Landratte an – deinen ersten Rang in La Familia. Dieser Rang bildet den Anfang einer serverweiten Ranglaufbahn."
         },
@@ -1041,7 +1042,8 @@
             "trigger": "intro quest finale completion / reward claim",
             "once_per_player": true,
             "replaces_stage": "lafamilia_rank_01_landratte",
-            "note": "Alte Rangstage nach Vergabe entfernen; nur einen aktiven Rang je Spieler behalten."
+            "note": "Alte Rangstage nach Vergabe entfernen; nur einen aktiven Rang je Spieler behalten.",
+            "icon": "assets/lafamilia/textures/ftbquests/raenge/rang_02_deckjunge.png"
           },
           "quest_text_addendum": "Du wirst zum Deckjungen befördert. Landratte war bereits der Rang der ersten Quest, nicht erst der Abschluss."
         },
@@ -1141,5 +1143,12 @@
     "allow": "Vorhandene Dungeons/Strukturen, Dimensionen und Bossgegner der tatsächlich installierten Mods plus Vanilla",
     "boss_npc_policy": "Vorhandene Mod-Bosse und ggf. existierende Boss-NPCs nutzen; genaue Auswahl nach Modpack-Analyse, keine erfundenen Boss-IDs",
     "distinction": "EasyNPC-Shop/Dialogfiguren sind Questgeber; kein automatischer Bosskampf durch bloßen NPC-Eintrag."
+  },
+  "repeatable_quest_policy": {
+    "daily_unlock": "after LF-L01-Q01 (only eligible tasks for player's progress)",
+    "weekly_unlock": "after LF-L08-Q02",
+    "recurring_icon_daily": "assets/lafamilia/textures/ftbquests/auftraege/taegliche_quests.png",
+    "recurring_icon_weekly": "assets/lafamilia/textures/ftbquests/auftraege/woechentliche_quests.png",
+    "repeatables_outside_intro_chapters": true
   }
 }
