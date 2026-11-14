@@ -147,7 +147,14 @@
           "logical_dependencies": [
             "LF-L01-Q02"
           ],
-          "shape": "hexagon"
+          "shape": "hexagon",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "faesser_schiffsvorraete.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/faesser_schiffsvorraete.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
         },
         {
           "planning_id": "LF-L02-Q02",
@@ -165,7 +172,14 @@
           "logical_dependencies": [
             "LF-L02-Q01"
           ],
-          "shape": "hexagon"
+          "shape": "hexagon",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "holzfaeller.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/holzfaeller.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
         },
         {
           "planning_id": "LF-L02-Q03",
@@ -183,7 +197,14 @@
           "logical_dependencies": [
             "LF-L02-Q01"
           ],
-          "shape": "circle"
+          "shape": "circle",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "faesser_schiffsvorraete.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/faesser_schiffsvorraete.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
         },
         {
           "planning_id": "LF-L02-Q04",
@@ -201,7 +222,14 @@
           "logical_dependencies": [
             "LF-L02-Q01"
           ],
-          "shape": "circle"
+          "shape": "circle",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "faesser_schiffsvorraete.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/faesser_schiffsvorraete.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
         },
         {
           "planning_id": "LF-L02-Q05",
@@ -219,7 +247,14 @@
           "logical_dependencies": [
             "LF-L02-Q01"
           ],
-          "shape": "circle"
+          "shape": "circle",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "betten_schraenke.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/betten_schraenke.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
         },
         {
           "planning_id": "LF-L02-Q06",
@@ -237,7 +272,14 @@
           "logical_dependencies": [
             "LF-L02-Q01"
           ],
-          "shape": "circle"
+          "shape": "circle",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "kerzen_laternen.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/kerzen_laternen.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
         }
       ]
     },
@@ -261,7 +303,14 @@
           "logical_dependencies": [
             "LF-L02-Q02"
           ],
-          "shape": "hexagon"
+          "shape": "hexagon",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "ackerbau.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/ackerbau.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
         },
         {
           "planning_id": "LF-L03-Q02",
@@ -279,7 +328,14 @@
           "logical_dependencies": [
             "LF-L03-Q01"
           ],
-          "shape": "hexagon"
+          "shape": "hexagon",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "geschirr_kuechenwaren.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/geschirr_kuechenwaren.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
         },
         {
           "planning_id": "LF-L03-Q03",
@@ -297,7 +353,14 @@
           "logical_dependencies": [
             "LF-L03-Q01"
           ],
-          "shape": "circle"
+          "shape": "circle",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "ackerbau.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/ackerbau.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
         },
         {
           "planning_id": "LF-L03-Q04",
@@ -333,7 +396,14 @@
           "logical_dependencies": [
             "LF-L03-Q01"
           ],
-          "shape": "circle"
+          "shape": "circle",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "geschirr_kuechenwaren.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/geschirr_kuechenwaren.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
         },
         {
           "planning_id": "LF-L03-Q06",
@@ -351,7 +421,14 @@
           "logical_dependencies": [
             "LF-L03-Q01"
           ],
-          "shape": "circle"
+          "shape": "circle",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "faesser_schiffsvorraete.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/faesser_schiffsvorraete.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
         }
       ]
     },
@@ -375,7 +452,14 @@
           "logical_dependencies": [
             "LF-L03-Q02"
           ],
-          "shape": "hexagon"
+          "shape": "hexagon",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "natur_pflanzen.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/natur_pflanzen.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
         },
         {
           "planning_id": "LF-L04-Q02",
@@ -393,7 +477,14 @@
           "logical_dependencies": [
             "LF-L04-Q01"
           ],
-          "shape": "hexagon"
+          "shape": "hexagon",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "stein_erde.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/stein_erde.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
         },
         {
           "planning_id": "LF-L04-Q03",
@@ -411,7 +502,14 @@
           "logical_dependencies": [
             "LF-L04-Q01"
           ],
-          "shape": "circle"
+          "shape": "circle",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "holzfaeller.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/holzfaeller.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
         },
         {
           "planning_id": "LF-L04-Q04",
@@ -429,7 +527,14 @@
           "logical_dependencies": [
             "LF-L04-Q01"
           ],
-          "shape": "circle"
+          "shape": "circle",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "stein_erde.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/stein_erde.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
         },
         {
           "planning_id": "LF-L04-Q05",
@@ -447,7 +552,14 @@
           "logical_dependencies": [
             "LF-L04-Q01"
           ],
-          "shape": "circle"
+          "shape": "circle",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "werkzeug_werkstattbedarf.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/werkzeug_werkstattbedarf.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
         },
         {
           "planning_id": "LF-L04-Q06",
@@ -489,7 +601,14 @@
           "logical_dependencies": [
             "LF-L04-Q02"
           ],
-          "shape": "hexagon"
+          "shape": "hexagon",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "werkzeug_werkstattbedarf.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/werkzeug_werkstattbedarf.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
         },
         {
           "planning_id": "LF-L05-Q02",
@@ -507,7 +626,14 @@
           "logical_dependencies": [
             "LF-L05-Q01"
           ],
-          "shape": "hexagon"
+          "shape": "hexagon",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "tische_stuehle.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/tische_stuehle.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
         },
         {
           "planning_id": "LF-L05-Q03",
@@ -525,7 +651,14 @@
           "logical_dependencies": [
             "LF-L05-Q01"
           ],
-          "shape": "circle"
+          "shape": "circle",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "werkzeug_werkstattbedarf.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/werkzeug_werkstattbedarf.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
         },
         {
           "planning_id": "LF-L05-Q04",
@@ -543,7 +676,14 @@
           "logical_dependencies": [
             "LF-L05-Q01"
           ],
-          "shape": "circle"
+          "shape": "circle",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "werkzeug_werkstattbedarf.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/werkzeug_werkstattbedarf.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
         },
         {
           "planning_id": "LF-L05-Q05",
@@ -561,7 +701,14 @@
           "logical_dependencies": [
             "LF-L05-Q01"
           ],
-          "shape": "circle"
+          "shape": "circle",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "faesser_schiffsvorraete.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/faesser_schiffsvorraete.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
         },
         {
           "planning_id": "LF-L05-Q06",
@@ -579,7 +726,14 @@
           "logical_dependencies": [
             "LF-L05-Q01"
           ],
-          "shape": "circle"
+          "shape": "circle",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "tische_stuehle.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/tische_stuehle.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
         }
       ]
     },
@@ -603,7 +757,14 @@
           "logical_dependencies": [
             "LF-L05-Q02"
           ],
-          "shape": "hexagon"
+          "shape": "hexagon",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "faesser_schiffsvorraete.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/faesser_schiffsvorraete.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
         },
         {
           "planning_id": "LF-L06-Q02",
@@ -639,7 +800,14 @@
           "logical_dependencies": [
             "LF-L06-Q01"
           ],
-          "shape": "circle"
+          "shape": "circle",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "stein_erde.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/stein_erde.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
         },
         {
           "planning_id": "LF-L06-Q04",
@@ -693,7 +861,14 @@
           "logical_dependencies": [
             "LF-L06-Q01"
           ],
-          "shape": "circle"
+          "shape": "circle",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "faesser_schiffsvorraete.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/faesser_schiffsvorraete.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
         }
       ]
     },
@@ -925,5 +1100,11 @@
         }
       ]
     }
-  ]
+  ],
+  "icon_asset_library": {
+    "set": "haendler_set_01",
+    "count_icons": 10,
+    "assigned_quest_count": 25,
+    "note": "Zehn separate PNG-Icons sind als ZIP in der zugehörigen Chat-Konversation verfügbar; die Bilddateien selbst wurden noch nicht auf GitHub hochgeladen. Mapping ist eine Planung, kein ausgeführter FTB-Quests-Import."
+  }
 }
