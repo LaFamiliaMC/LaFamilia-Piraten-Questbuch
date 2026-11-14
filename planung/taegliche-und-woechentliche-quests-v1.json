@@ -1,0 +1,93 @@
+{
+  "format": "LaFamilia Recurring Quest Design v1 (planning, not an installed FTB quest config)",
+  "game_version": "Fabric 1.21.1",
+  "goals": {
+    "global_total_quests": 2000,
+    "daily_pool_target": 30,
+    "weekly_pool_target": 15,
+    "initial_daily_available": 6,
+    "initial_weekly_available": 3
+  },
+  "dependencies": {
+    "daily_unlock_after": "LF-L01-Q01",
+    "weekly_unlock_after": "LF-L08-Q02",
+    "note": "Do not offer unreachable world tasks before world unlock"
+  },
+  "scheduling": {
+    "time_zone": "Europe/Berlin",
+    "daily_reset_local": "04:00",
+    "weekly_reset_weekday": "Monday",
+    "weekly_reset_local": "04:00",
+    "status": "Proposed default, confirm with ExtraQuests 2.0.1 config and daylight saving time"
+  },
+  "ranks": {
+    "repeatable_rank_stage_rewards": false,
+    "repeatable_rank_progress_awards": false,
+    "once_only_rank_milestones": true
+  },
+  "icons": {
+    "daily": "assets/lafamilia/textures/ftbquests/auftraege/taegliche_quests.png",
+    "weekly": "assets/lafamilia/textures/ftbquests/auftraege/woechentliche_quests.png",
+    "status": "Design files available separately in chat ZIP, not yet on GitHub"
+  },
+  "principles": [
+    "Independent daily and weekly chapters, never add long dependency lines to main story chapters.",
+    "Rotate among roleplay delivery, gathering, farming, fishing, crafting, exploration, trade and verified mob tasks.",
+    "No forced purchase of expensive Waystones, plushies or other rare shop goods.",
+    "Daily tasks should be achievable by new players; weekly tasks have more substantial scope.",
+    "Reusable task completion must not duplicate any one-off merchant, story, or rank reward.",
+    "Group/team payout duplication must be tested on server before activation.",
+    "Do not invent boss IDs, mod locations or dungeons; only confirmed modpack mobs/structures.",
+    "Adjust coin/item reward quantities after testing MiguelEconomy shop price balance."
+  ],
+  "daily_examples": [
+    {
+      "title": "Frischer Proviant",
+      "goal": "Lieferung einfacher Nahrungsmittel an Hafenversorgung",
+      "merchant": "Ackerbauhändler"
+    },
+    {
+      "title": "Holz für den Kai",
+      "goal": "Kleine Holzlieferung",
+      "merchant": "Holzfäller"
+    },
+    {
+      "title": "Bauarbeiten im Hafen",
+      "goal": "Gewöhnliche Steine oder Erde liefern",
+      "merchant": "Stein- und Erdhändler"
+    },
+    {
+      "title": "Licht ins Dunkel",
+      "goal": "Einige Beleuchtungsgegenstände beschaffen",
+      "merchant": "Kerzen & Laternen"
+    },
+    {
+      "title": "Die Hafenküche",
+      "goal": "Kleine Koch- oder Lieferaufgabe",
+      "merchant": "Geschirr & Küchenwaren"
+    },
+    {
+      "title": "Reisevorräte",
+      "goal": "Fässer oder gewöhnlichen Transportbedarf liefern",
+      "merchant": "Fässer & Schiffsvorräte"
+    }
+  ],
+  "weekly_examples": [
+    {
+      "title": "Große Hafenversorgung",
+      "goal": "Mehrstufige Handels- und Versorgungsaufgabe",
+      "npc_group": "Händler"
+    },
+    {
+      "title": "Gildenmeister der Woche",
+      "goal": "Berufsaufgaben aus mehreren verifizierten Modpack-Mechaniken",
+      "npc_group": "Berufe"
+    },
+    {
+      "title": "Expedition im Auftrag",
+      "goal": "Welt-Erkundung oder bestehende Modpack-Struktur; keine eigenen Dungeons",
+      "npc_group": "Erkundung"
+    }
+  ],
+  "deployment_status": "NOT installed on live server / not SNBT-generated"
+}
