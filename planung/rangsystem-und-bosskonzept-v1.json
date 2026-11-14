@@ -1,0 +1,137 @@
+{
+  "format": "LaFamilia Progression and Boss Design v1 (planning-only)",
+  "minecraft_version": "1.21.1",
+  "mod_loader": "Fabric",
+  "quest_count_target": 2000,
+  "title": "La Familia – Die Chroniken der Sieben Meere",
+  "status": "Design/Planung, keine installierte Serverkonfiguration",
+  "rules": {
+    "first_quest_grants_first_rank": true,
+    "first_quest_id": "LF-L01-Q01",
+    "first_quest_reward": "Landratte",
+    "lobby_finale_quest_id": "LF-L08-Q02",
+    "lobby_finale_reward": "Deckjunge",
+    "persistent_player_rank": true,
+    "rank_replacement": "When promoting remove previous stage; keep one active rank",
+    "no_luckperms_required": "FTB Library/Quests Stage Rewards as stage flags; does not itself guarantee scoreboard/chat/name tag prefix",
+    "progress_model": "Beständige, einmalige Story-, Berufs-, Entdeckungs- und Boss-Meilensteine; keine repetitiven Daily/Weekly-Farmränge",
+    "avoid_quest_count_grind": "Kein Zwang alle 2000 Quests abzuschließen; exakte Gesamt-Zahl und Meilensteine erst nach Erstellung aller Kategorien festlegen",
+    "group_vs_player": "Rang pro Spieler vergeben, auch bei gemeinsamem FTB-Teamfortschritt separat testen",
+    "reward_claim": "Autoclaim der Stage-Belohnung nach Questabschluss prüfen; sonst bei manuellem Abholen klar kennzeichnen"
+  },
+  "ranks": [
+    {
+      "level": 1,
+      "title": "Landratte",
+      "stage": "lafamilia_rank_01_landratte",
+      "quest_id": "LF-L01-Q01",
+      "condition": "Erste Quest: Gespräch mit dem Kapitän",
+      "status": "milestone_quest_selected"
+    },
+    {
+      "level": 2,
+      "title": "Deckjunge",
+      "stage": "lafamilia_rank_02_deckjunge",
+      "quest_id": "LF-L08-Q02",
+      "condition": "Die verpflichtende Lobby-Einführung abschließen",
+      "status": "milestone_quest_selected"
+    },
+    {
+      "level": 3,
+      "title": "Matrose",
+      "stage": "lafamilia_rank_03_matrose",
+      "quest_id": null,
+      "condition": "Erster großer Story-Meilenstein und grundlegende Welt-Erkundung",
+      "status": "to_be_assigned_when_content_is_built"
+    },
+    {
+      "level": 4,
+      "title": "Seebär",
+      "stage": "lafamilia_rank_04_seebaer",
+      "quest_id": null,
+      "condition": "Fortgeschrittene Aufgaben und zwei verschiedene Questbereiche",
+      "status": "to_be_assigned_when_content_is_built"
+    },
+    {
+      "level": 5,
+      "title": "Bootsmann",
+      "stage": "lafamilia_rank_05_bootsmann",
+      "quest_id": null,
+      "condition": "Gildenfortschritt und eine längere Handels-/Versorgungskette",
+      "status": "to_be_assigned_when_content_is_built"
+    },
+    {
+      "level": 6,
+      "title": "Steuermann",
+      "stage": "lafamilia_rank_06_steuermann",
+      "quest_id": null,
+      "condition": "Expeditionen und bedeutender Hauptstory-Meilenstein",
+      "status": "to_be_assigned_when_content_is_built"
+    },
+    {
+      "level": 7,
+      "title": "Erster Maat",
+      "stage": "lafamilia_rank_07_erster_maat",
+      "quest_id": null,
+      "condition": "Anspruchsvolle modpackbasierte Aufgaben und Weltreise-Meilenstein",
+      "status": "to_be_assigned_when_content_is_built"
+    },
+    {
+      "level": 8,
+      "title": "Freibeuter",
+      "stage": "lafamilia_rank_08_freibeuter",
+      "quest_id": null,
+      "condition": "Einen bestätigten Modpack-Boss-Queststrang abschließen",
+      "status": "to_be_assigned_when_content_is_built"
+    },
+    {
+      "level": 9,
+      "title": "Kapitän",
+      "stage": "lafamilia_rank_09_kapitaen",
+      "quest_id": null,
+      "condition": "Große Hauptstory-Etappe und mehrere Kapitel-Meisterschaften",
+      "status": "to_be_assigned_when_content_is_built"
+    },
+    {
+      "level": 10,
+      "title": "Piratenkommodore",
+      "stage": "lafamilia_rank_10_piratenkommodore",
+      "quest_id": null,
+      "condition": "Fortgeschrittene Modpack-Boss- und Expeditions-Meilensteine",
+      "status": "to_be_assigned_when_content_is_built"
+    },
+    {
+      "level": 11,
+      "title": "Piratenfürst",
+      "stage": "lafamilia_rank_11_piratenfuerst",
+      "quest_id": null,
+      "condition": "Späte Endgame-Herausforderungen und Hauptgeschichte",
+      "status": "to_be_assigned_when_content_is_built"
+    },
+    {
+      "level": 12,
+      "title": "Legende der Sieben Meere",
+      "stage": "lafamilia_rank_12_legende_der_sieben_meere",
+      "quest_id": null,
+      "condition": "Finale des globalen Fortschrittspfads und seine Meisterprüfungen",
+      "status": "to_be_assigned_when_content_is_built"
+    }
+  ],
+  "dungeon_and_boss_policy": {
+    "custom_dungeons": false,
+    "self_created_boss_mobs": false,
+    "eligible_locations": [
+      "Existing modded generated structures and dungeons",
+      "Existing vanilla structures",
+      "Modpack dimensions and biome areas"
+    ],
+    "eligible_enemies": [
+      "Confirmed bosses from installed mods",
+      "Confirmed existing boss NPCs/entities in the modpack",
+      "Vanilla bosses where suitable"
+    ],
+    "selection_later": "Use current modpack server registry, modlist, entity IDs, spawn conditions, and existing structures when implementing the boss quest section",
+    "avoid_assumptions": "No fabricated entity IDs or boss names and no implicit assumption that ordinary EasyNPC dialogs are real boss mobs",
+    "evidence_and_anti_abuse": "Kill trigger if supported, or confirmed advancement/loot/token task; prevent duplicate one-off rank awards"
+  }
+}
