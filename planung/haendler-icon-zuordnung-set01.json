@@ -1,0 +1,317 @@
+{
+  "format": "LaFamilia Quest Icon Assignments v1",
+  "resource_pack_ready": false,
+  "ftb_questbook_installed": false,
+  "icon_count": 10,
+  "quest_assignments_count": 25,
+  "note": "Dieses JSON verknüpft bereits generierte PNG-Dateinamen mit den geplanten Lobbyquests. Die tatsächlichen FTB-Quests-SNBTs und das spätere Resource-Pack werden separat erstellt.",
+  "icons": [
+    {
+      "merchant": "Holzfäller",
+      "npc_uuid": "b424fb91-290c-422e-9475-970a1fc4ec64",
+      "icon_file": "holzfaeller.png",
+      "texture_path": "assets/lafamilia/textures/ftbquests/haendler/holzfaeller.png",
+      "quest_ids": [
+        "LF-L02-Q02",
+        "LF-L04-Q03"
+      ]
+    },
+    {
+      "merchant": "Stein- und Erdhändler",
+      "npc_uuid": "90bad3cc-0327-4c95-998c-edcba16f477e",
+      "icon_file": "stein_erde.png",
+      "texture_path": "assets/lafamilia/textures/ftbquests/haendler/stein_erde.png",
+      "quest_ids": [
+        "LF-L04-Q02",
+        "LF-L04-Q04",
+        "LF-L06-Q03"
+      ]
+    },
+    {
+      "merchant": "Natur- und Pflanzenhändler",
+      "npc_uuid": "ea1411ed-9189-495a-96e1-35c0a49291bb",
+      "icon_file": "natur_pflanzen.png",
+      "texture_path": "assets/lafamilia/textures/ftbquests/haendler/natur_pflanzen.png",
+      "quest_ids": [
+        "LF-L04-Q01"
+      ]
+    },
+    {
+      "merchant": "Ackerbauhändler",
+      "npc_uuid": "4d47e0db-5ca7-463a-b45e-b43edf3dc7d9",
+      "icon_file": "ackerbau.png",
+      "texture_path": "assets/lafamilia/textures/ftbquests/haendler/ackerbau.png",
+      "quest_ids": [
+        "LF-L03-Q01",
+        "LF-L03-Q03"
+      ]
+    },
+    {
+      "merchant": "Fässer & Schiffsvorräte",
+      "npc_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
+      "icon_file": "faesser_schiffsvorraete.png",
+      "texture_path": "assets/lafamilia/textures/ftbquests/haendler/faesser_schiffsvorraete.png",
+      "quest_ids": [
+        "LF-L02-Q01",
+        "LF-L02-Q03",
+        "LF-L02-Q04",
+        "LF-L03-Q06",
+        "LF-L05-Q05",
+        "LF-L06-Q01",
+        "LF-L06-Q06"
+      ]
+    },
+    {
+      "merchant": "Geschirr & Küchenwaren",
+      "npc_uuid": "b9150d76-1221-40eb-9736-867be277fdef",
+      "icon_file": "geschirr_kuechenwaren.png",
+      "texture_path": "assets/lafamilia/textures/ftbquests/haendler/geschirr_kuechenwaren.png",
+      "quest_ids": [
+        "LF-L03-Q02",
+        "LF-L03-Q05"
+      ]
+    },
+    {
+      "merchant": "Tische & Stühle",
+      "npc_uuid": "94a2eb3d-4056-4be0-a1f9-00f2db3fdb66",
+      "icon_file": "tische_stuehle.png",
+      "texture_path": "assets/lafamilia/textures/ftbquests/haendler/tische_stuehle.png",
+      "quest_ids": [
+        "LF-L05-Q02",
+        "LF-L05-Q06"
+      ]
+    },
+    {
+      "merchant": "Betten & Schränke",
+      "npc_uuid": "b0c6014c-28f4-46f8-840c-cd6fa958d7d9",
+      "icon_file": "betten_schraenke.png",
+      "texture_path": "assets/lafamilia/textures/ftbquests/haendler/betten_schraenke.png",
+      "quest_ids": [
+        "LF-L02-Q05"
+      ]
+    },
+    {
+      "merchant": "Kerzen & Laternen",
+      "npc_uuid": "492d0ebe-2b7c-4b18-b7e5-5276e8e5a21f",
+      "icon_file": "kerzen_laternen.png",
+      "texture_path": "assets/lafamilia/textures/ftbquests/haendler/kerzen_laternen.png",
+      "quest_ids": [
+        "LF-L02-Q06"
+      ]
+    },
+    {
+      "merchant": "Werkzeug & Werkstattbedarf",
+      "npc_uuid": "34cf18e4-8c19-4d49-97fb-49b1a7ef9909",
+      "icon_file": "werkzeug_werkstattbedarf.png",
+      "texture_path": "assets/lafamilia/textures/ftbquests/haendler/werkzeug_werkstattbedarf.png",
+      "quest_ids": [
+        "LF-L04-Q05",
+        "LF-L05-Q01",
+        "LF-L05-Q03",
+        "LF-L05-Q04"
+      ]
+    }
+  ],
+  "assignments": [
+    {
+      "quest_id": "LF-L02-Q01",
+      "quest_name": "Beim Quartiermeister melden",
+      "chapter_name": "Die Versorgung des Hafens",
+      "merchant": "Fässer & Schiffsvorräte",
+      "npc_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
+      "icon_file": "faesser_schiffsvorraete.png"
+    },
+    {
+      "quest_id": "LF-L02-Q02",
+      "quest_name": "Holz für den Schiffsbau",
+      "chapter_name": "Die Versorgung des Hafens",
+      "merchant": "Holzfäller",
+      "npc_uuid": "b424fb91-290c-422e-9475-970a1fc4ec64",
+      "icon_file": "holzfaeller.png"
+    },
+    {
+      "quest_id": "LF-L02-Q03",
+      "quest_name": "Fässer und Kisten",
+      "chapter_name": "Die Versorgung des Hafens",
+      "merchant": "Fässer & Schiffsvorräte",
+      "npc_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
+      "icon_file": "faesser_schiffsvorraete.png"
+    },
+    {
+      "quest_id": "LF-L02-Q04",
+      "quest_name": "Fehlende Vorräte",
+      "chapter_name": "Die Versorgung des Hafens",
+      "merchant": "Fässer & Schiffsvorräte",
+      "npc_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
+      "icon_file": "faesser_schiffsvorraete.png"
+    },
+    {
+      "quest_id": "LF-L02-Q05",
+      "quest_name": "Ein Bett für die Nacht",
+      "chapter_name": "Die Versorgung des Hafens",
+      "merchant": "Betten & Schränke",
+      "npc_uuid": "b0c6014c-28f4-46f8-840c-cd6fa958d7d9",
+      "icon_file": "betten_schraenke.png"
+    },
+    {
+      "quest_id": "LF-L02-Q06",
+      "quest_name": "Licht für den Hafen",
+      "chapter_name": "Die Versorgung des Hafens",
+      "merchant": "Kerzen & Laternen",
+      "npc_uuid": "492d0ebe-2b7c-4b18-b7e5-5276e8e5a21f",
+      "icon_file": "kerzen_laternen.png"
+    },
+    {
+      "quest_id": "LF-L03-Q01",
+      "quest_name": "Die Versorgung der Mannschaft",
+      "chapter_name": "Proviant für die Mannschaft",
+      "merchant": "Ackerbauhändler",
+      "npc_uuid": "4d47e0db-5ca7-463a-b45e-b43edf3dc7d9",
+      "icon_file": "ackerbau.png"
+    },
+    {
+      "quest_id": "LF-L03-Q02",
+      "quest_name": "Die Hafenküche",
+      "chapter_name": "Proviant für die Mannschaft",
+      "merchant": "Geschirr & Küchenwaren",
+      "npc_uuid": "b9150d76-1221-40eb-9736-867be277fdef",
+      "icon_file": "geschirr_kuechenwaren.png"
+    },
+    {
+      "quest_id": "LF-L03-Q03",
+      "quest_name": "Die Speisekammer",
+      "chapter_name": "Proviant für die Mannschaft",
+      "merchant": "Ackerbauhändler",
+      "npc_uuid": "4d47e0db-5ca7-463a-b45e-b43edf3dc7d9",
+      "icon_file": "ackerbau.png"
+    },
+    {
+      "quest_id": "LF-L03-Q05",
+      "quest_name": "Die Spezialität der Taverne",
+      "chapter_name": "Proviant für die Mannschaft",
+      "merchant": "Geschirr & Küchenwaren",
+      "npc_uuid": "b9150d76-1221-40eb-9736-867be277fdef",
+      "icon_file": "geschirr_kuechenwaren.png"
+    },
+    {
+      "quest_id": "LF-L03-Q06",
+      "quest_name": "Vorräte für die Reise",
+      "chapter_name": "Proviant für die Mannschaft",
+      "merchant": "Fässer & Schiffsvorräte",
+      "npc_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
+      "icon_file": "faesser_schiffsvorraete.png"
+    },
+    {
+      "quest_id": "LF-L04-Q01",
+      "quest_name": "Die Pflanzen der Karibik",
+      "chapter_name": "Die Gilden stellen sich vor",
+      "merchant": "Natur- und Pflanzenhändler",
+      "npc_uuid": "ea1411ed-9189-495a-96e1-35c0a49291bb",
+      "icon_file": "natur_pflanzen.png"
+    },
+    {
+      "quest_id": "LF-L04-Q02",
+      "quest_name": "Der Bau des Hafens",
+      "chapter_name": "Die Gilden stellen sich vor",
+      "merchant": "Stein- und Erdhändler",
+      "npc_uuid": "90bad3cc-0327-4c95-998c-edcba16f477e",
+      "icon_file": "stein_erde.png"
+    },
+    {
+      "quest_id": "LF-L04-Q03",
+      "quest_name": "Holz für die Gilde",
+      "chapter_name": "Die Gilden stellen sich vor",
+      "merchant": "Holzfäller",
+      "npc_uuid": "b424fb91-290c-422e-9475-970a1fc4ec64",
+      "icon_file": "holzfaeller.png"
+    },
+    {
+      "quest_id": "LF-L04-Q04",
+      "quest_name": "Erze für die Schmiede",
+      "chapter_name": "Die Gilden stellen sich vor",
+      "merchant": "Stein- und Erdhändler",
+      "npc_uuid": "90bad3cc-0327-4c95-998c-edcba16f477e",
+      "icon_file": "stein_erde.png"
+    },
+    {
+      "quest_id": "LF-L04-Q05",
+      "quest_name": "Die Werkzeuge der Gilden",
+      "chapter_name": "Die Gilden stellen sich vor",
+      "merchant": "Werkzeug & Werkstattbedarf",
+      "npc_uuid": "34cf18e4-8c19-4d49-97fb-49b1a7ef9909",
+      "icon_file": "werkzeug_werkstattbedarf.png"
+    },
+    {
+      "quest_id": "LF-L05-Q01",
+      "quest_name": "Das Werkzeug des Handwerkers",
+      "chapter_name": "Handwerk und Schiffsbau",
+      "merchant": "Werkzeug & Werkstattbedarf",
+      "npc_uuid": "34cf18e4-8c19-4d49-97fb-49b1a7ef9909",
+      "icon_file": "werkzeug_werkstattbedarf.png"
+    },
+    {
+      "quest_id": "LF-L05-Q02",
+      "quest_name": "Einrichtung der Taverne",
+      "chapter_name": "Handwerk und Schiffsbau",
+      "merchant": "Tische & Stühle",
+      "npc_uuid": "94a2eb3d-4056-4be0-a1f9-00f2db3fdb66",
+      "icon_file": "tische_stuehle.png"
+    },
+    {
+      "quest_id": "LF-L05-Q03",
+      "quest_name": "Eine alte Werkbank",
+      "chapter_name": "Handwerk und Schiffsbau",
+      "merchant": "Werkzeug & Werkstattbedarf",
+      "npc_uuid": "34cf18e4-8c19-4d49-97fb-49b1a7ef9909",
+      "icon_file": "werkzeug_werkstattbedarf.png"
+    },
+    {
+      "quest_id": "LF-L05-Q04",
+      "quest_name": "Das richtige Werkzeug",
+      "chapter_name": "Handwerk und Schiffsbau",
+      "merchant": "Werkzeug & Werkstattbedarf",
+      "npc_uuid": "34cf18e4-8c19-4d49-97fb-49b1a7ef9909",
+      "icon_file": "werkzeug_werkstattbedarf.png"
+    },
+    {
+      "quest_id": "LF-L05-Q05",
+      "quest_name": "Ein beschädigtes Schiff",
+      "chapter_name": "Handwerk und Schiffsbau",
+      "merchant": "Fässer & Schiffsvorräte",
+      "npc_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
+      "icon_file": "faesser_schiffsvorraete.png"
+    },
+    {
+      "quest_id": "LF-L05-Q06",
+      "quest_name": "Der Bauplatz am Hafen",
+      "chapter_name": "Handwerk und Schiffsbau",
+      "merchant": "Tische & Stühle",
+      "npc_uuid": "94a2eb3d-4056-4be0-a1f9-00f2db3fdb66",
+      "icon_file": "tische_stuehle.png"
+    },
+    {
+      "quest_id": "LF-L06-Q01",
+      "quest_name": "Der Handel am Hafen",
+      "chapter_name": "Münzen und Händler",
+      "merchant": "Fässer & Schiffsvorräte",
+      "npc_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
+      "icon_file": "faesser_schiffsvorraete.png"
+    },
+    {
+      "quest_id": "LF-L06-Q03",
+      "quest_name": "Was kostet die Welt?",
+      "chapter_name": "Münzen und Händler",
+      "merchant": "Stein- und Erdhändler",
+      "npc_uuid": "90bad3cc-0327-4c95-998c-edcba16f477e",
+      "icon_file": "stein_erde.png"
+    },
+    {
+      "quest_id": "LF-L06-Q06",
+      "quest_name": "Das erste Handelsgeschäft",
+      "chapter_name": "Münzen und Händler",
+      "merchant": "Fässer & Schiffsvorräte",
+      "npc_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
+      "icon_file": "faesser_schiffsvorraete.png"
+    }
+  ]
+}
