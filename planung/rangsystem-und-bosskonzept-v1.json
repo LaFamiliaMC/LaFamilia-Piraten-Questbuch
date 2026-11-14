@@ -26,7 +26,10 @@
       "stage": "lafamilia_rank_01_landratte",
       "quest_id": "LF-L01-Q01",
       "condition": "Erste Quest: Gespräch mit dem Kapitän",
-      "status": "milestone_quest_selected"
+      "status": "milestone_quest_selected",
+      "icon_file": "rang_01_landratte.png",
+      "icon_resource_pack_path": "assets/lafamilia/textures/ftbquests/raenge/rang_01_landratte.png",
+      "icon_status": "created_png_available_in_chat_zip_not_yet_in_github_or_active_ftb"
     },
     {
       "level": 2,
@@ -34,7 +37,10 @@
       "stage": "lafamilia_rank_02_deckjunge",
       "quest_id": "LF-L08-Q02",
       "condition": "Die verpflichtende Lobby-Einführung abschließen",
-      "status": "milestone_quest_selected"
+      "status": "milestone_quest_selected",
+      "icon_file": "rang_02_deckjunge.png",
+      "icon_resource_pack_path": "assets/lafamilia/textures/ftbquests/raenge/rang_02_deckjunge.png",
+      "icon_status": "created_png_available_in_chat_zip_not_yet_in_github_or_active_ftb"
     },
     {
       "level": 3,
@@ -42,7 +48,10 @@
       "stage": "lafamilia_rank_03_matrose",
       "quest_id": null,
       "condition": "Erster großer Story-Meilenstein und grundlegende Welt-Erkundung",
-      "status": "to_be_assigned_when_content_is_built"
+      "status": "to_be_assigned_when_content_is_built",
+      "icon_file": "rang_03_matrose.png",
+      "icon_resource_pack_path": "assets/lafamilia/textures/ftbquests/raenge/rang_03_matrose.png",
+      "icon_status": "created_png_available_in_chat_zip_not_yet_in_github_or_active_ftb"
     },
     {
       "level": 4,
@@ -50,7 +59,10 @@
       "stage": "lafamilia_rank_04_seebaer",
       "quest_id": null,
       "condition": "Fortgeschrittene Aufgaben und zwei verschiedene Questbereiche",
-      "status": "to_be_assigned_when_content_is_built"
+      "status": "to_be_assigned_when_content_is_built",
+      "icon_file": "rang_04_seebaer.png",
+      "icon_resource_pack_path": "assets/lafamilia/textures/ftbquests/raenge/rang_04_seebaer.png",
+      "icon_status": "created_png_available_in_chat_zip_not_yet_in_github_or_active_ftb"
     },
     {
       "level": 5,
@@ -58,7 +70,10 @@
       "stage": "lafamilia_rank_05_bootsmann",
       "quest_id": null,
       "condition": "Gildenfortschritt und eine längere Handels-/Versorgungskette",
-      "status": "to_be_assigned_when_content_is_built"
+      "status": "to_be_assigned_when_content_is_built",
+      "icon_file": "rang_05_bootsmann.png",
+      "icon_resource_pack_path": "assets/lafamilia/textures/ftbquests/raenge/rang_05_bootsmann.png",
+      "icon_status": "created_png_available_in_chat_zip_not_yet_in_github_or_active_ftb"
     },
     {
       "level": 6,
@@ -66,7 +81,10 @@
       "stage": "lafamilia_rank_06_steuermann",
       "quest_id": null,
       "condition": "Expeditionen und bedeutender Hauptstory-Meilenstein",
-      "status": "to_be_assigned_when_content_is_built"
+      "status": "to_be_assigned_when_content_is_built",
+      "icon_file": "rang_06_steuermann.png",
+      "icon_resource_pack_path": "assets/lafamilia/textures/ftbquests/raenge/rang_06_steuermann.png",
+      "icon_status": "created_png_available_in_chat_zip_not_yet_in_github_or_active_ftb"
     },
     {
       "level": 7,
@@ -74,7 +92,10 @@
       "stage": "lafamilia_rank_07_erster_maat",
       "quest_id": null,
       "condition": "Anspruchsvolle modpackbasierte Aufgaben und Weltreise-Meilenstein",
-      "status": "to_be_assigned_when_content_is_built"
+      "status": "to_be_assigned_when_content_is_built",
+      "icon_file": "rang_07_erster_maat.png",
+      "icon_resource_pack_path": "assets/lafamilia/textures/ftbquests/raenge/rang_07_erster_maat.png",
+      "icon_status": "created_png_available_in_chat_zip_not_yet_in_github_or_active_ftb"
     },
     {
       "level": 8,
@@ -82,7 +103,10 @@
       "stage": "lafamilia_rank_08_freibeuter",
       "quest_id": null,
       "condition": "Einen bestätigten Modpack-Boss-Queststrang abschließen",
-      "status": "to_be_assigned_when_content_is_built"
+      "status": "to_be_assigned_when_content_is_built",
+      "icon_file": "rang_08_freibeuter.png",
+      "icon_resource_pack_path": "assets/lafamilia/textures/ftbquests/raenge/rang_08_freibeuter.png",
+      "icon_status": "created_png_available_in_chat_zip_not_yet_in_github_or_active_ftb"
     },
     {
       "level": 9,
@@ -90,7 +114,10 @@
       "stage": "lafamilia_rank_09_kapitaen",
       "quest_id": null,
       "condition": "Große Hauptstory-Etappe und mehrere Kapitel-Meisterschaften",
-      "status": "to_be_assigned_when_content_is_built"
+      "status": "to_be_assigned_when_content_is_built",
+      "icon_file": "rang_09_kapitaen.png",
+      "icon_resource_pack_path": "assets/lafamilia/textures/ftbquests/raenge/rang_09_kapitaen.png",
+      "icon_status": "created_png_available_in_chat_zip_not_yet_in_github_or_active_ftb"
     },
     {
       "level": 10,
@@ -98,7 +125,10 @@
       "stage": "lafamilia_rank_10_piratenkommodore",
       "quest_id": null,
       "condition": "Fortgeschrittene Modpack-Boss- und Expeditions-Meilensteine",
-      "status": "to_be_assigned_when_content_is_built"
+      "status": "to_be_assigned_when_content_is_built",
+      "icon_file": "rang_10_piratenkommodore.png",
+      "icon_resource_pack_path": "assets/lafamilia/textures/ftbquests/raenge/rang_10_piratenkommodore.png",
+      "icon_status": "created_png_available_in_chat_zip_not_yet_in_github_or_active_ftb"
     },
     {
       "level": 11,
@@ -106,7 +136,10 @@
       "stage": "lafamilia_rank_11_piratenfuerst",
       "quest_id": null,
       "condition": "Späte Endgame-Herausforderungen und Hauptgeschichte",
-      "status": "to_be_assigned_when_content_is_built"
+      "status": "to_be_assigned_when_content_is_built",
+      "icon_file": "rang_11_piratenfuerst.png",
+      "icon_resource_pack_path": "assets/lafamilia/textures/ftbquests/raenge/rang_11_piratenfuerst.png",
+      "icon_status": "created_png_available_in_chat_zip_not_yet_in_github_or_active_ftb"
     },
     {
       "level": 12,
@@ -114,7 +147,10 @@
       "stage": "lafamilia_rank_12_legende_der_sieben_meere",
       "quest_id": null,
       "condition": "Finale des globalen Fortschrittspfads und seine Meisterprüfungen",
-      "status": "to_be_assigned_when_content_is_built"
+      "status": "to_be_assigned_when_content_is_built",
+      "icon_file": "rang_12_legende_der_sieben_meere.png",
+      "icon_resource_pack_path": "assets/lafamilia/textures/ftbquests/raenge/rang_12_legende_der_sieben_meere.png",
+      "icon_status": "created_png_available_in_chat_zip_not_yet_in_github_or_active_ftb"
     }
   ],
   "dungeon_and_boss_policy": {
@@ -133,5 +169,17 @@
     "selection_later": "Use current modpack server registry, modlist, entity IDs, spawn conditions, and existing structures when implementing the boss quest section",
     "avoid_assumptions": "No fabricated entity IDs or boss names and no implicit assumption that ordinary EasyNPC dialogs are real boss mobs",
     "evidence_and_anti_abuse": "Kill trigger if supported, or confirmed advancement/loot/token task; prevent duplicate one-off rank awards"
+  },
+  "recurring_quests": {
+    "plan_file": "planung/taegliche-und-woechentliche-quests-v1.json",
+    "rank_progression": "Daily and weekly repeats do not directly grant any pirate rank, any rank-stage reward, or repeatable stage progress.",
+    "note": "Repeatable quests may award modest coins/materials/experience; special rank milestones remain unique."
+  },
+  "design_icons": {
+    "total_rank_icons": 12,
+    "icon_pack_name": "LaFamilia_Rang_und_Auftragsicons_Set_01.zip",
+    "source": "Cropped individually from custom Minecraft-style rank overview for consistent style",
+    "icon_size_px": 256,
+    "status": "PNG design finished, not yet deployed in resource pack"
   }
 }
