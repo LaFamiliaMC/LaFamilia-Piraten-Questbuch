@@ -168,9 +168,9 @@
             "LF-L01-Q01"
           ],
           "shape": "circle",
-          "dialog_id": null,
+          "dialog_id": "fc757df3-d218-3b94-892e-29f55513e646",
           "dialog_document": "dialoge/schiffsoffizier-quest05.md",
-          "npc_dialog_status": "NPC UUID recorded; waiting for quest-completion Dialog B ID; FTB task integration deferred",
+          "npc_dialog_status": "Quest-05-Abschlussdialog (Dialog B) erfasst; automatische FTB-Quests/EasyNPC-Verknüpfung bis zur vollständigen NPC-Aufstellung zurückgestellt",
           "npc_trigger_policy": {
             "quest_unlock": "LF-L01-Q01",
             "optional": true,
@@ -188,7 +188,8 @@
             "once_only": true,
             "rank_stage_reward": false,
             "status": "planning_only"
-          }
+          },
+          "npc_dialog_role": "Dialog B – Willkommen an Bord (Abschluss)"
         },
         {
           "planning_id": "LF-L01-Q06",
