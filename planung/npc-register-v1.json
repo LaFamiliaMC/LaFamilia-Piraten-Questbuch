@@ -176,5 +176,12 @@
       "dialog_id": null
     }
   ],
-  "note": "EasyNPC dialogue tasks require the actual generated dialog ID from the NPC editor in addition to NPC UUID. Do not claim the conversation task is automatic until it is configured and tested."
+  "note": "EasyNPC dialogue tasks require the actual generated dialog ID from the NPC editor in addition to NPC UUID. Do not claim the conversation task is automatic until it is configured and tested.",
+  "workflow": {
+    "phase": "npc_collection",
+    "policy": "Alle NPCs zunächst im Spiel platzieren und UUIDs, Dialoge und Dialog-IDs je NPC registrieren. EasyNPC Task-Konvertierung und FTB-Questabschluss-Erkennung erst nach vollständiger NPC-Erfassung gesammelt durchführen; anschließend jeden NPC einzeln auf Funktion, Voraussetzungen und einmalige Belohnungen testen.",
+    "automatic_npc_task_installation_deferred": true,
+    "individual_npc_testing_at_end": true,
+    "keep_original_shops": true
+  }
 }
