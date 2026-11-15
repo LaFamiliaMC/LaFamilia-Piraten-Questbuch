@@ -103,10 +103,26 @@
           "internal_plan_id": "LF-L01-Q05",
           "hex_quest_id": "FA10010300050000",
           "title": "Ein Blick auf das große Schiff",
-          "task": "ftbquests:checkmark (TEST, not NPC dialog auto)",
+          "task": "ftbquests:checkmark (existing TEST build); convert to EasyNPC task after all NPCs are recorded",
           "icon_asset": null,
           "merchant_uuid": null,
-          "needs_easy_npc_dialog_id": true
+          "needs_easy_npc_dialog_id": true,
+          "npc_uuid": "f5e8ef08-d548-47c2-88c0-d473843b9c65",
+          "npc_role": "Schiffsoffizier",
+          "dialog_id": null,
+          "needs_easy_npc_task_conversion": true,
+          "reward_plan": {
+            "xp": 25,
+            "items": [
+              {
+                "item": "minecraft:compass",
+                "count": 1
+              }
+            ],
+            "once_only": true,
+            "rank_stage_reward": false,
+            "status": "planning_only"
+          }
         },
         {
           "internal_plan_id": "LF-L01-Q06",
@@ -217,6 +233,12 @@
       "npc_role": "Hüter des Hafenkodex",
       "dialog_id": "23b56d3e-5da3-338a-b351-07b485ef88fe",
       "status": "NPC and Quest 04 completion dialog ID recorded; current ZIP not updated; final integration deferred"
+    },
+    "FA10010300050000": {
+      "npc_uuid": "f5e8ef08-d548-47c2-88c0-d473843b9c65",
+      "npc_role": "Schiffsoffizier",
+      "dialog_id": null,
+      "status": "NPC-UUID gespeichert; wartet auf Dialog B-ID, spätere automatische Anbindung"
     }
   },
   "deployment_workflow": {
