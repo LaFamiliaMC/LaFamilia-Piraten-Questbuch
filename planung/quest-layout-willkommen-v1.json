@@ -326,8 +326,8 @@
           "inter_chapter_dependency": null,
           "hide_dependency_lines": false,
           "optional": false,
-          "assigned_station": "Quest-NPC bei Holzfäller (noch auszuwählen)",
-          "npc_uuid": null,
+          "assigned_station": "Schiffszimmermann (eigener Dialog-NPC beim Holzfäller-Shop)",
+          "npc_uuid": "07f6f682-8be6-4a91-aa99-4c3ec711d25d",
           "logical_dependencies": [
             "LF-L02-Q01"
           ],
@@ -344,7 +344,26 @@
           "dialog_id": null,
           "quest_npc_status": "Shop bleibt unverändert; eigener Quest-NPC oder Quest-Aufgabe ohne NPC-Dialog noch festzulegen",
           "dialog_only_dedicated_quest_npc": true,
-          "quest_shop_separation": "Der vorhandene Shop-NPC kann nur das Shop-GUI öffnen, nicht den EasyNPC-Questdialog. Nicht dessen UUID als Dialog-NPC verwenden."
+          "quest_shop_separation": "Der vorhandene Shop-NPC kann nur das Shop-GUI öffnen, nicht den EasyNPC-Questdialog. Nicht dessen UUID als Dialog-NPC verwenden.",
+          "dialog_document": "dialoge/schiffszimmermann-quest08.md",
+          "npc_dialog_status": "NPC UUID erfasst; ID des einzigen Erklärdialogs noch offen; FTB Task erst am Schluss",
+          "npc_trigger_policy": {
+            "dialog_name": "q08_schiffszimmermann",
+            "dialog_count": 1,
+            "dialog_is_default": true,
+            "dialog_action": "Close Dialog",
+            "completion_event": "Opening one EasyNPC explanation dialogue",
+            "quest_dependency": "LF-L02-Q01",
+            "no_item_delivery_required": true,
+            "no_scoreboard": true,
+            "no_shop_visit_tracking": true,
+            "ftb_integration_deferred": true
+          },
+          "quest_narrative": "Der Schiffszimmermann erklärt, weshalb Eichenholz und andere Hölzer für Rumpf, Planken, Masten und Reparaturen gebraucht werden, und weist auf den bestehenden Holzfäller-Shop hin. Kein echter Holztransport oder Gegenstandsabgabe bei dieser Einführungsquest.",
+          "reward_plan": {
+            "status": "not_yet_finalized",
+            "once_only": true
+          }
         },
         {
           "planning_id": "LF-L02-Q03",
