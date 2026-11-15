@@ -455,7 +455,8 @@
             "item_delivery": false,
             "ftb_integration_deferred": true
           },
-          "quest_narrative": "Der Proviantmeister erklärt Lebensmittel-, Trinkwasser- und Ersatzvorräte für lange Seereisen und verweist auf den Shop Fässer & Schiffsvorräte. Rein erzählerische Einführung; kein wirklicher Vorratsauftrag und keine Items erforderlich."
+          "quest_narrative": "Proviantmeister erklärt den Spielern den reinen Ankauf von Lebensmitteln und Proviant für die Seeleute von La Familia: Spieler können überschüssige Lebensmittel gegen Münzen verkaufen, der betreffende Proviantankäufer verkauft nichts. Bei Quest 10 kein Pflichtverkauf und keine Item-Abgabe. Dialogtext ist keine Änderung an der Shop-Konfiguration.",
+          "merchant_behavior_note": "Gewünschter Handelsmodus: Proviantankäufer kauft an, verkauft nichts. Nur als Dialogbeschreibung dokumentiert; tatsächliche Shopkonfiguration nicht in diesem Schritt bearbeitet oder verifiziert."
         },
         {
           "planning_id": "LF-L02-Q05",
