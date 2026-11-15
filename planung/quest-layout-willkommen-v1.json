@@ -341,12 +341,12 @@
           },
           "shop_reference_uuid": "b424fb91-290c-422e-9475-970a1fc4ec64",
           "shop_is_quest_dialog_capable": false,
-          "dialog_id": null,
+          "dialog_id": "325abe87-2b95-35ab-8910-924352962719",
           "quest_npc_status": "Shop bleibt unverändert; eigener Quest-NPC oder Quest-Aufgabe ohne NPC-Dialog noch festzulegen",
           "dialog_only_dedicated_quest_npc": true,
           "quest_shop_separation": "Der vorhandene Shop-NPC kann nur das Shop-GUI öffnen, nicht den EasyNPC-Questdialog. Nicht dessen UUID als Dialog-NPC verwenden.",
           "dialog_document": "dialoge/schiffszimmermann-quest08.md",
-          "npc_dialog_status": "NPC UUID erfasst; ID des einzigen Erklärdialogs noch offen; FTB Task erst am Schluss",
+          "npc_dialog_status": "Einziger Dialog q08_schiffszimmermann mit Dialog-ID erfasst; FTB-EasyNPC-Task später",
           "npc_trigger_policy": {
             "dialog_name": "q08_schiffszimmermann",
             "dialog_count": 1,
@@ -359,7 +359,7 @@
             "no_shop_visit_tracking": true,
             "ftb_integration_deferred": true
           },
-          "quest_narrative": "Der Schiffszimmermann erklärt, weshalb Eichenholz und andere Hölzer für Rumpf, Planken, Masten und Reparaturen gebraucht werden, und weist auf den bestehenden Holzfäller-Shop hin. Kein echter Holztransport oder Gegenstandsabgabe bei dieser Einführungsquest.",
+          "quest_narrative": "Schiffszimmermann erklärt die Bedeutung von Bauholz für Schiffe und stellt Holzfäller-Händler Jack vor, bei dem Spieler gefundenes Holz verkaufen können; keine echte Holzabgabe für die Quest nötig.",
           "reward_plan": {
             "status": "not_yet_finalized",
             "once_only": true
