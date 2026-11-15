@@ -162,12 +162,33 @@
           "inter_chapter_dependency": null,
           "hide_dependency_lines": true,
           "optional": true,
-          "assigned_station": "Kapitän",
-          "npc_uuid": null,
+          "assigned_station": "Schiffsoffizier",
+          "npc_uuid": "f5e8ef08-d548-47c2-88c0-d473843b9c65",
           "logical_dependencies": [
             "LF-L01-Q01"
           ],
-          "shape": "circle"
+          "shape": "circle",
+          "dialog_id": null,
+          "dialog_document": "dialoge/schiffsoffizier-quest05.md",
+          "npc_dialog_status": "NPC UUID recorded; waiting for quest-completion Dialog B ID; FTB task integration deferred",
+          "npc_trigger_policy": {
+            "quest_unlock": "LF-L01-Q01",
+            "optional": true,
+            "quest_completion": "Dialog B final acknowledgment (only), not Dialog A or C",
+            "not_a_story_gate": true
+          },
+          "reward_plan": {
+            "xp": 25,
+            "items": [
+              {
+                "item": "minecraft:compass",
+                "count": 1
+              }
+            ],
+            "once_only": true,
+            "rank_stage_reward": false,
+            "status": "planning_only"
+          }
         },
         {
           "planning_id": "LF-L01-Q06",
