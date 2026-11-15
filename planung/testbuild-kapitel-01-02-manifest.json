@@ -77,10 +77,14 @@
           "internal_plan_id": "LF-L01-Q04",
           "hex_quest_id": "FA10010300040000",
           "title": "Die Regeln von La Familia",
-          "task": "ftbquests:checkmark (TEST, not NPC dialog auto)",
+          "task": "ftbquests:checkmark (existing TEST build); separate NPC and EasyNPC-dialog link after all NPCs placed",
           "icon_asset": null,
           "merchant_uuid": null,
-          "needs_easy_npc_dialog_id": true
+          "needs_easy_npc_dialog_id": true,
+          "npc_uuid": null,
+          "dialog_id": null,
+          "npc_role": "Hüter des Hafenkodex",
+          "needs_npc_uuid": true
         },
         {
           "internal_plan_id": "LF-L01-Q05",
