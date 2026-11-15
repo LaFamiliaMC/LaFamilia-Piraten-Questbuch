@@ -189,15 +189,26 @@
           "internal_plan_id": "LF-L02-Q02",
           "hex_quest_id": "FA10010300080000",
           "title": "Holz für den Schiffsbau",
-          "task": "ftbquests:checkmark (TEST); dedicated Quest-NPC dialog deferred; shop NPC cannot provide EasyNPC dialog",
+          "task": "ftbquests:checkmark (current TEST build); planned EasyNPC task on opening single Schiffszimmermann explanation dialog; integrate only after all NPCs collected",
           "icon_asset": "assets/lafamilia/textures/ftbquests/haendler/holzfaeller.png",
           "merchant_uuid": "b424fb91-290c-422e-9475-970a1fc4ec64",
           "needs_easy_npc_dialog_id": true,
-          "npc_uuid": null,
+          "npc_uuid": "07f6f682-8be6-4a91-aa99-4c3ec711d25d",
           "dialog_id": null,
-          "needs_dedicated_quest_npc": true,
+          "needs_dedicated_quest_npc": false,
           "merchant_shop_only": true,
-          "shop_reference_uuid": "b424fb91-290c-422e-9475-970a1fc4ec64"
+          "shop_reference_uuid": "b424fb91-290c-422e-9475-970a1fc4ec64",
+          "npc_role": "Schiffszimmermann",
+          "needs_easy_npc_task_conversion": true,
+          "quest_objective": {
+            "type": "single_easy_npc_explanatory_dialog",
+            "dialog_name": "q08_schiffszimmermann",
+            "trigger": "on opening dialog",
+            "requires_items": false,
+            "requires_wood_delivery": false,
+            "merchant_shop_only": true,
+            "status": "planned_only"
+          }
         },
         {
           "internal_plan_id": "LF-L02-Q03",
@@ -312,6 +323,12 @@
       "dialog_id": "ffab60c6-f23e-3594-bdef-e94c5c82ba42",
       "dialog_role": "q07_quartiermeister – einzelner Erklärdialog",
       "status": "NPC-/Dialog-UUID dokumentiert; Testbuild noch Checkmark, keine aktive EasyNPC FTB Verknüpfung"
+    },
+    "FA10010300080000": {
+      "npc_uuid": "07f6f682-8be6-4a91-aa99-4c3ec711d25d",
+      "npc_role": "Schiffszimmermann",
+      "dialog_id": null,
+      "status": "NPC UUID registered, dialog ID pending; FTB binding deferred"
     }
   },
   "deployment_workflow": {
