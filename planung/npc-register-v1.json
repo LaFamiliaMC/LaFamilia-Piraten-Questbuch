@@ -284,8 +284,8 @@
       "plan_quest_id": "LF-L02-Q05",
       "ftb_hex_id": "FA10010300110000",
       "source": "user_supplied_npc_uuid",
-      "dialog_status": "single_dialog_id_pending; final_FTB_task_integration_deferred",
-      "dialog_id": null,
+      "dialog_status": "single_dialog_id_received; final_FTB_task_integration_deferred",
+      "dialog_id": "f7ad98f2-9ca4-379f-aa04-94854ef04bc2",
       "dialog_document": "dialoge/hafenherbergsvater-quest11.md",
       "dialog_role": "q11_hafenherbergsvater – ein Erklärdialog; Questabschluss später durch Dialogöffnung",
       "note": "Ein eigener EasyNPC ohne Shopfunktion beim Händler für Betten & Schränke. Keine Kauf-, Schlaf- oder Gegenstandsabgabepflicht."
