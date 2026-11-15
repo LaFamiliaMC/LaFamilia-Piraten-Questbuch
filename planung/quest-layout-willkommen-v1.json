@@ -92,8 +92,8 @@
             "LF-L01-Q01"
           ],
           "shape": "circle",
-          "dialog_id": null,
-          "npc_dialog_status": "NPC UUID received; separate quest-completion dialog ID pending",
+          "dialog_id": "666df7d2-8638-37b7-a4d9-efd806c8eceb",
+          "npc_dialog_status": "Dialog ID supplied for quest 03; automatic task integration deferred until all NPCs placed",
           "dialog_document": "dialoge/hauptmann-hafenwache-quest03.md",
           "reward_plan": {
             "xp": 25,
@@ -111,7 +111,8 @@
             "optional": true,
             "quest_completion": "Dialog B final response, after introduction",
             "not_a_story_gate": true
-          }
+          },
+          "npc_dialog_role": "Hauptmann der Hafenwache – Questabschlussdialog (Dialog B)"
         },
         {
           "planning_id": "LF-L01-Q04",
