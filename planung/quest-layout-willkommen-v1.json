@@ -422,8 +422,8 @@
           "inter_chapter_dependency": null,
           "hide_dependency_lines": true,
           "optional": true,
-          "assigned_station": "Quest-NPC bei Fässer & Schiffsvorräte (noch auszuwählen)",
-          "npc_uuid": null,
+          "assigned_station": "Proviantmeister (eigener Quest-NPC beim Fässer-&-Schiffsvorräte-Shop)",
+          "npc_uuid": "af4c5c5e-aa26-453b-8962-b740932a8143",
           "logical_dependencies": [
             "LF-L02-Q01"
           ],
@@ -438,9 +438,24 @@
           "shop_reference_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
           "shop_is_quest_dialog_capable": false,
           "dialog_id": null,
-          "quest_npc_status": "Shop bleibt unverändert; eigener Quest-NPC oder Quest-Aufgabe ohne NPC-Dialog noch festzulegen",
+          "quest_npc_status": "NPC UUID gespeichert; Dialog-ID des einzigen EasyNPC Erklärdialogs steht noch aus; FTB Integration später",
           "dialog_only_dedicated_quest_npc": true,
-          "quest_shop_separation": "Der vorhandene Shop-NPC kann nur das Shop-GUI öffnen, nicht den EasyNPC-Questdialog. Nicht dessen UUID als Dialog-NPC verwenden."
+          "quest_shop_separation": "Der vorhandene Shop-NPC kann nur das Shop-GUI öffnen, nicht den EasyNPC-Questdialog. Nicht dessen UUID als Dialog-NPC verwenden.",
+          "dialog_document": "dialoge/proviantmeister-quest10.md",
+          "npc_trigger_policy": {
+            "dialog_name": "q10_proviantmeister",
+            "dialog_count": 1,
+            "dialog_is_default": true,
+            "dialog_action": "Close Dialog",
+            "completion_event": "EasyNPC dialogue opened; FTB task to be bound after all NPCs collected",
+            "dependency": "LF-L02-Q01 (Quest 07)",
+            "side_quest": true,
+            "scoreboard": false,
+            "shop_visit_tracking": false,
+            "item_delivery": false,
+            "ftb_integration_deferred": true
+          },
+          "quest_narrative": "Der Proviantmeister erklärt Lebensmittel-, Trinkwasser- und Ersatzvorräte für lange Seereisen und verweist auf den Shop Fässer & Schiffsvorräte. Rein erzählerische Einführung; kein wirklicher Vorratsauftrag und keine Items erforderlich."
         },
         {
           "planning_id": "LF-L02-Q05",
