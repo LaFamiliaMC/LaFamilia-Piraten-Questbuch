@@ -128,10 +128,26 @@
           "internal_plan_id": "LF-L01-Q06",
           "hex_quest_id": "FA10010300060000",
           "title": "Die Glocke des Hafens",
-          "task": "ftbquests:checkmark (TEST, not NPC dialog auto)",
+          "task": "ftbquests:checkmark (existing TEST build); EasyNPC conversion deferred until all NPCs placed",
           "icon_asset": null,
           "merchant_uuid": null,
-          "needs_easy_npc_dialog_id": true
+          "needs_easy_npc_dialog_id": true,
+          "npc_uuid": "f410950f-02e6-4731-a239-3dc06c486e61",
+          "npc_role": "Hafenglockenwächter",
+          "dialog_id": null,
+          "needs_easy_npc_task_conversion": true,
+          "reward_plan": {
+            "xp": 25,
+            "items": [
+              {
+                "item": "minecraft:clock",
+                "count": 1
+              }
+            ],
+            "once_only": true,
+            "rank_stage_reward": false,
+            "status": "planning_only"
+          }
         }
       ]
     },
@@ -239,6 +255,12 @@
       "npc_role": "Schiffsoffizier",
       "dialog_id": "fc757df3-d218-3b94-892e-29f55513e646",
       "status": "Dialog B recorded; TEST ZIP remains checkmark; final integration deferred"
+    },
+    "FA10010300060000": {
+      "npc_uuid": "f410950f-02e6-4731-a239-3dc06c486e61",
+      "npc_role": "Hafenglockenwächter",
+      "dialog_id": null,
+      "status": "NPC UUID eingetragen; Abschlussdialog-ID fehlt, noch keine automatische FTB-Anbindung"
     }
   },
   "deployment_workflow": {
