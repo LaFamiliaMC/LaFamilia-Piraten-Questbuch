@@ -44,9 +44,9 @@
             "icon": "assets/lafamilia/textures/ftbquests/raenge/rang_01_landratte.png"
           },
           "quest_text_addendum": "Der Kapitän erkennt dich als Landratte an – deinen ersten Rang in La Familia. Dieser Rang bildet den Anfang einer serverweiten Ranglaufbahn.",
-          "dialog_label_planned": "lafamilia_kapitaen_willkommen",
-          "dialog_id": null,
-          "npc_dialog_status": "UUID fest, Dialog-ID muss aus EasyNPC kopiert werden"
+          "dialog_label_planned": null,
+          "dialog_id": "addaae3c-bd31-37a4-8e70-188d7680f404",
+          "npc_dialog_status": "correct dialog ID received from user; automatic quest completion not yet deployed/tested"
         },
         {
           "planning_id": "LF-L01-Q02",
