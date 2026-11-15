@@ -21,8 +21,9 @@
       "plan_quest_id": "LF-L01-Q02",
       "ftb_hex_id": "FA10010300020000",
       "source": "user_followup_interpreted_as_npc_uuid",
-      "dialog_status": "waiting_for_dialog_id",
-      "dialog_id": null
+      "dialog_status": "dialog2_id_received; pending_easy_npc_ftb_task_and_server_test",
+      "dialog_id": "09301480-fd54-3179-bb8b-c2603fe58c6e",
+      "dialog_role": "Dialog 2 – ins Hafenbuch eintragen"
     },
     {
       "name": "Holzfäller",
