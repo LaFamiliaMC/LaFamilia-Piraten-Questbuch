@@ -125,12 +125,16 @@
           "inter_chapter_dependency": null,
           "hide_dependency_lines": true,
           "optional": true,
-          "assigned_station": "Hafenmeister",
+          "assigned_station": "Hüter des Hafenkodex",
           "npc_uuid": null,
           "logical_dependencies": [
             "LF-L01-Q01"
           ],
-          "shape": "circle"
+          "shape": "circle",
+          "dialog_id": null,
+          "npc_dialog_status": "Neuer eigener NPC geplant – wartet auf vom Nutzer vergebene NPC UUID und danach Dialog-ID",
+          "npc_role": "Unabhängiger Regelhüter der Lobby; nicht Hafenmeister und nicht Hauptmann der Hafenwache",
+          "dialog_design": "Begrüßung, Vorstellung des Hafenkodex, Regeln erläutern, bewusste Bestätigung des Spielers; bestätigte Regeln des Servers statt erfundener Vorschriften einsetzen"
         },
         {
           "planning_id": "LF-L01-Q05",
