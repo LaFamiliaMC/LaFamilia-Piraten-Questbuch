@@ -65,14 +65,15 @@
             "LF-L01-Q01"
           ],
           "shape": "hexagon",
-          "dialog_id": null,
-          "npc_dialog_status": "Hafenmeister NPC-UUID from follow-up, assumes this UUID is NPC rather than dialog; pending dialog ID",
+          "dialog_id": "09301480-fd54-3179-bb8b-c2603fe58c6e",
+          "npc_dialog_status": "Hafenmeister Dialog 2 ID provided by user; automatic EasyNPC FTB task not yet deployed in SNBT or server-tested",
           "npc_dialog_plan": {
             "intro": "Ahoy, Landratte! Willkommen beim Hafenmeister. Ich trage jeden neuen Seefahrer ins Hafenbuch ein.",
             "player": "Der Kapitän schickt mich.",
             "response": "Dann zeig mir deinen Hafenpass. Schau dich im Hafen um und lerne unsere Händler und Handwerker kennen.",
             "finish": "Du bist jetzt im Hafenbuch vermerkt. Die nächsten Stationen erwarten dich."
-          }
+          },
+          "dialog_role": "Erste Begegnung – Aufnahme ins Hafenbuch (Questabschluss)"
         },
         {
           "planning_id": "LF-L01-Q03",
