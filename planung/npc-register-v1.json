@@ -232,6 +232,8 @@
     "policy": "Alle NPCs zunächst im Spiel platzieren und UUIDs, Dialoge und Dialog-IDs je NPC registrieren. EasyNPC Task-Konvertierung und FTB-Questabschluss-Erkennung erst nach vollständiger NPC-Erfassung gesammelt durchführen; anschließend jeden NPC einzeln auf Funktion, Voraussetzungen und einmalige Belohnungen testen.",
     "automatic_npc_task_installation_deferred": true,
     "individual_npc_testing_at_end": true,
-    "keep_original_shops": true
+    "keep_original_shops": true,
+    "shop_npc_dialog_constraint": "Bestehende EasyNPC-Shop-NPCs öffnen nur das Shop-GUI und führen keine Questdialoge aus. Deshalb ist ein separater EasyNPC-Quest-NPC erforderlich, wenn ein NPC-Gespräch Teil der Quest ist. Shop-UUID niemals als Dialog-UUID/Questsprecher wiederverwenden. Shop bleibt erhalten.",
+    "chapter2_quest_npcs": "Quest 07 benötigt einen eigenen Quartiermeister mit separater NPC-UUID. Quest 08–12: Händler bleiben shop-only; separate Questsprecher oder item-basierte Tasks sind noch festzulegen."
   }
 }
