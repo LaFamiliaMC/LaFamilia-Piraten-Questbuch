@@ -6,7 +6,7 @@
 **Questtyp:** Optionale Nebenquest  
 **Voraussetzung:** Quest 07 „Beim Quartiermeister melden“  
 **Dialogname:** `q10_proviantmeister`  
-**Dialog-ID:** Noch aus EasyNPC zu übermitteln  
+**Dialog-ID:** `28fe37f8-7908-328a-811c-16d363f92f03` (vom Nutzer mitgeteilt)  
 **Status:** NPC und Dialogvorlage gespeichert; keine aktivierte FTB-Questverknüpfung.
 
 ## Einziger EasyNPC-Dialog
@@ -46,7 +46,7 @@ Aye, Proviantmeister! Ich werde meine überschüssigen Lebensmittel bei euch ver
 1. Den Proviantmeister-NPC `af4c5c5e-aa26-453b-8962-b740932a8143` im Dialogeditor öffnen.
 2. Einen Standarddialog `q10_proviantmeister` mit dem obigen Text und genau einem Antwortknopf anlegen.
 3. Als Antwortaktion `Close Dialog` wählen.
-4. Die Dialog-ID aus EasyNPC kopieren und für Quest 10 weitergeben.
+4. Die Dialog-ID `28fe37f8-7908-328a-811c-16d363f92f03` ist gespeichert und wird später bei der FTB-EasyNPC-Anbindung genutzt.
 5. Die automatische FTB-Quest-Verknüpfung erst nach vollständiger Erfassung aller Quest-NPCs einrichten.
 
 ## Abgrenzung Händler / NPC
