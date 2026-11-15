@@ -259,7 +259,10 @@
             "purchase_required": false,
             "requires_item_submission": false,
             "scoreboard": false,
-            "status": "planning_only"
+            "status": "planning_only",
+            "merchant_narrative": "Proviantankauf für Seeleute, ausschließlich Ankauf, kein Verkauf",
+            "merchant_behavior_verified": false,
+            "shop_reconfiguration_done": false
           }
         },
         {
