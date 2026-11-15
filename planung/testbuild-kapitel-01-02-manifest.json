@@ -161,7 +161,7 @@
           "internal_plan_id": "LF-L02-Q01",
           "hex_quest_id": "FA10010300070000",
           "title": "Beim Quartiermeister melden",
-          "task": "ftbquests:checkmark (current TEST build); planned EasyNPC Task on q07_abschluss without scoreboard, after all NPCs collected",
+          "task": "ftbquests:checkmark (current TEST build); planned EasyNPC dialog task bound to one dialogue q07_quartiermeister; no other dialogs or scoreboard",
           "icon_asset": "assets/lafamilia/textures/ftbquests/haendler/faesser_schiffsvorraete.png",
           "merchant_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
           "needs_easy_npc_dialog_id": true,
@@ -171,18 +171,18 @@
           "merchant_shop_only": true,
           "shop_reference_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
           "quest_objective": {
-            "type": "easy_npc_confirm_dialog_without_scoreboard",
-            "start_dialog": "q07_start",
-            "return_dialog": "q07_rueckkehr",
-            "completion_dialog": "q07_abschluss",
-            "task_trigger": "Opening q07_abschluss only after explicit confirmation button",
-            "no_scoreboard": true,
-            "no_shop_tracking": true,
-            "no_purchase": true,
-            "caveat": "Player can confirm before physically visiting shops; this is acceptable for narrative-only intro",
+            "type": "single_easy_npc_explanation_dialog",
+            "dialog_name": "q07_quartiermeister",
+            "dialog_count": 1,
+            "task_trigger": "on opening the explanatory dialog",
+            "visit_requirements": false,
+            "shop_validation": false,
+            "purchase_required": false,
+            "return_required": false,
+            "scoreboard_required": false,
             "status": "planned_only"
           },
-          "dialog_role": "q07_abschluss (Manual Only, opened via confirmation; not q07_start/q07_rueckkehr)"
+          "dialog_role": "q07_quartiermeister (einziger Erklär- und Abschlussdialog; Öffnen löst FTB Task später aus)"
         },
         {
           "internal_plan_id": "LF-L02-Q02",
