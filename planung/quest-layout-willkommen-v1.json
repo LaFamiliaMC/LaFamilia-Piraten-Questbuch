@@ -515,8 +515,8 @@
           "inter_chapter_dependency": null,
           "hide_dependency_lines": true,
           "optional": true,
-          "assigned_station": "Quest-NPC bei Kerzen & Laternen (noch auszuwählen)",
-          "npc_uuid": null,
+          "assigned_station": "Hafenlaternenwärter beim Händler für Kerzen & Laternen (eigener Dialog-NPC)",
+          "npc_uuid": "cf2887c7-a332-4bf0-8ebb-03ef60bcc486",
           "logical_dependencies": [
             "LF-L02-Q01"
           ],
@@ -531,9 +531,24 @@
           "shop_reference_uuid": "492d0ebe-2b7c-4b18-b7e5-5276e8e5a21f",
           "shop_is_quest_dialog_capable": false,
           "dialog_id": null,
-          "quest_npc_status": "Shop bleibt unverändert; eigener Quest-NPC oder Quest-Aufgabe ohne NPC-Dialog noch festzulegen",
+          "quest_npc_status": "Hafenlaternenwärter-NPC UUID erfasst, Dialog-ID steht noch aus; FTB-Anbindung später",
           "dialog_only_dedicated_quest_npc": true,
-          "quest_shop_separation": "Der vorhandene Shop-NPC kann nur das Shop-GUI öffnen, nicht den EasyNPC-Questdialog. Nicht dessen UUID als Dialog-NPC verwenden."
+          "quest_shop_separation": "Der vorhandene Shop-NPC kann nur das Shop-GUI öffnen, nicht den EasyNPC-Questdialog. Nicht dessen UUID als Dialog-NPC verwenden.",
+          "dialog_document": "dialoge/hafenlaternenwaerter-quest12.md",
+          "npc_trigger_policy": {
+            "dialog_name": "q12_hafenlaternenwaerter",
+            "dialog_count": 1,
+            "dialog_is_default": true,
+            "dialog_action": "Close Dialog",
+            "completion_event": "Opening the sole EasyNPC explanation dialog; FTB task binding deferred",
+            "dependency": "LF-L02-Q01 (Quest 07)",
+            "side_quest": true,
+            "scoreboard": false,
+            "purchase_required": false,
+            "item_delivery": false,
+            "ftb_integration_deferred": true
+          },
+          "quest_narrative": "Der Hafenlaternenwärter erklärt, warum Kerzen und Laternen nachts Wege, Kais und Schiffe beleuchten, und empfiehlt den bestehenden Händler für Kerzen und Laternen; kein Kauf oder Anzünden erforderlich."
         }
       ]
     },
