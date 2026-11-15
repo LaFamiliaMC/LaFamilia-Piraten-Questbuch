@@ -3,7 +3,8 @@
 **Quest-ID:** `LF-L02-Q01` / FTB `FA10010300070000`  
 **NPC:** Quartiermeister vor dem Handelshaus, UUID `10bbc089-6e58-4d92-b3c0-c1cf911f8d74`  
 **Voraussetzung:** Quest 02 „Der Hafenmeister“ – wird bei der gemeinsamen späteren FTB-Integration gesetzt.  
-**Dialog:** `q07_quartiermeister` (einziger Erklär- und Abschlussdialog; ID wird aus EasyNPC nachgereicht).
+**Dialog:** `q07_quartiermeister` (einziger Erklär- und Abschlussdialog).  
+**Dialog-ID:** `ffab60c6-f23e-3594-bdef-e94c5c82ba42` (vom Nutzer angegeben).
 
 ## Questablauf
 
@@ -27,6 +28,6 @@ Diese Shop-NPCs behalten vollständig ihre Shop-GUI und erhalten keine Questdial
 - Keine Scoreboards, Spieler-Tags, Aktionen wie „Open Dialog“ oder besondere Befehle.
 - Kein Kauf und keine zusätzliche Mod.
 
-**Zum Einrichten:** Im EasyNPC-Dialogeditor einen einzigen Standarddialog mit dem Text aus [Quartiermeister-Dialog Quest 07](../dialoge/quartiermeister-quest07.md) erstellen. Als Antwort lediglich einen Knopf mit Aktion „Close Dialog“ vorsehen. Danach **die Dialog-ID dieses einen Dialogs** kopieren und uns mitteilen.
+**Zum Einrichten:** Im EasyNPC-Dialogeditor einen einzigen Standarddialog mit dem Text aus [Quartiermeister-Dialog Quest 07](../dialoge/quartiermeister-quest07.md) erstellen. Als Antwort lediglich einen Knopf mit Aktion „Close Dialog“ vorsehen. Danach **Dialog-ID `ffab60c6-f23e-3594-bdef-e94c5c82ba42`** für die spätere FTB-Aufgabe verwenden.
 
 **Status:** Aktuelle FTB-Testdatei ist weiter auf Checkmark. Automatische Verknüpfung mit Dialog-Öffnen erst am Ende, wenn alle NPCs gesammelt und geprüft sind.
