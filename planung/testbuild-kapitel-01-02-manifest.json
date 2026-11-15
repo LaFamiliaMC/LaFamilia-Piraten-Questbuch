@@ -296,15 +296,28 @@
           "internal_plan_id": "LF-L02-Q06",
           "hex_quest_id": "FA10010300120000",
           "title": "Licht für den Hafen",
-          "task": "ftbquests:checkmark (TEST); dedicated Quest-NPC dialog deferred; shop NPC cannot provide EasyNPC dialog",
+          "task": "ftbquests:checkmark (current TEST build); future EasyNPC task on opening q12_hafenlaternenwaerter, binding deferred",
           "icon_asset": "assets/lafamilia/textures/ftbquests/haendler/kerzen_laternen.png",
           "merchant_uuid": "492d0ebe-2b7c-4b18-b7e5-5276e8e5a21f",
           "needs_easy_npc_dialog_id": true,
-          "npc_uuid": null,
+          "npc_uuid": "cf2887c7-a332-4bf0-8ebb-03ef60bcc486",
           "dialog_id": null,
-          "needs_dedicated_quest_npc": true,
+          "needs_dedicated_quest_npc": false,
           "merchant_shop_only": true,
-          "shop_reference_uuid": "492d0ebe-2b7c-4b18-b7e5-5276e8e5a21f"
+          "shop_reference_uuid": "492d0ebe-2b7c-4b18-b7e5-5276e8e5a21f",
+          "npc_role": "Hafenlaternenwärter",
+          "needs_easy_npc_task_conversion": true,
+          "quest_objective": {
+            "type": "single_easy_npc_explanatory_dialog",
+            "dialog_name": "q12_hafenlaternenwaerter",
+            "trigger": "on opening dialog",
+            "shop_visit_validation": false,
+            "purchase_required": false,
+            "requires_item_submission": false,
+            "requires_lighting_placement": false,
+            "scoreboard": false,
+            "status": "planning_only"
+          }
         }
       ]
     }
@@ -390,6 +403,12 @@
       "dialog_id": "f7ad98f2-9ca4-379f-aa04-94854ef04bc2",
       "dialog_role": "q11_hafenherbergsvater – einziger Erklärdialog",
       "status": "NPC und Dialog-ID dokumentiert; Checkmark im Testbuild bleibt, FTB Verknüpfung erst später"
+    },
+    "FA10010300120000": {
+      "npc_uuid": "cf2887c7-a332-4bf0-8ebb-03ef60bcc486",
+      "npc_role": "Hafenlaternenwärter",
+      "dialog_id": null,
+      "status": "NPC-UUID erfasst; Dialog-ID ausstehend; FTB-Anbindung noch nicht aktiv"
     }
   },
   "deployment_workflow": {
