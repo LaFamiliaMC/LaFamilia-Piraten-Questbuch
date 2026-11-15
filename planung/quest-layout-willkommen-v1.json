@@ -264,12 +264,11 @@
           "shop_reference_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
           "shop_is_quest_dialog_capable": false,
           "dialog_id": null,
-          "quest_npc_status": "Quartiermeister UUID gespeichert, Abschlussdialog q07_abschluss ID fehlt; keine Scoreboards, keine Shopbesuch-Kontrolle; FTB-Integration später",
+          "quest_npc_status": "Ein einzelner Erklärdialog q07_quartiermeister geplant; NPC UUID erfasst; Dialog-ID aus EasyNPC noch offen; FTB Task später",
           "dialog_only_dedicated_quest_npc": true,
           "quest_shop_separation": "Der vorhandene Shop-NPC kann nur das Shop-GUI öffnen, nicht den EasyNPC-Questdialog. Nicht dessen UUID als Dialog-NPC verwenden.",
           "quest_visit_shops_plan": {
-            "introduced_by": "Eigenständiger Quartiermeister draußen vor dem Eingang des Gebäudes",
-            "start_trigger": "Startdialog des Quartiermeisters nach LF-L01-Q02",
+            "introduced_by": "Eigenständiger Quartiermeister vor dem Eingang",
             "shop_stations": [
               {
                 "name": "Fässer und Schiffsvorräte",
@@ -288,30 +287,30 @@
                 "identification_status": "noch vom Nutzer bestätigen lassen, ob dieser Shop gemeint ist"
               }
             ],
-            "narrative_goal": "Spieler soll sich im Gebäude die drei Händler Fässer und Schiffsvorräte, Geschirr und Küchenwaren und Naturdeko ansehen",
+            "narrative_goal": "NPC erklärt die drei Shops Fässer & Schiffsvorräte, Geschirr & Küchenwaren, Naturdeko",
+            "narrative_only": true,
             "actual_shop_visits_required_for_quest_completion": false,
             "shop_gui_open_tracking": false,
             "purchase_required": false,
-            "player_return": "Spieler kehrt zum Quartiermeister zurück und wählt die Antwort: Ich habe mir die drei Geschäfte angesehen.",
-            "completion_trigger": "Without scoreboard: default dialog q07_start can open return prompt q07_rueckkehr through button; confirmation opens manual-only q07_abschluss, whose opening will later complete FTB task",
-            "completion_effect": "Quest 07 einmalig abschließen; dadurch Quest 08 Holz für den Schiffsbau freischalten",
+            "player_return_required": false,
+            "completion_trigger": "One explanatory EasyNPC dialog q07_quartiermeister; FTB task is planned to complete on opening it",
+            "completion_effect": "Quest 07 einmalig abschließen und Quest 08 freischalten, sobald FTB Task später eingerichtet ist",
             "merchant_shops_unchanged": true,
             "position": "Outside entrance to three-shop merchant house",
-            "implementation_status": "planning_only; dialog to FTB task binding deferred until all NPCs collected"
+            "implementation_status": "planning_only; EasyNPC FTB binding deferred"
           },
-          "quest_title_alias": "Die drei Geschäfte im Hafen kennenlernen",
+          "quest_title_alias": "Einweisung in die Hafenversorgung",
           "dialog_document": "dialoge/quartiermeister-quest07.md",
           "npc_trigger_policy": {
-            "plan": "EasyNPC without scoreboard or other custom persistent flags",
-            "default_dialog": "q07_start – same on first visit and return, with two answer buttons",
-            "intro_button": "Ich schaue mich im Handelshaus um – close dialog",
-            "return_button": "Ich bin zurück – Open Dialog q07_rueckkehr",
-            "return_confirmation": "q07_rueckkehr answer: Aye, ich habe mir die drei Geschäfte angesehen! -> Open Dialog q07_abschluss",
-            "finish_target": "q07_abschluss Manual Only (-1); only this dialog ID used for future FTB EasyNPC Task",
-            "after_completion": "Optional q07_nachher conditioned on completed FTB Quest 07, only after final integration",
+            "dialog_name": "q07_quartiermeister",
+            "count": 1,
+            "dialog_is_default": true,
+            "dialog_action": "Close Dialog",
+            "completion_event": "EasyNPC dialog open; future FTB EasyNPC dialog task uses this one and only dialogue ID",
+            "completion_after_quest_02": true,
             "scoreboard_required": false,
             "shop_visit_tracking": false,
-            "limitation": "Without stored progress the player can select return/confirmation immediately, without visits; accepted by user",
+            "return_visit_required": false,
             "automatic_ftb_integration_deferred": true
           }
         },
