@@ -248,8 +248,8 @@
           "inter_chapter_dependency": "LF-L01-Q02",
           "hide_dependency_lines": false,
           "optional": false,
-          "assigned_station": "Fässer & Schiffsvorräte",
-          "npc_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
+          "assigned_station": "Eigenständiger Quartiermeister (Quest-NPC)",
+          "npc_uuid": null,
           "logical_dependencies": [
             "LF-L01-Q02"
           ],
@@ -260,7 +260,13 @@
             "file_name": "faesser_schiffsvorraete.png",
             "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/faesser_schiffsvorraete.png",
             "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
-          }
+          },
+          "shop_reference_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
+          "shop_is_quest_dialog_capable": false,
+          "dialog_id": null,
+          "quest_npc_status": "Neuen unabhängigen Quartiermeister erstellen; NPC-UUID aus EasyNPC ausstehend",
+          "dialog_only_dedicated_quest_npc": true,
+          "quest_shop_separation": "Der vorhandene Shop-NPC kann nur das Shop-GUI öffnen, nicht den EasyNPC-Questdialog. Nicht dessen UUID als Dialog-NPC verwenden."
         },
         {
           "planning_id": "LF-L02-Q02",
@@ -273,8 +279,8 @@
           "inter_chapter_dependency": null,
           "hide_dependency_lines": false,
           "optional": false,
-          "assigned_station": "Holzfäller",
-          "npc_uuid": "b424fb91-290c-422e-9475-970a1fc4ec64",
+          "assigned_station": "Quest-NPC bei Holzfäller (noch auszuwählen)",
+          "npc_uuid": null,
           "logical_dependencies": [
             "LF-L02-Q01"
           ],
@@ -285,7 +291,13 @@
             "file_name": "holzfaeller.png",
             "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/holzfaeller.png",
             "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
-          }
+          },
+          "shop_reference_uuid": "b424fb91-290c-422e-9475-970a1fc4ec64",
+          "shop_is_quest_dialog_capable": false,
+          "dialog_id": null,
+          "quest_npc_status": "Shop bleibt unverändert; eigener Quest-NPC oder Quest-Aufgabe ohne NPC-Dialog noch festzulegen",
+          "dialog_only_dedicated_quest_npc": true,
+          "quest_shop_separation": "Der vorhandene Shop-NPC kann nur das Shop-GUI öffnen, nicht den EasyNPC-Questdialog. Nicht dessen UUID als Dialog-NPC verwenden."
         },
         {
           "planning_id": "LF-L02-Q03",
@@ -298,8 +310,8 @@
           "inter_chapter_dependency": null,
           "hide_dependency_lines": true,
           "optional": true,
-          "assigned_station": "Fässer & Schiffsvorräte",
-          "npc_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
+          "assigned_station": "Quest-NPC bei Fässer & Schiffsvorräte (noch auszuwählen)",
+          "npc_uuid": null,
           "logical_dependencies": [
             "LF-L02-Q01"
           ],
@@ -310,7 +322,13 @@
             "file_name": "faesser_schiffsvorraete.png",
             "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/faesser_schiffsvorraete.png",
             "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
-          }
+          },
+          "shop_reference_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
+          "shop_is_quest_dialog_capable": false,
+          "dialog_id": null,
+          "quest_npc_status": "Shop bleibt unverändert; eigener Quest-NPC oder Quest-Aufgabe ohne NPC-Dialog noch festzulegen",
+          "dialog_only_dedicated_quest_npc": true,
+          "quest_shop_separation": "Der vorhandene Shop-NPC kann nur das Shop-GUI öffnen, nicht den EasyNPC-Questdialog. Nicht dessen UUID als Dialog-NPC verwenden."
         },
         {
           "planning_id": "LF-L02-Q04",
@@ -323,8 +341,8 @@
           "inter_chapter_dependency": null,
           "hide_dependency_lines": true,
           "optional": true,
-          "assigned_station": "Fässer & Schiffsvorräte",
-          "npc_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
+          "assigned_station": "Quest-NPC bei Fässer & Schiffsvorräte (noch auszuwählen)",
+          "npc_uuid": null,
           "logical_dependencies": [
             "LF-L02-Q01"
           ],
@@ -335,7 +353,13 @@
             "file_name": "faesser_schiffsvorraete.png",
             "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/faesser_schiffsvorraete.png",
             "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
-          }
+          },
+          "shop_reference_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
+          "shop_is_quest_dialog_capable": false,
+          "dialog_id": null,
+          "quest_npc_status": "Shop bleibt unverändert; eigener Quest-NPC oder Quest-Aufgabe ohne NPC-Dialog noch festzulegen",
+          "dialog_only_dedicated_quest_npc": true,
+          "quest_shop_separation": "Der vorhandene Shop-NPC kann nur das Shop-GUI öffnen, nicht den EasyNPC-Questdialog. Nicht dessen UUID als Dialog-NPC verwenden."
         },
         {
           "planning_id": "LF-L02-Q05",
@@ -348,8 +372,8 @@
           "inter_chapter_dependency": null,
           "hide_dependency_lines": true,
           "optional": true,
-          "assigned_station": "Betten & Schränke",
-          "npc_uuid": "b0c6014c-28f4-46f8-840c-cd6fa958d7d9",
+          "assigned_station": "Quest-NPC bei Betten & Schränke (noch auszuwählen)",
+          "npc_uuid": null,
           "logical_dependencies": [
             "LF-L02-Q01"
           ],
@@ -360,7 +384,13 @@
             "file_name": "betten_schraenke.png",
             "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/betten_schraenke.png",
             "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
-          }
+          },
+          "shop_reference_uuid": "b0c6014c-28f4-46f8-840c-cd6fa958d7d9",
+          "shop_is_quest_dialog_capable": false,
+          "dialog_id": null,
+          "quest_npc_status": "Shop bleibt unverändert; eigener Quest-NPC oder Quest-Aufgabe ohne NPC-Dialog noch festzulegen",
+          "dialog_only_dedicated_quest_npc": true,
+          "quest_shop_separation": "Der vorhandene Shop-NPC kann nur das Shop-GUI öffnen, nicht den EasyNPC-Questdialog. Nicht dessen UUID als Dialog-NPC verwenden."
         },
         {
           "planning_id": "LF-L02-Q06",
@@ -373,8 +403,8 @@
           "inter_chapter_dependency": null,
           "hide_dependency_lines": true,
           "optional": true,
-          "assigned_station": "Kerzen & Laternen",
-          "npc_uuid": "492d0ebe-2b7c-4b18-b7e5-5276e8e5a21f",
+          "assigned_station": "Quest-NPC bei Kerzen & Laternen (noch auszuwählen)",
+          "npc_uuid": null,
           "logical_dependencies": [
             "LF-L02-Q01"
           ],
@@ -385,7 +415,13 @@
             "file_name": "kerzen_laternen.png",
             "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/kerzen_laternen.png",
             "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
-          }
+          },
+          "shop_reference_uuid": "492d0ebe-2b7c-4b18-b7e5-5276e8e5a21f",
+          "shop_is_quest_dialog_capable": false,
+          "dialog_id": null,
+          "quest_npc_status": "Shop bleibt unverändert; eigener Quest-NPC oder Quest-Aufgabe ohne NPC-Dialog noch festzulegen",
+          "dialog_only_dedicated_quest_npc": true,
+          "quest_shop_separation": "Der vorhandene Shop-NPC kann nur das Shop-GUI öffnen, nicht den EasyNPC-Questdialog. Nicht dessen UUID als Dialog-NPC verwenden."
         }
       ]
     },
