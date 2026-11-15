@@ -27,14 +27,15 @@
           "internal_plan_id": "LF-L01-Q01",
           "hex_quest_id": "FA10010300010000",
           "title": "Ein neuer Seefahrer",
-          "task": "ftbquests:checkmark (TEST, not NPC dialog auto)",
+          "task": "ftbquests:checkmark (current TEST ZIP), planned EasyNPC task dialogId=addaae3c-bd31-37a4-8e70-188d7680f404",
           "icon_asset": "assets/lafamilia/textures/ftbquests/raenge/rang_01_landratte.png",
           "merchant_uuid": null,
-          "needs_easy_npc_dialog_id": true,
+          "needs_easy_npc_dialog_id": false,
           "npc_uuid": "8c658830-313e-4f63-8dc2-f7ff4a51b669",
           "npc_role": "Kapitän von La Familia",
-          "dialog_id": null,
-          "dialog_label_planned": "lafamilia_kapitaen_willkommen"
+          "dialog_id": "addaae3c-bd31-37a4-8e70-188d7680f404",
+          "dialog_label_planned": null,
+          "needs_easy_npc_task_conversion": true
         },
         {
           "internal_plan_id": "LF-L01-Q02",
@@ -152,7 +153,7 @@
   "no_overwriting_global_data_snbt": true,
   "no_overwriting_chapter_groups_snbt": true,
   "known_limits": [
-    "No real EasyNPC dialog IDs from existing server, NPC conversations are currently click-to-confirm tasks.",
+    "Captain dialogId now known; TEST 01 ZIP still uses checkmark until EasyNPC task is configured in FTB Quests editor.",
     "Rank stage autogrant and its team behavior not server tested.",
     "Existing merchant shops untouched.",
     "Resource pack files available as ZIP in conversation; PNG binary files are not uploaded to this repo."
@@ -161,8 +162,8 @@
     "FA10010300010000": {
       "npc_uuid": "8c658830-313e-4f63-8dc2-f7ff4a51b669",
       "npc_role": "Kapitän von La Familia",
-      "dialog_id": null,
-      "status": "UUID verifiziert durch Nutzerangabe, Dialog noch nicht konfiguriert"
+      "dialog_id": "addaae3c-bd31-37a4-8e70-188d7680f404",
+      "status": "Dialog ID assigned; task in previously delivered ZIP still checkmark; update in FTB Quests editor needed"
     }
   }
 }
