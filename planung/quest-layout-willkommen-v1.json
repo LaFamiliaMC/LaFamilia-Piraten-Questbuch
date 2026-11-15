@@ -249,7 +249,7 @@
           "hide_dependency_lines": false,
           "optional": false,
           "assigned_station": "Eigenständiger Quartiermeister (Quest-NPC)",
-          "npc_uuid": null,
+          "npc_uuid": "10bbc089-6e58-4d92-b3c0-c1cf911f8d74",
           "logical_dependencies": [
             "LF-L01-Q02"
           ],
@@ -264,7 +264,7 @@
           "shop_reference_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
           "shop_is_quest_dialog_capable": false,
           "dialog_id": null,
-          "quest_npc_status": "Quartiermeister draußen vor Tür; NPC-UUID noch ausstehend; Abschlussdialog-ID noch ausstehend; keine Shopbesuch-Prüfung",
+          "quest_npc_status": "Quartiermeister-NPC vor Handelshaus erfasst; Dialog C Abschluss-ID noch offen; EasyNPC/FTB-Verknüpfung erst nach vollständiger NPC-Erfassung",
           "dialog_only_dedicated_quest_npc": true,
           "quest_shop_separation": "Der vorhandene Shop-NPC kann nur das Shop-GUI öffnen, nicht den EasyNPC-Questdialog. Nicht dessen UUID als Dialog-NPC verwenden.",
           "quest_visit_shops_plan": {
@@ -300,7 +300,13 @@
             "implementation_status": "planning_only; dialog to FTB task binding deferred until all NPCs collected"
           },
           "quest_title_alias": "Die drei Geschäfte im Hafen kennenlernen",
-          "dialog_document": "planung/quest07-drei-shops-konzept.md"
+          "dialog_document": "dialoge/quartiermeister-quest07.md",
+          "npc_trigger_policy": {
+            "quest_start": "Quartiermeister Dialog B – Rundgang beginnen",
+            "quest_finish": "Quartiermeister Dialog C – Rückkehr mit Bestätigung",
+            "shop_visit_tracking": false,
+            "one_time_rewards": true
+          }
         },
         {
           "planning_id": "LF-L02-Q02",
