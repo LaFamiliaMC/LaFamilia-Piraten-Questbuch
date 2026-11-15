@@ -1,66 +1,76 @@
 # La Familia – Quartiermeister (Quest 07)
 
-**NPC:** Quartiermeister draußen vor dem Handelshaus  
+**NPC:** Quartiermeister vor dem Handelshaus  
 **NPC-UUID:** `10bbc089-6e58-4d92-b3c0-c1cf911f8d74`  
-**Quest-Plan-ID:** `LF-L02-Q01`  
 **FTB-Quest-ID:** `FA10010300070000`  
-**Questtitel:** „Beim Quartiermeister melden“ / „Die drei Geschäfte im Hafen kennenlernen“  
-**Voraussetzung:** Quest 02 „Der Hafenmeister“  
-**Abschluss-Dialog-ID:** Noch ausstehend – **Dialog C** (Rückkehr beim Quartiermeister)  
-**Technik:** Keine Shopbesuchsprüfung. Keine Änderung an bestehenden Shop-NPCs. FTB-Quests-Anbindung erst nach Erfassen aller NPCs.
+**Status:** NPC erfasst. FTB-EasyNPC-Anbindung noch **nicht** aktiv.  
+**Gesuchte Dialog-ID:** `q07_abschluss` (Dialog D), **nicht** `q07_rueckkehr`.
 
-## Dialog A – Vor Quest 02
+> **Technischer Hinweis:** EasyNPC x FTB Quests Compat schließt eine passende Aufgabe **beim Öffnen des Dialogs** ab. Darum muss erst die Bestätigung des Spielers den eigentlichen Abschlussdialog öffnen. Diese Ergänzung präzisiert die frühere Dialogvorlage.
 
-**Quartiermeister:** „Halt, Fremder! Erst wenn dich unser Kapitän willkommen geheißen hat und der Hafenmeister dich kennt, darfst du deine Aufgaben im Hafen antreten. Kehre danach zu mir zurück.“
+## Dialog A – Vor Aufnahme beim Hafenmeister (optional, spätere Questbedingung)
 
-**Spieler:** „Aye! Ich melde mich zuerst bei ihnen.“
+**Quartiermeister:** „Halt, Fremder! Erst wenn du dich beim Kapitän und beim Hafenmeister gemeldet hast, beginnen deine Aufgaben im Hafen.“
 
-**Ergebnis:** Keine Questbelohnung, kein Abschluss.
+**Spieler:** „Aye, ich werde mich zuerst dort melden.“
 
-## Dialog B – Quest 07 beginnt: Die drei Läden kennenlernen
+**Ergebnis:** Kein Abschluss. FTB-Abhängigkeit zu Quest 02 später einrichten.
 
-**Quartiermeister:** „Ahoy, Landratte! Ich bin der Quartiermeister von La Familia. Ohne gute Versorgung läuft selbst unser stolzestes Schiff keinen Meter weit!“
+## Dialog B – `q07_start`: Die drei Läden kennenlernen
 
-**Spieler:** „Wie kann ich helfen?“
+**Quartiermeister:** „Ahoy, Landratte! Willkommen bei der Hafenversorgung von La Familia! Ich bin der Quartiermeister und sorge dafür, dass die Mannschaft versorgt ist. Direkt hinter dieser Tür findest du Fässer und Schiffsvorräte, Geschirr und Küchenwaren und unseren Naturdeko-Laden.“
 
-**Quartiermeister:** „Direkt hinter dieser Tür liegen drei wichtige Geschäfte. Schau dir zuerst die Fässer und Schiffsvorräte an, dann Geschirr und Küchenwaren. Zuletzt besuche unseren Naturdeko-Laden. Dort siehst du, wie wir unseren Hafen ausstatten und in Schuss halten.“
+**Spieler (Frage):** „Muss ich dafür etwas kaufen?“
 
-**Spieler:** „Muss ich etwas kaufen?“
+**Quartiermeister:** „Nein! Schau dich einfach in Ruhe um. Du sollst die Läden kennenlernen, mehr nicht. Komm anschließend zu mir zurück!“
 
-**Quartiermeister:** „Nein! Es geht darum, dass du unsere Händler kennenlernst. Sieh dich in Ruhe um und komm danach zu mir zurück.“
+**Spieler (Startantwort):** „Aye! Ich schaue mich in den drei Geschäften um!“
 
-**Spieler – Startantwort:** „Aye! Ich schaue mich in den drei Geschäften um!“
+**EasyNPC-Aktion auf dieser Startantwort:** `Scoreboard` → `set:lf_q07:1`, danach `Close Dialog`.
 
-**Quartiermeister:** „Gute Fahrt – und vergiss nicht, mir nachher Bescheid zu geben!“
+**Ergebnis:** Nach diesem Gespräch erscheint beim nächsten Anklicken der Rückkehrdialog. Kein FTB-Questabschluss.
 
-**Ergebnis:** Kein Questabschluss. Das ist der Startdialog, *nicht* der EasyNPC-Questabschluss-Dialog.
+## Dialog C – `q07_rueckkehr`: Spieler meldet sich zurück
 
-## Dialog C – Rückkehr zum Quartiermeister (Quest 07 abschließen)
+**Anzeige-Bedingung:** Scoreboard `lf_q07 == 1`; Priorität 10.
 
-**Quartiermeister:** „Na, Landratte? Konntest du einen Blick in unsere drei Geschäfte werfen?“
+**Quartiermeister:** „Na, Landratte? Hast du unsere drei Geschäfte kennengelernt?“
 
-**Spieler – Abschlussantwort:** „Aye, ich habe mir die drei Geschäfte angesehen!“
+**Spieler (Abschlussantwort):** „Aye, ich habe mir die drei Geschäfte angesehen!“
 
-**Quartiermeister:** „Ausgezeichnet! Jetzt weißt du, wo unsere Mannschaft Schiffsvorräte, Küchenwaren und Ausrüstung für einen schönen Hafen bekommt. Ein guter Pirat kennt nicht nur sein Schiff, sondern auch die Leute, die es versorgen!“
+**EasyNPC-Aktionen auf genau dieser Abschlussantwort (in Reihenfolge):**
+1. `Scoreboard` → `set:lf_q07:2`
+2. `Open Dialog` → `q07_abschluss`
 
-**Quartiermeister:** „Deine nächste Aufgabe führt dich zum Schiffsbau. Dort wird dringend Holz benötigt. Schau in dein Questbuch und melde dich zum nächsten Auftrag!“
+**Wichtig:** Die Quest soll **nicht** beim bloßen Öffnen von Dialog C abschließen. Es ist keine Shopbesuchsprüfung vorgesehen.
 
-**Ergebnis:** *Nur* die Rückkehr-Bestätigung in **Dialog C** soll bei der späteren Anbindung Quest 07 einmalig abschließen und die abhängige Quest 08 freigeben. Es wird **nicht** geprüft, ob die drei Shops tatsächlich geöffnet wurden.
+## Dialog D – `q07_abschluss`: Separates Abschlusssignal
 
-## Dialog D – Nach Questabschluss
+**Anzeige:** Priorität `Manual Only (-1)`, nicht als Standarddialog. Öffnet **nur**, wenn die Antwort aus Dialog C ihn aufruft.
 
-**Quartiermeister:** „Ahoy, Landratte! Du kennst unser Handelshaus bereits. Vergiss nicht: Ohne geschickte Händler ist selbst der reichste Piratenhafen verloren.“
+**Quartiermeister:** „Ausgezeichnet! Jetzt weißt du, wo unsere Mannschaft Vorräte, Küchenwaren und Hafenausstattung bekommt. Nun wird Holz für den Schiffsbau gebraucht. Schau in dein Questbuch, Landratte!“
 
-**Spieler:** „Wohin geht es als Nächstes?“
+**Spieler:** „Aye, Quartiermeister!“
 
-**Quartiermeister:** „Beim Schiffsbau wird Holz gebraucht! Geh deiner nächsten Aufgabe nach und mach La Familia stolz!“
+**Späterer FTB-Task:** Hier die **Dialog-ID von `q07_abschluss`** hinterlegen. **Bei Öffnung dieses Dialogs** wird dann die Quest 07 abgeschlossen (sofern freigeschaltet). Ein eigener Itemkauf oder Shopcheck wird nicht benötigt.
+
+## Dialog E – `q07_nachher`: Nach der Bestätigung
+
+**Anzeige-Bedingung:** Scoreboard `lf_q07 == 2`; Priorität 100.
+
+**Quartiermeister:** „Ahoy, Landratte! Unser Handelshaus kennst du nun. Der Schiffsbau kann deine Hilfe gebrauchen!“
+
+**Spieler:** „Aye! Auf zum nächsten Auftrag!“
 
 **Ergebnis:** Keine erneute Questbelohnung.
 
-## Spätere technische Umsetzung
+## Dialogsteuerung in EasyNPC
 
-1. NPC `10bbc089-6e58-4d92-b3c0-c1cf911f8d74` und Rollen/Dialoge A–D dokumentiert.
-2. Nutzer übermittelt als Nächstes die EasyNPC **Dialog-ID von Dialog C**.
-3. Alle EasyNPC-FTB-Tasks erst nach vollständiger NPC-Erfassung verbinden. Shop-NPCs bleiben reine Händler.
-4. Quest 07 muss erst nach dem Rückkehrgespräch abschließen, ohne Shop-GUI-Checks und ohne Kaufzwang.
-5. Pro Spieler nur einmal Belohnung; Quest 08 nach Questabschluss freischalten und jeden NPC einzeln testen.
+1. Einmalig durch Server-OP: `/scoreboard objectives add lf_q07 dummy`.
+2. Im NPC-Menü **Erweiterter Dialog / Advanced Dialog** öffnen und Einträge wie oben benennen.
+3. `q07_start`: bedingungsloser Fallback (Priorität 0). Startknopf mit Scoreboard-Aktion `set:lf_q07:1`.
+4. `q07_rueckkehr`: Bedingung Scoreboard `lf_q07 == 1` (Priorität 10). Bestätigungsknopf `set:lf_q07:2` und dann Aktion **Open Dialog** `q07_abschluss`.
+5. `q07_abschluss`: **Manual Only -1** und keine Bedingungen. **Nur seine Dialog-ID** für die spätere EasyNPC-FTB-Aufgabe kopieren.
+6. `q07_nachher`: Bedingung `lf_q07 == 2` und Priorität 100.
+7. FTB-Quest-02-Voraussetzung und FTB Task/Belohnung wie mit dem Besitzer vereinbart **erst später** integrieren.
+8. Spieler können diese Dialoge im Test bereits sehen, doch die **FTB-Quest 07 wird dabei noch nicht real abgeschlossen**. Zum Zurücksetzen von Tests: `/scoreboard players reset <Spielername> lf_q07`.
