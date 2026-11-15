@@ -6,7 +6,8 @@
 **FTB-Quest-ID:** `FA10010300030000`  
 **Questart:** Optionale Nebenquest in Kapitel 1, nach Quest 01 verfügbar  
 **Geplante einmalige Belohnung:** 25 Erfahrungspunkte und 4 Fackeln. Kein neuer Rang.  
-**Dialog-ID:** Noch nicht vorhanden; nach Erstellung von Dialog B aus EasyNPC kopieren.
+**Dialog-ID für den Questabschluss (Dialog B):** `666df7d2-8638-37b7-a4d9-efd806c8eceb` (vom Nutzer übermittelt).  
+**Status:** Nur Zuordnung; automatische FTB-Questaufgabe wird erst eingerichtet, wenn alle NPCs stehen.
 
 ## Dialog A – Spieler hat Quest 01 beim Kapitän noch nicht beendet
 
@@ -57,6 +58,6 @@
 ## Umsetzung später (wie mit dem Serverbetreiber vereinbart)
 
 1. EasyNPC-NPC-ID `04df3e39-1e9e-468e-8d23-94454743bbce` ist fest.
-2. Dialoge A–C im EasyNPC-Editor anlegen; **nur die tatsächliche Dialog-ID von B** für Questabschluss kopieren (sofern die Erweiterung diesen Abschlussdialog registriert).
+2. Dialog B ist mit `666df7d2-8638-37b7-a4d9-efd806c8eceb` hinterlegt. Die Dialog-IDs A/C sind noch nicht hinterlegt; sie dürfen die Quest nicht abschließen.
 3. Die automatische Task-Konvertierung aller NPCs erfolgt gesammelt, sobald alle NPCs platziert sind. Danach **jeden NPC separat testen**.
 4. Quest-ID `FA10010300030000` beibehalten. Weder bestehenden Händler-Shop noch andere Quest-Dateien überschreiben.
