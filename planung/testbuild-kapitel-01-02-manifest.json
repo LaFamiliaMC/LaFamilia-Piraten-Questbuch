@@ -175,5 +175,12 @@
       "dialog_id": "09301480-fd54-3179-bb8b-c2603fe58c6e",
       "status": "Dialog-ID assigned; TEST ZIP remains checkmark until task is replaced and tested"
     }
+  },
+  "deployment_workflow": {
+    "npc_setup_phase": "collect UUIDs and dialog IDs only",
+    "automatic_easy_npc_task_switch": "deferred until all NPCs are placed and recorded",
+    "final_verification": "one NPC and quest at a time",
+    "preserve_existing_quest_ids": true,
+    "never_overwrite_shops": true
   }
 }
