@@ -4,9 +4,9 @@
 **NPC-UUID:** `0ddeb1e3-8414-4a10-ac46-22263e28bc26`  
 **FTB-Quest:** `FA10010300040000` / `LF-L01-Q04` – Die Regeln von La Familia  
 **Questart:** optionale Lobby-Nebenquest, nach Quest 01 verfügbar  
-**Abschluss-Dialog-ID:** Noch nicht bekannt. Nach Anlage von Dialog B aus EasyNPC kopieren.  
+**Abschluss-Dialog-ID (Dialog B):** `23b56d3e-5da3-338a-b351-07b485ef88fe` (vom Nutzer geliefert).  
 **Geplante einmalige Belohnung:** 25 XP und 1 Buch (ohne neue Rangstufe).  
-**Status:** Dialogvorlage; kein aktiver EasyNPC-FTB-Task.
+**Status:** NPC- und Dialog-UUID gespeichert; kein aktiver EasyNPC-FTB-Task. Automatische Anbindung folgt erst nach vollständiger NPC-Erfassung.
 
 > Die unten erwähnten Grundsätze sind **Regelvorschläge für das Rollenspiel**, keine verifizierte offizielle Serverordnung. Vor Veröffentlichung mit den tatsächlichen La Familia Serverregeln abgleichen. Die vollständigen echten Regeln sollten zusätzlich im Server-Regelbuch oder einer verlinkten Quelle stehen.
 
@@ -63,6 +63,6 @@
 ## Integration (bewusst für später zurückgestellt)
 
 1. Beim Hüter-NPC mit UUID `0ddeb1e3-8414-4a10-ac46-22263e28bc26` die Dialoge A–C im EasyNPC-Editor anlegen.
-2. Die **wirkliche Dialog-ID des Abschlussdialogs B** nachreichen; sie ist nicht identisch mit der NPC-UUID.
-3. Erst nachdem **alle** Lobby-NPCs angelegt wurden, Quest `FA10010300040000` im FTB-Quests-Editor von Checkmark auf „EasyNPC Task“ umstellen, NPC-UUID und reale Abschluss-Dialog-ID eintragen.
+2. Die Abschluss-Dialog-ID von Dialog B ist `23b56d3e-5da3-338a-b351-07b485ef88fe`; sie ist nicht identisch mit der NPC-UUID.
+3. Erst nachdem **alle** Lobby-NPCs angelegt wurden, Quest `FA10010300040000` im FTB-Quests-Editor von Checkmark auf „EasyNPC Task“ umstellen, NPC-UUID `0ddeb1e3-8414-4a10-ac46-22263e28bc26` und Abschluss-Dialog-ID `23b56d3e-5da3-338a-b351-07b485ef88fe` eintragen.
 4. Anschließend jeden NPC einzeln testen; Originalshops und andere Quests nicht überschreiben.
