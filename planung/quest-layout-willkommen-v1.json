@@ -264,13 +264,12 @@
           "shop_reference_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
           "shop_is_quest_dialog_capable": false,
           "dialog_id": null,
-          "quest_npc_status": "Quartiermeister vor der Tür; neue NPC-UUID und Dialog-ID ausstehend",
+          "quest_npc_status": "Quartiermeister draußen vor Tür; NPC-UUID noch ausstehend; Abschlussdialog-ID noch ausstehend; keine Shopbesuch-Prüfung",
           "dialog_only_dedicated_quest_npc": true,
           "quest_shop_separation": "Der vorhandene Shop-NPC kann nur das Shop-GUI öffnen, nicht den EasyNPC-Questdialog. Nicht dessen UUID als Dialog-NPC verwenden.",
           "quest_visit_shops_plan": {
-            "introduced_by": "Eigener Quartiermeister direkt vor dem Ladengebäude, noch zu platzieren",
-            "start_trigger": "Questdialog des Quartiermeisters nach Kapitel 1 / LF-L01-Q02",
-            "visits_required": 3,
+            "introduced_by": "Eigenständiger Quartiermeister draußen vor dem Eingang des Gebäudes",
+            "start_trigger": "Startdialog des Quartiermeisters nach LF-L01-Q02",
             "shop_stations": [
               {
                 "name": "Fässer und Schiffsvorräte",
@@ -289,15 +288,18 @@
                 "identification_status": "noch vom Nutzer bestätigen lassen, ob dieser Shop gemeint ist"
               }
             ],
-            "required_action": "Jede der drei Shop-GUIs einmal tatsächlich öffnen",
-            "completion_goal": "Quest 07 automatisch nach dem dritten einzigartigen Shopbesuch abschließen; danach LF-L02-Q02 freischalten",
-            "live_shop_visit_tracking": "not_implemented",
-            "technical_dependency": "prüfen, wie sich Shop-Öffnungen der installierten EasyNPC-Shop-Mod zuverlässig serverseitig erfassen lassen; ggf. separate Fabric-Brückenmod",
-            "fallback_only_if_not_feasible": "Alternativ kann der Quartiermeister die Besuche im Rückkehrdialog bestätigen; dies beweist nicht die realen Shop-Öffnungen.",
+            "narrative_goal": "Spieler soll sich im Gebäude die drei Händler Fässer und Schiffsvorräte, Geschirr und Küchenwaren und Naturdeko ansehen",
+            "actual_shop_visits_required_for_quest_completion": false,
+            "shop_gui_open_tracking": false,
+            "purchase_required": false,
+            "player_return": "Spieler kehrt zum Quartiermeister zurück und wählt die Antwort: Ich habe mir die drei Geschäfte angesehen.",
+            "completion_trigger": "Abschluss-Dialogoption beim Quartiermeister; tatsächliche Shopbesuche nicht prüfen",
+            "completion_effect": "Quest 07 einmalig abschließen; dadurch Quest 08 Holz für den Schiffsbau freischalten",
             "merchant_shops_unchanged": true,
-            "position": "Outside entrance of building containing the three merchants"
+            "position": "Outside entrance to three-shop merchant house",
+            "implementation_status": "planning_only; dialog to FTB task binding deferred until all NPCs collected"
           },
-          "quest_title_alias": "Erkunde die drei Läden im Hafen",
+          "quest_title_alias": "Die drei Geschäfte im Hafen kennenlernen",
           "dialog_document": "planung/quest07-drei-shops-konzept.md"
         },
         {
