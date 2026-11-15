@@ -1,63 +1,51 @@
-# La Familia – Quartiermeister Quest 07, einfache Einrichtung OHNE Scoreboard
+# Quartiermeister – Quest 07: Ein einziger EasyNPC-Dialog
 
-**NPC:** Quartiermeister vor dem Handelshaus  
 **NPC-UUID:** `10bbc089-6e58-4d92-b3c0-c1cf911f8d74`  
 **FTB-Quest-ID:** `FA10010300070000`  
-**Quest:** „Beim Quartiermeister melden“ / „Die drei Geschäfte im Hafen kennenlernen“  
-**Abschluss-Dialog-ID:** noch ausstehend; **nur `q07_abschluss`** aus EasyNPC kopieren.
+**Dialogname:** `q07_quartiermeister`  
+**Dialog-ID:** Noch nicht vorhanden – aus EasyNPC kopieren.  
+**Status:** Nur Textvorlage, kein aktivierter FTB-Abschlusstask.
 
-## So funktioniert die Variante ohne Scoreboard
+## Text des einzigen Dialogs
 
-Wir verwenden drei EasyNPC-Dialogeinträge und keine Scoreboards, Spieler-Tags, Befehle oder Shopbesuchskontrolle. Die Shop-NPCs bleiben unverändert.
+**Quartiermeister:**
 
-### Dialog 1 – `q07_start` (Standard-/Fallback-Dialog)
+Ahoy, Landratte! Willkommen bei der Hafenversorgung von La Familia!
 
-Text: „Ahoy, Landratte! Ich bin der Quartiermeister von La Familia. Direkt hinter dieser Tür befinden sich drei Geschäfte: Fässer und Schiffsvorräte, Geschirr und Küchenwaren sowie Naturdeko. Schau dich dort in Ruhe um. Du musst nichts kaufen – komm danach wieder zu mir!“
+Ich bin der Quartiermeister und sorge dafür, dass unsere Mannschaft stets bestens versorgt ist.
 
-**Antwortknopf A:** „Aye! Ich schaue mich in den drei Geschäften um!“  
+Direkt hinter mir findest du drei wichtige Geschäfte unseres Hafens!
+
+**Fässer und Schiffsvorräte:** Hier bekommst du alles, was ein ordentliches Piratenschiff an Vorräten und Ausrüstung benötigt.
+
+**Geschirr und Küchenwaren:** Hier findest du die passende Ausstattung für unsere Küchen und die Versorgung der Mannschaft.
+
+**Naturdeko:** Unser Hafen soll schließlich nicht wie eine verlassene Räuberhöhle aussehen! Hier findest du allerlei schöne Dinge, um dein Zuhause zu gestalten.
+
+Merk dir diese drei Händler gut, Landratte! Du wirst ihre Dienste auf deinen kommenden Abenteuern sicher brauchen.
+
+Nun bist du mit unserer Hafenversorgung vertraut!
+
+Als Nächstes wartet der Schiffsbau auf dich. Dort wird dringend Holz benötigt!
+
+**Antwort des Spielers:**
+
+Aye, Quartiermeister! Vielen Dank für die Einweisung!
+
 **Aktion:** `Close Dialog`
 
-**Antwortknopf B:** „Ich bin zurück und möchte Bericht erstatten!“  
-**Aktion:** `Open Dialog` → `q07_rueckkehr`
+## In EasyNPC einrichten
 
-`q07_start` ist als **Standarddialog** markiert. Bei jedem erneuten Anklicken kann er wieder erscheinen, solange die spätere FTB-Zustandsbedingung noch nicht eingerichtet ist.
+1. Quartiermeister im Dialogeditor bearbeiten.
+2. **Nur einen** Standarddialog erstellen, am besten mit Label `q07_quartiermeister`.
+3. Text aus diesem Dokument einfügen.
+4. **Einen** Antwortknopf mit „Aye, Quartiermeister! Vielen Dank für die Einweisung!“ hinzufügen; Aktion `Close Dialog`.
+5. Im EasyNPC x FTB Quests Compat Menü **die Dialog-ID dieses einen Dialogs** kopieren und dem Projekt mitteilen.
 
-### Dialog 2 – `q07_rueckkehr` (Manual Only, Priorität -1)
+## Wann wird Quest 07 abgeschlossen?
 
-Text: „Na, Landratte? Hast du dir unsere drei Geschäfte angesehen?“
+Die genutzte EasyNPC-x-FTB-Quests-Kompatibilität erkennt nach bisherigem Integrationsplan das **Öffnen** des angegebenen Zieldialogs als Taskabschluss. Deshalb wäre Quest 07 künftig **bereits beim Öffnen** des Erklärdialogs erfüllt, auch wenn der Text noch nicht gelesen wurde. Der Knopf beendet nur das Gespräch.
 
-**Antwortknopf:** „Aye, ich habe mir die drei Geschäfte angesehen!“  
-**Aktion:** `Open Dialog` → `q07_abschluss`
+Wir binden die FTB-Aufgabe, die Quest-02-Voraussetzung und die einmalige Belohnung **erst nach Erfassung aller NPCs** ein. Bis dahin ist das hier nur die vorbereitete Dialogvorlage.
 
-**Alternativer Antwortknopf:** „Noch nicht, ich sehe mich weiter um.“  
-**Aktion:** `Close Dialog`
-
-Wichtig: Die FTB-Quest-Aufgabe später **nicht an `q07_rueckkehr`** knüpfen. Ihre Öffnung bedeutet noch keine Bestätigung.
-
-### Dialog 3 – `q07_abschluss` (Manual Only, Priorität -1)
-
-Text: „Ausgezeichnet, Landratte! Jetzt kennst du unsere drei Händler und weißt, wo unsere Mannschaft ihre Vorräte herbekommt. Nun wartet der Schiffsbau: Dort wird dringend Holz benötigt!“
-
-**Antwortknopf:** „Aye, Quartiermeister!“  
-**Aktion:** `Close Dialog`
-
-**Nur diese Dialog-ID** wird in der abschließenden gemeinsamen Integration in die FTB-Quests-EasyNPC-Aufgabe für Quest 07 eingetragen. Laut Kompatibilitätsmod löst die Quest-Aufgabe beim **Öffnen des Zieldialogs** aus.
-
-## Wichtige Grenzen
-
-- **Keine Überprüfung** der tatsächlichen Shopbesuche.
-- **Keine Erinnerung an einen ersten Besuch:** Da kein Scoreboard oder anderer Speicher genutzt wird, kann ein Spieler bereits beim ersten Gespräch auf „Ich bin zurück“ klicken. Das ist laut Wunsch des Serverbetreibers für diese Einführungsquest in Ordnung.
-- Erst später richten wir für abgeschlossene FTB-Quest 07 optional einen Nachgesprächs-Dialog ein, der sich über den FTB-Queststatus auswählt. Dadurch bleibt die einmalige Belohnung auf Quest-Ebene.
-- **Bis alle NPCs stehen:** kein automatischer FTB-Aufgaben-Abschluss, keine echten Belohnungen über diese Dialoge.
-- Vor der finalen Integration kann man alle Dialoge testen, aber Quest 07 bleibt im Testbuild eine Checkmark-Aufgabe.
-
-## In EasyNPC eintragen
-
-1. Quartiermeister im NPC-Editor öffnen, **Advanced Dialog / Erweiterter Dialog** wählen.
-2. Eintrag `q07_start` als Standarddialog anlegen; zwei Antwortknöpfe wie oben.
-3. Eintrag `q07_rueckkehr` mit Priorität **Manual Only (-1)** anlegen; sein Abschlussknopf öffnet `q07_abschluss`.
-4. Eintrag `q07_abschluss` ebenfalls mit Priorität **Manual Only (-1)** anlegen.
-5. Funktion **Open Dialog** in der Aktion des jeweiligen Antwortknopfs benutzen.
-6. Am Ende über die **Q**-Schaltfläche der Kompatibilitätsmod **nur die Dialog-ID von `q07_abschluss`** kopieren und dem Projekt mitteilen.
-
-**Fazit:** Drei Dialogeinträge ohne Scoreboard; Questabschluss später erst nach Bestätigung durch den Spieler. Kein Kauf und kein Tracking.
+**Es gibt keine Scoreboards, keine Shopbesuchprüfung, keinen Kauf, keine Rückkehr und keinen weiteren Dialog.**
