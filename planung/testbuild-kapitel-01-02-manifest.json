@@ -77,12 +77,12 @@
           "internal_plan_id": "LF-L01-Q04",
           "hex_quest_id": "FA10010300040000",
           "title": "Die Regeln von La Familia",
-          "task": "ftbquests:checkmark (existing TEST build); EasyNPC task conversion deferred until all NPCs collected",
+          "task": "ftbquests:checkmark (current TEST ZIP); target EasyNPC Task for dialog 23b56d3e-5da3-338a-b351-07b485ef88fe only during final NPC integration",
           "icon_asset": null,
           "merchant_uuid": null,
-          "needs_easy_npc_dialog_id": true,
+          "needs_easy_npc_dialog_id": false,
           "npc_uuid": "0ddeb1e3-8414-4a10-ac46-22263e28bc26",
-          "dialog_id": null,
+          "dialog_id": "23b56d3e-5da3-338a-b351-07b485ef88fe",
           "npc_role": "Hüter des Hafenkodex",
           "needs_npc_uuid": false,
           "reward_plan": {
@@ -96,7 +96,8 @@
             "once_only": true,
             "rank_stage_reward": false,
             "status": "planning_only"
-          }
+          },
+          "needs_easy_npc_task_conversion": true
         },
         {
           "internal_plan_id": "LF-L01-Q05",
@@ -214,8 +215,8 @@
     "FA10010300040000": {
       "npc_uuid": "0ddeb1e3-8414-4a10-ac46-22263e28bc26",
       "npc_role": "Hüter des Hafenkodex",
-      "dialog_id": null,
-      "status": "NPC UUID registered, waiting for quest-dialog ID; not yet linked to FTB task"
+      "dialog_id": "23b56d3e-5da3-338a-b351-07b485ef88fe",
+      "status": "NPC and Quest 04 completion dialog ID recorded; current ZIP not updated; final integration deferred"
     }
   },
   "deployment_workflow": {
