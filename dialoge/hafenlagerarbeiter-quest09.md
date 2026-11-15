@@ -7,7 +7,7 @@
 **Questtyp:** Nebenquest, optional  
 **Voraussetzung:** Quest 07 „Beim Quartiermeister melden“ (`LF-L02-Q01`)  
 **Dialogname:** `q09_hafenlagerarbeiter`  
-**Dialog-ID:** noch aus EasyNPC zu übermitteln  
+**Dialog-ID:** `98258fb6-9e43-371a-a51c-433c0248c504` (vom Nutzer übermittelt)  
 **FTB-Status:** Nur Dokumentation; bestehender Testbuild verwendet weiterhin einen Checkmark-Task.
 
 ## Ein einziger Erklärdialog
@@ -39,7 +39,7 @@ Deine Einweisung ist damit beendet. Aye, und nun an die Arbeit!“
 1. NPC mit der UUID `da5f8bc7-e0d5-48ed-9a1a-91a582458327` im EasyNPC-Editor öffnen.
 2. Einen einzigen **Standarddialog** namens `q09_hafenlagerarbeiter` anlegen.
 3. Den Text übernehmen, einen Antwortknopf mit `Close Dialog` setzen.
-4. Die EasyNPC-**Dialog-ID dieses Dialogs** kopieren und für Quest 09 übermitteln.
+4. Die **Dialog-ID `98258fb6-9e43-371a-a51c-433c0248c504`** ist erfasst und wird erst bei der späteren FTB-Quests-Anbindung verwendet.
 5. Später wird die FTB-EasyNPC-Task an die Öffnung genau dieses Dialogs gebunden. Die Questbelohnung erfolgt dann einmalig; die Voraussetzung Quest 07 bleibt erhalten.
 6. Der vorhandene Händler **Fässer & Schiffsvorräte** mit Shop-UUID `a092c754-26c6-458e-8c42-de3ad3e26c1d` bleibt unverändert.
 
