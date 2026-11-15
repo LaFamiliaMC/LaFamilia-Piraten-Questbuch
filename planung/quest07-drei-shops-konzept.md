@@ -7,7 +7,7 @@
 
 ## Aufbau
 
-Ein **eigener Quartiermeister ohne Shopfunktion** steht draußen vor dem Eingang des Handelshauses. Seine NPC-UUID und die ID des Abschlussdialogs werden später eingetragen.
+Ein **eigener Quartiermeister ohne Shopfunktion** steht draußen vor dem Eingang des Handelshauses. Seine **NPC-UUID ist `10bbc089-6e58-4d92-b3c0-c1cf911f8d74`**. Die ID des Abschlussdialogs (Dialog C) wird später eingetragen.
 
 Im Gebäude befinden sich drei unveränderte, eigenständige Shop-NPCs:
 
@@ -71,7 +71,11 @@ Die genannten Shop-UUIDs dienen nur der Dokumentation, **nicht** zur technischen
 
 ## Umsetzung später
 
-- **Noch offen:** Eigener Quartiermeister-NPC mit UUID; Abschluss-Dialog-ID von Dialog C.
+- **Quartiermeister-NPC-ID erfasst:** `10bbc089-6e58-4d92-b3c0-c1cf911f8d74`. **Noch offen:** Abschluss-Dialog-ID von Dialog C.
 - Bis alle NPCs registriert sind, keine automatische EasyNPC-FTB-Aufgabe einbauen.
 - Bei der späteren Integration wird **nur der Abschlussdialog** als Quest-Trigger genutzt. Keine Shop-Ereignisprüfung implementieren.
 - Jeden NPC anschließend einzeln testen, insbesondere dass Quest 07 nicht schon beim ersten Dialog abschließt und nur einmal belohnt wird.
+
+## Zugehörige separate Dialogvorlage
+
+Die Dialoge für EasyNPC stehen auch unter [`dialoge/quartiermeister-quest07.md`](../dialoge/quartiermeister-quest07.md). Die eigentliche Questverknüpfung ist noch nicht aktiv.
