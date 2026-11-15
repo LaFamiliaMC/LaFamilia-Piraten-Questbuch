@@ -31,7 +31,7 @@
           "hide_dependency_lines": false,
           "optional": false,
           "assigned_station": "Kapitän",
-          "npc_uuid": null,
+          "npc_uuid": "8c658830-313e-4f63-8dc2-f7ff4a51b669",
           "logical_dependencies": [],
           "shape": "hexagon",
           "rank_reward": {
@@ -43,7 +43,10 @@
             "note": "Stage Reward in FTB Quests; verify reward autocollection and per-player behavior with actual server before deployment.",
             "icon": "assets/lafamilia/textures/ftbquests/raenge/rang_01_landratte.png"
           },
-          "quest_text_addendum": "Der Kapitän erkennt dich als Landratte an – deinen ersten Rang in La Familia. Dieser Rang bildet den Anfang einer serverweiten Ranglaufbahn."
+          "quest_text_addendum": "Der Kapitän erkennt dich als Landratte an – deinen ersten Rang in La Familia. Dieser Rang bildet den Anfang einer serverweiten Ranglaufbahn.",
+          "dialog_label_planned": "lafamilia_kapitaen_willkommen",
+          "dialog_id": null,
+          "npc_dialog_status": "UUID fest, Dialog-ID muss aus EasyNPC kopiert werden"
         },
         {
           "planning_id": "LF-L01-Q02",
