@@ -240,12 +240,12 @@
           "internal_plan_id": "LF-L02-Q04",
           "hex_quest_id": "FA10010300100000",
           "title": "Fehlende Vorräte",
-          "task": "ftbquests:checkmark (current TEST build); planned EasyNPC task on opening q10_proviantmeister; binding deferred until all NPCs collected",
+          "task": "ftbquests:checkmark (current TEST build); future EasyNPC dialog task on opening 28fe37f8-7908-328a-811c-16d363f92f03; binding deferred",
           "icon_asset": "assets/lafamilia/textures/ftbquests/haendler/faesser_schiffsvorraete.png",
           "merchant_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
-          "needs_easy_npc_dialog_id": true,
+          "needs_easy_npc_dialog_id": false,
           "npc_uuid": "af4c5c5e-aa26-453b-8962-b740932a8143",
-          "dialog_id": null,
+          "dialog_id": "28fe37f8-7908-328a-811c-16d363f92f03",
           "needs_dedicated_quest_npc": false,
           "merchant_shop_only": true,
           "shop_reference_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
@@ -367,8 +367,9 @@
     "FA10010300100000": {
       "npc_uuid": "af4c5c5e-aa26-453b-8962-b740932a8143",
       "npc_role": "Proviantmeister",
-      "dialog_id": null,
-      "status": "NPC UUID registered; EasyNPC dialog ID pending; final FTB binding deferred"
+      "dialog_id": "28fe37f8-7908-328a-811c-16d363f92f03",
+      "dialog_role": "q10_proviantmeister – ein Erklärdialog über Proviantankauf",
+      "status": "Beide IDs erfasst; Checkmark-Testbuild unverändert, FTB-Anbindung später"
     }
   },
   "deployment_workflow": {
