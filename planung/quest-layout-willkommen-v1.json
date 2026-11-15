@@ -202,12 +202,33 @@
           "inter_chapter_dependency": null,
           "hide_dependency_lines": true,
           "optional": true,
-          "assigned_station": "Hafenglocke",
-          "npc_uuid": null,
+          "assigned_station": "Hafenglockenwächter",
+          "npc_uuid": "f410950f-02e6-4731-a239-3dc06c486e61",
           "logical_dependencies": [
             "LF-L01-Q01"
           ],
-          "shape": "circle"
+          "shape": "circle",
+          "dialog_id": null,
+          "dialog_document": "dialoge/hafenglockenwaechter-quest06.md",
+          "npc_dialog_status": "NPC UUID eingetragen, Dialog-B-Abschluss-ID noch offen; automatische FTB-Verknüpfung zurückgestellt",
+          "npc_trigger_policy": {
+            "quest_unlock": "LF-L01-Q01",
+            "optional": true,
+            "quest_completion": "Dialog B last response only; not Dialog A/C",
+            "not_a_story_gate": true
+          },
+          "reward_plan": {
+            "xp": 25,
+            "items": [
+              {
+                "item": "minecraft:clock",
+                "count": 1
+              }
+            ],
+            "once_only": true,
+            "rank_stage_reward": false,
+            "status": "planning_only"
+          }
         }
       ]
     },
