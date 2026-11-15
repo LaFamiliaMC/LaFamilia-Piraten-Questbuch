@@ -10,8 +10,8 @@
   },
   "dependencies": {
     "daily_unlock_after": "LF-L01-Q01",
-    "weekly_unlock_after": "LF-L08-Q02",
-    "note": "Do not offer unreachable world tasks before world unlock"
+    "weekly_unlock_after": "LF-L03-Q04",
+    "note": "Weekly Quests erst nach Quest 16 (Spielwelt-Reise) freischalten; keine Aufgaben aus unerreichbaren Welten vorher."
   },
   "scheduling": {
     "time_zone": "Europe/Berlin",
