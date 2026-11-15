@@ -39,14 +39,15 @@
     },
     {
       "name": "Hüter des Hafenkodex",
-      "uuid": null,
+      "uuid": "0ddeb1e3-8414-4a10-ac46-22263e28bc26",
       "category": "nebenquest",
       "plan_quest_id": "LF-L01-Q04",
       "ftb_hex_id": "FA10010300040000",
-      "source": "new_dedicated_npc_requested_by_user",
-      "dialog_status": "waiting_for_npc_uuid",
+      "source": "user_supplied_npc_uuid",
+      "dialog_status": "waiting_for_quest_completion_dialog_id",
       "dialog_id": null,
-      "note": "Neuer eigener NPC für die Serverregeln. Nicht den bestehenden Hafenmeister für Quest 04 verwenden."
+      "note": "Neuer eigener NPC für die Serverregeln. Nicht den bestehenden Hafenmeister für Quest 04 verwenden.",
+      "dialog_document": "dialoge/hueter-hafenkodex-quest04.md"
     },
     {
       "name": "Holzfäller",
