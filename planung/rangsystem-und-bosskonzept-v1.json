@@ -9,7 +9,7 @@
     "first_quest_grants_first_rank": true,
     "first_quest_id": "LF-L01-Q01",
     "first_quest_reward": "Landratte",
-    "lobby_finale_quest_id": "LF-L08-Q02",
+    "lobby_finale_quest_id": "LF-L03-Q04",
     "lobby_finale_reward": "Deckjunge",
     "persistent_player_rank": true,
     "rank_replacement": "When promoting remove previous stage; keep one active rank",
@@ -17,7 +17,8 @@
     "progress_model": "Beständige, einmalige Story-, Berufs-, Entdeckungs- und Boss-Meilensteine; keine repetitiven Daily/Weekly-Farmränge",
     "avoid_quest_count_grind": "Kein Zwang alle 2000 Quests abzuschließen; exakte Gesamt-Zahl und Meilensteine erst nach Erstellung aller Kategorien festlegen",
     "group_vs_player": "Rang pro Spieler vergeben, auch bei gemeinsamem FTB-Teamfortschritt separat testen",
-    "reward_claim": "Autoclaim der Stage-Belohnung nach Questabschluss prüfen; sonst bei manuellem Abholen klar kennzeichnen"
+    "reward_claim": "Autoclaim der Stage-Belohnung nach Questabschluss prüfen; sonst bei manuellem Abholen klar kennzeichnen",
+    "lobby_finale_note": "Am Kapitän auf dem kleinen Schiff nach Quest 15; Quest 16 belohnt Rang Deckjunge einmalig nach aktivierter FTB Quests Stage-Vergabe. Teleport nur durch bewusste Spielerwahl."
   },
   "ranks": [
     {
@@ -35,7 +36,7 @@
       "level": 2,
       "title": "Deckjunge",
       "stage": "lafamilia_rank_02_deckjunge",
-      "quest_id": "LF-L08-Q02",
+      "quest_id": "LF-L03-Q04",
       "condition": "Die verpflichtende Lobby-Einführung abschließen",
       "status": "milestone_quest_selected",
       "icon_file": "rang_02_deckjunge.png",
