@@ -1,31 +1,32 @@
-# Quest 07 – Die drei Geschäfte kennenlernen (ohne Scoreboard)
+# Quest 07 – Beim Quartiermeister melden: Nur ein Dialog
 
-**Quest-Plan-ID:** `LF-L02-Q01`  
-**FTB-Quest-ID:** `FA10010300070000`  
-**Quartiermeister-NPC-UUID:** `10bbc089-6e58-4d92-b3c0-c1cf911f8d74`  
-**Voraussetzung:** Quest 02 „Der Hafenmeister“; wird bei der späteren FTB-Integration umgesetzt.
+**Quest-ID:** `LF-L02-Q01` / FTB `FA10010300070000`  
+**NPC:** Quartiermeister vor dem Handelshaus, UUID `10bbc089-6e58-4d92-b3c0-c1cf911f8d74`  
+**Voraussetzung:** Quest 02 „Der Hafenmeister“ – wird bei der gemeinsamen späteren FTB-Integration gesetzt.  
+**Dialog:** `q07_quartiermeister` (einziger Erklär- und Abschlussdialog; ID wird aus EasyNPC nachgereicht).
 
-Der Quartiermeister steht **draußen vor der Tür** des Handelshauses. Im Haus stehen drei separate Shops:
-- **Fässer & Schiffsvorräte** – `a092c754-26c6-458e-8c42-de3ad3e26c1d`
-- **Geschirr & Küchenwaren** – `b9150d76-1221-40eb-9736-867be277fdef`
-- **Naturdeko** – vermutlich **Decocraft Nature**, `c9f6d74e-35ba-4083-8688-013d7ecbd161`. Die genaue Zuordnung bestätigt der Serverbetreiber noch.
+## Questablauf
 
-## Ablauf
+1. Der Spieler spricht den Quartiermeister außerhalb des Handelshauses an.
+2. **Ein einzelner Dialog** erklärt die drei Shops.
+3. Der Spieler klickt „Aye, Quartiermeister! Vielen Dank für die Einweisung!“ und schließt das Gespräch.
+4. Quest 07 soll bei der späteren Einrichtung der EasyNPC-FTB-Aufgabe bereits **beim Öffnen** dieses einen Dialogs abgeschlossen werden – **nicht** erst beim Klick auf den Schließen-Knopf. Die Questbelohnung ist einmalig und Quest 08 folgt über die FTB-Quest-Abhängigkeit.
 
-1. Quartiermeister erzählt von den drei Shops.
-2. Spieler kann sie besuchen, **kein Kauf erforderlich** und **keine Kontrolle, ob er die Shops geöffnet hat**.
-3. Bei einer Interaktion mit dem Quartiermeister kann der Spieler über **„Ich bin zurück“** zu einer Rückkehrfrage gelangen.
-4. Er bestätigt **„Aye, ich habe mir die drei Geschäfte angesehen!“**.
-5. Diese Antwort öffnet einen **separaten Abschlussdialog** `q07_abschluss`. **Nur dessen Dialog-ID** löst später die EasyNPC-FTB-Aufgabe aus, weil die Kompatibilitätsmod bereits beim Öffnen des Zieldialogs auslöst.
-6. Nach Abschluss wird Quest 08 „Holz für den Schiffsbau“ freigeschaltet.
+## Erklärte Shops (nur erzählerisch)
 
-## Technisch bewusst einfach
+- **Fässer & Schiffsvorräte**, existierender Shop-NPC `a092c754-26c6-458e-8c42-de3ad3e26c1d`
+- **Geschirr & Küchenwaren**, existierender Shop-NPC `b9150d76-1221-40eb-9736-867be277fdef`
+- **Naturdeko**, vermutlich „Decocraft Nature“, existierender Shop-NPC `c9f6d74e-35ba-4083-8688-013d7ecbd161` (exakte Zuordnung bei Bedarf später bestätigen)
 
-- **Keine Scoreboards**, Befehle, Spieler-Tags oder individuelle Shopbesuchsflags.
-- Drei EasyNPC-Dialoge: `q07_start` als Standard, `q07_rueckkehr` und `q07_abschluss` mit **Manual Only (-1)**.
-- Button „Ich schaue mich um“ schließt `q07_start`, Button „Ich bin zurück“ öffnet `q07_rueckkehr`; Abschlussbutton öffnet `q07_abschluss`.
-- **Bekannte Einschränkung:** Auch beim ersten Gespräch kann ein Spieler direkt „Ich bin zurück“ wählen. Eine echte Unterscheidung zwischen Erst- und Zweitbesuch erfordert einen gespeicherten Status, den wir ausdrücklich nicht nutzen.
-- Sobald wir am Ende aller NPC-Erfassungen FTB Quests integrieren, kann ein Dialog nach Questabschluss abhängig vom FTB-Queststatus angezeigt werden. Der Questabschluss und die Belohnung werden pro Spieler über FTB Quests geregelt.
-- Shop-NPCs bleiben reine Shops und unverändert.
+Diese Shop-NPCs behalten vollständig ihre Shop-GUI und erhalten keine Questdialoge.
 
-**Detaillierte Texte und Einrichtung:** [Quartiermeister – Dialoge ohne Scoreboard](../dialoge/quartiermeister-quest07.md).
+## Was **nicht** nötig ist
+
+- Keine Shop-Interaktion als Voraussetzung.
+- Kein Rückkehrgespräch und keine zweite Dialog-ID.
+- Keine Scoreboards, Spieler-Tags, Aktionen wie „Open Dialog“ oder besondere Befehle.
+- Kein Kauf und keine zusätzliche Mod.
+
+**Zum Einrichten:** Im EasyNPC-Dialogeditor einen einzigen Standarddialog mit dem Text aus [Quartiermeister-Dialog Quest 07](../dialoge/quartiermeister-quest07.md) erstellen. Als Antwort lediglich einen Knopf mit Aktion „Close Dialog“ vorsehen. Danach **die Dialog-ID dieses einen Dialogs** kopieren und uns mitteilen.
+
+**Status:** Aktuelle FTB-Testdatei ist weiter auf Checkmark. Automatische Verknüpfung mit Dialog-Öffnen erst am Ende, wenn alle NPCs gesammelt und geprüft sind.
