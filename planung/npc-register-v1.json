@@ -2,7 +2,7 @@
   "schema": "LaFamilia NPC registry v1",
   "purpose": "Stable UUID/quest mappings; shop NPCs remain existing",
   "version": "Fabric 1.21.1",
-  "source_note": "Captain UUID directly supplied by user in current turn; 15 merchant UUIDs collected from earlier shop planning, verify server before automated tasks",
+  "source_note": "Captain NPC UUID and corrected dialog ID supplied directly by user; 15 merchant UUIDs from earlier shop planning, verify server before automated tasks.",
   "npcs": [
     {
       "name": "Kapitän von La Familia",
@@ -11,8 +11,8 @@
       "plan_quest_id": "LF-L01-Q01",
       "ftb_hex_id": "FA10010300010000",
       "source": "user_verified",
-      "dialog_status": "awaiting_real_dialog_id",
-      "dialog_id": null
+      "dialog_status": "dialog_id_received; pending_live_easy_npc_task_test",
+      "dialog_id": "addaae3c-bd31-37a4-8e70-188d7680f404"
     },
     {
       "name": "Holzfäller",
