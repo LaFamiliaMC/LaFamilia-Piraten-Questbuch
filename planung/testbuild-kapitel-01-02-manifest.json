@@ -161,7 +161,7 @@
           "internal_plan_id": "LF-L02-Q01",
           "hex_quest_id": "FA10010300070000",
           "title": "Beim Quartiermeister melden",
-          "task": "ftbquests:checkmark (current TEST build); planned 3 shop visit tracking via verified server event bridge, not implemented",
+          "task": "ftbquests:checkmark (current TEST build); planned EasyNPC Quartiermeister completion dialog on player return; no shop tracking",
           "icon_asset": "assets/lafamilia/textures/ftbquests/haendler/faesser_schiffsvorraete.png",
           "merchant_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
           "needs_easy_npc_dialog_id": true,
@@ -170,16 +170,18 @@
           "needs_dedicated_quest_npc": true,
           "merchant_shop_only": true,
           "shop_reference_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
-          "shop_visit_tracking": {
-            "required_count": 3,
-            "shop_uuids": [
+          "quest_objective": {
+            "type": "quartermaster_return_dialog",
+            "start_dialog": "ask_player_to_visit_three_shops",
+            "finish_dialog": "Ich habe mir die drei Geschäfte angesehen",
+            "shop_visit_validation": false,
+            "shopped_items_required": false,
+            "shop_reference_uuids": [
               "a092c754-26c6-458e-8c42-de3ad3e26c1d",
               "b9150d76-1221-40eb-9736-867be277fdef",
               "c9f6d74e-35ba-4083-8688-013d7ecbd161"
             ],
-            "status": "concept_only_not_implemented",
-            "automatic_complete_after_all_visits": true,
-            "nature_shop_pending_confirmation": true
+            "status": "planned_only"
           }
         },
         {
