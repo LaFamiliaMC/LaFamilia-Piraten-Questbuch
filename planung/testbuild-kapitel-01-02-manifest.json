@@ -161,55 +161,85 @@
           "internal_plan_id": "LF-L02-Q01",
           "hex_quest_id": "FA10010300070000",
           "title": "Beim Quartiermeister melden",
-          "task": "ftbquests:checkmark (TEST, not NPC dialog auto)",
+          "task": "ftbquests:checkmark (TEST); dedicated Quest-NPC dialog deferred; shop NPC cannot provide EasyNPC dialog",
           "icon_asset": "assets/lafamilia/textures/ftbquests/haendler/faesser_schiffsvorraete.png",
           "merchant_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
-          "needs_easy_npc_dialog_id": true
+          "needs_easy_npc_dialog_id": true,
+          "npc_uuid": null,
+          "dialog_id": null,
+          "needs_dedicated_quest_npc": true,
+          "merchant_shop_only": true,
+          "shop_reference_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d"
         },
         {
           "internal_plan_id": "LF-L02-Q02",
           "hex_quest_id": "FA10010300080000",
           "title": "Holz für den Schiffsbau",
-          "task": "ftbquests:checkmark (TEST, not NPC dialog auto)",
+          "task": "ftbquests:checkmark (TEST); dedicated Quest-NPC dialog deferred; shop NPC cannot provide EasyNPC dialog",
           "icon_asset": "assets/lafamilia/textures/ftbquests/haendler/holzfaeller.png",
           "merchant_uuid": "b424fb91-290c-422e-9475-970a1fc4ec64",
-          "needs_easy_npc_dialog_id": true
+          "needs_easy_npc_dialog_id": true,
+          "npc_uuid": null,
+          "dialog_id": null,
+          "needs_dedicated_quest_npc": true,
+          "merchant_shop_only": true,
+          "shop_reference_uuid": "b424fb91-290c-422e-9475-970a1fc4ec64"
         },
         {
           "internal_plan_id": "LF-L02-Q03",
           "hex_quest_id": "FA10010300090000",
           "title": "Fässer und Kisten",
-          "task": "ftbquests:checkmark (TEST, not NPC dialog auto)",
+          "task": "ftbquests:checkmark (TEST); dedicated Quest-NPC dialog deferred; shop NPC cannot provide EasyNPC dialog",
           "icon_asset": "assets/lafamilia/textures/ftbquests/haendler/faesser_schiffsvorraete.png",
           "merchant_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
-          "needs_easy_npc_dialog_id": true
+          "needs_easy_npc_dialog_id": true,
+          "npc_uuid": null,
+          "dialog_id": null,
+          "needs_dedicated_quest_npc": true,
+          "merchant_shop_only": true,
+          "shop_reference_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d"
         },
         {
           "internal_plan_id": "LF-L02-Q04",
           "hex_quest_id": "FA10010300100000",
           "title": "Fehlende Vorräte",
-          "task": "ftbquests:checkmark (TEST, not NPC dialog auto)",
+          "task": "ftbquests:checkmark (TEST); dedicated Quest-NPC dialog deferred; shop NPC cannot provide EasyNPC dialog",
           "icon_asset": "assets/lafamilia/textures/ftbquests/haendler/faesser_schiffsvorraete.png",
           "merchant_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
-          "needs_easy_npc_dialog_id": true
+          "needs_easy_npc_dialog_id": true,
+          "npc_uuid": null,
+          "dialog_id": null,
+          "needs_dedicated_quest_npc": true,
+          "merchant_shop_only": true,
+          "shop_reference_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d"
         },
         {
           "internal_plan_id": "LF-L02-Q05",
           "hex_quest_id": "FA10010300110000",
           "title": "Ein Bett für die Nacht",
-          "task": "ftbquests:checkmark (TEST, not NPC dialog auto)",
+          "task": "ftbquests:checkmark (TEST); dedicated Quest-NPC dialog deferred; shop NPC cannot provide EasyNPC dialog",
           "icon_asset": "assets/lafamilia/textures/ftbquests/haendler/betten_schraenke.png",
           "merchant_uuid": "b0c6014c-28f4-46f8-840c-cd6fa958d7d9",
-          "needs_easy_npc_dialog_id": true
+          "needs_easy_npc_dialog_id": true,
+          "npc_uuid": null,
+          "dialog_id": null,
+          "needs_dedicated_quest_npc": true,
+          "merchant_shop_only": true,
+          "shop_reference_uuid": "b0c6014c-28f4-46f8-840c-cd6fa958d7d9"
         },
         {
           "internal_plan_id": "LF-L02-Q06",
           "hex_quest_id": "FA10010300120000",
           "title": "Licht für den Hafen",
-          "task": "ftbquests:checkmark (TEST, not NPC dialog auto)",
+          "task": "ftbquests:checkmark (TEST); dedicated Quest-NPC dialog deferred; shop NPC cannot provide EasyNPC dialog",
           "icon_asset": "assets/lafamilia/textures/ftbquests/haendler/kerzen_laternen.png",
           "merchant_uuid": "492d0ebe-2b7c-4b18-b7e5-5276e8e5a21f",
-          "needs_easy_npc_dialog_id": true
+          "needs_easy_npc_dialog_id": true,
+          "npc_uuid": null,
+          "dialog_id": null,
+          "needs_dedicated_quest_npc": true,
+          "merchant_shop_only": true,
+          "shop_reference_uuid": "492d0ebe-2b7c-4b18-b7e5-5276e8e5a21f"
         }
       ]
     }
