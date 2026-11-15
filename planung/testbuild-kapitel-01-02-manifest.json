@@ -54,10 +54,23 @@
           "internal_plan_id": "LF-L01-Q03",
           "hex_quest_id": "FA10010300030000",
           "title": "Die Hafenwache kennenlernen",
-          "task": "ftbquests:checkmark (TEST, not NPC dialog auto)",
+          "task": "ftbquests:checkmark (existing TEST build); EasyNPC task conversion deferred until all NPCs collected",
           "icon_asset": null,
           "merchant_uuid": null,
-          "needs_easy_npc_dialog_id": true
+          "needs_easy_npc_dialog_id": true,
+          "npc_uuid": "04df3e39-1e9e-468e-8d23-94454743bbce",
+          "npc_role": "Hauptmann der Hafenwache",
+          "dialog_id": null,
+          "reward_plan": {
+            "xp": 25,
+            "items": [
+              {
+                "item": "minecraft:torch",
+                "count": 4
+              }
+            ],
+            "planned_only": true
+          }
         },
         {
           "internal_plan_id": "LF-L01-Q04",
@@ -174,6 +187,12 @@
       "npc_role": "Hafenmeister",
       "dialog_id": "09301480-fd54-3179-bb8b-c2603fe58c6e",
       "status": "Dialog-ID assigned; TEST ZIP remains checkmark until task is replaced and tested"
+    },
+    "FA10010300030000": {
+      "npc_uuid": "04df3e39-1e9e-468e-8d23-94454743bbce",
+      "npc_role": "Hauptmann der Hafenwache",
+      "dialog_id": null,
+      "status": "NPC placed, dialog IDs pending; no live integration yet"
     }
   },
   "deployment_workflow": {
