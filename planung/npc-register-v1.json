@@ -57,10 +57,11 @@
       "plan_quest_id": "LF-L01-Q05",
       "ftb_hex_id": "FA10010300050000",
       "source": "user_supplied_npc_uuid",
-      "dialog_status": "dialog_b_completion_id_pending",
-      "dialog_id": null,
+      "dialog_status": "dialog_b_completion_id_registered; integration_deferred",
+      "dialog_id": "fc757df3-d218-3b94-892e-29f55513e646",
       "dialog_document": "dialoge/schiffsoffizier-quest05.md",
-      "note": "Eigener Schiffsoffizier, nicht bereits registrierter Kapitän"
+      "note": "Eigener Schiffsoffizier, nicht bereits registrierter Kapitän",
+      "dialog_role": "Dialog B – Questabschluss Schiffsoffizier"
     },
     {
       "name": "Holzfäller",
