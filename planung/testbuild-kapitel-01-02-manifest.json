@@ -161,12 +161,12 @@
           "internal_plan_id": "LF-L02-Q01",
           "hex_quest_id": "FA10010300070000",
           "title": "Beim Quartiermeister melden",
-          "task": "ftbquests:checkmark (current TEST build); planned EasyNPC dialog task bound to one dialogue q07_quartiermeister; no other dialogs or scoreboard",
+          "task": "ftbquests:checkmark (current TEST build); planned EasyNPC dialog task on opening ffab60c6-f23e-3594-bdef-e94c5c82ba42; binding deferred",
           "icon_asset": "assets/lafamilia/textures/ftbquests/haendler/faesser_schiffsvorraete.png",
           "merchant_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
-          "needs_easy_npc_dialog_id": true,
+          "needs_easy_npc_dialog_id": false,
           "npc_uuid": "10bbc089-6e58-4d92-b3c0-c1cf911f8d74",
-          "dialog_id": null,
+          "dialog_id": "ffab60c6-f23e-3594-bdef-e94c5c82ba42",
           "needs_dedicated_quest_npc": false,
           "merchant_shop_only": true,
           "shop_reference_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
@@ -182,7 +182,8 @@
             "scoreboard_required": false,
             "status": "planned_only"
           },
-          "dialog_role": "q07_quartiermeister (einziger Erklär- und Abschlussdialog; Öffnen löst FTB Task später aus)"
+          "dialog_role": "q07_quartiermeister (einziger Erklär- und Abschlussdialog; Öffnen löst FTB Task später aus)",
+          "needs_easy_npc_task_conversion": true
         },
         {
           "internal_plan_id": "LF-L02-Q02",
@@ -308,8 +309,9 @@
     "FA10010300070000": {
       "npc_uuid": "10bbc089-6e58-4d92-b3c0-c1cf911f8d74",
       "npc_role": "Quartiermeister vor dem Handelshaus",
-      "dialog_id": null,
-      "status": "Quest-NPC-UUID eingetragen; Dialog C noch ausstehend; FTB-Verknüpfung erst später"
+      "dialog_id": "ffab60c6-f23e-3594-bdef-e94c5c82ba42",
+      "dialog_role": "q07_quartiermeister – einzelner Erklärdialog",
+      "status": "NPC-/Dialog-UUID dokumentiert; Testbuild noch Checkmark, keine aktive EasyNPC FTB Verknüpfung"
     }
   },
   "deployment_workflow": {
