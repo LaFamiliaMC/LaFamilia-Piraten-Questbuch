@@ -245,11 +245,11 @@
       "plan_quest_id": "LF-L02-Q02",
       "ftb_hex_id": "FA10010300080000",
       "source": "user_supplied_npc_uuid",
-      "dialog_status": "single_dialog_id_pending; final_FTB_task_integration_deferred",
-      "dialog_id": null,
+      "dialog_status": "single_dialog_id_received; final_FTB_task_integration_deferred",
+      "dialog_id": "325abe87-2b95-35ab-8910-924352962719",
       "dialog_document": "dialoge/schiffszimmermann-quest08.md",
       "dialog_role": "q08_schiffszimmermann – Erklärdialog, Quest 08 wird später bei Öffnung abgeschlossen",
-      "note": "Eigener Quest-NPC nahe dem Holzfäller-Shop; keine Shopfunktion; Erklärquest ohne Itemlieferung, ohne Scoreboard."
+      "note": "Schiffszimmermann steht beim Shop von Holzfäller Jack und erläutert den Holzverkauf; Erklärquest ohne Items und Scoreboard."
     }
   ],
   "note": "EasyNPC dialogue tasks require the actual generated dialog ID from the NPC editor in addition to NPC UUID. Do not claim the conversation task is automatic until it is configured and tested.",
