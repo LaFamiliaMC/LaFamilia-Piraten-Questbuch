@@ -208,9 +208,9 @@
             "LF-L01-Q01"
           ],
           "shape": "circle",
-          "dialog_id": null,
+          "dialog_id": "5087c3db-a43a-35b5-b26e-0108686bbfb4",
           "dialog_document": "dialoge/hafenglockenwaechter-quest06.md",
-          "npc_dialog_status": "NPC UUID eingetragen, Dialog-B-Abschluss-ID noch offen; automatische FTB-Verknüpfung zurückgestellt",
+          "npc_dialog_status": "Quest 06 Dialog B ID erhalten; automatische FTB-EasyNPC-Task-Konvertierung erst nachdem alle NPCs erfasst sind",
           "npc_trigger_policy": {
             "quest_unlock": "LF-L01-Q01",
             "optional": true,
@@ -228,7 +228,8 @@
             "once_only": true,
             "rank_stage_reward": false,
             "status": "planning_only"
-          }
+          },
+          "npc_dialog_role": "Dialog B – Abschluss Hafenglocke"
         }
       ]
     },
