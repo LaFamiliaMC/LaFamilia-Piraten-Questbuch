@@ -263,8 +263,8 @@
           },
           "shop_reference_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
           "shop_is_quest_dialog_capable": false,
-          "dialog_id": null,
-          "quest_npc_status": "Ein einzelner Erklärdialog q07_quartiermeister geplant; NPC UUID erfasst; Dialog-ID aus EasyNPC noch offen; FTB Task später",
+          "dialog_id": "ffab60c6-f23e-3594-bdef-e94c5c82ba42",
+          "quest_npc_status": "NPC UUID und einzelner Erklärdialog q07_quartiermeister mit Dialog-ID erfasst; FTB EasyNPC-Task noch nicht eingerichtet",
           "dialog_only_dedicated_quest_npc": true,
           "quest_shop_separation": "Der vorhandene Shop-NPC kann nur das Shop-GUI öffnen, nicht den EasyNPC-Questdialog. Nicht dessen UUID als Dialog-NPC verwenden.",
           "quest_visit_shops_plan": {
@@ -312,7 +312,8 @@
             "shop_visit_tracking": false,
             "return_visit_required": false,
             "automatic_ftb_integration_deferred": true
-          }
+          },
+          "npc_dialog_role": "q07_quartiermeister – ein einziger Dialog; Ziel für FTB Task beim Öffnen"
         },
         {
           "planning_id": "LF-L02-Q02",
