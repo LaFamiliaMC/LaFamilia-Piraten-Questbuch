@@ -275,7 +275,7 @@
       "dialog_id": null,
       "dialog_document": "dialoge/proviantmeister-quest10.md",
       "dialog_role": "q10_proviantmeister – ein Erklärdialog; FTB Questabschluss später beim Öffnen",
-      "note": "Separater Dialog-NPC nahe dem Shop Fässer & Schiffsvorräte, kein Shop-Dialog; rein erklärende Nebenquest ohne Scoreboard oder Items."
+      "note": "Separater Quest-NPC, ein Erklärdialog ohne Scoreboard. Erläutert Proviantankauf für Seeleute, Händler kauft Lebensmittel an und verkauft nichts. Shop-Betriebsart nur textlich beschrieben, nicht geändert."
     }
   ],
   "note": "EasyNPC dialogue tasks require the actual generated dialog ID from the NPC editor in addition to NPC UUID. Do not claim the conversation task is automatic until it is configured and tested.",
