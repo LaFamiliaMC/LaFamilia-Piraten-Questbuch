@@ -189,12 +189,12 @@
           "internal_plan_id": "LF-L02-Q02",
           "hex_quest_id": "FA10010300080000",
           "title": "Holz für den Schiffsbau",
-          "task": "ftbquests:checkmark (current TEST build); planned EasyNPC task on opening single Schiffszimmermann explanation dialog; integrate only after all NPCs collected",
+          "task": "ftbquests:checkmark (current TEST build); planned EasyNPC dialog task on opening 325abe87-2b95-35ab-8910-924352962719; not yet integrated",
           "icon_asset": "assets/lafamilia/textures/ftbquests/haendler/holzfaeller.png",
           "merchant_uuid": "b424fb91-290c-422e-9475-970a1fc4ec64",
-          "needs_easy_npc_dialog_id": true,
+          "needs_easy_npc_dialog_id": false,
           "npc_uuid": "07f6f682-8be6-4a91-aa99-4c3ec711d25d",
-          "dialog_id": null,
+          "dialog_id": "325abe87-2b95-35ab-8910-924352962719",
           "needs_dedicated_quest_npc": false,
           "merchant_shop_only": true,
           "shop_reference_uuid": "b424fb91-290c-422e-9475-970a1fc4ec64",
@@ -327,8 +327,8 @@
     "FA10010300080000": {
       "npc_uuid": "07f6f682-8be6-4a91-aa99-4c3ec711d25d",
       "npc_role": "Schiffszimmermann",
-      "dialog_id": null,
-      "status": "NPC UUID registered, dialog ID pending; FTB binding deferred"
+      "dialog_id": "325abe87-2b95-35ab-8910-924352962719",
+      "status": "NPC- und Dialog-UUID dokumentiert; Checkmark-Testbuild bleibt unverändert, FTB-Integration später"
     }
   },
   "deployment_workflow": {
