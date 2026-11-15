@@ -5,7 +5,8 @@
 **Quest:** `LF-L01-Q02` – „Der Hafenmeister“  
 **FTB-Quest-ID:** `FA10010300020000`  
 **Abhängigkeit:** Quest 01 „Ein neuer Seefahrer“, Kapitän-Dialog abgeschlossen  
-**Dialog-IDs:** Noch nicht zugewiesen; nach Anlage der Dialoge aus EasyNPC kopieren und in NPC-Register eintragen.
+**Dialog-ID (Dialog B / Questabschluss):** `09301480-fd54-3179-bb8b-c2603fe58c6e` (vom Nutzer geliefert).  
+**Dialog-IDs A und C:** Noch nicht zugewiesen; nicht für den Questabschluss verwenden.
 
 ## Dialog A – Vor der Kapitänsquest (Quest 01 nicht abgeschlossen)
 
@@ -33,7 +34,7 @@
 
 **Hafenmeister:** „So sei es! Dein Name steht nun im Hafenbuch, Landratte. Such als Nächstes den Quartiermeister bei den Schiffsvorräten auf. Er hat den ersten Versorgungsauftrag für dich. Gute Fahrt – und immer eine Handbreit Wasser unter dem Kiel!“
 
-**Ende/Questabschluss:** Quest 02 „Der Hafenmeister“ nach dem abschließenden Gespräch beenden. In der EasyNPC-FTB-Quests-Anbindung den tatsächlich aus EasyNPC kopierten Dialogbezeichner für diesen Abschluss verwenden. **Nicht** eine erfundene ID wie `dialog_02` eintragen. Die Aufgabenart im älteren Testbuild ist noch eine manuelle Checkmark-Aufgabe; automatische Auslösung erfordert die korrekte Task-Konfiguration.
+**Ende/Questabschluss:** Quest 02 „Der Hafenmeister“ nach dem abschließenden Gespräch beenden. Im FTB-Quests-Editor für diesen Abschluss den Aufgabentyp **EasyNPC Task** auswählen, im Feld `dialogId` `09301480-fd54-3179-bb8b-c2603fe58c6e` eintragen und als optionale NPC-UUID `aaa51318-0fd4-47af-baca-8f8c4d727499` festlegen. Quest-ID `FA10010300020000` beibehalten. **Nicht** eine erfundene ID wie `dialog_02` eintragen. Die Aufgabenart im älteren Testbuild ist noch eine manuelle Checkmark-Aufgabe; automatische Auslösung erfordert die korrekte Task-Konfiguration.
 
 **Nächste Hauptquest:** Kapitel 2, „Beim Quartiermeister melden“ (Shop-/Stationszuordnung „Fässer & Schiffsvorräte“). Noch keine automatische Itemübergabe behaupten, bis sie implementiert und getestet wurde.
 
@@ -62,5 +63,9 @@
 - Dialog C anzeigen, sobald Quest 02 abgeschlossen ist.
 - Zustandsabhängige Zuordnung erst in der tatsächlich installierten EasyNPC-Kompatibilitätsmod prüfen, sonst im Editor manuell verschalten.
 - Dialog B darf die Quest nur **einmalig** abschließen.
-- NPC **UUID**: `aaa51318-0fd4-47af-baca-8f8c4d727499`. FTB **Quest-ID**: `FA10010300020000`. **Echte EasyNPC Dialog-ID(s) fehlen noch.**
+- NPC **UUID**: `aaa51318-0fd4-47af-baca-8f8c4d727499`. FTB **Quest-ID**: `FA10010300020000`. **Dialog B bekannt: `09301480-fd54-3179-bb8b-c2603fe58c6e`; Dialog A und C weiterhin unbekannt.**
 - Kein Shop überschreiben, keine globalen Questdaten zurücksetzen.
+
+## Teststatus
+
+Die tatsächlichen Questdateien des bisherigen Testbuilds enthalten weiterhin die manuelle Häkchen-Aufgabe. Die GitHub-Planung wurde um die von dir genannte Dialog-ID ergänzt. Der Eintrag im Questeditor und der Test, ob das Gespräch die Quest automatisch abschließt, stehen noch aus.
