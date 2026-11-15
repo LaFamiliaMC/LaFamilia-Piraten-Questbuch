@@ -264,9 +264,41 @@
           "shop_reference_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
           "shop_is_quest_dialog_capable": false,
           "dialog_id": null,
-          "quest_npc_status": "Neuen unabhängigen Quartiermeister erstellen; NPC-UUID aus EasyNPC ausstehend",
+          "quest_npc_status": "Quartiermeister vor der Tür; neue NPC-UUID und Dialog-ID ausstehend",
           "dialog_only_dedicated_quest_npc": true,
-          "quest_shop_separation": "Der vorhandene Shop-NPC kann nur das Shop-GUI öffnen, nicht den EasyNPC-Questdialog. Nicht dessen UUID als Dialog-NPC verwenden."
+          "quest_shop_separation": "Der vorhandene Shop-NPC kann nur das Shop-GUI öffnen, nicht den EasyNPC-Questdialog. Nicht dessen UUID als Dialog-NPC verwenden.",
+          "quest_visit_shops_plan": {
+            "introduced_by": "Eigener Quartiermeister direkt vor dem Ladengebäude, noch zu platzieren",
+            "start_trigger": "Questdialog des Quartiermeisters nach Kapitel 1 / LF-L01-Q02",
+            "visits_required": 3,
+            "shop_stations": [
+              {
+                "name": "Fässer und Schiffsvorräte",
+                "recorded_shop_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
+                "matched_registry_name": "Fässer & Schiffsvorräte"
+              },
+              {
+                "name": "Geschirr und Küchenwaren",
+                "recorded_shop_uuid": "b9150d76-1221-40eb-9736-867be277fdef",
+                "matched_registry_name": "Geschirr & Küchenwaren"
+              },
+              {
+                "name": "Naturdeko",
+                "recorded_shop_uuid": "c9f6d74e-35ba-4083-8688-013d7ecbd161",
+                "matched_registry_name": "Decocraft Nature",
+                "identification_status": "noch vom Nutzer bestätigen lassen, ob dieser Shop gemeint ist"
+              }
+            ],
+            "required_action": "Jede der drei Shop-GUIs einmal tatsächlich öffnen",
+            "completion_goal": "Quest 07 automatisch nach dem dritten einzigartigen Shopbesuch abschließen; danach LF-L02-Q02 freischalten",
+            "live_shop_visit_tracking": "not_implemented",
+            "technical_dependency": "prüfen, wie sich Shop-Öffnungen der installierten EasyNPC-Shop-Mod zuverlässig serverseitig erfassen lassen; ggf. separate Fabric-Brückenmod",
+            "fallback_only_if_not_feasible": "Alternativ kann der Quartiermeister die Besuche im Rückkehrdialog bestätigen; dies beweist nicht die realen Shop-Öffnungen.",
+            "merchant_shops_unchanged": true,
+            "position": "Outside entrance of building containing the three merchants"
+          },
+          "quest_title_alias": "Erkunde die drei Läden im Hafen",
+          "dialog_document": "planung/quest07-drei-shops-konzept.md"
         },
         {
           "planning_id": "LF-L02-Q02",
