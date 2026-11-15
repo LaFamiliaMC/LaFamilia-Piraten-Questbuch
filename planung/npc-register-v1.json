@@ -232,11 +232,11 @@
       "plan_quest_id": "LF-L02-Q01",
       "ftb_hex_id": "FA10010300070000",
       "source": "user_supplied_npc_uuid",
-      "dialog_status": "single_explanatory_dialog_id_pending; final_FTB_task_integration_deferred",
-      "dialog_id": null,
+      "dialog_status": "single_explanatory_dialog_id_received; FTB_task_deferred",
+      "dialog_id": "ffab60c6-f23e-3594-bdef-e94c5c82ba42",
       "dialog_document": "dialoge/quartiermeister-quest07.md",
       "note": "Ein eigenständiger Quest-NPC erklärt direkt alle drei Shops; kein Rundgang oder Shopcheck nötig; ein Dialog, keine Scoreboards",
-      "dialog_role": "q07_quartiermeister – automatisch beim Öffnen für Quest 07"
+      "dialog_role": "q07_quartiermeister – einziger Erklär- und Quest-Abschlussdialog"
     }
   ],
   "note": "EasyNPC dialogue tasks require the actual generated dialog ID from the NPC editor in addition to NPC UUID. Do not claim the conversation task is automatic until it is configured and tested.",
@@ -249,6 +249,6 @@
     "shop_npc_dialog_constraint": "Bestehende EasyNPC-Shop-NPCs öffnen nur das Shop-GUI und führen keine Questdialoge aus. Deshalb ist ein separater EasyNPC-Quest-NPC erforderlich, wenn ein NPC-Gespräch Teil der Quest ist. Shop-UUID niemals als Dialog-UUID/Questsprecher wiederverwenden. Shop bleibt erhalten.",
     "chapter2_quest_npcs": "Quest 07 benötigt einen eigenen Quartiermeister mit separater NPC-UUID. Quest 08–12: Händler bleiben shop-only; separate Questsprecher oder item-basierte Tasks sind noch festzulegen.",
     "chapter2_quest_07_approach": "Nur ein Dialog beim Quartiermeister draußen vor dem Handelsgebäude. Dieser stellt Fässer & Schiffsvorräte, Geschirr & Küchenwaren und Naturdeko vor. Der Dialog wird später selbst zum Quest 07 EasyNPC FTB-Task (beim Öffnen). Kein zweites Gespräch, keine Shopkontrolle, keine Scoreboards. Shops unverändert.",
-    "chapter2_quest_07_status": "Nur q07_quartiermeister Dialog-ID noch ausstehend. Spätere FTB Integration mit Quest 02 als Voraussetzung."
+    "chapter2_quest_07_status": "Quartiermeister-NPC UUID und einziger Erklärdialog q07_quartiermeister inkl. Dialog-ID gespeichert; erst später FTB Task verknüpfen."
   }
 }
