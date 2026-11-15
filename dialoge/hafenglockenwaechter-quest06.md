@@ -4,9 +4,9 @@
 **NPC-UUID:** `f410950f-02e6-4731-a239-3dc06c486e61`  
 **Quest:** `LF-L01-Q06` / `FA10010300060000` – Die Glocke des Hafens  
 **Questart:** optionale Nebenquest in Kapitel 1, freigeschaltet nach Quest 01.  
-**Abschluss-Dialog-ID:** Noch unbekannt – später vom Nutzer aus EasyNPC übermitteln lassen.  
+**Abschluss-Dialog-ID (Dialog B):** `5087c3db-a43a-35b5-b26e-0108686bbfb4` (vom Nutzer geliefert).  
 **Geplante einmalige Belohnung:** 25 Erfahrungspunkte und 1 Uhr (`minecraft:clock`).  
-**Status:** NPC registriert, Dialoge vorbereitet; die automatische FTB-Quests-Aufgabe wird erst nach Erfassung aller NPCs eingerichtet.
+**Status:** NPC-UUID und Abschluss-Dialog-ID registriert; die automatische FTB-Quests-Aufgabe wird erst nach Erfassung aller NPCs eingerichtet.
 
 ## Dialog A – Vor Quest 01 beim Kapitän
 
@@ -61,6 +61,6 @@
 ## Technische Nacharbeit (gesammelt am Schluss)
 
 1. NPC `f410950f-02e6-4731-a239-3dc06c486e61` ist fest mit Quest `FA10010300060000` registriert.
-2. Dialog A/B/C in EasyNPC anlegen und **nur die echte Dialog-ID von Dialog B** als Abschluss-Trigger melden.
+2. Abschluss-Dialog-ID von Dialog B ist bereits `5087c3db-a43a-35b5-b26e-0108686bbfb4`; Dialog A und C dürfen keinen Questabschluss auslösen.
 3. Kein Umstellen der aktuellen Checkmark-Aufgabe, bevor **alle NPCs** eingerichtet sind.
 4. Am Schluss NPC-UUID und Dialog-ID in die EasyNPC-FTB-Aufgabe setzen, Quest-ID erhalten, Voraussetzungen sowie einmalige Belohnung pro Spieler einzeln testen.
