@@ -269,12 +269,12 @@
           "internal_plan_id": "LF-L02-Q05",
           "hex_quest_id": "FA10010300110000",
           "title": "Ein Bett für die Nacht",
-          "task": "ftbquests:checkmark (current TEST build); planned EasyNPC task on opening q11_hafenherbergsvater; FTB integration deferred",
+          "task": "ftbquests:checkmark (current TEST build); planned EasyNPC task to complete on opening f7ad98f2-9ca4-379f-aa04-94854ef04bc2; FTB integration deferred",
           "icon_asset": "assets/lafamilia/textures/ftbquests/haendler/betten_schraenke.png",
           "merchant_uuid": "b0c6014c-28f4-46f8-840c-cd6fa958d7d9",
-          "needs_easy_npc_dialog_id": true,
+          "needs_easy_npc_dialog_id": false,
           "npc_uuid": "a20fafc8-1146-4855-a55d-be29bad42ef1",
-          "dialog_id": null,
+          "dialog_id": "f7ad98f2-9ca4-379f-aa04-94854ef04bc2",
           "needs_dedicated_quest_npc": false,
           "merchant_shop_only": true,
           "shop_reference_uuid": "b0c6014c-28f4-46f8-840c-cd6fa958d7d9",
@@ -387,8 +387,9 @@
     "FA10010300110000": {
       "npc_uuid": "a20fafc8-1146-4855-a55d-be29bad42ef1",
       "npc_role": "Hafenherbergsvater",
-      "dialog_id": null,
-      "status": "NPC UUID recorded; EasyNPC dialog ID pending; FTB binding deferred"
+      "dialog_id": "f7ad98f2-9ca4-379f-aa04-94854ef04bc2",
+      "dialog_role": "q11_hafenherbergsvater – einziger Erklärdialog",
+      "status": "NPC und Dialog-ID dokumentiert; Checkmark im Testbuild bleibt, FTB Verknüpfung erst später"
     }
   },
   "deployment_workflow": {
