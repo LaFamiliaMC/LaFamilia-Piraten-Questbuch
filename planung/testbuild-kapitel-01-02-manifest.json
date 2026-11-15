@@ -54,13 +54,13 @@
           "internal_plan_id": "LF-L01-Q03",
           "hex_quest_id": "FA10010300030000",
           "title": "Die Hafenwache kennenlernen",
-          "task": "ftbquests:checkmark (existing TEST build); EasyNPC task conversion deferred until all NPCs collected",
+          "task": "ftbquests:checkmark (existing TEST build); target EasyNPC Task dialog 666df7d2-8638-37b7-a4d9-efd806c8eceb; conversion deferred until all NPCs collected",
           "icon_asset": null,
           "merchant_uuid": null,
-          "needs_easy_npc_dialog_id": true,
+          "needs_easy_npc_dialog_id": false,
           "npc_uuid": "04df3e39-1e9e-468e-8d23-94454743bbce",
           "npc_role": "Hauptmann der Hafenwache",
-          "dialog_id": null,
+          "dialog_id": "666df7d2-8638-37b7-a4d9-efd806c8eceb",
           "reward_plan": {
             "xp": 25,
             "items": [
@@ -70,7 +70,8 @@
               }
             ],
             "planned_only": true
-          }
+          },
+          "needs_easy_npc_task_conversion": true
         },
         {
           "internal_plan_id": "LF-L01-Q04",
@@ -191,8 +192,8 @@
     "FA10010300030000": {
       "npc_uuid": "04df3e39-1e9e-468e-8d23-94454743bbce",
       "npc_role": "Hauptmann der Hafenwache",
-      "dialog_id": null,
-      "status": "NPC placed, dialog IDs pending; no live integration yet"
+      "dialog_id": "666df7d2-8638-37b7-a4d9-efd806c8eceb",
+      "status": "Dialog ID recorded; TEST ZIP remains checkmark until final NPC integration"
     }
   },
   "deployment_workflow": {
