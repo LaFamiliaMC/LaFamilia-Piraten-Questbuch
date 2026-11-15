@@ -240,15 +240,27 @@
           "internal_plan_id": "LF-L02-Q04",
           "hex_quest_id": "FA10010300100000",
           "title": "Fehlende Vorräte",
-          "task": "ftbquests:checkmark (TEST); dedicated Quest-NPC dialog deferred; shop NPC cannot provide EasyNPC dialog",
+          "task": "ftbquests:checkmark (current TEST build); planned EasyNPC task on opening q10_proviantmeister; binding deferred until all NPCs collected",
           "icon_asset": "assets/lafamilia/textures/ftbquests/haendler/faesser_schiffsvorraete.png",
           "merchant_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
           "needs_easy_npc_dialog_id": true,
-          "npc_uuid": null,
+          "npc_uuid": "af4c5c5e-aa26-453b-8962-b740932a8143",
           "dialog_id": null,
-          "needs_dedicated_quest_npc": true,
+          "needs_dedicated_quest_npc": false,
           "merchant_shop_only": true,
-          "shop_reference_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d"
+          "shop_reference_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
+          "npc_role": "Proviantmeister",
+          "needs_easy_npc_task_conversion": true,
+          "quest_objective": {
+            "type": "single_easy_npc_explanatory_dialog",
+            "dialog_name": "q10_proviantmeister",
+            "trigger": "on opening dialog",
+            "shop_visit_validation": false,
+            "purchase_required": false,
+            "requires_item_submission": false,
+            "scoreboard": false,
+            "status": "planning_only"
+          }
         },
         {
           "internal_plan_id": "LF-L02-Q05",
@@ -348,6 +360,12 @@
       "dialog_id": "98258fb6-9e43-371a-a51c-433c0248c504",
       "dialog_role": "q09_hafenlagerarbeiter – ein Erklärdialog",
       "status": "Beide UUIDs erfasst; FTB Task bleibt bis zur Sammelintegration Checkmark"
+    },
+    "FA10010300100000": {
+      "npc_uuid": "af4c5c5e-aa26-453b-8962-b740932a8143",
+      "npc_role": "Proviantmeister",
+      "dialog_id": null,
+      "status": "NPC UUID registered; EasyNPC dialog ID pending; final FTB binding deferred"
     }
   },
   "deployment_workflow": {
