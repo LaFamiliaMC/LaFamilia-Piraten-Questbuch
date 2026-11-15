@@ -264,7 +264,7 @@
           "shop_reference_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
           "shop_is_quest_dialog_capable": false,
           "dialog_id": null,
-          "quest_npc_status": "Quartiermeister UUID gespeichert; ID des separaten Bestätigungsdialogs q07_abschluss ausstehend; FTB-Integration später",
+          "quest_npc_status": "Quartiermeister UUID gespeichert, Abschlussdialog q07_abschluss ID fehlt; keine Scoreboards, keine Shopbesuch-Kontrolle; FTB-Integration später",
           "dialog_only_dedicated_quest_npc": true,
           "quest_shop_separation": "Der vorhandene Shop-NPC kann nur das Shop-GUI öffnen, nicht den EasyNPC-Questdialog. Nicht dessen UUID als Dialog-NPC verwenden.",
           "quest_visit_shops_plan": {
@@ -293,7 +293,7 @@
             "shop_gui_open_tracking": false,
             "purchase_required": false,
             "player_return": "Spieler kehrt zum Quartiermeister zurück und wählt die Antwort: Ich habe mir die drei Geschäfte angesehen.",
-            "completion_trigger": "Spieler klickt Bestätigungsbutton im Rückkehrdialog q07_rueckkehr; Aktion öffnet extra Dialog q07_abschluss, dessen Öffnen später den FTB Task erfüllt; kein Shop-Tracking",
+            "completion_trigger": "Without scoreboard: default dialog q07_start can open return prompt q07_rueckkehr through button; confirmation opens manual-only q07_abschluss, whose opening will later complete FTB task",
             "completion_effect": "Quest 07 einmalig abschließen; dadurch Quest 08 Holz für den Schiffsbau freischalten",
             "merchant_shops_unchanged": true,
             "position": "Outside entrance to three-shop merchant house",
@@ -302,14 +302,17 @@
           "quest_title_alias": "Die drei Geschäfte im Hafen kennenlernen",
           "dialog_document": "dialoge/quartiermeister-quest07.md",
           "npc_trigger_policy": {
-            "quest_start": "q07_start – Button 'Aye! Ich schaue mich in den drei Geschäften um!' setzt Scoreboard lf_q07 auf 1",
-            "return_prompt": "q07_rueckkehr – nur wenn lf_q07=1; Öffnen allein löst keine FTB Aufgabe aus",
-            "confirmed_completion": "q07_abschluss – separater Dialog, den erst der Abschlussknopf aus q07_rueckkehr öffnet; erst dessen Dialog-ID darf FTB EasyNPC Task 07 erhalten",
-            "after_completion": "q07_nachher – wenn lf_q07=2",
-            "narrative_shops_only": true,
+            "plan": "EasyNPC without scoreboard or other custom persistent flags",
+            "default_dialog": "q07_start – same on first visit and return, with two answer buttons",
+            "intro_button": "Ich schaue mich im Handelshaus um – close dialog",
+            "return_button": "Ich bin zurück – Open Dialog q07_rueckkehr",
+            "return_confirmation": "q07_rueckkehr answer: Aye, ich habe mir die drei Geschäfte angesehen! -> Open Dialog q07_abschluss",
+            "finish_target": "q07_abschluss Manual Only (-1); only this dialog ID used for future FTB EasyNPC Task",
+            "after_completion": "Optional q07_nachher conditioned on completed FTB Quest 07, only after final integration",
+            "scoreboard_required": false,
             "shop_visit_tracking": false,
-            "automatic_npc_ftb_integration_deferred": true,
-            "why_separate_completion_dialog": "EasyNPC x FTB Quests Compat completes target task on opening target dialog, not button click"
+            "limitation": "Without stored progress the player can select return/confirmation immediately, without visits; accepted by user",
+            "automatic_ftb_integration_deferred": true
           }
         },
         {
