@@ -126,15 +126,29 @@
           "hide_dependency_lines": true,
           "optional": true,
           "assigned_station": "Hüter des Hafenkodex",
-          "npc_uuid": null,
+          "npc_uuid": "0ddeb1e3-8414-4a10-ac46-22263e28bc26",
           "logical_dependencies": [
             "LF-L01-Q01"
           ],
           "shape": "circle",
           "dialog_id": null,
-          "npc_dialog_status": "Neuer eigener NPC geplant – wartet auf vom Nutzer vergebene NPC UUID und danach Dialog-ID",
+          "npc_dialog_status": "NPC UUID registered; completion dialog ID pending; automatic tasks deferred until all NPCs placed",
           "npc_role": "Unabhängiger Regelhüter der Lobby; nicht Hafenmeister und nicht Hauptmann der Hafenwache",
-          "dialog_design": "Begrüßung, Vorstellung des Hafenkodex, Regeln erläutern, bewusste Bestätigung des Spielers; bestätigte Regeln des Servers statt erfundener Vorschriften einsetzen"
+          "dialog_design": "Begrüßung, Vorstellung des Hafenkodex, Regeln erläutern, bewusste Bestätigung des Spielers; bestätigte Regeln des Servers statt erfundener Vorschriften einsetzen",
+          "dialog_document": "dialoge/hueter-hafenkodex-quest04.md",
+          "reward_plan": {
+            "xp": 25,
+            "items": [
+              {
+                "item": "minecraft:book",
+                "count": 1
+              }
+            ],
+            "once_only": true,
+            "rank_stage_reward": false,
+            "status": "planning_only"
+          },
+          "quest_completion_logic": "Dialogue B final option acknowledges server rules; no quest completion from dialogue A/C"
         },
         {
           "planning_id": "LF-L01-Q05",
