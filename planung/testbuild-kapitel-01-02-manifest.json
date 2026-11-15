@@ -103,13 +103,13 @@
           "internal_plan_id": "LF-L01-Q05",
           "hex_quest_id": "FA10010300050000",
           "title": "Ein Blick auf das große Schiff",
-          "task": "ftbquests:checkmark (existing TEST build); convert to EasyNPC task after all NPCs are recorded",
+          "task": "ftbquests:checkmark (current TEST ZIP); target EasyNPC Task for dialog fc757df3-d218-3b94-892e-29f55513e646, deferred until all NPCs",
           "icon_asset": null,
           "merchant_uuid": null,
-          "needs_easy_npc_dialog_id": true,
+          "needs_easy_npc_dialog_id": false,
           "npc_uuid": "f5e8ef08-d548-47c2-88c0-d473843b9c65",
           "npc_role": "Schiffsoffizier",
-          "dialog_id": null,
+          "dialog_id": "fc757df3-d218-3b94-892e-29f55513e646",
           "needs_easy_npc_task_conversion": true,
           "reward_plan": {
             "xp": 25,
@@ -237,8 +237,8 @@
     "FA10010300050000": {
       "npc_uuid": "f5e8ef08-d548-47c2-88c0-d473843b9c65",
       "npc_role": "Schiffsoffizier",
-      "dialog_id": null,
-      "status": "NPC-UUID gespeichert; wartet auf Dialog B-ID, spätere automatische Anbindung"
+      "dialog_id": "fc757df3-d218-3b94-892e-29f55513e646",
+      "status": "Dialog B recorded; TEST ZIP remains checkmark; final integration deferred"
     }
   },
   "deployment_workflow": {
