@@ -32,9 +32,10 @@
       "plan_quest_id": "LF-L01-Q03",
       "ftb_hex_id": "FA10010300030000",
       "source": "user_supplied_npc_uuid",
-      "dialog_status": "dialog_quest_completion_id_pending",
-      "dialog_id": null,
-      "dialog_document": "dialoge/hauptmann-hafenwache-quest03.md"
+      "dialog_status": "quest_completion_dialog_id_received; final_easy_npc_task_integration_deferred",
+      "dialog_id": "666df7d2-8638-37b7-a4d9-efd806c8eceb",
+      "dialog_document": "dialoge/hauptmann-hafenwache-quest03.md",
+      "dialog_role": "Quest 03 – Dialog B Abschluss"
     },
     {
       "name": "Holzfäller",
