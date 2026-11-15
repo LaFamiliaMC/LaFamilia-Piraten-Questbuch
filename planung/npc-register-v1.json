@@ -234,6 +234,8 @@
     "individual_npc_testing_at_end": true,
     "keep_original_shops": true,
     "shop_npc_dialog_constraint": "Bestehende EasyNPC-Shop-NPCs öffnen nur das Shop-GUI und führen keine Questdialoge aus. Deshalb ist ein separater EasyNPC-Quest-NPC erforderlich, wenn ein NPC-Gespräch Teil der Quest ist. Shop-UUID niemals als Dialog-UUID/Questsprecher wiederverwenden. Shop bleibt erhalten.",
-    "chapter2_quest_npcs": "Quest 07 benötigt einen eigenen Quartiermeister mit separater NPC-UUID. Quest 08–12: Händler bleiben shop-only; separate Questsprecher oder item-basierte Tasks sind noch festzulegen."
+    "chapter2_quest_npcs": "Quest 07 benötigt einen eigenen Quartiermeister mit separater NPC-UUID. Quest 08–12: Händler bleiben shop-only; separate Questsprecher oder item-basierte Tasks sind noch festzulegen.",
+    "chapter2_quest_07_approach": "Quartiermeister steht draußen vor der Tür; nach seinem Startdialog müssen Spieler im Gebäude die Shops Fässer/Schiffsvorräte, Geschirr/Küchenwaren und Naturdeko öffnen. Ziel: automatischer Abschluss nach 3 eindeutig erfassten Besuchen, technisch noch nicht gebaut. Shop-NPCs und ihre GUI bleiben unverändert.",
+    "chapter2_quest_07_status": "Warten auf neue Quartiermeister-NPC-UUID, spätere Dialog-ID und technische Verifizierung des Shop-Besuch-Trackings."
   }
 }
