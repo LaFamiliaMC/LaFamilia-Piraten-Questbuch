@@ -1,0 +1,1413 @@
+{
+  "format": "LaFamilia Layout Blueprint v1 (planning-only, not directly importable into FTB Quests)",
+  "platform": "Fabric 1.21.1",
+  "goal_total_quests": 2000,
+  "category": "Willkommen in La Familia",
+  "total_quests": 48,
+  "layout_rules": {
+    "chapter_views": "8 eigene FTB-Kapitel in einer Kapitelgruppe, nicht ein einziges 48-Quest-Feld",
+    "main_quest_line": "Pro Kapitel nur die beiden Hauptquests mit sichtbarer horizontaler Linie verbinden",
+    "optional_quests": "Vier Nebenquests pro Kapitel in unterer Reihe; optional, keine sichtbaren Linien",
+    "inter_chapter": "Fortschritts-Abhängigkeit zwischen Hauptquests verschiedener Kapitel, ohne sichtbare Quer-Verbindungen auf derselben Seite",
+    "unlocking": "Jede optionale Quest hat eine verborgene (linienlose) logische Abhängigkeit von der ersten Hauptquest ihres Kapitels; Kapitel-Hauptquests 1 benötigen jeweils den zweiten Hauptquest des Vorgängerkapitels.",
+    "background": "Leere Piratenhafen-Dekoration ohne vorgezeichnete Icons, Questfenster oder Texte",
+    "shop_preservation": "Bestehende Händler-Shops und deren Preise nicht ändern",
+    "note": "UUID-Zuordnungen aus früheren Shop-Chats; vor Echtimport mit Server-Shopkonfiguration verifizieren"
+  },
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "chapter_name": "Ein Fremder im Hafen",
+      "quests": [
+        {
+          "planning_id": "LF-L01-Q01",
+          "global_number": 1,
+          "title": "Ein neuer Seefahrer",
+          "type": "hauptquest",
+          "x": -8,
+          "y": 0,
+          "visible_dependency": null,
+          "inter_chapter_dependency": null,
+          "hide_dependency_lines": false,
+          "optional": false,
+          "assigned_station": "Kapitän",
+          "npc_uuid": "8c658830-313e-4f63-8dc2-f7ff4a51b669",
+          "logical_dependencies": [],
+          "shape": "hexagon",
+          "rank_reward": {
+            "reward_type": "ftbquests:stage",
+            "stage": "lafamilia_rank_01_landratte",
+            "display_title": "Landratte",
+            "trigger": "after first NPC dialog quest completion / reward claim",
+            "once_per_player": true,
+            "note": "Stage Reward in FTB Quests; verify reward autocollection and per-player behavior with actual server before deployment.",
+            "icon": "assets/lafamilia/textures/ftbquests/raenge/rang_01_landratte.png"
+          },
+          "quest_text_addendum": "Der Kapitän erkennt dich als Landratte an – deinen ersten Rang in La Familia. Dieser Rang bildet den Anfang einer serverweiten Ranglaufbahn.",
+          "dialog_label_planned": null,
+          "dialog_id": "addaae3c-bd31-37a4-8e70-188d7680f404",
+          "npc_dialog_status": "correct dialog ID received from user; automatic quest completion not yet deployed/tested"
+        },
+        {
+          "planning_id": "LF-L01-Q02",
+          "global_number": 2,
+          "title": "Der Hafenmeister",
+          "type": "hauptquest",
+          "x": 8,
+          "y": 0,
+          "visible_dependency": "LF-L01-Q01",
+          "inter_chapter_dependency": null,
+          "hide_dependency_lines": false,
+          "optional": false,
+          "assigned_station": "Hafenmeister",
+          "npc_uuid": "aaa51318-0fd4-47af-baca-8f8c4d727499",
+          "logical_dependencies": [
+            "LF-L01-Q01"
+          ],
+          "shape": "hexagon",
+          "dialog_id": "09301480-fd54-3179-bb8b-c2603fe58c6e",
+          "npc_dialog_status": "Hafenmeister Dialog 2 ID provided by user; automatic EasyNPC FTB task not yet deployed in SNBT or server-tested",
+          "npc_dialog_plan": {
+            "intro": "Ahoy, Landratte! Willkommen beim Hafenmeister. Ich trage jeden neuen Seefahrer ins Hafenbuch ein.",
+            "player": "Der Kapitän schickt mich.",
+            "response": "Dann zeig mir deinen Hafenpass. Schau dich im Hafen um und lerne unsere Händler und Handwerker kennen.",
+            "finish": "Du bist jetzt im Hafenbuch vermerkt. Die nächsten Stationen erwarten dich."
+          },
+          "dialog_role": "Erste Begegnung – Aufnahme ins Hafenbuch (Questabschluss)"
+        },
+        {
+          "planning_id": "LF-L01-Q03",
+          "global_number": 3,
+          "title": "Die Hafenwache kennenlernen",
+          "type": "nebenquest",
+          "x": -12,
+          "y": 9,
+          "visible_dependency": null,
+          "inter_chapter_dependency": null,
+          "hide_dependency_lines": true,
+          "optional": true,
+          "assigned_station": "Hauptmann der Hafenwache",
+          "npc_uuid": "04df3e39-1e9e-468e-8d23-94454743bbce",
+          "logical_dependencies": [
+            "LF-L01-Q01"
+          ],
+          "shape": "circle",
+          "dialog_id": "666df7d2-8638-37b7-a4d9-efd806c8eceb",
+          "npc_dialog_status": "Dialog ID supplied for quest 03; automatic task integration deferred until all NPCs placed",
+          "dialog_document": "dialoge/hauptmann-hafenwache-quest03.md",
+          "reward_plan": {
+            "xp": 25,
+            "items": [
+              {
+                "item": "minecraft:torch",
+                "count": 4
+              }
+            ],
+            "once_only": true,
+            "rank_stage_reward": false
+          },
+          "npc_trigger_policy": {
+            "quest_unlock": "LF-L01-Q01",
+            "optional": true,
+            "quest_completion": "Dialog B final response, after introduction",
+            "not_a_story_gate": true
+          },
+          "npc_dialog_role": "Hauptmann der Hafenwache – Questabschlussdialog (Dialog B)"
+        },
+        {
+          "planning_id": "LF-L01-Q04",
+          "global_number": 4,
+          "title": "Die Regeln von La Familia",
+          "type": "nebenquest",
+          "x": -4,
+          "y": 9,
+          "visible_dependency": null,
+          "inter_chapter_dependency": null,
+          "hide_dependency_lines": true,
+          "optional": true,
+          "assigned_station": "Hüter des Hafenkodex",
+          "npc_uuid": "0ddeb1e3-8414-4a10-ac46-22263e28bc26",
+          "logical_dependencies": [
+            "LF-L01-Q01"
+          ],
+          "shape": "circle",
+          "dialog_id": "23b56d3e-5da3-338a-b351-07b485ef88fe",
+          "npc_dialog_status": "Dialog-ID für Quest 04 erfasst; FTB EasyNPC Task wird erst am Ende nach Erfassung aller NPCs eingerichtet",
+          "npc_role": "Unabhängiger Regelhüter der Lobby; nicht Hafenmeister und nicht Hauptmann der Hafenwache",
+          "dialog_design": "Begrüßung, Vorstellung des Hafenkodex, Regeln erläutern, bewusste Bestätigung des Spielers; bestätigte Regeln des Servers statt erfundener Vorschriften einsetzen",
+          "dialog_document": "dialoge/hueter-hafenkodex-quest04.md",
+          "reward_plan": {
+            "xp": 25,
+            "items": [
+              {
+                "item": "minecraft:book",
+                "count": 1
+              }
+            ],
+            "once_only": true,
+            "rank_stage_reward": false,
+            "status": "planning_only"
+          },
+          "quest_completion_logic": "Dialogue B final option acknowledges server rules; no quest completion from dialogue A/C",
+          "dialog_role": "Dialog B – Bestätigung des Hafenkodex (Questabschluss)"
+        },
+        {
+          "planning_id": "LF-L01-Q05",
+          "global_number": 5,
+          "title": "Ein Blick auf das große Schiff",
+          "type": "nebenquest",
+          "x": 4,
+          "y": 9,
+          "visible_dependency": null,
+          "inter_chapter_dependency": null,
+          "hide_dependency_lines": true,
+          "optional": true,
+          "assigned_station": "Schiffsoffizier",
+          "npc_uuid": "f5e8ef08-d548-47c2-88c0-d473843b9c65",
+          "logical_dependencies": [
+            "LF-L01-Q01"
+          ],
+          "shape": "circle",
+          "dialog_id": "fc757df3-d218-3b94-892e-29f55513e646",
+          "dialog_document": "dialoge/schiffsoffizier-quest05.md",
+          "npc_dialog_status": "Quest-05-Abschlussdialog (Dialog B) erfasst; automatische FTB-Quests/EasyNPC-Verknüpfung bis zur vollständigen NPC-Aufstellung zurückgestellt",
+          "npc_trigger_policy": {
+            "quest_unlock": "LF-L01-Q01",
+            "optional": true,
+            "quest_completion": "Dialog B final acknowledgment (only), not Dialog A or C",
+            "not_a_story_gate": true
+          },
+          "reward_plan": {
+            "xp": 25,
+            "items": [
+              {
+                "item": "minecraft:compass",
+                "count": 1
+              }
+            ],
+            "once_only": true,
+            "rank_stage_reward": false,
+            "status": "planning_only"
+          },
+          "npc_dialog_role": "Dialog B – Willkommen an Bord (Abschluss)"
+        },
+        {
+          "planning_id": "LF-L01-Q06",
+          "global_number": 6,
+          "title": "Die Glocke des Hafens",
+          "type": "nebenquest",
+          "x": 12,
+          "y": 9,
+          "visible_dependency": null,
+          "inter_chapter_dependency": null,
+          "hide_dependency_lines": true,
+          "optional": true,
+          "assigned_station": "Hafenglockenwächter",
+          "npc_uuid": "f410950f-02e6-4731-a239-3dc06c486e61",
+          "logical_dependencies": [
+            "LF-L01-Q01"
+          ],
+          "shape": "circle",
+          "dialog_id": "5087c3db-a43a-35b5-b26e-0108686bbfb4",
+          "dialog_document": "dialoge/hafenglockenwaechter-quest06.md",
+          "npc_dialog_status": "Quest 06 Dialog B ID erhalten; automatische FTB-EasyNPC-Task-Konvertierung erst nachdem alle NPCs erfasst sind",
+          "npc_trigger_policy": {
+            "quest_unlock": "LF-L01-Q01",
+            "optional": true,
+            "quest_completion": "Dialog B last response only; not Dialog A/C",
+            "not_a_story_gate": true
+          },
+          "reward_plan": {
+            "xp": 25,
+            "items": [
+              {
+                "item": "minecraft:clock",
+                "count": 1
+              }
+            ],
+            "once_only": true,
+            "rank_stage_reward": false,
+            "status": "planning_only"
+          },
+          "npc_dialog_role": "Dialog B – Abschluss Hafenglocke"
+        }
+      ]
+    },
+    {
+      "chapter_number": 2,
+      "chapter_name": "Die Versorgung des Hafens",
+      "quests": [
+        {
+          "planning_id": "LF-L02-Q01",
+          "global_number": 7,
+          "title": "Beim Quartiermeister melden",
+          "type": "hauptquest",
+          "x": -8,
+          "y": 0,
+          "visible_dependency": null,
+          "inter_chapter_dependency": "LF-L01-Q02",
+          "hide_dependency_lines": false,
+          "optional": false,
+          "assigned_station": "Eigenständiger Quartiermeister (Quest-NPC)",
+          "npc_uuid": "10bbc089-6e58-4d92-b3c0-c1cf911f8d74",
+          "logical_dependencies": [
+            "LF-L01-Q02"
+          ],
+          "shape": "hexagon",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "faesser_schiffsvorraete.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/faesser_schiffsvorraete.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          },
+          "shop_reference_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
+          "shop_is_quest_dialog_capable": false,
+          "dialog_id": "ffab60c6-f23e-3594-bdef-e94c5c82ba42",
+          "quest_npc_status": "NPC UUID und einzelner Erklärdialog q07_quartiermeister mit Dialog-ID erfasst; FTB EasyNPC-Task noch nicht eingerichtet",
+          "dialog_only_dedicated_quest_npc": true,
+          "quest_shop_separation": "Der vorhandene Shop-NPC kann nur das Shop-GUI öffnen, nicht den EasyNPC-Questdialog. Nicht dessen UUID als Dialog-NPC verwenden.",
+          "quest_visit_shops_plan": {
+            "introduced_by": "Eigenständiger Quartiermeister vor dem Eingang",
+            "shop_stations": [
+              {
+                "name": "Fässer und Schiffsvorräte",
+                "recorded_shop_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
+                "matched_registry_name": "Fässer & Schiffsvorräte"
+              },
+              {
+                "name": "Geschirr und Küchenwaren",
+                "recorded_shop_uuid": "b9150d76-1221-40eb-9736-867be277fdef",
+                "matched_registry_name": "Geschirr & Küchenwaren"
+              },
+              {
+                "name": "Naturdeko",
+                "recorded_shop_uuid": "c9f6d74e-35ba-4083-8688-013d7ecbd161",
+                "matched_registry_name": "Decocraft Nature",
+                "identification_status": "noch vom Nutzer bestätigen lassen, ob dieser Shop gemeint ist"
+              }
+            ],
+            "narrative_goal": "NPC erklärt die drei Shops Fässer & Schiffsvorräte, Geschirr & Küchenwaren, Naturdeko",
+            "narrative_only": true,
+            "actual_shop_visits_required_for_quest_completion": false,
+            "shop_gui_open_tracking": false,
+            "purchase_required": false,
+            "player_return_required": false,
+            "completion_trigger": "One explanatory EasyNPC dialog q07_quartiermeister; FTB task is planned to complete on opening it",
+            "completion_effect": "Quest 07 einmalig abschließen und Quest 08 freischalten, sobald FTB Task später eingerichtet ist",
+            "merchant_shops_unchanged": true,
+            "position": "Outside entrance to three-shop merchant house",
+            "implementation_status": "planning_only; EasyNPC FTB binding deferred"
+          },
+          "quest_title_alias": "Einweisung in die Hafenversorgung",
+          "dialog_document": "dialoge/quartiermeister-quest07.md",
+          "npc_trigger_policy": {
+            "dialog_name": "q07_quartiermeister",
+            "count": 1,
+            "dialog_is_default": true,
+            "dialog_action": "Close Dialog",
+            "completion_event": "EasyNPC dialog open; future FTB EasyNPC dialog task uses this one and only dialogue ID",
+            "completion_after_quest_02": true,
+            "scoreboard_required": false,
+            "shop_visit_tracking": false,
+            "return_visit_required": false,
+            "automatic_ftb_integration_deferred": true
+          },
+          "npc_dialog_role": "q07_quartiermeister – ein einziger Dialog; Ziel für FTB Task beim Öffnen"
+        },
+        {
+          "planning_id": "LF-L02-Q02",
+          "global_number": 8,
+          "title": "Holz für den Schiffsbau",
+          "type": "hauptquest",
+          "x": 8,
+          "y": 0,
+          "visible_dependency": "LF-L02-Q01",
+          "inter_chapter_dependency": null,
+          "hide_dependency_lines": false,
+          "optional": false,
+          "assigned_station": "Schiffszimmermann (eigener Dialog-NPC beim Holzfäller-Shop)",
+          "npc_uuid": "07f6f682-8be6-4a91-aa99-4c3ec711d25d",
+          "logical_dependencies": [
+            "LF-L02-Q01"
+          ],
+          "shape": "hexagon",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "holzfaeller.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/holzfaeller.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          },
+          "shop_reference_uuid": "b424fb91-290c-422e-9475-970a1fc4ec64",
+          "shop_is_quest_dialog_capable": false,
+          "dialog_id": "325abe87-2b95-35ab-8910-924352962719",
+          "quest_npc_status": "Shop bleibt unverändert; eigener Quest-NPC oder Quest-Aufgabe ohne NPC-Dialog noch festzulegen",
+          "dialog_only_dedicated_quest_npc": true,
+          "quest_shop_separation": "Der vorhandene Shop-NPC kann nur das Shop-GUI öffnen, nicht den EasyNPC-Questdialog. Nicht dessen UUID als Dialog-NPC verwenden.",
+          "dialog_document": "dialoge/schiffszimmermann-quest08.md",
+          "npc_dialog_status": "Einziger Dialog q08_schiffszimmermann mit Dialog-ID erfasst; FTB-EasyNPC-Task später",
+          "npc_trigger_policy": {
+            "dialog_name": "q08_schiffszimmermann",
+            "dialog_count": 1,
+            "dialog_is_default": true,
+            "dialog_action": "Close Dialog",
+            "completion_event": "Opening one EasyNPC explanation dialogue",
+            "quest_dependency": "LF-L02-Q01",
+            "no_item_delivery_required": true,
+            "no_scoreboard": true,
+            "no_shop_visit_tracking": true,
+            "ftb_integration_deferred": true
+          },
+          "quest_narrative": "Schiffszimmermann erklärt die Bedeutung von Bauholz für Schiffe und stellt Holzfäller-Händler Jack vor, bei dem Spieler gefundenes Holz verkaufen können; keine echte Holzabgabe für die Quest nötig.",
+          "reward_plan": {
+            "status": "not_yet_finalized",
+            "once_only": true
+          }
+        },
+        {
+          "planning_id": "LF-L02-Q03",
+          "global_number": 9,
+          "title": "Fässer und Kisten",
+          "type": "nebenquest",
+          "x": -12,
+          "y": 9,
+          "visible_dependency": null,
+          "inter_chapter_dependency": null,
+          "hide_dependency_lines": true,
+          "optional": true,
+          "assigned_station": "Hafenlagerarbeiter bei Fässer & Schiffsvorräte – eigener Quest-NPC",
+          "npc_uuid": "da5f8bc7-e0d5-48ed-9a1a-91a582458327",
+          "logical_dependencies": [
+            "LF-L02-Q01"
+          ],
+          "shape": "circle",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "faesser_schiffsvorraete.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/faesser_schiffsvorraete.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          },
+          "shop_reference_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
+          "shop_is_quest_dialog_capable": false,
+          "dialog_id": "98258fb6-9e43-371a-a51c-433c0248c504",
+          "quest_npc_status": "NPC-UUID und Dialog-ID erfasst; EasyNPC-FTB-Task erst nach allen NPCs einrichten",
+          "dialog_only_dedicated_quest_npc": true,
+          "quest_shop_separation": "Der vorhandene Shop-NPC kann nur das Shop-GUI öffnen, nicht den EasyNPC-Questdialog. Nicht dessen UUID als Dialog-NPC verwenden.",
+          "dialog_document": "dialoge/hafenlagerarbeiter-quest09.md",
+          "npc_trigger_policy": {
+            "dialog_name": "q09_hafenlagerarbeiter",
+            "dialog_count": 1,
+            "dialog_is_default": true,
+            "dialog_action": "Close Dialog",
+            "completion_event": "opening this single EasyNPC dialogue when FTB task is connected",
+            "dependency": "LF-L02-Q01 (Quest 07)",
+            "side_quest": true,
+            "scoreboard": false,
+            "shop_visit_tracking": false,
+            "item_delivery": false,
+            "ftb_integration_deferred": true
+          },
+          "quest_narrative": "Der Hafenlagerarbeiter erklärt, dass Fässer Flüssigkeiten und Vorräte und Kisten/Truhen Werkzeuge und Proviant ordentlich lagern. Er stellt den Shop für Fässer & Schiffsvorräte vor. Keine tatsächliche Abgabe."
+        },
+        {
+          "planning_id": "LF-L02-Q04",
+          "global_number": 10,
+          "title": "Fehlende Vorräte",
+          "type": "nebenquest",
+          "x": -4,
+          "y": 9,
+          "visible_dependency": null,
+          "inter_chapter_dependency": null,
+          "hide_dependency_lines": true,
+          "optional": true,
+          "assigned_station": "Proviantmeister (eigener Quest-NPC beim Fässer-&-Schiffsvorräte-Shop)",
+          "npc_uuid": "af4c5c5e-aa26-453b-8962-b740932a8143",
+          "logical_dependencies": [
+            "LF-L02-Q01"
+          ],
+          "shape": "circle",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "faesser_schiffsvorraete.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/faesser_schiffsvorraete.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          },
+          "shop_reference_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
+          "shop_is_quest_dialog_capable": false,
+          "dialog_id": "28fe37f8-7908-328a-811c-16d363f92f03",
+          "quest_npc_status": "NPC-UUID und Dialog-ID des Proviantmeisters erfasst; EasyNPC-FTB-Anbindung noch ausstehend",
+          "dialog_only_dedicated_quest_npc": true,
+          "quest_shop_separation": "Der vorhandene Shop-NPC kann nur das Shop-GUI öffnen, nicht den EasyNPC-Questdialog. Nicht dessen UUID als Dialog-NPC verwenden.",
+          "dialog_document": "dialoge/proviantmeister-quest10.md",
+          "npc_trigger_policy": {
+            "dialog_name": "q10_proviantmeister",
+            "dialog_count": 1,
+            "dialog_is_default": true,
+            "dialog_action": "Close Dialog",
+            "completion_event": "EasyNPC dialogue opened; FTB task to be bound after all NPCs collected",
+            "dependency": "LF-L02-Q01 (Quest 07)",
+            "side_quest": true,
+            "scoreboard": false,
+            "shop_visit_tracking": false,
+            "item_delivery": false,
+            "ftb_integration_deferred": true
+          },
+          "quest_narrative": "Proviantmeister erklärt den Spielern den reinen Ankauf von Lebensmitteln und Proviant für die Seeleute von La Familia: Spieler können überschüssige Lebensmittel gegen Münzen verkaufen, der betreffende Proviantankäufer verkauft nichts. Bei Quest 10 kein Pflichtverkauf und keine Item-Abgabe. Dialogtext ist keine Änderung an der Shop-Konfiguration.",
+          "merchant_behavior_note": "Gewünschter Handelsmodus: Proviantankäufer kauft an, verkauft nichts. Nur als Dialogbeschreibung dokumentiert; tatsächliche Shopkonfiguration nicht in diesem Schritt bearbeitet oder verifiziert."
+        },
+        {
+          "planning_id": "LF-L02-Q05",
+          "global_number": 11,
+          "title": "Ein Bett für die Nacht",
+          "type": "nebenquest",
+          "x": 4,
+          "y": 9,
+          "visible_dependency": null,
+          "inter_chapter_dependency": null,
+          "hide_dependency_lines": true,
+          "optional": true,
+          "assigned_station": "Hafenherbergsvater beim Betten-&-Schränke-Händler (eigener Dialog-NPC)",
+          "npc_uuid": "a20fafc8-1146-4855-a55d-be29bad42ef1",
+          "logical_dependencies": [
+            "LF-L02-Q01"
+          ],
+          "shape": "circle",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "betten_schraenke.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/betten_schraenke.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          },
+          "shop_reference_uuid": "b0c6014c-28f4-46f8-840c-cd6fa958d7d9",
+          "shop_is_quest_dialog_capable": false,
+          "dialog_id": "f7ad98f2-9ca4-379f-aa04-94854ef04bc2",
+          "quest_npc_status": "NPC UUID und Dialog-ID des einzigen Erklärdialogs erfasst; FTB Quest-Task-Anbindung am Ende",
+          "dialog_only_dedicated_quest_npc": true,
+          "quest_shop_separation": "Der vorhandene Shop-NPC kann nur das Shop-GUI öffnen, nicht den EasyNPC-Questdialog. Nicht dessen UUID als Dialog-NPC verwenden.",
+          "dialog_document": "dialoge/hafenherbergsvater-quest11.md",
+          "npc_trigger_policy": {
+            "dialog_name": "q11_hafenherbergsvater",
+            "dialog_count": 1,
+            "dialog_is_default": true,
+            "dialog_action": "Close Dialog",
+            "completion_event": "Open this one EasyNPC explanatory dialog; future FTB completion event",
+            "dependency": "LF-L02-Q01 (Quest 07)",
+            "side_quest": true,
+            "scoreboard": false,
+            "shop_visit_tracking": false,
+            "item_delivery": false,
+            "ftb_integration_deferred": true
+          },
+          "quest_narrative": "Hafenherbergsvater erläutert neuen Seefahrern die Bedeutung eines sicheren Schlafplatzes und weist auf den bestehenden Händler für Betten und Schränke hin; keine Kauf- oder Schlafpflicht."
+        },
+        {
+          "planning_id": "LF-L02-Q06",
+          "global_number": 12,
+          "title": "Licht für den Hafen",
+          "type": "nebenquest",
+          "x": 12,
+          "y": 9,
+          "visible_dependency": null,
+          "inter_chapter_dependency": null,
+          "hide_dependency_lines": true,
+          "optional": true,
+          "assigned_station": "Hafenlaternenwärter beim Händler für Kerzen & Laternen (eigener Dialog-NPC)",
+          "npc_uuid": "cf2887c7-a332-4bf0-8ebb-03ef60bcc486",
+          "logical_dependencies": [
+            "LF-L02-Q01"
+          ],
+          "shape": "circle",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "kerzen_laternen.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/kerzen_laternen.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          },
+          "shop_reference_uuid": "492d0ebe-2b7c-4b18-b7e5-5276e8e5a21f",
+          "shop_is_quest_dialog_capable": false,
+          "dialog_id": null,
+          "quest_npc_status": "Hafenlaternenwärter-NPC UUID erfasst, Dialog-ID steht noch aus; FTB-Anbindung später",
+          "dialog_only_dedicated_quest_npc": true,
+          "quest_shop_separation": "Der vorhandene Shop-NPC kann nur das Shop-GUI öffnen, nicht den EasyNPC-Questdialog. Nicht dessen UUID als Dialog-NPC verwenden.",
+          "dialog_document": "dialoge/hafenlaternenwaerter-quest12.md",
+          "npc_trigger_policy": {
+            "dialog_name": "q12_hafenlaternenwaerter",
+            "dialog_count": 1,
+            "dialog_is_default": true,
+            "dialog_action": "Close Dialog",
+            "completion_event": "Opening the sole EasyNPC explanation dialog; FTB task binding deferred",
+            "dependency": "LF-L02-Q01 (Quest 07)",
+            "side_quest": true,
+            "scoreboard": false,
+            "purchase_required": false,
+            "item_delivery": false,
+            "ftb_integration_deferred": true
+          },
+          "quest_narrative": "Der Hafenlaternenwärter erklärt, warum Kerzen und Laternen nachts Wege, Kais und Schiffe beleuchten, und empfiehlt den bestehenden Händler für Kerzen und Laternen; kein Kauf oder Anzünden erforderlich."
+        }
+      ]
+    },
+    {
+      "chapter_number": 3,
+      "chapter_name": "Proviant für die Mannschaft",
+      "quests": [
+        {
+          "planning_id": "LF-L03-Q01",
+          "global_number": 13,
+          "title": "Die Versorgung der Mannschaft",
+          "type": "hauptquest",
+          "x": -8,
+          "y": 0,
+          "visible_dependency": null,
+          "inter_chapter_dependency": "LF-L02-Q02",
+          "hide_dependency_lines": false,
+          "optional": false,
+          "assigned_station": "Ackerbauhändler",
+          "npc_uuid": "4d47e0db-5ca7-463a-b45e-b43edf3dc7d9",
+          "logical_dependencies": [
+            "LF-L02-Q02"
+          ],
+          "shape": "hexagon",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "ackerbau.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/ackerbau.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
+        },
+        {
+          "planning_id": "LF-L03-Q02",
+          "global_number": 14,
+          "title": "Die Hafenküche",
+          "type": "hauptquest",
+          "x": 8,
+          "y": 0,
+          "visible_dependency": "LF-L03-Q01",
+          "inter_chapter_dependency": null,
+          "hide_dependency_lines": false,
+          "optional": false,
+          "assigned_station": "Geschirr & Küchenwaren",
+          "npc_uuid": "b9150d76-1221-40eb-9736-867be277fdef",
+          "logical_dependencies": [
+            "LF-L03-Q01"
+          ],
+          "shape": "hexagon",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "geschirr_kuechenwaren.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/geschirr_kuechenwaren.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
+        },
+        {
+          "planning_id": "LF-L03-Q03",
+          "global_number": 15,
+          "title": "Die Speisekammer",
+          "type": "nebenquest",
+          "x": -12,
+          "y": 9,
+          "visible_dependency": null,
+          "inter_chapter_dependency": null,
+          "hide_dependency_lines": true,
+          "optional": true,
+          "assigned_station": "Ackerbauhändler",
+          "npc_uuid": "4d47e0db-5ca7-463a-b45e-b43edf3dc7d9",
+          "logical_dependencies": [
+            "LF-L03-Q01"
+          ],
+          "shape": "circle",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "ackerbau.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/ackerbau.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
+        },
+        {
+          "planning_id": "LF-L03-Q04",
+          "global_number": 16,
+          "title": "Frischer Fisch vom Kai",
+          "type": "nebenquest",
+          "x": -4,
+          "y": 9,
+          "visible_dependency": null,
+          "inter_chapter_dependency": null,
+          "hide_dependency_lines": true,
+          "optional": true,
+          "assigned_station": "Fischerei (Aufgabe)",
+          "npc_uuid": null,
+          "logical_dependencies": [
+            "LF-L03-Q01"
+          ],
+          "shape": "circle"
+        },
+        {
+          "planning_id": "LF-L03-Q05",
+          "global_number": 17,
+          "title": "Die Spezialität der Taverne",
+          "type": "nebenquest",
+          "x": 4,
+          "y": 9,
+          "visible_dependency": null,
+          "inter_chapter_dependency": null,
+          "hide_dependency_lines": true,
+          "optional": true,
+          "assigned_station": "Geschirr & Küchenwaren",
+          "npc_uuid": "b9150d76-1221-40eb-9736-867be277fdef",
+          "logical_dependencies": [
+            "LF-L03-Q01"
+          ],
+          "shape": "circle",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "geschirr_kuechenwaren.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/geschirr_kuechenwaren.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
+        },
+        {
+          "planning_id": "LF-L03-Q06",
+          "global_number": 18,
+          "title": "Vorräte für die Reise",
+          "type": "nebenquest",
+          "x": 12,
+          "y": 9,
+          "visible_dependency": null,
+          "inter_chapter_dependency": null,
+          "hide_dependency_lines": true,
+          "optional": true,
+          "assigned_station": "Fässer & Schiffsvorräte",
+          "npc_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
+          "logical_dependencies": [
+            "LF-L03-Q01"
+          ],
+          "shape": "circle",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "faesser_schiffsvorraete.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/faesser_schiffsvorraete.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
+        }
+      ]
+    },
+    {
+      "chapter_number": 4,
+      "chapter_name": "Die Gilden stellen sich vor",
+      "quests": [
+        {
+          "planning_id": "LF-L04-Q01",
+          "global_number": 19,
+          "title": "Die Pflanzen der Karibik",
+          "type": "hauptquest",
+          "x": -8,
+          "y": 0,
+          "visible_dependency": null,
+          "inter_chapter_dependency": "LF-L03-Q02",
+          "hide_dependency_lines": false,
+          "optional": false,
+          "assigned_station": "Natur- und Pflanzenhändler",
+          "npc_uuid": "ea1411ed-9189-495a-96e1-35c0a49291bb",
+          "logical_dependencies": [
+            "LF-L03-Q02"
+          ],
+          "shape": "hexagon",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "natur_pflanzen.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/natur_pflanzen.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
+        },
+        {
+          "planning_id": "LF-L04-Q02",
+          "global_number": 20,
+          "title": "Der Bau des Hafens",
+          "type": "hauptquest",
+          "x": 8,
+          "y": 0,
+          "visible_dependency": "LF-L04-Q01",
+          "inter_chapter_dependency": null,
+          "hide_dependency_lines": false,
+          "optional": false,
+          "assigned_station": "Stein- und Erdhändler",
+          "npc_uuid": "90bad3cc-0327-4c95-998c-edcba16f477e",
+          "logical_dependencies": [
+            "LF-L04-Q01"
+          ],
+          "shape": "hexagon",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "stein_erde.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/stein_erde.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
+        },
+        {
+          "planning_id": "LF-L04-Q03",
+          "global_number": 21,
+          "title": "Holz für die Gilde",
+          "type": "nebenquest",
+          "x": -12,
+          "y": 9,
+          "visible_dependency": null,
+          "inter_chapter_dependency": null,
+          "hide_dependency_lines": true,
+          "optional": true,
+          "assigned_station": "Holzfäller",
+          "npc_uuid": "b424fb91-290c-422e-9475-970a1fc4ec64",
+          "logical_dependencies": [
+            "LF-L04-Q01"
+          ],
+          "shape": "circle",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "holzfaeller.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/holzfaeller.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
+        },
+        {
+          "planning_id": "LF-L04-Q04",
+          "global_number": 22,
+          "title": "Erze für die Schmiede",
+          "type": "nebenquest",
+          "x": -4,
+          "y": 9,
+          "visible_dependency": null,
+          "inter_chapter_dependency": null,
+          "hide_dependency_lines": true,
+          "optional": true,
+          "assigned_station": "Stein- und Erdhändler",
+          "npc_uuid": "90bad3cc-0327-4c95-998c-edcba16f477e",
+          "logical_dependencies": [
+            "LF-L04-Q01"
+          ],
+          "shape": "circle",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "stein_erde.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/stein_erde.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
+        },
+        {
+          "planning_id": "LF-L04-Q05",
+          "global_number": 23,
+          "title": "Die Werkzeuge der Gilden",
+          "type": "nebenquest",
+          "x": 4,
+          "y": 9,
+          "visible_dependency": null,
+          "inter_chapter_dependency": null,
+          "hide_dependency_lines": true,
+          "optional": true,
+          "assigned_station": "Werkzeug & Werkstattbedarf",
+          "npc_uuid": "34cf18e4-8c19-4d49-97fb-49b1a7ef9909",
+          "logical_dependencies": [
+            "LF-L04-Q01"
+          ],
+          "shape": "circle",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "werkzeug_werkstattbedarf.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/werkzeug_werkstattbedarf.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
+        },
+        {
+          "planning_id": "LF-L04-Q06",
+          "global_number": 24,
+          "title": "Ein grüner Piratenhafen",
+          "type": "nebenquest",
+          "x": 12,
+          "y": 9,
+          "visible_dependency": null,
+          "inter_chapter_dependency": null,
+          "hide_dependency_lines": true,
+          "optional": true,
+          "assigned_station": "Decocraft Nature",
+          "npc_uuid": "c9f6d74e-35ba-4083-8688-013d7ecbd161",
+          "logical_dependencies": [
+            "LF-L04-Q01"
+          ],
+          "shape": "circle"
+        }
+      ]
+    },
+    {
+      "chapter_number": 5,
+      "chapter_name": "Handwerk und Schiffsbau",
+      "quests": [
+        {
+          "planning_id": "LF-L05-Q01",
+          "global_number": 25,
+          "title": "Das Werkzeug des Handwerkers",
+          "type": "hauptquest",
+          "x": -8,
+          "y": 0,
+          "visible_dependency": null,
+          "inter_chapter_dependency": "LF-L04-Q02",
+          "hide_dependency_lines": false,
+          "optional": false,
+          "assigned_station": "Werkzeug & Werkstattbedarf",
+          "npc_uuid": "34cf18e4-8c19-4d49-97fb-49b1a7ef9909",
+          "logical_dependencies": [
+            "LF-L04-Q02"
+          ],
+          "shape": "hexagon",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "werkzeug_werkstattbedarf.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/werkzeug_werkstattbedarf.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
+        },
+        {
+          "planning_id": "LF-L05-Q02",
+          "global_number": 26,
+          "title": "Einrichtung der Taverne",
+          "type": "hauptquest",
+          "x": 8,
+          "y": 0,
+          "visible_dependency": "LF-L05-Q01",
+          "inter_chapter_dependency": null,
+          "hide_dependency_lines": false,
+          "optional": false,
+          "assigned_station": "Tische & Stühle",
+          "npc_uuid": "94a2eb3d-4056-4be0-a1f9-00f2db3fdb66",
+          "logical_dependencies": [
+            "LF-L05-Q01"
+          ],
+          "shape": "hexagon",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "tische_stuehle.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/tische_stuehle.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
+        },
+        {
+          "planning_id": "LF-L05-Q03",
+          "global_number": 27,
+          "title": "Eine alte Werkbank",
+          "type": "nebenquest",
+          "x": -12,
+          "y": 9,
+          "visible_dependency": null,
+          "inter_chapter_dependency": null,
+          "hide_dependency_lines": true,
+          "optional": true,
+          "assigned_station": "Werkzeug & Werkstattbedarf",
+          "npc_uuid": "34cf18e4-8c19-4d49-97fb-49b1a7ef9909",
+          "logical_dependencies": [
+            "LF-L05-Q01"
+          ],
+          "shape": "circle",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "werkzeug_werkstattbedarf.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/werkzeug_werkstattbedarf.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
+        },
+        {
+          "planning_id": "LF-L05-Q04",
+          "global_number": 28,
+          "title": "Das richtige Werkzeug",
+          "type": "nebenquest",
+          "x": -4,
+          "y": 9,
+          "visible_dependency": null,
+          "inter_chapter_dependency": null,
+          "hide_dependency_lines": true,
+          "optional": true,
+          "assigned_station": "Werkzeug & Werkstattbedarf",
+          "npc_uuid": "34cf18e4-8c19-4d49-97fb-49b1a7ef9909",
+          "logical_dependencies": [
+            "LF-L05-Q01"
+          ],
+          "shape": "circle",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "werkzeug_werkstattbedarf.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/werkzeug_werkstattbedarf.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
+        },
+        {
+          "planning_id": "LF-L05-Q05",
+          "global_number": 29,
+          "title": "Ein beschädigtes Schiff",
+          "type": "nebenquest",
+          "x": 4,
+          "y": 9,
+          "visible_dependency": null,
+          "inter_chapter_dependency": null,
+          "hide_dependency_lines": true,
+          "optional": true,
+          "assigned_station": "Fässer & Schiffsvorräte",
+          "npc_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
+          "logical_dependencies": [
+            "LF-L05-Q01"
+          ],
+          "shape": "circle",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "faesser_schiffsvorraete.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/faesser_schiffsvorraete.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
+        },
+        {
+          "planning_id": "LF-L05-Q06",
+          "global_number": 30,
+          "title": "Der Bauplatz am Hafen",
+          "type": "nebenquest",
+          "x": 12,
+          "y": 9,
+          "visible_dependency": null,
+          "inter_chapter_dependency": null,
+          "hide_dependency_lines": true,
+          "optional": true,
+          "assigned_station": "Tische & Stühle",
+          "npc_uuid": "94a2eb3d-4056-4be0-a1f9-00f2db3fdb66",
+          "logical_dependencies": [
+            "LF-L05-Q01"
+          ],
+          "shape": "circle",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "tische_stuehle.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/tische_stuehle.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
+        }
+      ]
+    },
+    {
+      "chapter_number": 6,
+      "chapter_name": "Münzen und Händler",
+      "quests": [
+        {
+          "planning_id": "LF-L06-Q01",
+          "global_number": 31,
+          "title": "Der Handel am Hafen",
+          "type": "hauptquest",
+          "x": -8,
+          "y": 0,
+          "visible_dependency": null,
+          "inter_chapter_dependency": "LF-L05-Q02",
+          "hide_dependency_lines": false,
+          "optional": false,
+          "assigned_station": "Fässer & Schiffsvorräte",
+          "npc_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
+          "logical_dependencies": [
+            "LF-L05-Q02"
+          ],
+          "shape": "hexagon",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "faesser_schiffsvorraete.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/faesser_schiffsvorraete.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
+        },
+        {
+          "planning_id": "LF-L06-Q02",
+          "global_number": 32,
+          "title": "Geheimnisvolle Fundstücke",
+          "type": "hauptquest",
+          "x": 8,
+          "y": 0,
+          "visible_dependency": "LF-L06-Q01",
+          "inter_chapter_dependency": null,
+          "hide_dependency_lines": false,
+          "optional": false,
+          "assigned_station": "Kuriositäten & Reliquien",
+          "npc_uuid": "5cebee17-e91c-4832-b573-ac3e3a16bbac",
+          "logical_dependencies": [
+            "LF-L06-Q01"
+          ],
+          "shape": "hexagon"
+        },
+        {
+          "planning_id": "LF-L06-Q03",
+          "global_number": 33,
+          "title": "Was kostet die Welt?",
+          "type": "nebenquest",
+          "x": -12,
+          "y": 9,
+          "visible_dependency": null,
+          "inter_chapter_dependency": null,
+          "hide_dependency_lines": true,
+          "optional": true,
+          "assigned_station": "Stein- und Erdhändler",
+          "npc_uuid": "90bad3cc-0327-4c95-998c-edcba16f477e",
+          "logical_dependencies": [
+            "LF-L06-Q01"
+          ],
+          "shape": "circle",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "stein_erde.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/stein_erde.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
+        },
+        {
+          "planning_id": "LF-L06-Q04",
+          "global_number": 34,
+          "title": "Ein Blick ins Warenangebot",
+          "type": "nebenquest",
+          "x": -4,
+          "y": 9,
+          "visible_dependency": null,
+          "inter_chapter_dependency": null,
+          "hide_dependency_lines": true,
+          "optional": true,
+          "assigned_station": "Decocraft Nature",
+          "npc_uuid": "c9f6d74e-35ba-4083-8688-013d7ecbd161",
+          "logical_dependencies": [
+            "LF-L06-Q01"
+          ],
+          "shape": "circle"
+        },
+        {
+          "planning_id": "LF-L06-Q05",
+          "global_number": 35,
+          "title": "Ein kleiner Glücksbringer",
+          "type": "nebenquest",
+          "x": 4,
+          "y": 9,
+          "visible_dependency": null,
+          "inter_chapter_dependency": null,
+          "hide_dependency_lines": true,
+          "optional": true,
+          "assigned_station": "Plüschtiere & Kuscheltiere",
+          "npc_uuid": "af27de02-95ad-4f31-9729-7d8a692ef457",
+          "logical_dependencies": [
+            "LF-L06-Q01"
+          ],
+          "shape": "circle"
+        },
+        {
+          "planning_id": "LF-L06-Q06",
+          "global_number": 36,
+          "title": "Das erste Handelsgeschäft",
+          "type": "nebenquest",
+          "x": 12,
+          "y": 9,
+          "visible_dependency": null,
+          "inter_chapter_dependency": null,
+          "hide_dependency_lines": true,
+          "optional": true,
+          "assigned_station": "Fässer & Schiffsvorräte",
+          "npc_uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
+          "logical_dependencies": [
+            "LF-L06-Q01"
+          ],
+          "shape": "circle",
+          "icon_asset": {
+            "icon_set": "haendler_set_01",
+            "namespace": "lafamilia",
+            "file_name": "faesser_schiffsvorraete.png",
+            "resource_pack_path": "assets/lafamilia/textures/ftbquests/haendler/faesser_schiffsvorraete.png",
+            "status": "grafik_vorbereitet_nicht_im_laufenden_questbuch_aktiviert"
+          }
+        }
+      ]
+    },
+    {
+      "chapter_number": 7,
+      "chapter_name": "Die Grenzen der bekannten Welt",
+      "quests": [
+        {
+          "planning_id": "LF-L07-Q01",
+          "global_number": 37,
+          "title": "Die Karten der sieben Meere",
+          "type": "hauptquest",
+          "x": -8,
+          "y": 0,
+          "visible_dependency": null,
+          "inter_chapter_dependency": "LF-L06-Q02",
+          "hide_dependency_lines": false,
+          "optional": false,
+          "assigned_station": "Bücher & Karten",
+          "npc_uuid": "90f7528c-02f2-434c-82a0-6337b0892bc5",
+          "logical_dependencies": [
+            "LF-L06-Q02"
+          ],
+          "shape": "hexagon"
+        },
+        {
+          "planning_id": "LF-L07-Q02",
+          "global_number": 38,
+          "title": "Die magischen Reisewege",
+          "type": "hauptquest",
+          "x": 8,
+          "y": 0,
+          "visible_dependency": "LF-L07-Q01",
+          "inter_chapter_dependency": null,
+          "hide_dependency_lines": false,
+          "optional": false,
+          "assigned_station": "Wegsteine & Teleporter",
+          "npc_uuid": "fd396e7e-311d-4681-a2f2-1ce03df1401d",
+          "logical_dependencies": [
+            "LF-L07-Q01"
+          ],
+          "shape": "hexagon"
+        },
+        {
+          "planning_id": "LF-L07-Q03",
+          "global_number": 39,
+          "title": "Eine Karte voller Geheimnisse",
+          "type": "nebenquest",
+          "x": -12,
+          "y": 9,
+          "visible_dependency": null,
+          "inter_chapter_dependency": null,
+          "hide_dependency_lines": true,
+          "optional": true,
+          "assigned_station": "Bücher & Karten",
+          "npc_uuid": "90f7528c-02f2-434c-82a0-6337b0892bc5",
+          "logical_dependencies": [
+            "LF-L07-Q01"
+          ],
+          "shape": "circle"
+        },
+        {
+          "planning_id": "LF-L07-Q04",
+          "global_number": 40,
+          "title": "Der Weg in die Spielwelt",
+          "type": "nebenquest",
+          "x": -4,
+          "y": 9,
+          "visible_dependency": null,
+          "inter_chapter_dependency": null,
+          "hide_dependency_lines": true,
+          "optional": true,
+          "assigned_station": "Wegsteine & Teleporter",
+          "npc_uuid": "fd396e7e-311d-4681-a2f2-1ce03df1401d",
+          "logical_dependencies": [
+            "LF-L07-Q01"
+          ],
+          "shape": "circle"
+        },
+        {
+          "planning_id": "LF-L07-Q05",
+          "global_number": 41,
+          "title": "Das verbotene Netherportal",
+          "type": "nebenquest",
+          "x": 4,
+          "y": 9,
+          "visible_dependency": null,
+          "inter_chapter_dependency": null,
+          "hide_dependency_lines": true,
+          "optional": true,
+          "assigned_station": "Portalwächter",
+          "npc_uuid": null,
+          "logical_dependencies": [
+            "LF-L07-Q01"
+          ],
+          "shape": "circle"
+        },
+        {
+          "planning_id": "LF-L07-Q06",
+          "global_number": 42,
+          "title": "Das geheimnisvolle Endportal",
+          "type": "nebenquest",
+          "x": 12,
+          "y": 9,
+          "visible_dependency": null,
+          "inter_chapter_dependency": null,
+          "hide_dependency_lines": true,
+          "optional": true,
+          "assigned_station": "Portalwächter",
+          "npc_uuid": null,
+          "logical_dependencies": [
+            "LF-L07-Q01"
+          ],
+          "shape": "circle"
+        }
+      ]
+    },
+    {
+      "chapter_number": 8,
+      "chapter_name": "Die Aufnahme in La Familia",
+      "quests": [
+        {
+          "planning_id": "LF-L08-Q01",
+          "global_number": 43,
+          "title": "Die Aufnahmeurkunde",
+          "type": "hauptquest",
+          "x": -8,
+          "y": 0,
+          "visible_dependency": null,
+          "inter_chapter_dependency": "LF-L07-Q02",
+          "hide_dependency_lines": false,
+          "optional": false,
+          "assigned_station": "Hafenmeister",
+          "npc_uuid": null,
+          "logical_dependencies": [
+            "LF-L07-Q02"
+          ],
+          "shape": "hexagon"
+        },
+        {
+          "planning_id": "LF-L08-Q02",
+          "global_number": 44,
+          "title": "Willkommen in der Mannschaft!",
+          "type": "hauptquest",
+          "x": 8,
+          "y": 0,
+          "visible_dependency": "LF-L08-Q01",
+          "inter_chapter_dependency": null,
+          "hide_dependency_lines": false,
+          "optional": false,
+          "assigned_station": "Kapitän",
+          "npc_uuid": null,
+          "logical_dependencies": [
+            "LF-L08-Q01"
+          ],
+          "shape": "hexagon",
+          "rank_reward": {
+            "reward_type": "ftbquests:stage",
+            "stage": "lafamilia_rank_02_deckjunge",
+            "display_title": "Deckjunge",
+            "trigger": "intro quest finale completion / reward claim",
+            "once_per_player": true,
+            "replaces_stage": "lafamilia_rank_01_landratte",
+            "note": "Alte Rangstage nach Vergabe entfernen; nur einen aktiven Rang je Spieler behalten.",
+            "icon": "assets/lafamilia/textures/ftbquests/raenge/rang_02_deckjunge.png"
+          },
+          "quest_text_addendum": "Du wirst zum Deckjungen befördert. Landratte war bereits der Rang der ersten Quest, nicht erst der Abschluss."
+        },
+        {
+          "planning_id": "LF-L08-Q03",
+          "global_number": 45,
+          "title": "Ein letzter Rundgang",
+          "type": "nebenquest",
+          "x": -12,
+          "y": 9,
+          "visible_dependency": null,
+          "inter_chapter_dependency": null,
+          "hide_dependency_lines": true,
+          "optional": true,
+          "assigned_station": "Hafenmeister",
+          "npc_uuid": null,
+          "logical_dependencies": [
+            "LF-L08-Q01"
+          ],
+          "shape": "circle"
+        },
+        {
+          "planning_id": "LF-L08-Q04",
+          "global_number": 46,
+          "title": "Die Namen der Mannschaft",
+          "type": "nebenquest",
+          "x": -4,
+          "y": 9,
+          "visible_dependency": null,
+          "inter_chapter_dependency": null,
+          "hide_dependency_lines": true,
+          "optional": true,
+          "assigned_station": "Kapitän",
+          "npc_uuid": null,
+          "logical_dependencies": [
+            "LF-L08-Q01"
+          ],
+          "shape": "circle"
+        },
+        {
+          "planning_id": "LF-L08-Q05",
+          "global_number": 47,
+          "title": "Das Geheimnis des Kapitäns",
+          "type": "nebenquest",
+          "x": 4,
+          "y": 9,
+          "visible_dependency": null,
+          "inter_chapter_dependency": null,
+          "hide_dependency_lines": true,
+          "optional": true,
+          "assigned_station": "Kapitän",
+          "npc_uuid": null,
+          "logical_dependencies": [
+            "LF-L08-Q01"
+          ],
+          "shape": "circle"
+        },
+        {
+          "planning_id": "LF-L08-Q06",
+          "global_number": 48,
+          "title": "Ein Versprechen für die Zukunft",
+          "type": "nebenquest",
+          "x": 12,
+          "y": 9,
+          "visible_dependency": null,
+          "inter_chapter_dependency": null,
+          "hide_dependency_lines": true,
+          "optional": true,
+          "assigned_station": "Kapitän",
+          "npc_uuid": null,
+          "logical_dependencies": [
+            "LF-L08-Q01"
+          ],
+          "shape": "circle"
+        }
+      ]
+    }
+  ],
+  "icon_asset_library": {
+    "set": "haendler_set_01",
+    "count_icons": 10,
+    "assigned_quest_count": 25,
+    "note": "Zehn separate PNG-Icons sind als ZIP in der zugehörigen Chat-Konversation verfügbar; die Bilddateien selbst wurden noch nicht auf GitHub hochgeladen. Mapping ist eine Planung, kein ausgeführter FTB-Quests-Import."
+  },
+  "rank_design": {
+    "scheme_ref": "planung/rangsystem-und-bosskonzept-v1.json",
+    "first_quest_id": "LF-L01-Q01",
+    "first_rank": "Landratte",
+    "intro_end_quest_id": "LF-L08-Q02",
+    "intro_end_rank": "Deckjunge",
+    "global_quest_target": 2000,
+    "rank_valid_for": "alle Kapitel des Gesamtquestbuchs",
+    "game_stages_over_permissions_plugin": true
+  },
+  "world_design": {
+    "user_decision": "Keine selbstgebauten oder eigens von uns erstellten Dungeons für Quests",
+    "allow": "Vorhandene Dungeons/Strukturen, Dimensionen und Bossgegner der tatsächlich installierten Mods plus Vanilla",
+    "boss_npc_policy": "Vorhandene Mod-Bosse und ggf. existierende Boss-NPCs nutzen; genaue Auswahl nach Modpack-Analyse, keine erfundenen Boss-IDs",
+    "distinction": "EasyNPC-Shop/Dialogfiguren sind Questgeber; kein automatischer Bosskampf durch bloßen NPC-Eintrag."
+  },
+  "repeatable_quest_policy": {
+    "daily_unlock": "after LF-L01-Q01 (only eligible tasks for player's progress)",
+    "weekly_unlock": "after LF-L08-Q02",
+    "recurring_icon_daily": "assets/lafamilia/textures/ftbquests/auftraege/taegliche_quests.png",
+    "recurring_icon_weekly": "assets/lafamilia/textures/ftbquests/auftraege/woechentliche_quests.png",
+    "repeatables_outside_intro_chapters": true
+  }
+}
