@@ -7,38 +7,50 @@
 **Voraussetzung:** Quest 07 „Beim Quartiermeister melden“  
 **Dialogname:** `q10_proviantmeister`  
 **Dialog-ID:** Noch aus EasyNPC zu übermitteln  
-**Status:** NPC gespeichert und Dialogvorlage erstellt, kein aktivierter FTB-Questabschluss im Testbuild.
+**Status:** NPC und Dialogvorlage gespeichert; keine aktivierte FTB-Questverknüpfung.
 
 ## Einziger EasyNPC-Dialog
 
 **Proviantmeister:**
 
-„Ahoy, Landratte! Gut, dass du hier bist! Ich bin der Proviantmeister von La Familia, und in unseren Vorratskammern herrscht gerade ein ordentliches Durcheinander!
+Ahoy, Landratte! Komm näher, ich habe etwas Wichtiges zu erzählen!
 
-Stell dir vor, ein Schiff sticht in See und nach wenigen Tagen sind Brot und Trinkwasser alle. Da hilft auch die größte Kanone nichts mehr!
+Ich bin der Proviantmeister von La Familia und sorge dafür, dass unsere Seeleute niemals mit leerem Magen in See stechen müssen!
 
-Darum achten wir darauf, dass immer genug Lebensmittel, Wasser und Ersatzvorräte an Bord sind. Wir verstauen sie ordentlich in Fässern und Kisten, damit die Mannschaft auch auf langen Reisen versorgt bleibt.
+Eine hungrige Mannschaft ist eine schlechte Mannschaft, und ein Schiff ohne Vorräte kommt nicht weit!
 
-Unser Händler für Fässer und Schiffsvorräte ist gleich hier in der Nähe. Bei ihm kannst du dich über wichtige Waren für die Versorgung informieren.
+Deshalb kaufen wir hier am Hafen Lebensmittel und Proviant von fleißigen Abenteurern wie dir an.
 
-Merke dir eines, Landratte: Ein kluger Kapitän zählt nicht nur seine Kanonenkugeln, sondern auch seine Vorräte!
+Ob Fisch, Fleisch, Brot, Gemüse oder andere Lebensmittel – unsere Seeleute brauchen ständig Nachschub!
 
-Damit kennst du die Aufgabe unserer Hafenversorgung. Für heute musst du nichts beschaffen – diese Einweisung reicht aus. Halte dein Questbuch im Auge, denn La Familia hat noch viel mit dir vor!“
+Hast du auf deinen Reisen überschüssige Lebensmittel gesammelt, kannst du sie bei unserem Proviantankäufer gegen Münzen verkaufen.
+
+Aber merk dir eines, Landratte: **Hier wird nur angekauft! Unser Händler verkauft keine Waren.**
+
+Alles, was wir ankaufen, landet in den Vorratskammern und versorgt unsere Mannschaft auf ihren langen Reisen über die sieben Meere.
+
+Nun weißt du, wo du deine überschüssigen Lebensmittel zu Münzen machen und gleichzeitig unsere Seeleute unterstützen kannst!
+
+Gut gemacht, Landratte! La Familia dankt dir für deine Unterstützung!
 
 **Spieler – einzige Antwort:**
 
-„Aye, Proviantmeister! Ich werde unsere Vorräte nicht vergessen!“
+Aye, Proviantmeister! Ich werde meine überschüssigen Lebensmittel bei euch verkaufen!
 
 **EasyNPC-Aktion:** `Close Dialog`
 
-**Ziel:** Sobald die EasyNPC-FTB-Questaufgabe später verbunden ist, wird die optionale Quest 10 bereits beim **Öffnen** dieses Dialogs einmalig abgeschlossen, nicht erst beim Anklicken des Schließen-Knopfs.
+**Quest 10:** Wird erst nach der späteren EasyNPC-FTB-Verknüpfung beim Öffnen dieses Dialogs einmalig abgeschlossen. Für die Quest muss nichts verkauft werden.
 
-## Einrichtung in EasyNPC
+## EasyNPC-Einrichtung
 
-1. Den NPC `af4c5c5e-aa26-453b-8962-b740932a8143` mit dem Dialogeditor bearbeiten.
-2. Genau **einen Standarddialog** namens `q10_proviantmeister` anlegen.
-3. Obigen Text und den einzigen Antwortknopf mit der Aktion `Close Dialog` übernehmen.
-4. Seine **Dialog-ID** aus EasyNPC kopieren und für Quest 10 weitergeben.
-5. Die Zuordnung zu FTB Quests wird erst eingerichtet, wenn alle Quest-NPCs gesammelt wurden. Voraussetzung Quest 07 bleibt erhalten und die Questbelohnung soll einmalig sein.
+1. Den Proviantmeister-NPC `af4c5c5e-aa26-453b-8962-b740932a8143` im Dialogeditor öffnen.
+2. Einen Standarddialog `q10_proviantmeister` mit dem obigen Text und genau einem Antwortknopf anlegen.
+3. Als Antwortaktion `Close Dialog` wählen.
+4. Die Dialog-ID aus EasyNPC kopieren und für Quest 10 weitergeben.
+5. Die automatische FTB-Quest-Verknüpfung erst nach vollständiger Erfassung aller Quest-NPCs einrichten.
 
-**Wichtig:** Der vorhandene Shop-NPC **Fässer & Schiffsvorräte** (`a092c754-26c6-458e-8c42-de3ad3e26c1d`) bleibt unverändert. Trotz des Titels „Fehlende Vorräte“ verlangt diese vereinfachte Einführungsquest weder Einkauf noch reale Vorratsabgabe oder Scoreboard. Der aktuelle Testbuild behält bis zur gemeinsamen Integration die Checkmark-Aufgabe.
+## Abgrenzung Händler / NPC
+
+Der Proviantmeister ist der **separate Quest-Dialog-NPC**. Die Aussage „Hier wird nur angekauft“ beschreibt den vom Nutzer gewünschten **Proviantankäufer**. Sie richtet dessen tatsächliche Handelsangebote nicht automatisch ein und ändert keine bestehenden Shop-NPCs. Ob der bislang referenzierte Shop „Fässer & Schiffsvorräte“ (`a092c754-26c6-458e-8c42-de3ad3e26c1d`) oder ein anderer Händler für den Proviantankauf zuständig ist, wird hier nicht stillschweigend festgelegt.
+
+**Keine Scoreboards, keine Shopprüfung, kein erzwungener Verkauf und keine Gegenstandsabgabe für die Quest.** Der aktuelle FTB-Testbuild nutzt noch die Checkmark-Aufgabe.
