@@ -77,14 +77,26 @@
           "internal_plan_id": "LF-L01-Q04",
           "hex_quest_id": "FA10010300040000",
           "title": "Die Regeln von La Familia",
-          "task": "ftbquests:checkmark (existing TEST build); separate NPC and EasyNPC-dialog link after all NPCs placed",
+          "task": "ftbquests:checkmark (existing TEST build); EasyNPC task conversion deferred until all NPCs collected",
           "icon_asset": null,
           "merchant_uuid": null,
           "needs_easy_npc_dialog_id": true,
-          "npc_uuid": null,
+          "npc_uuid": "0ddeb1e3-8414-4a10-ac46-22263e28bc26",
           "dialog_id": null,
           "npc_role": "Hüter des Hafenkodex",
-          "needs_npc_uuid": true
+          "needs_npc_uuid": false,
+          "reward_plan": {
+            "xp": 25,
+            "items": [
+              {
+                "item": "minecraft:book",
+                "count": 1
+              }
+            ],
+            "once_only": true,
+            "rank_stage_reward": false,
+            "status": "planning_only"
+          }
         },
         {
           "internal_plan_id": "LF-L01-Q05",
@@ -198,6 +210,12 @@
       "npc_role": "Hauptmann der Hafenwache",
       "dialog_id": "666df7d2-8638-37b7-a4d9-efd806c8eceb",
       "status": "Dialog ID recorded; TEST ZIP remains checkmark until final NPC integration"
+    },
+    "FA10010300040000": {
+      "npc_uuid": "0ddeb1e3-8414-4a10-ac46-22263e28bc26",
+      "npc_role": "Hüter des Hafenkodex",
+      "dialog_id": null,
+      "status": "NPC UUID registered, waiting for quest-dialog ID; not yet linked to FTB task"
     }
   },
   "deployment_workflow": {
