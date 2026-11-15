@@ -6,7 +6,14 @@
     "quest_id": "FA10010300010000",
     "stage": "lafamilia_rank_01_landratte",
     "add": true,
-    "autoclaim": "enabled (needs in-game verification)"
+    "autoclaim": "enabled (needs in-game verification)",
+    "stage_type_verified": "gamestage",
+    "correct_serialization": {
+      "type": "gamestage",
+      "stage": "lafamilia_rank_01_landratte",
+      "auto": "invisible",
+      "team_reward": false
+    }
   },
   "phase": "Test 01, 12 quests, two independent visible chapters",
   "chapters": [
@@ -23,7 +30,11 @@
           "task": "ftbquests:checkmark (TEST, not NPC dialog auto)",
           "icon_asset": "assets/lafamilia/textures/ftbquests/raenge/rang_01_landratte.png",
           "merchant_uuid": null,
-          "needs_easy_npc_dialog_id": true
+          "needs_easy_npc_dialog_id": true,
+          "npc_uuid": "8c658830-313e-4f63-8dc2-f7ff4a51b669",
+          "npc_role": "Kapitän von La Familia",
+          "dialog_id": null,
+          "dialog_label_planned": "lafamilia_kapitaen_willkommen"
         },
         {
           "internal_plan_id": "LF-L01-Q02",
@@ -145,5 +156,13 @@
     "Rank stage autogrant and its team behavior not server tested.",
     "Existing merchant shops untouched.",
     "Resource pack files available as ZIP in conversation; PNG binary files are not uploaded to this repo."
-  ]
+  ],
+  "assigned_npcs": {
+    "FA10010300010000": {
+      "npc_uuid": "8c658830-313e-4f63-8dc2-f7ff4a51b669",
+      "npc_role": "Kapitän von La Familia",
+      "dialog_id": null,
+      "status": "UUID verifiziert durch Nutzerangabe, Dialog noch nicht konfiguriert"
+    }
+  }
 }
