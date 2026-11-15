@@ -44,10 +44,11 @@
       "plan_quest_id": "LF-L01-Q04",
       "ftb_hex_id": "FA10010300040000",
       "source": "user_supplied_npc_uuid",
-      "dialog_status": "waiting_for_quest_completion_dialog_id",
-      "dialog_id": null,
+      "dialog_status": "completion_dialog_id_registered; task_integration_deferred",
+      "dialog_id": "23b56d3e-5da3-338a-b351-07b485ef88fe",
       "note": "Neuer eigener NPC für die Serverregeln. Nicht den bestehenden Hafenmeister für Quest 04 verwenden.",
-      "dialog_document": "dialoge/hueter-hafenkodex-quest04.md"
+      "dialog_document": "dialoge/hueter-hafenkodex-quest04.md",
+      "dialog_role": "Dialog B – Abschlussbestätigung"
     },
     {
       "name": "Holzfäller",
