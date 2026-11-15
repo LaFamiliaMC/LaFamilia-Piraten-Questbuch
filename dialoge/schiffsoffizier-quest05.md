@@ -4,9 +4,9 @@
 **NPC-UUID:** `f5e8ef08-d548-47c2-88c0-d473843b9c65`  
 **Quest:** `LF-L01-Q05` / `FA10010300050000`  
 **Questart:** optionale Nebenquest, verfügbar nach „Ein neuer Seefahrer“ (Quest 01).  
-**Dialog B Abschluss-ID:** Noch offen – bitte aus EasyNPC kopieren.  
+**Dialog B Abschluss-ID:** `fc757df3-d218-3b94-892e-29f55513e646` (vom Nutzer angegeben).  
 **Geplante einmalige Belohnung:** 25 XP, 1 Kompass (noch nicht im Server-Testbuild aktiviert).  
-**Technik:** EasyNPC-Aufgabe und Dialog-Automatik werden erst nach Platzierung aller NPCs aktiviert und danach einzeln getestet.
+**Technik:** Dialog B ist zugeordnet; EasyNPC-Aufgabe und Dialog-Automatik werden erst nach Platzierung aller NPCs aktiviert und danach einzeln getestet.
 
 ## Dialog A – Vor der Aufnahme beim Kapitän
 
@@ -64,6 +64,6 @@
 
 1. NPC mit UUID `f5e8ef08-d548-47c2-88c0-d473843b9c65` vorhanden.
 2. Dialog A, B und C in EasyNPC anlegen, abhängig von Fortschritt in Quest 01/05.
-3. Nach Erstellung **nur die echte Abschluss-Dialog-ID von Dialog B** schicken und in NPC-Register speichern.
+3. **Abschluss-Dialog-ID von Dialog B ist bereits gespeichert:** `fc757df3-d218-3b94-892e-29f55513e646`. Andere Dialoge A/C dürfen keinen Questabschluss auslösen.
 4. Erst am Ende aller NPC-Platzierungen den FTB-Questtask von Checkmark auf EasyNPC-Aufgabe umstellen.
 5. Quest einzeln testen; bestehende Händler-Shops und andere NPCs unverändert lassen.
