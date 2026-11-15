@@ -6,7 +6,7 @@
 **Questtyp:** Optionale Nebenquest  
 **Voraussetzung:** Quest 07 „Beim Quartiermeister melden“  
 **Dialogname:** `q11_hafenherbergsvater`  
-**Dialog-ID:** Noch aus EasyNPC zu übermitteln  
+**Dialog-ID:** `f7ad98f2-9ca4-379f-aa04-94854ef04bc2` (vom Nutzer übermittelt)  
 **FTB-Status:** Noch keine aktive automatische FTB-Questaufgabe im Testbuild.
 
 ## Einziger Dialog
@@ -40,7 +40,7 @@ Aye, Herbergsvater! Ich werde mir merken, wo ich Betten und Schränke finde!
 1. Den Hafenherbergsvater mit NPC-UUID `a20fafc8-1146-4855-a55d-be29bad42ef1` in EasyNPC bearbeiten.
 2. Genau **einen Standarddialog** mit dem Namen `q11_hafenherbergsvater` anlegen.
 3. Obigen Text eingeben und einen Antwortknopf mit Aktion `Close Dialog` hinzufügen.
-4. EasyNPC-Dialog-ID kopieren und für Quest 11 übermitteln.
+4. Die EasyNPC-Dialog-ID `f7ad98f2-9ca4-379f-aa04-94854ef04bc2` ist gespeichert und wird bei der späteren FTB-Aufgabenanbindung verwendet.
 5. Die FTB-Questaufgabe erst dann an den Dialog binden, wenn alle NPCs mit IDs erfasst sind. Quest 07 bleibt die Voraussetzung; eine etwaige Belohnung erfolgt einmalig über FTB Quests.
 
 **Wichtig:** Der bestehende Händler für **Betten & Schränke** mit UUID `b0c6014c-28f4-46f8-840c-cd6fa958d7d9` bleibt ein reiner Shop. Für Quest 11 muss der Spieler weder ein Bett kaufen noch schlafen oder Gegenstände abgeben. Kein Scoreboard und keine technischen Shopkontrollen.
