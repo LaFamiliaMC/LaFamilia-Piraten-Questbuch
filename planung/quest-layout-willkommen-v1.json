@@ -60,11 +60,19 @@
           "hide_dependency_lines": false,
           "optional": false,
           "assigned_station": "Hafenmeister",
-          "npc_uuid": null,
+          "npc_uuid": "aaa51318-0fd4-47af-baca-8f8c4d727499",
           "logical_dependencies": [
             "LF-L01-Q01"
           ],
-          "shape": "hexagon"
+          "shape": "hexagon",
+          "dialog_id": null,
+          "npc_dialog_status": "Hafenmeister NPC-UUID from follow-up, assumes this UUID is NPC rather than dialog; pending dialog ID",
+          "npc_dialog_plan": {
+            "intro": "Ahoy, Landratte! Willkommen beim Hafenmeister. Ich trage jeden neuen Seefahrer ins Hafenbuch ein.",
+            "player": "Der Kapitän schickt mich.",
+            "response": "Dann zeig mir deinen Hafenpass. Schau dich im Hafen um und lerne unsere Händler und Handwerker kennen.",
+            "finish": "Du bist jetzt im Hafenbuch vermerkt. Die nächsten Stationen erwarten dich."
+          }
         },
         {
           "planning_id": "LF-L01-Q03",
