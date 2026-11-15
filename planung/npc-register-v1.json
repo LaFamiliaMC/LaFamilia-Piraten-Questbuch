@@ -271,8 +271,8 @@
       "plan_quest_id": "LF-L02-Q04",
       "ftb_hex_id": "FA10010300100000",
       "source": "user_supplied_npc_uuid",
-      "dialog_status": "single_dialog_id_pending; final_FTB_task_integration_deferred",
-      "dialog_id": null,
+      "dialog_status": "single_dialog_id_received; FTB_task_integration_deferred",
+      "dialog_id": "28fe37f8-7908-328a-811c-16d363f92f03",
       "dialog_document": "dialoge/proviantmeister-quest10.md",
       "dialog_role": "q10_proviantmeister – ein Erklärdialog; FTB Questabschluss später beim Öffnen",
       "note": "Separater Quest-NPC, ein Erklärdialog ohne Scoreboard. Erläutert Proviantankauf für Seeleute, Händler kauft Lebensmittel an und verkauft nichts. Shop-Betriebsart nur textlich beschrieben, nicht geändert."
