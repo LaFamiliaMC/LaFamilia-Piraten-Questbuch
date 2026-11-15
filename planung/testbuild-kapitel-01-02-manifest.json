@@ -41,10 +41,13 @@
           "internal_plan_id": "LF-L01-Q02",
           "hex_quest_id": "FA10010300020000",
           "title": "Der Hafenmeister",
-          "task": "ftbquests:checkmark (TEST, not NPC dialog auto)",
+          "task": "ftbquests:checkmark (TEST, until dialog ID and EasyNPC task are set)",
           "icon_asset": null,
           "merchant_uuid": null,
-          "needs_easy_npc_dialog_id": true
+          "needs_easy_npc_dialog_id": true,
+          "npc_uuid": "aaa51318-0fd4-47af-baca-8f8c4d727499",
+          "npc_role": "Hafenmeister",
+          "dialog_id": null
         },
         {
           "internal_plan_id": "LF-L01-Q03",
@@ -164,6 +167,12 @@
       "npc_role": "Kapitän von La Familia",
       "dialog_id": "addaae3c-bd31-37a4-8e70-188d7680f404",
       "status": "Dialog ID assigned; task in previously delivered ZIP still checkmark; update in FTB Quests editor needed"
+    },
+    "FA10010300020000": {
+      "npc_uuid": "aaa51318-0fd4-47af-baca-8f8c4d727499",
+      "npc_role": "Hafenmeister",
+      "dialog_id": null,
+      "status": "NPC UUID supplied in next-quest context; dialog ID pending and no game-side binding yet"
     }
   }
 }
