@@ -86,12 +86,32 @@
           "inter_chapter_dependency": null,
           "hide_dependency_lines": true,
           "optional": true,
-          "assigned_station": "Hafenwache",
-          "npc_uuid": null,
+          "assigned_station": "Hauptmann der Hafenwache",
+          "npc_uuid": "04df3e39-1e9e-468e-8d23-94454743bbce",
           "logical_dependencies": [
             "LF-L01-Q01"
           ],
-          "shape": "circle"
+          "shape": "circle",
+          "dialog_id": null,
+          "npc_dialog_status": "NPC UUID received; separate quest-completion dialog ID pending",
+          "dialog_document": "dialoge/hauptmann-hafenwache-quest03.md",
+          "reward_plan": {
+            "xp": 25,
+            "items": [
+              {
+                "item": "minecraft:torch",
+                "count": 4
+              }
+            ],
+            "once_only": true,
+            "rank_stage_reward": false
+          },
+          "npc_trigger_policy": {
+            "quest_unlock": "LF-L01-Q01",
+            "optional": true,
+            "quest_completion": "Dialog B final response, after introduction",
+            "not_a_story_gate": true
+          }
         },
         {
           "planning_id": "LF-L01-Q04",
