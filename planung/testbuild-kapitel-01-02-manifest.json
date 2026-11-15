@@ -316,8 +316,12 @@
             "requires_item_submission": false,
             "requires_lighting_placement": false,
             "scoreboard": false,
-            "status": "planning_only"
-          }
+            "status": "planning_only",
+            "mandatory_intro_bridge": true,
+            "prerequisite_plan_id": "LF-L02-Q02"
+          },
+          "planned_required_for_intro_finale": true,
+          "planned_dependency_after_revision": "LF-L02-Q02 (Quest 08)"
         }
       ]
     }
@@ -417,5 +421,6 @@
     "final_verification": "one NPC and quest at a time",
     "preserve_existing_quest_ids": true,
     "never_overwrite_shops": true
-  }
+  },
+  "intro_plan_note": "Die 48-Quest-Einführung wurde auf 16 Quests gekürzt, siehe planung/quest-layout-willkommen-v1.json. Dieses bestehende Testbuild-Manifest umfasst weiterhin nur Kapitel 1–2 (Quests 01–12); Quest 13–16 sind noch keine eingebauten FTB-Quests."
 }
