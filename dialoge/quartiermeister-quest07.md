@@ -3,8 +3,8 @@
 **NPC-UUID:** `10bbc089-6e58-4d92-b3c0-c1cf911f8d74`  
 **FTB-Quest-ID:** `FA10010300070000`  
 **Dialogname:** `q07_quartiermeister`  
-**Dialog-ID:** Noch nicht vorhanden – aus EasyNPC kopieren.  
-**Status:** Nur Textvorlage, kein aktivierter FTB-Abschlusstask.
+**Dialog-ID:** `ffab60c6-f23e-3594-bdef-e94c5c82ba42` (vom Nutzer übermittelt).  
+**Status:** Dialog-ID gespeichert; noch kein aktivierter FTB-Abschlusstask.
 
 ## Text des einzigen Dialogs
 
@@ -40,7 +40,7 @@ Aye, Quartiermeister! Vielen Dank für die Einweisung!
 2. **Nur einen** Standarddialog erstellen, am besten mit Label `q07_quartiermeister`.
 3. Text aus diesem Dokument einfügen.
 4. **Einen** Antwortknopf mit „Aye, Quartiermeister! Vielen Dank für die Einweisung!“ hinzufügen; Aktion `Close Dialog`.
-5. Im EasyNPC x FTB Quests Compat Menü **die Dialog-ID dieses einen Dialogs** kopieren und dem Projekt mitteilen.
+5. Im EasyNPC x FTB Quests Compat Menü **die gespeicherte Dialog-ID `ffab60c6-f23e-3594-bdef-e94c5c82ba42`** beim späteren FTB-Quests-EasyNPC-Task verwenden.
 
 ## Wann wird Quest 07 abgeschlossen?
 
