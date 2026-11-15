@@ -1,0 +1,169 @@
+{
+  "schema": "LaFamilia NPC registry v1",
+  "purpose": "Stable UUID/quest mappings; shop NPCs remain existing",
+  "version": "Fabric 1.21.1",
+  "source_note": "Captain UUID directly supplied by user in current turn; 15 merchant UUIDs collected from earlier shop planning, verify server before automated tasks",
+  "npcs": [
+    {
+      "name": "Kapitän von La Familia",
+      "uuid": "8c658830-313e-4f63-8dc2-f7ff4a51b669",
+      "category": "hauptgeschichte",
+      "plan_quest_id": "LF-L01-Q01",
+      "ftb_hex_id": "FA10010300010000",
+      "source": "user_verified",
+      "dialog_status": "awaiting_real_dialog_id",
+      "dialog_id": null
+    },
+    {
+      "name": "Holzfäller",
+      "uuid": "b424fb91-290c-422e-9475-970a1fc4ec64",
+      "category": "haendler",
+      "plan_quest_id": null,
+      "ftb_hex_id": null,
+      "source": "previous_shop_chat",
+      "dialog_status": "not_configured",
+      "dialog_id": null
+    },
+    {
+      "name": "Stein- und Erdhändler",
+      "uuid": "90bad3cc-0327-4c95-998c-edcba16f477e",
+      "category": "haendler",
+      "plan_quest_id": null,
+      "ftb_hex_id": null,
+      "source": "previous_shop_chat",
+      "dialog_status": "not_configured",
+      "dialog_id": null
+    },
+    {
+      "name": "Natur- und Pflanzenhändler",
+      "uuid": "ea1411ed-9189-495a-96e1-35c0a49291bb",
+      "category": "haendler",
+      "plan_quest_id": null,
+      "ftb_hex_id": null,
+      "source": "previous_shop_chat",
+      "dialog_status": "not_configured",
+      "dialog_id": null
+    },
+    {
+      "name": "Ackerbauhändler",
+      "uuid": "4d47e0db-5ca7-463a-b45e-b43edf3dc7d9",
+      "category": "haendler",
+      "plan_quest_id": null,
+      "ftb_hex_id": null,
+      "source": "previous_shop_chat",
+      "dialog_status": "not_configured",
+      "dialog_id": null
+    },
+    {
+      "name": "Decocraft Nature",
+      "uuid": "c9f6d74e-35ba-4083-8688-013d7ecbd161",
+      "category": "haendler",
+      "plan_quest_id": null,
+      "ftb_hex_id": null,
+      "source": "previous_shop_chat",
+      "dialog_status": "not_configured",
+      "dialog_id": null
+    },
+    {
+      "name": "Fässer & Schiffsvorräte",
+      "uuid": "a092c754-26c6-458e-8c42-de3ad3e26c1d",
+      "category": "haendler",
+      "plan_quest_id": null,
+      "ftb_hex_id": null,
+      "source": "previous_shop_chat",
+      "dialog_status": "not_configured",
+      "dialog_id": null
+    },
+    {
+      "name": "Geschirr & Küchenwaren",
+      "uuid": "b9150d76-1221-40eb-9736-867be277fdef",
+      "category": "haendler",
+      "plan_quest_id": null,
+      "ftb_hex_id": null,
+      "source": "previous_shop_chat",
+      "dialog_status": "not_configured",
+      "dialog_id": null
+    },
+    {
+      "name": "Tische & Stühle",
+      "uuid": "94a2eb3d-4056-4be0-a1f9-00f2db3fdb66",
+      "category": "haendler",
+      "plan_quest_id": null,
+      "ftb_hex_id": null,
+      "source": "previous_shop_chat",
+      "dialog_status": "not_configured",
+      "dialog_id": null
+    },
+    {
+      "name": "Betten & Schränke",
+      "uuid": "b0c6014c-28f4-46f8-840c-cd6fa958d7d9",
+      "category": "haendler",
+      "plan_quest_id": null,
+      "ftb_hex_id": null,
+      "source": "previous_shop_chat",
+      "dialog_status": "not_configured",
+      "dialog_id": null
+    },
+    {
+      "name": "Kerzen & Laternen",
+      "uuid": "492d0ebe-2b7c-4b18-b7e5-5276e8e5a21f",
+      "category": "haendler",
+      "plan_quest_id": null,
+      "ftb_hex_id": null,
+      "source": "previous_shop_chat",
+      "dialog_status": "not_configured",
+      "dialog_id": null
+    },
+    {
+      "name": "Werkzeug & Werkstattbedarf",
+      "uuid": "34cf18e4-8c19-4d49-97fb-49b1a7ef9909",
+      "category": "haendler",
+      "plan_quest_id": null,
+      "ftb_hex_id": null,
+      "source": "previous_shop_chat",
+      "dialog_status": "not_configured",
+      "dialog_id": null
+    },
+    {
+      "name": "Bücher & Karten",
+      "uuid": "90f7528c-02f2-434c-82a0-6337b0892bc5",
+      "category": "haendler",
+      "plan_quest_id": null,
+      "ftb_hex_id": null,
+      "source": "previous_shop_chat",
+      "dialog_status": "not_configured",
+      "dialog_id": null
+    },
+    {
+      "name": "Kuriositäten & Reliquien",
+      "uuid": "5cebee17-e91c-4832-b573-ac3e3a16bbac",
+      "category": "haendler",
+      "plan_quest_id": null,
+      "ftb_hex_id": null,
+      "source": "previous_shop_chat",
+      "dialog_status": "not_configured",
+      "dialog_id": null
+    },
+    {
+      "name": "Plüschtiere & Kuscheltiere",
+      "uuid": "af27de02-95ad-4f31-9729-7d8a692ef457",
+      "category": "haendler",
+      "plan_quest_id": null,
+      "ftb_hex_id": null,
+      "source": "previous_shop_chat",
+      "dialog_status": "not_configured",
+      "dialog_id": null
+    },
+    {
+      "name": "Wegsteine & Teleporter",
+      "uuid": "fd396e7e-311d-4681-a2f2-1ce03df1401d",
+      "category": "haendler",
+      "plan_quest_id": null,
+      "ftb_hex_id": null,
+      "source": "previous_shop_chat",
+      "dialog_status": "not_configured",
+      "dialog_id": null
+    }
+  ],
+  "note": "EasyNPC dialogue tasks require the actual generated dialog ID from the NPC editor in addition to NPC UUID. Do not claim the conversation task is automatic until it is configured and tested."
+}
