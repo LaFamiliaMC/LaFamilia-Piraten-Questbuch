@@ -269,15 +269,28 @@
           "internal_plan_id": "LF-L02-Q05",
           "hex_quest_id": "FA10010300110000",
           "title": "Ein Bett für die Nacht",
-          "task": "ftbquests:checkmark (TEST); dedicated Quest-NPC dialog deferred; shop NPC cannot provide EasyNPC dialog",
+          "task": "ftbquests:checkmark (current TEST build); planned EasyNPC task on opening q11_hafenherbergsvater; FTB integration deferred",
           "icon_asset": "assets/lafamilia/textures/ftbquests/haendler/betten_schraenke.png",
           "merchant_uuid": "b0c6014c-28f4-46f8-840c-cd6fa958d7d9",
           "needs_easy_npc_dialog_id": true,
-          "npc_uuid": null,
+          "npc_uuid": "a20fafc8-1146-4855-a55d-be29bad42ef1",
           "dialog_id": null,
-          "needs_dedicated_quest_npc": true,
+          "needs_dedicated_quest_npc": false,
           "merchant_shop_only": true,
-          "shop_reference_uuid": "b0c6014c-28f4-46f8-840c-cd6fa958d7d9"
+          "shop_reference_uuid": "b0c6014c-28f4-46f8-840c-cd6fa958d7d9",
+          "npc_role": "Hafenherbergsvater",
+          "needs_easy_npc_task_conversion": true,
+          "quest_objective": {
+            "type": "single_easy_npc_explanatory_dialog",
+            "dialog_name": "q11_hafenherbergsvater",
+            "trigger": "on opening dialog",
+            "shop_visit_validation": false,
+            "purchase_required": false,
+            "requires_item_submission": false,
+            "requires_sleep": false,
+            "scoreboard": false,
+            "status": "planning_only"
+          }
         },
         {
           "internal_plan_id": "LF-L02-Q06",
@@ -370,6 +383,12 @@
       "dialog_id": "28fe37f8-7908-328a-811c-16d363f92f03",
       "dialog_role": "q10_proviantmeister – ein Erklärdialog über Proviantankauf",
       "status": "Beide IDs erfasst; Checkmark-Testbuild unverändert, FTB-Anbindung später"
+    },
+    "FA10010300110000": {
+      "npc_uuid": "a20fafc8-1146-4855-a55d-be29bad42ef1",
+      "npc_role": "Hafenherbergsvater",
+      "dialog_id": null,
+      "status": "NPC UUID recorded; EasyNPC dialog ID pending; FTB binding deferred"
     }
   },
   "deployment_workflow": {
