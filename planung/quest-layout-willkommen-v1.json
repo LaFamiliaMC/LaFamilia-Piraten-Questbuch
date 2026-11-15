@@ -469,8 +469,8 @@
           "inter_chapter_dependency": null,
           "hide_dependency_lines": true,
           "optional": true,
-          "assigned_station": "Quest-NPC bei Betten & Schränke (noch auszuwählen)",
-          "npc_uuid": null,
+          "assigned_station": "Hafenherbergsvater beim Betten-&-Schränke-Händler (eigener Dialog-NPC)",
+          "npc_uuid": "a20fafc8-1146-4855-a55d-be29bad42ef1",
           "logical_dependencies": [
             "LF-L02-Q01"
           ],
@@ -485,9 +485,24 @@
           "shop_reference_uuid": "b0c6014c-28f4-46f8-840c-cd6fa958d7d9",
           "shop_is_quest_dialog_capable": false,
           "dialog_id": null,
-          "quest_npc_status": "Shop bleibt unverändert; eigener Quest-NPC oder Quest-Aufgabe ohne NPC-Dialog noch festzulegen",
+          "quest_npc_status": "Hafenherbergsvater-NPC-UUID erfasst; Dialog-ID des einzigen Erklärdialogs noch offen; FTB-Verknüpfung später",
           "dialog_only_dedicated_quest_npc": true,
-          "quest_shop_separation": "Der vorhandene Shop-NPC kann nur das Shop-GUI öffnen, nicht den EasyNPC-Questdialog. Nicht dessen UUID als Dialog-NPC verwenden."
+          "quest_shop_separation": "Der vorhandene Shop-NPC kann nur das Shop-GUI öffnen, nicht den EasyNPC-Questdialog. Nicht dessen UUID als Dialog-NPC verwenden.",
+          "dialog_document": "dialoge/hafenherbergsvater-quest11.md",
+          "npc_trigger_policy": {
+            "dialog_name": "q11_hafenherbergsvater",
+            "dialog_count": 1,
+            "dialog_is_default": true,
+            "dialog_action": "Close Dialog",
+            "completion_event": "Open this one EasyNPC explanatory dialog; future FTB completion event",
+            "dependency": "LF-L02-Q01 (Quest 07)",
+            "side_quest": true,
+            "scoreboard": false,
+            "shop_visit_tracking": false,
+            "item_delivery": false,
+            "ftb_integration_deferred": true
+          },
+          "quest_narrative": "Hafenherbergsvater erläutert neuen Seefahrern die Bedeutung eines sicheren Schlafplatzes und weist auf den bestehenden Händler für Betten und Schränke hin; keine Kauf- oder Schlafpflicht."
         },
         {
           "planning_id": "LF-L02-Q06",
