@@ -51,6 +51,18 @@
       "dialog_role": "Dialog B – Abschlussbestätigung"
     },
     {
+      "name": "Schiffsoffizier",
+      "uuid": "f5e8ef08-d548-47c2-88c0-d473843b9c65",
+      "category": "nebenquest",
+      "plan_quest_id": "LF-L01-Q05",
+      "ftb_hex_id": "FA10010300050000",
+      "source": "user_supplied_npc_uuid",
+      "dialog_status": "dialog_b_completion_id_pending",
+      "dialog_id": null,
+      "dialog_document": "dialoge/schiffsoffizier-quest05.md",
+      "note": "Eigener Schiffsoffizier, nicht bereits registrierter Kapitän"
+    },
+    {
       "name": "Holzfäller",
       "uuid": "b424fb91-290c-422e-9475-970a1fc4ec64",
       "category": "haendler",
