@@ -4,11 +4,11 @@
 **Questtyp:** Hauptquest, Einführungsreihe  
 **Voraussetzung:** Quest 14 „Das Tor zum Nether“  
 **NPC:** Separater Endportal-Wächter nahe dem bestehenden Endportal (nicht den Spenden-NPC ersetzen)  
-**NPC-UUID:** noch einzutragen  
+**NPC-UUID:** `c23edf20-1e79-4a98-8680-b0417f8e4f26`  
 **Dialogname:** `q15_endportalwaechter`  
 **Dialog-ID:** noch einzutragen  
 **FTB-Quest-ID:** noch nicht erzeugt  
-**Status:** Planung; kein Serverportal verändert
+**Status:** NPC-UUID dokumentiert, Dialog-ID noch ausstehend. FTB-Aufgabe und Spendenportal auf dem Server durch diese Planungsänderung nicht verändert.
 
 ## Einziger Dialog
 
@@ -35,3 +35,11 @@ Aye, Wächter! Ich kenne nun auch das Geheimnis des Endportals!
 **Wichtig:** Bestehendes Endportal, Spendenziel, Aktivierungsmod und NPCs bleiben unverändert. Nur ein zusätzlicher Erklär-NPC wird später zugeordnet.
 
 **Nächste Quest:** 16 „Leinen los – Aufbruch in die Spielwelt“.
+
+## Einrichtung in EasyNPC
+
+1. Den eigenständigen Endportal-Wächter `c23edf20-1e79-4a98-8680-b0417f8e4f26` im EasyNPC-Editor öffnen.
+2. Genau **einen Standarddialog** `q15_endportalwaechter` anlegen.
+3. Den obigen Dialogtext mit einem einzigen Antwortknopf `Close Dialog` eintragen.
+4. Die erzeugte **Dialog-ID** für Quest 15 weitergeben.
+5. Erst nach vollständiger Sammlung aller Dialog-IDs die FTB-Questverknüpfung einrichten; Voraussetzung ist Quest 14. Keine Spenden- oder Portalreiseprüfung für Quest 15.
