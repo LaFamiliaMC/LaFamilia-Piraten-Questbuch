@@ -7,7 +7,7 @@
 **Questtyp:** Hauptquest (verpflichtender Übergang zur Abschlussreihe)  
 **Voraussetzung:** Quest 08 „Holz für den Schiffsbau“  
 **Dialogname:** `q12_hafenlaternenwaerter`  
-**Dialog-ID:** Noch aus EasyNPC zu übermitteln  
+**Dialog-ID:** `c636022c-fb3e-3b71-b5c1-d4d0be8eda9a` (vom Nutzer übermittelt)  
 **FTB-Status:** Nur NPC und Text vorbereitet. Der Testbuild verwendet noch `ftbquests:checkmark`.
 
 ## Einziger EasyNPC-Dialog
@@ -43,11 +43,11 @@ Aye, Laternenwärter! Ich werde dafür sorgen, dass ich den Weg auch bei Nacht f
 1. EasyNPC für den Hafenlaternenwärter mit NPC-UUID `cf2887c7-a332-4bf0-8ebb-03ef60bcc486` öffnen.
 2. Genau **einen Standarddialog** mit dem Namen `q12_hafenlaternenwaerter` anlegen.
 3. Obigen Text einfügen und eine Antwort mit der Aktion `Close Dialog` anlegen.
-4. Die Dialog-ID dieses Dialogs über die EasyNPC-x-FTB-Quests-Kompatibilität kopieren und für Quest 12 übermitteln.
-5. Den FTB-Aufgabentyp, die Abhängigkeit von Quest 07 und eine eventuelle einmalige Belohnung **erst später**, nach Erfassung aller NPCs, aktivieren und testen.
+4. Dialog-ID `c636022c-fb3e-3b71-b5c1-d4d0be8eda9a` ist erfasst und wird bei der späteren EasyNPC-FTB-Aufgabenanbindung genutzt.
+5. Den FTB-Aufgabentyp, die Abhängigkeit von Quest 08 und eine eventuelle einmalige Belohnung **erst später**, nach Erfassung aller NPCs, aktivieren und testen.
 
 Der vorhandene **Kerzen-&-Laternen-Händler** mit Shop-UUID `492d0ebe-2b7c-4b18-b7e5-5276e8e5a21f` bleibt unverändert. Kein Scoreboard, keine Kaufpflicht, kein Platzieren von Lichtquellen.
 
 ## Aktualisierte Kapitel-Reihenfolge (15.11.2026)
 
-Nach Kürzung der Einführungsreihe von 48 auf 16 Quests ist Quest 12 jetzt die **verpflichtende Übergangsquest** vor Quest 13 „Das Auktionshaus“. Der vorhandene Standarddialog bleibt unverändert; seine Dialog-ID muss noch eingetragen werden. Die Änderung ist bislang nur geplant und nicht im laufenden FTB-Testbuild eingespielt.
+Nach Kürzung der Einführungsreihe von 48 auf 16 Quests ist Quest 12 jetzt die **verpflichtende Übergangsquest** vor Quest 13 „Das Auktionshaus“. Der vorhandene Standarddialog bleibt unverändert; seine Dialog-ID `c636022c-fb3e-3b71-b5c1-d4d0be8eda9a` wurde erfasst. Die Änderung ist bislang nur geplant und nicht im laufenden FTB-Testbuild eingespielt.
