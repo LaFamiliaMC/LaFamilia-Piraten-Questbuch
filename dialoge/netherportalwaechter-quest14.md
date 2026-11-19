@@ -6,9 +6,9 @@
 **NPC:** Separater Netherportal-Wächter nahe dem vorhandenen Netherportal (nicht den Spenden-NPC oder dessen Funktion ersetzen)  
 **NPC-UUID:** `f13b074e-ef9b-4710-a1ed-51c1b1260330`  
 **Dialogname:** `q14_netherportalwaechter`  
-**Dialog-ID:** noch einzutragen  
+**Dialog-ID:** `55daa677-e99b-3859-932c-7b3ed2853f97` (vom Nutzer übermittelt)  
 **FTB-Quest-ID:** noch nicht erzeugt  
-**Status:** NPC-UUID dokumentiert, Dialog-ID noch offen; keine FTB-Aufgabe auf dem Server angebunden.
+**Status:** NPC-UUID und Dialog-ID dokumentiert; die FTB-Aufgabe ist noch nicht auf dem Server angebunden.
 
 ## Einziger Dialog
 
@@ -43,5 +43,5 @@ Aye! Ich werde das Netherportal und die gemeinsame Freischaltung nicht vergessen
 1. Mit dem eigenständigen Netherportal-Wächter `f13b074e-ef9b-4710-a1ed-51c1b1260330` den Dialogeditor öffnen.
 2. **Einen einzigen Standarddialog** `q14_netherportalwaechter` erstellen.
 3. Den obigen Erklärungstext einfügen und eine Antwort mit `Close Dialog` anlegen.
-4. Die von EasyNPC erzeugte **Dialog-ID** notieren und für Quest 14 weitergeben.
+4. Die EasyNPC-Dialog-ID `55daa677-e99b-3859-932c-7b3ed2853f97` ist erfasst und wird später für die FTB-Aufgabenverknüpfung genutzt.
 5. Erst nach Erfassung aller NPCs diesen Dialog als FTB-Questaufgabe verknüpfen; Quest 13 ist Voraussetzung. Die Quest darf keine Spende und keine Portalaktivierung verlangen.
