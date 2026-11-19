@@ -5,14 +5,14 @@
   "category": "Willkommen in La Familia",
   "total_quests": 16,
   "layout_rules": {
-    "chapter_views": "Drei FTB-Kapitel für 16 Lobby-Quests: Kapitel 1 (6), Kapitel 2 (6), Kapitel 3 (4); keine weiteren verpflichtenden Lobby-Kapitel",
-    "main_quest_line": "Kapitel 1: Quests 01–02 Hauptquests; Kapitel 2: Quests 07–08 und Quest 12 als verpflichtender Übergang; Kapitel 3: Quests 13–16 als lineare Hauptquestkette. Nebenquests 03–06, 09–11 bleiben optional.",
-    "optional_quests": "Quest 03–06 und 09–11 optional; die zuletzt geplanten vier Quests 13–16 sind verpflichtende Einweisungen, aber ohne Shoptransaktionen oder Portalspenden.",
-    "inter_chapter": "Quest 13 wird nach Quest 12 freigeschaltet, Quest 16 ist der Abschluss der Lobby und zeigt den Teleport-Kapitän am kleinen Schiff",
-    "unlocking": "Einführungspfad: 01→02→07→08→12→13→14→15→16. Alle übrigen Lobbyquests 03–06 und 09–11 sind optional. Kein Echtgeld/Shopkauf, keine Portalspende, keine Gegenstandsabgabe als Pflicht.",
+    "chapter_views": "Ein zusätzliches FTB-Kapitel 'Willkommen in La Familia' mit 16 Quests in einer kompakten 4×4-Schlangenlinie und 15 sichtbaren Verbindungen",
+    "main_quest_line": "Alle 16 Quests bilden eine einzige zwingende lineare Kette: Quest 01→02→...→16. Keine Ausnahmen.",
+    "optional_quests": "Keine. Die bisher 7 freiwilligen Quests 03–06 und 09–11 wurden auf ausdrücklichen Wunsch Teil der linearen Einführung.",
+    "inter_chapter": "Die alte 3-Kapitel-Darstellung bleibt nur als historisches Planning im JSON strukturiert; aktiv importiert wird EINE FTB-Questdatei mit 16 Quests.",
+    "unlocking": "Jede Quest ab 02 wird erst nach Abschluss der direkten Vorgängerquest freigeschaltet. Alle Folgequests zeigen vorher keine Details und bleiben bis dahin verborgen.",
     "background": "Leere Piratenhafen-Dekoration ohne vorgezeichnete Icons, Questfenster oder Texte",
     "shop_preservation": "Bestehende Händler-Shops und deren Preise nicht ändern",
-    "note": "Frühere 48-Quest-Planung unverändert archiviert in planung/archiv/quest-layout-willkommen-48-quests-stand-2026-11-15.json. 13–16 sind Entwürfe, noch keine NPC-UUIDs oder live FTB-Quests.",
+    "note": "Stand 19.11.2026: Die FTB-Importdatei wurde auf 16 nacheinander freischaltende Quests korrigiert. Layout und Sperren sind in ftb-import/lafamilia_willkommen_16.snbt hinterlegt. Checkmark-Aufgaben sind weiterhin Testplatzhalter; Echt-NPC-Task-Integration ausstehend.",
     "server_gameplay": "Quest 14/15 erklären bestehende Nether-/Endportal-Spendenfreischaltung, aktivieren keine Portale. Quest 16: Spieler muss explizit auf eine Reise-Schaltfläche klicken, bevor er in die Spielwelt teleportiert wird. Zielwelt/-koordinaten zunächst unbestätigt."
   },
   "chapters": [
@@ -25,7 +25,7 @@
           "global_number": 1,
           "title": "Ein neuer Seefahrer",
           "type": "hauptquest",
-          "x": -8,
+          "x": 0,
           "y": 0,
           "visible_dependency": null,
           "inter_chapter_dependency": null,
@@ -47,7 +47,13 @@
           "quest_text_addendum": "Der Kapitän erkennt dich als Landratte an – deinen ersten Rang in La Familia. Dieser Rang bildet den Anfang einer serverweiten Ranglaufbahn.",
           "dialog_label_planned": null,
           "dialog_id": "addaae3c-bd31-37a4-8e70-188d7680f404",
-          "npc_dialog_status": "correct dialog ID received from user; automatic quest completion not yet deployed/tested"
+          "npc_dialog_status": "correct dialog ID received from user; automatic quest completion not yet deployed/tested",
+          "intro_strict_sequence": true,
+          "intro_ftb_id": "FA10010300010000",
+          "ftb_task_status": "checkmark_test_task_to_be_replaced_with_real_easy_npc_dialog_task",
+          "progression_mode": "linear",
+          "hide_until_deps_complete": true,
+          "hide_details_until_startable": true
         },
         {
           "planning_id": "LF-L01-Q02",
@@ -74,23 +80,29 @@
             "response": "Dann zeig mir deinen Hafenpass. Schau dich im Hafen um und lerne unsere Händler und Handwerker kennen.",
             "finish": "Du bist jetzt im Hafenbuch vermerkt. Die nächsten Stationen erwarten dich."
           },
-          "dialog_role": "Erste Begegnung – Aufnahme ins Hafenbuch (Questabschluss)"
+          "dialog_role": "Erste Begegnung – Aufnahme ins Hafenbuch (Questabschluss)",
+          "intro_strict_sequence": true,
+          "intro_ftb_id": "FA10010300020000",
+          "ftb_task_status": "checkmark_test_task_to_be_replaced_with_real_easy_npc_dialog_task",
+          "progression_mode": "linear",
+          "hide_until_deps_complete": true,
+          "hide_details_until_startable": true
         },
         {
           "planning_id": "LF-L01-Q03",
           "global_number": 3,
           "title": "Die Hafenwache kennenlernen",
-          "type": "nebenquest",
-          "x": -12,
-          "y": 9,
-          "visible_dependency": null,
+          "type": "hauptquest",
+          "x": 16,
+          "y": 0,
+          "visible_dependency": "LF-L01-Q02",
           "inter_chapter_dependency": null,
-          "hide_dependency_lines": true,
-          "optional": true,
+          "hide_dependency_lines": false,
+          "optional": false,
           "assigned_station": "Hauptmann der Hafenwache",
           "npc_uuid": "04df3e39-1e9e-468e-8d23-94454743bbce",
           "logical_dependencies": [
-            "LF-L01-Q01"
+            "LF-L01-Q02"
           ],
           "shape": "circle",
           "dialog_id": "666df7d2-8638-37b7-a4d9-efd806c8eceb",
@@ -113,23 +125,29 @@
             "quest_completion": "Dialog B final response, after introduction",
             "not_a_story_gate": true
           },
-          "npc_dialog_role": "Hauptmann der Hafenwache – Questabschlussdialog (Dialog B)"
+          "npc_dialog_role": "Hauptmann der Hafenwache – Questabschlussdialog (Dialog B)",
+          "intro_strict_sequence": true,
+          "intro_ftb_id": "FA10010300030000",
+          "ftb_task_status": "checkmark_test_task_to_be_replaced_with_real_easy_npc_dialog_task",
+          "progression_mode": "linear",
+          "hide_until_deps_complete": true,
+          "hide_details_until_startable": true
         },
         {
           "planning_id": "LF-L01-Q04",
           "global_number": 4,
           "title": "Die Regeln von La Familia",
-          "type": "nebenquest",
-          "x": -4,
-          "y": 9,
-          "visible_dependency": null,
+          "type": "hauptquest",
+          "x": 24,
+          "y": 0,
+          "visible_dependency": "LF-L01-Q03",
           "inter_chapter_dependency": null,
-          "hide_dependency_lines": true,
-          "optional": true,
+          "hide_dependency_lines": false,
+          "optional": false,
           "assigned_station": "Hüter des Hafenkodex",
           "npc_uuid": "0ddeb1e3-8414-4a10-ac46-22263e28bc26",
           "logical_dependencies": [
-            "LF-L01-Q01"
+            "LF-L01-Q03"
           ],
           "shape": "circle",
           "dialog_id": "23b56d3e-5da3-338a-b351-07b485ef88fe",
@@ -150,23 +168,29 @@
             "status": "planning_only"
           },
           "quest_completion_logic": "Dialogue B final option acknowledges server rules; no quest completion from dialogue A/C",
-          "dialog_role": "Dialog B – Bestätigung des Hafenkodex (Questabschluss)"
+          "dialog_role": "Dialog B – Bestätigung des Hafenkodex (Questabschluss)",
+          "intro_strict_sequence": true,
+          "intro_ftb_id": "FA10010300040000",
+          "ftb_task_status": "checkmark_test_task_to_be_replaced_with_real_easy_npc_dialog_task",
+          "progression_mode": "linear",
+          "hide_until_deps_complete": true,
+          "hide_details_until_startable": true
         },
         {
           "planning_id": "LF-L01-Q05",
           "global_number": 5,
           "title": "Ein Blick auf das große Schiff",
-          "type": "nebenquest",
-          "x": 4,
-          "y": 9,
-          "visible_dependency": null,
+          "type": "hauptquest",
+          "x": 24,
+          "y": 8,
+          "visible_dependency": "LF-L01-Q04",
           "inter_chapter_dependency": null,
-          "hide_dependency_lines": true,
-          "optional": true,
+          "hide_dependency_lines": false,
+          "optional": false,
           "assigned_station": "Schiffsoffizier",
           "npc_uuid": "f5e8ef08-d548-47c2-88c0-d473843b9c65",
           "logical_dependencies": [
-            "LF-L01-Q01"
+            "LF-L01-Q04"
           ],
           "shape": "circle",
           "dialog_id": "fc757df3-d218-3b94-892e-29f55513e646",
@@ -190,23 +214,29 @@
             "rank_stage_reward": false,
             "status": "planning_only"
           },
-          "npc_dialog_role": "Dialog B – Willkommen an Bord (Abschluss)"
+          "npc_dialog_role": "Dialog B – Willkommen an Bord (Abschluss)",
+          "intro_strict_sequence": true,
+          "intro_ftb_id": "FA10010300050000",
+          "ftb_task_status": "checkmark_test_task_to_be_replaced_with_real_easy_npc_dialog_task",
+          "progression_mode": "linear",
+          "hide_until_deps_complete": true,
+          "hide_details_until_startable": true
         },
         {
           "planning_id": "LF-L01-Q06",
           "global_number": 6,
           "title": "Die Glocke des Hafens",
-          "type": "nebenquest",
-          "x": 12,
-          "y": 9,
-          "visible_dependency": null,
+          "type": "hauptquest",
+          "x": 16,
+          "y": 8,
+          "visible_dependency": "LF-L01-Q05",
           "inter_chapter_dependency": null,
-          "hide_dependency_lines": true,
-          "optional": true,
+          "hide_dependency_lines": false,
+          "optional": false,
           "assigned_station": "Hafenglockenwächter",
           "npc_uuid": "f410950f-02e6-4731-a239-3dc06c486e61",
           "logical_dependencies": [
-            "LF-L01-Q01"
+            "LF-L01-Q05"
           ],
           "shape": "circle",
           "dialog_id": "5087c3db-a43a-35b5-b26e-0108686bbfb4",
@@ -230,7 +260,13 @@
             "rank_stage_reward": false,
             "status": "planning_only"
           },
-          "npc_dialog_role": "Dialog B – Abschluss Hafenglocke"
+          "npc_dialog_role": "Dialog B – Abschluss Hafenglocke",
+          "intro_strict_sequence": true,
+          "intro_ftb_id": "FA10010300060000",
+          "ftb_task_status": "checkmark_test_task_to_be_replaced_with_real_easy_npc_dialog_task",
+          "progression_mode": "linear",
+          "hide_until_deps_complete": true,
+          "hide_details_until_startable": true
         }
       ]
     },
@@ -243,16 +279,16 @@
           "global_number": 7,
           "title": "Beim Quartiermeister melden",
           "type": "hauptquest",
-          "x": -8,
-          "y": 0,
-          "visible_dependency": null,
-          "inter_chapter_dependency": "LF-L01-Q02",
+          "x": 8,
+          "y": 8,
+          "visible_dependency": "LF-L01-Q06",
+          "inter_chapter_dependency": null,
           "hide_dependency_lines": false,
           "optional": false,
           "assigned_station": "Eigenständiger Quartiermeister (Quest-NPC)",
           "npc_uuid": "10bbc089-6e58-4d92-b3c0-c1cf911f8d74",
           "logical_dependencies": [
-            "LF-L01-Q02"
+            "LF-L01-Q06"
           ],
           "shape": "hexagon",
           "icon_asset": {
@@ -314,15 +350,21 @@
             "return_visit_required": false,
             "automatic_ftb_integration_deferred": true
           },
-          "npc_dialog_role": "q07_quartiermeister – ein einziger Dialog; Ziel für FTB Task beim Öffnen"
+          "npc_dialog_role": "q07_quartiermeister – ein einziger Dialog; Ziel für FTB Task beim Öffnen",
+          "intro_strict_sequence": true,
+          "intro_ftb_id": "FA10010300070000",
+          "ftb_task_status": "checkmark_test_task_to_be_replaced_with_real_easy_npc_dialog_task",
+          "progression_mode": "linear",
+          "hide_until_deps_complete": true,
+          "hide_details_until_startable": true
         },
         {
           "planning_id": "LF-L02-Q02",
           "global_number": 8,
           "title": "Holz für den Schiffsbau",
           "type": "hauptquest",
-          "x": 8,
-          "y": 0,
+          "x": 0,
+          "y": 8,
           "visible_dependency": "LF-L02-Q01",
           "inter_chapter_dependency": null,
           "hide_dependency_lines": false,
@@ -364,23 +406,29 @@
           "reward_plan": {
             "status": "not_yet_finalized",
             "once_only": true
-          }
+          },
+          "intro_strict_sequence": true,
+          "intro_ftb_id": "FA10010300080000",
+          "ftb_task_status": "checkmark_test_task_to_be_replaced_with_real_easy_npc_dialog_task",
+          "progression_mode": "linear",
+          "hide_until_deps_complete": true,
+          "hide_details_until_startable": true
         },
         {
           "planning_id": "LF-L02-Q03",
           "global_number": 9,
           "title": "Fässer und Kisten",
-          "type": "nebenquest",
-          "x": -12,
-          "y": 9,
-          "visible_dependency": null,
+          "type": "hauptquest",
+          "x": 0,
+          "y": 16,
+          "visible_dependency": "LF-L02-Q02",
           "inter_chapter_dependency": null,
-          "hide_dependency_lines": true,
-          "optional": true,
+          "hide_dependency_lines": false,
+          "optional": false,
           "assigned_station": "Hafenlagerarbeiter bei Fässer & Schiffsvorräte – eigener Quest-NPC",
           "npc_uuid": "da5f8bc7-e0d5-48ed-9a1a-91a582458327",
           "logical_dependencies": [
-            "LF-L02-Q01"
+            "LF-L02-Q02"
           ],
           "shape": "circle",
           "icon_asset": {
@@ -410,23 +458,29 @@
             "item_delivery": false,
             "ftb_integration_deferred": true
           },
-          "quest_narrative": "Der Hafenlagerarbeiter erklärt, dass Fässer Flüssigkeiten und Vorräte und Kisten/Truhen Werkzeuge und Proviant ordentlich lagern. Er stellt den Shop für Fässer & Schiffsvorräte vor. Keine tatsächliche Abgabe."
+          "quest_narrative": "Der Hafenlagerarbeiter erklärt, dass Fässer Flüssigkeiten und Vorräte und Kisten/Truhen Werkzeuge und Proviant ordentlich lagern. Er stellt den Shop für Fässer & Schiffsvorräte vor. Keine tatsächliche Abgabe.",
+          "intro_strict_sequence": true,
+          "intro_ftb_id": "FA10010300090000",
+          "ftb_task_status": "checkmark_test_task_to_be_replaced_with_real_easy_npc_dialog_task",
+          "progression_mode": "linear",
+          "hide_until_deps_complete": true,
+          "hide_details_until_startable": true
         },
         {
           "planning_id": "LF-L02-Q04",
           "global_number": 10,
           "title": "Fehlende Vorräte",
-          "type": "nebenquest",
-          "x": -4,
-          "y": 9,
-          "visible_dependency": null,
+          "type": "hauptquest",
+          "x": 8,
+          "y": 16,
+          "visible_dependency": "LF-L02-Q03",
           "inter_chapter_dependency": null,
-          "hide_dependency_lines": true,
-          "optional": true,
+          "hide_dependency_lines": false,
+          "optional": false,
           "assigned_station": "Proviantmeister (eigener Quest-NPC beim Fässer-&-Schiffsvorräte-Shop)",
           "npc_uuid": "af4c5c5e-aa26-453b-8962-b740932a8143",
           "logical_dependencies": [
-            "LF-L02-Q01"
+            "LF-L02-Q03"
           ],
           "shape": "circle",
           "icon_asset": {
@@ -457,23 +511,29 @@
             "ftb_integration_deferred": true
           },
           "quest_narrative": "Proviantmeister erklärt den Spielern den reinen Ankauf von Lebensmitteln und Proviant für die Seeleute von La Familia: Spieler können überschüssige Lebensmittel gegen Münzen verkaufen, der betreffende Proviantankäufer verkauft nichts. Bei Quest 10 kein Pflichtverkauf und keine Item-Abgabe. Dialogtext ist keine Änderung an der Shop-Konfiguration.",
-          "merchant_behavior_note": "Gewünschter Handelsmodus: Proviantankäufer kauft an, verkauft nichts. Nur als Dialogbeschreibung dokumentiert; tatsächliche Shopkonfiguration nicht in diesem Schritt bearbeitet oder verifiziert."
+          "merchant_behavior_note": "Gewünschter Handelsmodus: Proviantankäufer kauft an, verkauft nichts. Nur als Dialogbeschreibung dokumentiert; tatsächliche Shopkonfiguration nicht in diesem Schritt bearbeitet oder verifiziert.",
+          "intro_strict_sequence": true,
+          "intro_ftb_id": "FA10010300100000",
+          "ftb_task_status": "checkmark_test_task_to_be_replaced_with_real_easy_npc_dialog_task",
+          "progression_mode": "linear",
+          "hide_until_deps_complete": true,
+          "hide_details_until_startable": true
         },
         {
           "planning_id": "LF-L02-Q05",
           "global_number": 11,
           "title": "Ein Bett für die Nacht",
-          "type": "nebenquest",
-          "x": 4,
-          "y": 9,
-          "visible_dependency": null,
+          "type": "hauptquest",
+          "x": 16,
+          "y": 16,
+          "visible_dependency": "LF-L02-Q04",
           "inter_chapter_dependency": null,
-          "hide_dependency_lines": true,
-          "optional": true,
+          "hide_dependency_lines": false,
+          "optional": false,
           "assigned_station": "Hafenherbergsvater beim Betten-&-Schränke-Händler (eigener Dialog-NPC)",
           "npc_uuid": "a20fafc8-1146-4855-a55d-be29bad42ef1",
           "logical_dependencies": [
-            "LF-L02-Q01"
+            "LF-L02-Q04"
           ],
           "shape": "circle",
           "icon_asset": {
@@ -503,23 +563,29 @@
             "item_delivery": false,
             "ftb_integration_deferred": true
           },
-          "quest_narrative": "Hafenherbergsvater erläutert neuen Seefahrern die Bedeutung eines sicheren Schlafplatzes und weist auf den bestehenden Händler für Betten und Schränke hin; keine Kauf- oder Schlafpflicht."
+          "quest_narrative": "Hafenherbergsvater erläutert neuen Seefahrern die Bedeutung eines sicheren Schlafplatzes und weist auf den bestehenden Händler für Betten und Schränke hin; keine Kauf- oder Schlafpflicht.",
+          "intro_strict_sequence": true,
+          "intro_ftb_id": "FA10010300110000",
+          "ftb_task_status": "checkmark_test_task_to_be_replaced_with_real_easy_npc_dialog_task",
+          "progression_mode": "linear",
+          "hide_until_deps_complete": true,
+          "hide_details_until_startable": true
         },
         {
           "planning_id": "LF-L02-Q06",
           "global_number": 12,
           "title": "Licht für den Hafen",
           "type": "hauptquest",
-          "x": 16,
-          "y": 0,
-          "visible_dependency": "LF-L02-Q02",
+          "x": 24,
+          "y": 16,
+          "visible_dependency": "LF-L02-Q05",
           "inter_chapter_dependency": null,
-          "hide_dependency_lines": true,
+          "hide_dependency_lines": false,
           "optional": false,
           "assigned_station": "Hafenlaternenwärter beim Händler für Kerzen & Laternen (eigener Dialog-NPC)",
           "npc_uuid": "cf2887c7-a332-4bf0-8ebb-03ef60bcc486",
           "logical_dependencies": [
-            "LF-L02-Q02"
+            "LF-L02-Q05"
           ],
           "shape": "circle",
           "icon_asset": {
@@ -551,7 +617,13 @@
           },
           "quest_narrative": "Der Hafenlaternenwärter erklärt, warum Kerzen und Laternen nachts Wege, Kais und Schiffe beleuchten, und empfiehlt den bestehenden Händler für Kerzen und Laternen; kein Kauf oder Anzünden erforderlich.",
           "main_quest_bridge_to": "LF-L03-Q01",
-          "intro_mainline_required": true
+          "intro_mainline_required": true,
+          "intro_strict_sequence": true,
+          "intro_ftb_id": "FA10010300120000",
+          "ftb_task_status": "checkmark_test_task_to_be_replaced_with_real_easy_npc_dialog_task",
+          "progression_mode": "linear",
+          "hide_until_deps_complete": true,
+          "hide_details_until_startable": true
         }
       ]
     },
@@ -572,13 +644,13 @@
           "planning_id": "LF-L03-Q01",
           "global_number": 13,
           "title": "Das Auktionshaus",
-          "x": -12,
-          "y": 0,
+          "x": 24,
+          "y": 24,
           "logical_dependencies": [
             "LF-L02-Q06"
           ],
-          "inter_chapter_dependency": "LF-L02-Q06",
-          "visible_dependency": null,
+          "inter_chapter_dependency": null,
+          "visible_dependency": "LF-L02-Q06",
           "assigned_station": "Auktionsmeister neben dem Auktionshaus (eigener Quest-Dialog-NPC, Auktionshaus-Funktion bleibt unverändert)",
           "dialog_name": "q13_auktionsmeister",
           "dialog_document": "dialoge/auktionsmeister-quest13.md",
@@ -605,7 +677,13 @@
             "no_donation_requirement": true,
             "ftb_integration_deferred": true
           },
-          "shop_separation": "Bestehende Auktionshaus-Mod / GUI bleibt unverändert, NPC dient ausschließlich dem Erklärdialog."
+          "shop_separation": "Bestehende Auktionshaus-Mod / GUI bleibt unverändert, NPC dient ausschließlich dem Erklärdialog.",
+          "intro_strict_sequence": true,
+          "intro_ftb_id": "FA10010300130000",
+          "ftb_task_status": "checkmark_test_task_to_be_replaced_with_real_easy_npc_dialog_task",
+          "progression_mode": "linear",
+          "hide_until_deps_complete": true,
+          "hide_details_until_startable": true
         },
         {
           "optional": false,
@@ -620,8 +698,8 @@
           "planning_id": "LF-L03-Q02",
           "global_number": 14,
           "title": "Das Tor zum Nether",
-          "x": -4,
-          "y": 0,
+          "x": 16,
+          "y": 24,
           "logical_dependencies": [
             "LF-L03-Q01"
           ],
@@ -653,7 +731,13 @@
             "no_donation_requirement": true,
             "ftb_integration_deferred": true
           },
-          "portal_spenden_policy": "Netherportal-Spenden-NPC bleibt unverändert. Quest-NPC hat keine Spendenfunktion; Aufgabe verlangt weder Spende noch Portalaktivierung."
+          "portal_spenden_policy": "Netherportal-Spenden-NPC bleibt unverändert. Quest-NPC hat keine Spendenfunktion; Aufgabe verlangt weder Spende noch Portalaktivierung.",
+          "intro_strict_sequence": true,
+          "intro_ftb_id": "FA10010300140000",
+          "ftb_task_status": "checkmark_test_task_to_be_replaced_with_real_easy_npc_dialog_task",
+          "progression_mode": "linear",
+          "hide_until_deps_complete": true,
+          "hide_details_until_startable": true
         },
         {
           "optional": false,
@@ -668,8 +752,8 @@
           "planning_id": "LF-L03-Q03",
           "global_number": 15,
           "title": "Das Tor zum End",
-          "x": 4,
-          "y": 0,
+          "x": 8,
+          "y": 24,
           "logical_dependencies": [
             "LF-L03-Q02"
           ],
@@ -701,7 +785,13 @@
             "no_donation_requirement": true,
             "ftb_integration_deferred": true
           },
-          "portal_spenden_policy": "Die bestehenden Endportal-Spendenmechanismen und -NPCs bleiben unverändert. Quest 15 verlangt keine tatsächliche Münzspende oder Portalaktivierung."
+          "portal_spenden_policy": "Die bestehenden Endportal-Spendenmechanismen und -NPCs bleiben unverändert. Quest 15 verlangt keine tatsächliche Münzspende oder Portalaktivierung.",
+          "intro_strict_sequence": true,
+          "intro_ftb_id": "FA10010300150000",
+          "ftb_task_status": "checkmark_test_task_to_be_replaced_with_real_easy_npc_dialog_task",
+          "progression_mode": "linear",
+          "hide_until_deps_complete": true,
+          "hide_details_until_startable": true
         },
         {
           "optional": false,
@@ -716,8 +806,8 @@
           "planning_id": "LF-L03-Q04",
           "global_number": 16,
           "title": "Leinen los – Aufbruch in die Spielwelt",
-          "x": 12,
-          "y": 0,
+          "x": 0,
+          "y": 24,
           "logical_dependencies": [
             "LF-L03-Q03"
           ],
@@ -761,7 +851,13 @@
             "no_purchase_requirement": true,
             "no_donation_requirement": true,
             "ftb_integration_deferred": true
-          }
+          },
+          "intro_strict_sequence": true,
+          "intro_ftb_id": "FA10010300160000",
+          "ftb_task_status": "checkmark_test_task_to_be_replaced_with_real_easy_npc_dialog_task",
+          "progression_mode": "linear",
+          "hide_until_deps_complete": true,
+          "hide_details_until_startable": true
         }
       ]
     }
@@ -801,6 +897,10 @@
     "now_total": 16,
     "existing_quests_unchanged_except_quest12_made_mandatory": true,
     "previous_plan_archived_at": "planung/archiv/quest-layout-willkommen-48-quests-stand-2026-11-15.json",
-    "future_world_questline_separate": true
+    "future_world_questline_separate": true,
+    "updated_date": "2026-11-19",
+    "strictly_sequential_all_16": true,
+    "optional_quests_remaining": 0,
+    "chapter_file": "ftb-import/lafamilia_willkommen_16.snbt"
   }
 }
