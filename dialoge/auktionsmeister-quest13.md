@@ -4,11 +4,11 @@
 **Questtyp:** Hauptquest, Einführungsreihe (16 Quests)  
 **Voraussetzung:** Quest 12 „Licht für den Hafen“  
 **NPC:** Auktionsmeister, eigenständiger Dialog-NPC direkt beim Auktionshaus  
-**NPC-UUID:** noch einzutragen  
+**NPC-UUID:** `b0269d82-742e-422b-b730-dbffa19e423c`  
 **Dialogname:** `q13_auktionsmeister`  
 **Dialog-ID:** noch einzutragen  
 **FTB-Quest-ID:** wird beim Anlegen des echten FTB-Kapitels vergeben  
-**Status:** Planung; kein Dialog-/FTB-Task auf dem Server installiert
+**Status:** NPC-UUID dokumentiert; Dialog-ID noch offen. FTB-Quest und Aufgabenverknüpfung auf dem Server noch nicht eingerichtet.
 
 ## Einziger Dialog
 
@@ -35,3 +35,5 @@ Aye, Auktionsmeister! Ich werde im Auktionshaus die Augen offen halten!
 **FTB-Aufgabe später:** Quest 13 einmalig bei **Öffnung** dieses Dialogs abschließen. Kein Kauf, Gebot oder tatsächliches Einstellen eines Angebots notwendig. Bestehende Auktionshausfunktion/Mod nicht verändern.
 
 **Nächste Quest:** 14 „Das Tor zum Nether“.
+
+**EasyNPC-Einrichtung:** Beim NPC mit obiger UUID genau einen Standarddialog namens `q13_auktionsmeister` anlegen, Text übernehmen, einen Antwortknopf mit `Close Dialog` erstellen. Anschließend die von EasyNPC erzeugte Dialog-ID erfassen. Die FTB-Aufgabe wird erst später verbunden.
