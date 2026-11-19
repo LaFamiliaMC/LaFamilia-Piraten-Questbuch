@@ -50,10 +50,13 @@
           "npc_dialog_status": "correct dialog ID received from user; automatic quest completion not yet deployed/tested",
           "intro_strict_sequence": true,
           "intro_ftb_id": "FA10010300010000",
-          "ftb_task_status": "checkmark_test_task_to_be_replaced_with_real_easy_npc_dialog_task",
+          "ftb_task_status": "easynpc_ftbq_compat:easy_npc_task is present in uploaded server config; server-side behavior still to test",
           "progression_mode": "linear",
           "hide_until_deps_complete": true,
-          "hide_details_until_startable": true
+          "hide_details_until_startable": true,
+          "ftb_quest_id_hex": "42DA15436861A1E5",
+          "ftb_task_id_hex": "2BF4A6C03655EFED",
+          "ftb_quest_id_status": "verified_in_user_uploaded_quests_1_zip_2026_11_19"
         },
         {
           "planning_id": "LF-L01-Q02",
@@ -83,10 +86,13 @@
           "dialog_role": "Erste Begegnung – Aufnahme ins Hafenbuch (Questabschluss)",
           "intro_strict_sequence": true,
           "intro_ftb_id": "FA10010300020000",
-          "ftb_task_status": "checkmark_test_task_to_be_replaced_with_real_easy_npc_dialog_task",
+          "ftb_task_status": "easynpc_ftbq_compat:easy_npc_task is present in uploaded server config; server-side behavior still to test",
           "progression_mode": "linear",
           "hide_until_deps_complete": true,
-          "hide_details_until_startable": true
+          "hide_details_until_startable": true,
+          "ftb_quest_id_hex": "14264C52C89FAC7F",
+          "ftb_task_id_hex": "6077A26056AA27BD",
+          "ftb_quest_id_status": "verified_in_user_uploaded_quests_1_zip_2026_11_19"
         },
         {
           "planning_id": "LF-L01-Q03",
@@ -128,10 +134,13 @@
           "npc_dialog_role": "Hauptmann der Hafenwache – Questabschlussdialog (Dialog B)",
           "intro_strict_sequence": true,
           "intro_ftb_id": "FA10010300030000",
-          "ftb_task_status": "checkmark_test_task_to_be_replaced_with_real_easy_npc_dialog_task",
+          "ftb_task_status": "easynpc_ftbq_compat:easy_npc_task is present in uploaded server config; server-side behavior still to test",
           "progression_mode": "linear",
           "hide_until_deps_complete": true,
-          "hide_details_until_startable": true
+          "hide_details_until_startable": true,
+          "ftb_quest_id_hex": "4D0955976DE3274F",
+          "ftb_task_id_hex": "6F5A09B0D6825705",
+          "ftb_quest_id_status": "verified_in_user_uploaded_quests_1_zip_2026_11_19"
         },
         {
           "planning_id": "LF-L01-Q04",
@@ -171,10 +180,13 @@
           "dialog_role": "Dialog B – Bestätigung des Hafenkodex (Questabschluss)",
           "intro_strict_sequence": true,
           "intro_ftb_id": "FA10010300040000",
-          "ftb_task_status": "checkmark_test_task_to_be_replaced_with_real_easy_npc_dialog_task",
+          "ftb_task_status": "easynpc_ftbq_compat:easy_npc_task is present in uploaded server config; server-side behavior still to test",
           "progression_mode": "linear",
           "hide_until_deps_complete": true,
-          "hide_details_until_startable": true
+          "hide_details_until_startable": true,
+          "ftb_quest_id_hex": "59F6F019A4F3B5AD",
+          "ftb_task_id_hex": "783FFD11429F1CFD",
+          "ftb_quest_id_status": "verified_in_user_uploaded_quests_1_zip_2026_11_19"
         },
         {
           "planning_id": "LF-L01-Q05",
@@ -217,10 +229,13 @@
           "npc_dialog_role": "Dialog B – Willkommen an Bord (Abschluss)",
           "intro_strict_sequence": true,
           "intro_ftb_id": "FA10010300050000",
-          "ftb_task_status": "checkmark_test_task_to_be_replaced_with_real_easy_npc_dialog_task",
+          "ftb_task_status": "easynpc_ftbq_compat:easy_npc_task is present in uploaded server config; server-side behavior still to test",
           "progression_mode": "linear",
           "hide_until_deps_complete": true,
-          "hide_details_until_startable": true
+          "hide_details_until_startable": true,
+          "ftb_quest_id_hex": "22B67C91451AACDE",
+          "ftb_task_id_hex": "7B1D56BA697EE38A",
+          "ftb_quest_id_status": "verified_in_user_uploaded_quests_1_zip_2026_11_19"
         },
         {
           "planning_id": "LF-L01-Q06",
@@ -263,10 +278,13 @@
           "npc_dialog_role": "Dialog B – Abschluss Hafenglocke",
           "intro_strict_sequence": true,
           "intro_ftb_id": "FA10010300060000",
-          "ftb_task_status": "checkmark_test_task_to_be_replaced_with_real_easy_npc_dialog_task",
+          "ftb_task_status": "easynpc_ftbq_compat:easy_npc_task is present in uploaded server config; server-side behavior still to test",
           "progression_mode": "linear",
           "hide_until_deps_complete": true,
-          "hide_details_until_startable": true
+          "hide_details_until_startable": true,
+          "ftb_quest_id_hex": "05D52C297CEFA5EE",
+          "ftb_task_id_hex": "67688A4092D408BB",
+          "ftb_quest_id_status": "verified_in_user_uploaded_quests_1_zip_2026_11_19"
         }
       ]
     },
@@ -353,10 +371,13 @@
           "npc_dialog_role": "q07_quartiermeister – ein einziger Dialog; Ziel für FTB Task beim Öffnen",
           "intro_strict_sequence": true,
           "intro_ftb_id": "FA10010300070000",
-          "ftb_task_status": "checkmark_test_task_to_be_replaced_with_real_easy_npc_dialog_task",
+          "ftb_task_status": "easynpc_ftbq_compat:easy_npc_task is present in uploaded server config; server-side behavior still to test",
           "progression_mode": "linear",
           "hide_until_deps_complete": true,
-          "hide_details_until_startable": true
+          "hide_details_until_startable": true,
+          "ftb_quest_id_hex": "5B1FD863DBED2183",
+          "ftb_task_id_hex": "77F9F4188906B84E",
+          "ftb_quest_id_status": "verified_in_user_uploaded_quests_1_zip_2026_11_19"
         },
         {
           "planning_id": "LF-L02-Q02",
@@ -409,10 +430,13 @@
           },
           "intro_strict_sequence": true,
           "intro_ftb_id": "FA10010300080000",
-          "ftb_task_status": "checkmark_test_task_to_be_replaced_with_real_easy_npc_dialog_task",
+          "ftb_task_status": "easynpc_ftbq_compat:easy_npc_task is present in uploaded server config; server-side behavior still to test",
           "progression_mode": "linear",
           "hide_until_deps_complete": true,
-          "hide_details_until_startable": true
+          "hide_details_until_startable": true,
+          "ftb_quest_id_hex": "772F8BC48D5406F8",
+          "ftb_task_id_hex": "454A66EF97778AD7",
+          "ftb_quest_id_status": "verified_in_user_uploaded_quests_1_zip_2026_11_19"
         },
         {
           "planning_id": "LF-L02-Q03",
@@ -461,10 +485,13 @@
           "quest_narrative": "Der Hafenlagerarbeiter erklärt, dass Fässer Flüssigkeiten und Vorräte und Kisten/Truhen Werkzeuge und Proviant ordentlich lagern. Er stellt den Shop für Fässer & Schiffsvorräte vor. Keine tatsächliche Abgabe.",
           "intro_strict_sequence": true,
           "intro_ftb_id": "FA10010300090000",
-          "ftb_task_status": "checkmark_test_task_to_be_replaced_with_real_easy_npc_dialog_task",
+          "ftb_task_status": "easynpc_ftbq_compat:easy_npc_task is present in uploaded server config; server-side behavior still to test",
           "progression_mode": "linear",
           "hide_until_deps_complete": true,
-          "hide_details_until_startable": true
+          "hide_details_until_startable": true,
+          "ftb_quest_id_hex": "6CD8D9B156851E29",
+          "ftb_task_id_hex": "28DD55CE9B7F52E3",
+          "ftb_quest_id_status": "verified_in_user_uploaded_quests_1_zip_2026_11_19"
         },
         {
           "planning_id": "LF-L02-Q04",
@@ -514,10 +541,13 @@
           "merchant_behavior_note": "Gewünschter Handelsmodus: Proviantankäufer kauft an, verkauft nichts. Nur als Dialogbeschreibung dokumentiert; tatsächliche Shopkonfiguration nicht in diesem Schritt bearbeitet oder verifiziert.",
           "intro_strict_sequence": true,
           "intro_ftb_id": "FA10010300100000",
-          "ftb_task_status": "checkmark_test_task_to_be_replaced_with_real_easy_npc_dialog_task",
+          "ftb_task_status": "easynpc_ftbq_compat:easy_npc_task is present in uploaded server config; server-side behavior still to test",
           "progression_mode": "linear",
           "hide_until_deps_complete": true,
-          "hide_details_until_startable": true
+          "hide_details_until_startable": true,
+          "ftb_quest_id_hex": "796F63B8AB645A01",
+          "ftb_task_id_hex": "32A97E5D730EDF3B",
+          "ftb_quest_id_status": "verified_in_user_uploaded_quests_1_zip_2026_11_19"
         },
         {
           "planning_id": "LF-L02-Q05",
@@ -566,10 +596,13 @@
           "quest_narrative": "Hafenherbergsvater erläutert neuen Seefahrern die Bedeutung eines sicheren Schlafplatzes und weist auf den bestehenden Händler für Betten und Schränke hin; keine Kauf- oder Schlafpflicht.",
           "intro_strict_sequence": true,
           "intro_ftb_id": "FA10010300110000",
-          "ftb_task_status": "checkmark_test_task_to_be_replaced_with_real_easy_npc_dialog_task",
+          "ftb_task_status": "easynpc_ftbq_compat:easy_npc_task is present in uploaded server config; server-side behavior still to test",
           "progression_mode": "linear",
           "hide_until_deps_complete": true,
-          "hide_details_until_startable": true
+          "hide_details_until_startable": true,
+          "ftb_quest_id_hex": "24A66749F68586C2",
+          "ftb_task_id_hex": "1685ED9A7244BB9E",
+          "ftb_quest_id_status": "verified_in_user_uploaded_quests_1_zip_2026_11_19"
         },
         {
           "planning_id": "LF-L02-Q06",
@@ -620,10 +653,13 @@
           "intro_mainline_required": true,
           "intro_strict_sequence": true,
           "intro_ftb_id": "FA10010300120000",
-          "ftb_task_status": "checkmark_test_task_to_be_replaced_with_real_easy_npc_dialog_task",
+          "ftb_task_status": "easynpc_ftbq_compat:easy_npc_task is present in uploaded server config; server-side behavior still to test",
           "progression_mode": "linear",
           "hide_until_deps_complete": true,
-          "hide_details_until_startable": true
+          "hide_details_until_startable": true,
+          "ftb_quest_id_hex": "492E688642216F18",
+          "ftb_task_id_hex": "35EE7B3A6691195D",
+          "ftb_quest_id_status": "verified_in_user_uploaded_quests_1_zip_2026_11_19"
         }
       ]
     },
@@ -637,8 +673,8 @@
           "dialog_id": "7edc2203-9e3c-3d8c-9011-055ccb05b05c",
           "npc_uuid": "b0269d82-742e-422b-b730-dbffa19e423c",
           "dialog_count": 1,
-          "ftb_quest_id_hex": null,
-          "ftb_quest_id_status": "pending_quest_creation_in_FTB_Quests",
+          "ftb_quest_id_hex": "3E14B252EB9609D5",
+          "ftb_quest_id_status": "verified_in_user_uploaded_quests_1_zip_2026_11_19",
           "npc_status": "NPC-UUID und Dialog-ID vollständig erfasst; FTB-Quest noch nicht angelegt und EasyNPC-FTB-Task erst nach Sammlung aller NPCs",
           "status": "Dialog dokumentiert; FTB-Quest und Dialog-Aufgabe noch nicht installiert",
           "planning_id": "LF-L03-Q01",
@@ -680,10 +716,11 @@
           "shop_separation": "Bestehende Auktionshaus-Mod / GUI bleibt unverändert, NPC dient ausschließlich dem Erklärdialog.",
           "intro_strict_sequence": true,
           "intro_ftb_id": "FA10010300130000",
-          "ftb_task_status": "checkmark_test_task_to_be_replaced_with_real_easy_npc_dialog_task",
+          "ftb_task_status": "easynpc_ftbq_compat:easy_npc_task is present in uploaded server config; server-side behavior still to test",
           "progression_mode": "linear",
           "hide_until_deps_complete": true,
-          "hide_details_until_startable": true
+          "hide_details_until_startable": true,
+          "ftb_task_id_hex": "5F41E5072C9E4A70"
         },
         {
           "optional": false,
@@ -691,8 +728,8 @@
           "dialog_id": "55daa677-e99b-3859-932c-7b3ed2853f97",
           "npc_uuid": "f13b074e-ef9b-4710-a1ed-51c1b1260330",
           "dialog_count": 1,
-          "ftb_quest_id_hex": null,
-          "ftb_quest_id_status": "pending_quest_creation_in_FTB_Quests",
+          "ftb_quest_id_hex": "1C501D72E01931D9",
+          "ftb_quest_id_status": "verified_in_user_uploaded_quests_1_zip_2026_11_19",
           "npc_status": "NPC-UUID und EasyNPC-Dialog-ID vollständig erfasst; FTB-Quest und Integration später",
           "status": "Einziger EasyNPC-Erklärdialog dokumentiert; FTB-Quest-ID und automatische Task-Bindung noch offen",
           "planning_id": "LF-L03-Q02",
@@ -734,10 +771,11 @@
           "portal_spenden_policy": "Netherportal-Spenden-NPC bleibt unverändert. Quest-NPC hat keine Spendenfunktion; Aufgabe verlangt weder Spende noch Portalaktivierung.",
           "intro_strict_sequence": true,
           "intro_ftb_id": "FA10010300140000",
-          "ftb_task_status": "checkmark_test_task_to_be_replaced_with_real_easy_npc_dialog_task",
+          "ftb_task_status": "easynpc_ftbq_compat:easy_npc_task is present in uploaded server config; server-side behavior still to test",
           "progression_mode": "linear",
           "hide_until_deps_complete": true,
-          "hide_details_until_startable": true
+          "hide_details_until_startable": true,
+          "ftb_task_id_hex": "39AEDCAB10F37DD4"
         },
         {
           "optional": false,
@@ -745,8 +783,8 @@
           "dialog_id": "1ecb05cb-dbcd-340d-a4ae-18e662d7b12d",
           "npc_uuid": "c23edf20-1e79-4a98-8680-b0417f8e4f26",
           "dialog_count": 1,
-          "ftb_quest_id_hex": null,
-          "ftb_quest_id_status": "pending_quest_creation_in_FTB_Quests",
+          "ftb_quest_id_hex": "7C68D411714E5935",
+          "ftb_quest_id_status": "verified_in_user_uploaded_quests_1_zip_2026_11_19",
           "npc_status": "Endportal-Wächter NPC-UUID und EasyNPC-Dialog-ID erfasst; FTB-Quest-Anbindung folgt nach Erfassung aller NPCs",
           "status": "NPC und Dialog erfasst; FTB-Quest-ID und automatische EasyNPC Task-Anbindung noch ausstehend",
           "planning_id": "LF-L03-Q03",
@@ -788,10 +826,11 @@
           "portal_spenden_policy": "Die bestehenden Endportal-Spendenmechanismen und -NPCs bleiben unverändert. Quest 15 verlangt keine tatsächliche Münzspende oder Portalaktivierung.",
           "intro_strict_sequence": true,
           "intro_ftb_id": "FA10010300150000",
-          "ftb_task_status": "checkmark_test_task_to_be_replaced_with_real_easy_npc_dialog_task",
+          "ftb_task_status": "easynpc_ftbq_compat:easy_npc_task is present in uploaded server config; server-side behavior still to test",
           "progression_mode": "linear",
           "hide_until_deps_complete": true,
-          "hide_details_until_startable": true
+          "hide_details_until_startable": true,
+          "ftb_task_id_hex": "6BCCE4D45E4C1173"
         },
         {
           "optional": false,
@@ -799,8 +838,8 @@
           "dialog_id": "2a381170-c4b7-3a0f-be8a-875991921e9a",
           "npc_uuid": "b1e62449-ff6f-40ad-8aca-eeeb3a2d1346",
           "dialog_count": 1,
-          "ftb_quest_id_hex": null,
-          "ftb_quest_id_status": "pending_quest_creation_in_FTB_Quests",
+          "ftb_quest_id_hex": "1775F03AFDAAC8F9",
+          "ftb_quest_id_status": "verified_in_user_uploaded_quests_1_zip_2026_11_19",
           "npc_status": "NPC-UUID und EasyNPC-Dialog-ID erfasst; alle 16 Quest-NPCs und Dialoge sind vollständig dokumentiert",
           "status": "Dialogliste komplett; echte FTB-Quest-ID, serverseitige EasyNPC-Aufgabenanbindung, einmaliger Rang und Teleport noch nicht aktiviert",
           "planning_id": "LF-L03-Q04",
@@ -854,10 +893,11 @@
           },
           "intro_strict_sequence": true,
           "intro_ftb_id": "FA10010300160000",
-          "ftb_task_status": "checkmark_test_task_to_be_replaced_with_real_easy_npc_dialog_task",
+          "ftb_task_status": "easynpc_ftbq_compat:easy_npc_task is present in uploaded server config; server-side behavior still to test",
           "progression_mode": "linear",
           "hide_until_deps_complete": true,
-          "hide_details_until_startable": true
+          "hide_details_until_startable": true,
+          "ftb_task_id_hex": "77FB8C29F3A51A02"
         }
       ]
     }
@@ -902,5 +942,20 @@
     "strictly_sequential_all_16": true,
     "optional_quests_remaining": 0,
     "chapter_file": "ftb-import/lafamilia_willkommen_16.snbt"
+  },
+  "current_server_snapshot": {
+    "source": "quests(1).zip uploaded by the user 2026-11-19",
+    "status": "offline SNBT verified; not server-start tested",
+    "chapter_file": "quests/chapters/lafamilia_willkommen_16.snbt",
+    "chapter_id": "62DAD70B515151F8",
+    "source_overrides": "For installation use the repaired ZIP from this ChatGPT conversation, not the outdated ftb-import/lafamilia_willkommen_16.snbt GitHub draft.",
+    "quest_count": 16,
+    "dependencies_count": 15,
+    "translation_fix": "Real FTB Quest IDs translated in de_de.snbt and en_us.snbt; 988 current missing de_de fallback text entries supplied from en_us.",
+    "empty_chapters_removed": 2,
+    "misfiled_chapter_groups_removed": 1,
+    "original_ids_preserved": true,
+    "game_world_teleport_configured": false,
+    "rank_stage_rewards_configured": false
   }
 }
