@@ -4,14 +4,14 @@
 **Questtyp:** Verpflichtender Abschluss der 16-Quest-Lobby-Einführung  
 **Voraussetzung:** Quest 15 „Das Tor zum End“  
 **NPC:** Neuer Kapitän **auf dem kleinen Schiff**; getrennt vom Startkapitän aus Quest 01  
-**NPC-UUID:** noch einzutragen  
+**NPC-UUID:** `b1e62449-ff6f-40ad-8aca-eeeb3a2d1346`  
 **Dialogname:** `q16_kapitaen_kleines_schiff`  
 **Dialog-ID:** noch einzutragen  
 **FTB-Quest-ID:** noch nicht erzeugt  
 **Einmalige spätere Questbelohnung:** Rang `Deckjunge` (Stage `lafamilia_rank_02_deckjunge`, nach serverseitiger Verifikation)  
 **Teleport-Zielwelt:** noch unbekannt  
 **Sichere Zielkoordinaten / Spawn:** noch unbekannt  
-**Status:** Planung; weder Questabschluss noch Teleportfunktion sind aktiv
+**Status:** NPC-UUID erfasst. EasyNPC-Dialog-ID, FTB-Abschluss/Rangbelohnung und Teleportfunktion sind noch nicht eingerichtet.
 
 ## Einziger Dialog
 
@@ -35,7 +35,7 @@ Also, Matrose: Bist du bereit, die Segel zu setzen?
 
 Aye, Kapitän! Leinen los – bringt mich in die Spielwelt!
 
-**Geplante Aktion auf Antwort 1:** `Server-side teleport to configured game-world spawn` – **noch kein ausführbarer Befehl**, da Weltname, Spawn und ausführende Mod/Command-Bridge erst bestätigt werden müssen. Nur nach bewusstem Klick teleportieren, nicht bereits beim Dialogöffnen. Dieselbe Reiseoption soll bei späteren Gesprächen erneut funktionieren.
+**Geplante Aktion auf Antwort 1:** `Server-side teleport to configured game-world spawn` – **noch kein ausführbarer Befehl**, da Weltname, Spawn und ausführende Mod/Command-Bridge erst bestätigt werden müssen. **Vorläufig die Aktion `Close Dialog` einstellen**, damit der Knopf zwar sichtbar ist, aber keinen nicht funktionierenden/unsicheren Teleport versucht. Später wird ausschließlich dieser Antwortknopf mit der überprüften Teleportfunktion verbunden. Nicht bereits beim Dialogöffnen teleportieren. Dieselbe Reiseoption soll später auch bei erneuten Gesprächen funktionieren.
 
 **Spieler – Antwort 2:**
 
@@ -53,3 +53,14 @@ Noch nicht, Kapitän. Ich bleibe vorerst im Hafen!
 - Prüfen, ob die Reise nach der einmaligen Questbelohnung erneut ausführbar bleibt.
 - Nicht mit dem bestehenden Startkapitän verwechseln. Kein Shop; nur ein Dialog mit zwei Antwortmöglichkeiten.
 - Keine Änderung an Welt- oder Portalmod-Konfiguration in der reinen Planungsphase.
+
+## NPC-Erfassung und EasyNPC-Einrichtung
+
+1. Den Abschlusskapitän auf dem kleinen Schiff mit NPC-UUID `b1e62449-ff6f-40ad-8aca-eeeb3a2d1346` bearbeiten; nicht den Startkapitän aus Quest 01 verwenden.
+2. Einen Standarddialog mit dem Namen `q16_kapitaen_kleines_schiff` anlegen.
+3. Den Erklärungstext oben und **zwei Spielerantworten** übernehmen.
+4. **Vorläufig beide Antworten mit `Close Dialog` belegen.** Das ist nur die sichere Übergangslösung – die erste Antwort wird später durch einen funktionierenden serverseitigen Spielwelt-Teleport ersetzt. Nicht behaupten, dass die Reise bereits funktioniert.
+5. Dialog-ID aus EasyNPC kopieren und an uns übermitteln; danach sind alle 16 NPC-/Dialog-IDs vollständig erfasst.
+6. Die erste Öffnung des Dialogs soll später die finale FTB-Quest 16 einmalig abschließen; die `Deckjunge`-Stage ist eine geplante einmalige Questbelohnung. Ein erneutes Gespräch soll den Teleport erneut anbieten, ohne erneute Rangbelohnung.
+
+**Offen:** Exakter Spielwelt-/Dimensionsname und sichere Zielkoordinaten inklusive Spawnprüfung; technische Auswahl einer erlaubnisarmen serverseitigen Teleportaktion für den Button.
