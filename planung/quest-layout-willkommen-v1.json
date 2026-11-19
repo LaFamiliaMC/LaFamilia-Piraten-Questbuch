@@ -611,12 +611,12 @@
           "optional": false,
           "type": "hauptquest",
           "dialog_id": null,
-          "npc_uuid": null,
+          "npc_uuid": "f13b074e-ef9b-4710-a1ed-51c1b1260330",
           "dialog_count": 1,
           "ftb_quest_id_hex": null,
           "ftb_quest_id_status": "pending_quest_creation_in_FTB_Quests",
-          "npc_status": "noch separat platzieren, NPC-UUID und danach Dialog-ID erfassen",
-          "status": "planning_only; EasyNPC/FTB binding deferred until all NPCs are collected",
+          "npc_status": "NPC-UUID für Quest 14 erfasst; EasyNPC-Dialog-ID des einzigen Erklärdialogs steht noch aus",
+          "status": "NPC zugeordnet; Dialog-ID und FTB-Questintegration noch ausstehend",
           "planning_id": "LF-L03-Q02",
           "global_number": 14,
           "title": "Das Tor zum Nether",
@@ -652,7 +652,8 @@
             "no_purchase_requirement": true,
             "no_donation_requirement": true,
             "ftb_integration_deferred": true
-          }
+          },
+          "portal_spenden_policy": "Netherportal-Spenden-NPC bleibt unverändert. Quest-NPC hat keine Spendenfunktion; Aufgabe verlangt weder Spende noch Portalaktivierung."
         },
         {
           "optional": false,
