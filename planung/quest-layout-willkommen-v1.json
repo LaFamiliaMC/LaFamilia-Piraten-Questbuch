@@ -707,12 +707,12 @@
           "optional": false,
           "type": "hauptquest",
           "dialog_id": null,
-          "npc_uuid": null,
+          "npc_uuid": "b1e62449-ff6f-40ad-8aca-eeeb3a2d1346",
           "dialog_count": 1,
           "ftb_quest_id_hex": null,
           "ftb_quest_id_status": "pending_quest_creation_in_FTB_Quests",
-          "npc_status": "noch separat platzieren, NPC-UUID und danach Dialog-ID erfassen",
-          "status": "planning_only; EasyNPC/FTB binding deferred until all NPCs are collected",
+          "npc_status": "Abschlusskapitän auf dem kleinen Schiff: NPC-UUID erfasst, EasyNPC-Dialog-ID fehlt noch",
+          "status": "Alle 16 NPC-UUIDs erfasst; Quest 16 Dialog-ID, FTB-Anbindung, Rangbelohnung und Teleportkonfiguration noch offen",
           "planning_id": "LF-L03-Q04",
           "global_number": 16,
           "title": "Leinen los – Aufbruch in die Spielwelt",
@@ -736,7 +736,9 @@
             "repeatable_travel": true,
             "quest_completion_on_dialog_open_after_ftb_binding": true,
             "one_time_rank_reward": "Deckjunge",
-            "do_not_teleport_automatically_on_dialog_open": true
+            "do_not_teleport_automatically_on_dialog_open": true,
+            "implementation_status": "not_configured; no working teleport command or action added",
+            "temporary_easy_npc_action": "Close Dialog (until verified world/destination and secure teleport action are available)"
           },
           "icon_asset": {
             "status": "not_created_yet",
