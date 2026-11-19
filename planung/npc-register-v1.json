@@ -297,8 +297,8 @@
       "plan_quest_id": "LF-L02-Q06",
       "ftb_hex_id": "FA10010300120000",
       "source": "user_supplied_npc_uuid",
-      "dialog_status": "single_dialog_id_pending; final_FTB_task_integration_deferred",
-      "dialog_id": null,
+      "dialog_status": "single_dialog_id_received; final_FTB_task_integration_deferred",
+      "dialog_id": "c636022c-fb3e-3b71-b5c1-d4d0be8eda9a",
       "dialog_document": "dialoge/hafenlaternenwaerter-quest12.md",
       "dialog_role": "q12_hafenlaternenwaerter – ein Erklärdialog, FTB-Aufgabe später bei Dialogöffnung",
       "note": "Separater Quest-NPC nahe dem bestehenden Händler für Kerzen & Laternen; keine Shopfunktion und keine Pflicht zum Kauf oder Platzieren von Lichtquellen. Quest 12 nach Kürzung auf 16 zur notwendigen Hauptquest / Übergang zur letzten Kapitelreihe."
