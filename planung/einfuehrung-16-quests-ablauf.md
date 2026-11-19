@@ -27,7 +27,7 @@ Die Quests 03–06 und 09–11 bleiben **freiwillige Nebenquests**. Sie dürfen 
 ## Wichtig für die Implementierung
 
 - Alle vier neuen Sprecher sollen je **einen eigenen EasyNPC-Standarddialog** erhalten. Auktionshaus, Portal-Spenden-NPCs und bestehende Händler bleiben unverändert.
-- **Quest 13:** NPC-UUID `b0269d82-742e-422b-b730-dbffa19e423c` und Dialog-ID `7edc2203-9e3c-3d8c-9011-055ccb05b05c` erfasst; die echte FTB-Quest-ID und der serverseitige FTB-Task fehlen noch. Für Quest 14 sind NPC-UUID `f13b074e-ef9b-4710-a1ed-51c1b1260330` und Dialog-ID `55daa677-e99b-3859-932c-7b3ed2853f97` erfasst (FTB-Quest-ID und serverseitige Aufgabe fehlen noch); für Quest 15 ist die NPC-UUID `c23edf20-1e79-4a98-8680-b0417f8e4f26` erfasst (Dialog-ID und echte FTB-Quest-ID fehlen noch), für Quest 16 fehlen NPC-UUID, Dialog-ID und echte FTB-Quest-ID. Alle Dialogvorlagen liegen unter `dialoge/` und sind nicht in FTB Quests aktiviert.
+- **Quest 13:** NPC-UUID `b0269d82-742e-422b-b730-dbffa19e423c` und Dialog-ID `7edc2203-9e3c-3d8c-9011-055ccb05b05c` erfasst; die echte FTB-Quest-ID und der serverseitige FTB-Task fehlen noch. Für Quest 14 sind NPC-UUID `f13b074e-ef9b-4710-a1ed-51c1b1260330` und Dialog-ID `55daa677-e99b-3859-932c-7b3ed2853f97` erfasst (FTB-Quest-ID und serverseitige Aufgabe fehlen noch); für Quest 15 sind NPC-UUID `c23edf20-1e79-4a98-8680-b0417f8e4f26` und Dialog-ID `1ecb05cb-dbcd-340d-a4ae-18e662d7b12d` vollständig dokumentiert (echte FTB-Quest-ID und Task-Bindung noch ausstehend), für Quest 16 fehlen NPC-UUID, Dialog-ID und echte FTB-Quest-ID. Alle Dialogvorlagen liegen unter `dialoge/` und sind nicht in FTB Quests aktiviert.
 - Quest 12: NPC `cf2887c7-a332-4bf0-8ebb-03ef60bcc486` und EasyNPC-Dialog-ID `c636022c-fb3e-3b71-b5c1-d4d0be8eda9a` vollständig dokumentiert; die FTB-Aufgabenverknüpfung erfolgt erst zum Schluss.
 - Die bestehenden Quests 01–12 sind in der früheren Testbuild-Planung als Kapitel 1 und 2 dokumentiert. Das Testbuild wurde **nicht** um neue Quests ergänzt und die EasyNPC-FTB-Task-Umstellung bleibt bis zum Abschluss aller NPCs ausstehend.
 - **Quest 14 und 15 dürfen nicht an das tatsächliche Aktivieren der Portale oder die Münzspenden gebunden werden.** Diese technischen Mechanismen bleiben unabhängig und sind separat zu testen.
@@ -40,7 +40,7 @@ Die Quests 03–06 und 09–11 bleiben **freiwillige Nebenquests**. Sie dürfen 
 1. Quest 12: NPC-UUID und EasyNPC-Dialog-ID erfasst; spätere FTB-Verknüpfung und Test noch offen.
 2. Quest 13: NPC-UUID `b0269d82-742e-422b-b730-dbffa19e423c` und Dialog-ID `7edc2203-9e3c-3d8c-9011-055ccb05b05c` erfasst; spätere FTB-Verknüpfung offen.
 3. Quest 14: Netherportal-Wächter-NPC `f13b074e-ef9b-4710-a1ed-51c1b1260330` und Dialog-ID `55daa677-e99b-3859-932c-7b3ed2853f97` erfasst; spätere FTB-Verknüpfung offen.
-4. Quest 15: Endportal-Wächter-NPC `c23edf20-1e79-4a98-8680-b0417f8e4f26` gespeichert; Dialog-ID noch aus EasyNPC zu übermitteln.
+4. Quest 15: Endportal-Wächter-NPC `c23edf20-1e79-4a98-8680-b0417f8e4f26` und Dialog-ID `1ecb05cb-dbcd-340d-a4ae-18e662d7b12d` erfasst; spätere FTB-Verknüpfung ausstehend.
 5. NPC-UUID und anschließend Dialog-ID für Quest 16 (Kapitän auf dem kleinen Schiff).
 6. Spielweltname, Spawn und Transportweg für den finalen Kapitän; danach Funktionstest auf dem Testserver.
 
