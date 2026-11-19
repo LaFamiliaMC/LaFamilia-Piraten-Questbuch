@@ -28,7 +28,7 @@ Die Quests 03–06 und 09–11 bleiben **freiwillige Nebenquests**. Sie dürfen 
 
 - Alle vier neuen Sprecher sollen je **einen eigenen EasyNPC-Standarddialog** erhalten. Auktionshaus, Portal-Spenden-NPCs und bestehende Händler bleiben unverändert.
 - Für Quests 13–16 fehlen **NPC-UUIDs, EasyNPC-Dialog-IDs und tatsächliche FTB-Quest-IDs**. Die Dialogvorlagen liegen unter `dialoge/` und sind noch nicht auf dem Server eingerichtet.
-- Für Quest 12 fehlt noch die EasyNPC-**Dialog-ID** des NPC `cf2887c7-a332-4bf0-8ebb-03ef60bcc486`.
+- Quest 12: NPC `cf2887c7-a332-4bf0-8ebb-03ef60bcc486` und EasyNPC-Dialog-ID `c636022c-fb3e-3b71-b5c1-d4d0be8eda9a` vollständig dokumentiert; die FTB-Aufgabenverknüpfung erfolgt erst zum Schluss.
 - Die bestehenden Quests 01–12 sind in der früheren Testbuild-Planung als Kapitel 1 und 2 dokumentiert. Das Testbuild wurde **nicht** um neue Quests ergänzt und die EasyNPC-FTB-Task-Umstellung bleibt bis zum Abschluss aller NPCs ausstehend.
 - **Quest 14 und 15 dürfen nicht an das tatsächliche Aktivieren der Portale oder die Münzspenden gebunden werden.** Diese technischen Mechanismen bleiben unabhängig und sind separat zu testen.
 - **Quest 16 darf nicht beim bloßen Ansprechen teleportieren.** Der Spieler muss `In die Spielwelt segeln` aktiv auswählen. Der Button soll auch nach einmaligem Questabschluss für weitere Reisen verfügbar bleiben.
@@ -37,7 +37,7 @@ Die Quests 03–06 und 09–11 bleiben **freiwillige Nebenquests**. Sie dürfen 
 
 ## Noch zu erfassen
 
-1. EasyNPC-Dialog-ID für Quest 12.
+1. Quest 12: NPC-UUID und EasyNPC-Dialog-ID erfasst; spätere FTB-Verknüpfung und Test noch offen.
 2. NPC-UUID und anschließend Dialog-ID für Quest 13 (Auktionsmeister).
 3. NPC-UUID und anschließend Dialog-ID für Quest 14 (Netherportal-Wächter).
 4. NPC-UUID und anschließend Dialog-ID für Quest 15 (Endportal-Wächter).
