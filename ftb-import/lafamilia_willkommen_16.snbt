@@ -1,0 +1,459 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "lafamilia_willkommen_16"
+	group: "0F230595FEF55D6F"
+	id: "FA16016A20261119"
+	images: [ ]
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			id: "FA10010300010000"
+			x: 0.0d
+			y: 0.0d
+			shape: "hexagon"
+			size: 1.5d
+			icon: { count: 1, id: "minecraft:bread" }
+			tasks: [
+				{
+					id: "FA16017B00010000"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					id: "FA16018C00010000"
+					type: "item"
+					item: { count: 1, id: "minecraft:bread" }
+					count: 4
+				}
+				{
+					id: "FA16019D00010000"
+					type: "xp"
+					xp: 30
+				}
+			]
+		}
+		{
+			id: "FA10010300020000"
+			x: 6.0d
+			y: 0.0d
+			dependencies: ["FA10010300010000"]
+			shape: "hexagon"
+			size: 1.5d
+			icon: { count: 1, id: "minecraft:compass" }
+			tasks: [
+				{
+					id: "FA16017B00020000"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					id: "FA16018C00020000"
+					type: "item"
+					item: { count: 1, id: "minecraft:compass" }
+					count: 1
+				}
+				{
+					id: "FA16019D00020000"
+					type: "xp"
+					xp: 40
+				}
+			]
+		}
+		{
+			id: "FA10010300030000"
+			x: -5.0d
+			y: 6.0d
+			dependencies: ["FA10010300010000"]
+			shape: "circle"
+			size: 1.0d
+			icon: { count: 1, id: "minecraft:iron_nugget" }
+			tasks: [
+				{
+					id: "FA16017B00030000"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					id: "FA16018C00030000"
+					type: "item"
+					item: { count: 1, id: "minecraft:iron_nugget" }
+					count: 6
+				}
+				{
+					id: "FA16019D00030000"
+					type: "xp"
+					xp: 50
+				}
+			]
+		}
+		{
+			id: "FA10010300040000"
+			x: 0.0d
+			y: 6.0d
+			dependencies: ["FA10010300010000"]
+			shape: "circle"
+			size: 1.0d
+			icon: { count: 1, id: "minecraft:paper" }
+			tasks: [
+				{
+					id: "FA16017B00040000"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					id: "FA16018C00040000"
+					type: "item"
+					item: { count: 1, id: "minecraft:paper" }
+					count: 4
+				}
+				{
+					id: "FA16019D00040000"
+					type: "xp"
+					xp: 60
+				}
+			]
+		}
+		{
+			id: "FA10010300050000"
+			x: 5.0d
+			y: 6.0d
+			dependencies: ["FA10010300010000"]
+			shape: "circle"
+			size: 1.0d
+			icon: { count: 1, id: "minecraft:oak_planks" }
+			tasks: [
+				{
+					id: "FA16017B00050000"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					id: "FA16018C00050000"
+					type: "item"
+					item: { count: 1, id: "minecraft:oak_planks" }
+					count: 8
+				}
+				{
+					id: "FA16019D00050000"
+					type: "xp"
+					xp: 70
+				}
+			]
+		}
+		{
+			id: "FA10010300060000"
+			x: 10.0d
+			y: 6.0d
+			dependencies: ["FA10010300010000"]
+			shape: "circle"
+			size: 1.0d
+			icon: { count: 1, id: "minecraft:copper_ingot" }
+			tasks: [
+				{
+					id: "FA16017B00060000"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					id: "FA16018C00060000"
+					type: "item"
+					item: { count: 1, id: "minecraft:copper_ingot" }
+					count: 3
+				}
+				{
+					id: "FA16019D00060000"
+					type: "xp"
+					xp: 80
+				}
+			]
+		}
+		{
+			id: "FA10010300070000"
+			x: 12.0d
+			y: 0.0d
+			dependencies: ["FA10010300020000"]
+			shape: "hexagon"
+			size: 1.5d
+			icon: { count: 1, id: "minecraft:barrel" }
+			tasks: [
+				{
+					id: "FA16017B00070000"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					id: "FA16018C00070000"
+					type: "item"
+					item: { count: 1, id: "minecraft:barrel" }
+					count: 1
+				}
+				{
+					id: "FA16019D00070000"
+					type: "xp"
+					xp: 90
+				}
+			]
+		}
+		{
+			id: "FA10010300080000"
+			x: 18.0d
+			y: 0.0d
+			dependencies: ["FA10010300070000"]
+			shape: "hexagon"
+			size: 1.5d
+			icon: { count: 1, id: "minecraft:oak_log" }
+			tasks: [
+				{
+					id: "FA16017B00080000"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					id: "FA16018C00080000"
+					type: "item"
+					item: { count: 1, id: "minecraft:oak_log" }
+					count: 8
+				}
+				{
+					id: "FA16019D00080000"
+					type: "xp"
+					xp: 100
+				}
+			]
+		}
+		{
+			id: "FA10010300090000"
+			x: 12.0d
+			y: 6.0d
+			dependencies: ["FA10010300070000"]
+			shape: "circle"
+			size: 1.0d
+			icon: { count: 1, id: "minecraft:chest" }
+			tasks: [
+				{
+					id: "FA16017B00090000"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					id: "FA16018C00090000"
+					type: "item"
+					item: { count: 1, id: "minecraft:chest" }
+					count: 1
+				}
+				{
+					id: "FA16019D00090000"
+					type: "xp"
+					xp: 110
+				}
+			]
+		}
+		{
+			id: "FA10010300100000"
+			x: 17.0d
+			y: 6.0d
+			dependencies: ["FA10010300070000"]
+			shape: "circle"
+			size: 1.0d
+			icon: { count: 1, id: "minecraft:baked_potato" }
+			tasks: [
+				{
+					id: "FA16017B00100000"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					id: "FA16018C00100000"
+					type: "item"
+					item: { count: 1, id: "minecraft:baked_potato" }
+					count: 4
+				}
+				{
+					id: "FA16019D00100000"
+					type: "xp"
+					xp: 120
+				}
+			]
+		}
+		{
+			id: "FA10010300110000"
+			x: 22.0d
+			y: 6.0d
+			dependencies: ["FA10010300070000"]
+			shape: "circle"
+			size: 1.0d
+			icon: { count: 1, id: "minecraft:white_wool" }
+			tasks: [
+				{
+					id: "FA16017B00110000"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					id: "FA16018C00110000"
+					type: "item"
+					item: { count: 1, id: "minecraft:white_wool" }
+					count: 4
+				}
+				{
+					id: "FA16019D00110000"
+					type: "xp"
+					xp: 130
+				}
+			]
+		}
+		{
+			id: "FA10010300120000"
+			x: 24.0d
+			y: 0.0d
+			dependencies: ["FA10010300080000"]
+			shape: "hexagon"
+			size: 1.5d
+			icon: { count: 1, id: "minecraft:torch" }
+			tasks: [
+				{
+					id: "FA16017B00120000"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					id: "FA16018C00120000"
+					type: "item"
+					item: { count: 1, id: "minecraft:torch" }
+					count: 8
+				}
+				{
+					id: "FA16019D00120000"
+					type: "xp"
+					xp: 140
+				}
+			]
+		}
+		{
+			id: "FA10010300130000"
+			x: 30.0d
+			y: 0.0d
+			dependencies: ["FA10010300120000"]
+			shape: "hexagon"
+			size: 1.5d
+			icon: { count: 1, id: "minecraft:emerald" }
+			tasks: [
+				{
+					id: "FA16017B00130000"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					id: "FA16018C00130000"
+					type: "item"
+					item: { count: 1, id: "minecraft:emerald" }
+					count: 2
+				}
+				{
+					id: "FA16019D00130000"
+					type: "xp"
+					xp: 150
+				}
+			]
+		}
+		{
+			id: "FA10010300140000"
+			x: 36.0d
+			y: 0.0d
+			dependencies: ["FA10010300130000"]
+			shape: "hexagon"
+			size: 1.5d
+			icon: { count: 1, id: "minecraft:obsidian" }
+			tasks: [
+				{
+					id: "FA16017B00140000"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					id: "FA16018C00140000"
+					type: "item"
+					item: { count: 1, id: "minecraft:obsidian" }
+					count: 2
+				}
+				{
+					id: "FA16019D00140000"
+					type: "xp"
+					xp: 160
+				}
+			]
+		}
+		{
+			id: "FA10010300150000"
+			x: 42.0d
+			y: 0.0d
+			dependencies: ["FA10010300140000"]
+			shape: "hexagon"
+			size: 1.5d
+			icon: { count: 1, id: "minecraft:ender_pearl" }
+			tasks: [
+				{
+					id: "FA16017B00150000"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					id: "FA16018C00150000"
+					type: "item"
+					item: { count: 1, id: "minecraft:ender_pearl" }
+					count: 1
+				}
+				{
+					id: "FA16019D00150000"
+					type: "xp"
+					xp: 170
+				}
+			]
+		}
+		{
+			id: "FA10010300160000"
+			x: 48.0d
+			y: 0.0d
+			dependencies: ["FA10010300150000"]
+			shape: "hexagon"
+			size: 1.5d
+			icon: { count: 1, id: "minecraft:clock" }
+			tasks: [
+				{
+					id: "FA16017B00160000"
+					type: "checkmark"
+				}
+			]
+			rewards: [
+				{
+					id: "FA16018C00160000"
+					type: "item"
+					item: { count: 1, id: "minecraft:clock" }
+					count: 1
+				}
+				{
+					id: "FA16019D00160000"
+					type: "xp"
+					xp: 180
+				}
+			]
+		}
+	]
+}
