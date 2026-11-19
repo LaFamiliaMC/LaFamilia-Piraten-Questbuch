@@ -11,9 +11,9 @@ Die ursprüngliche 48-Quest-Einführung wird auf **16 Quests** verkürzt. Die Qu
 
 ## Hauptpfad
 
-`01 → 02 → 07 → 08 → 12 → 13 → 14 → 15 → 16 → Spielwelt`
+`01 → 02 → 03 → 04 → 05 → 06 → 07 → 08 → 09 → 10 → 11 → 12 → 13 → 14 → 15 → 16 → Spielwelt`
 
-Die Quests 03–06 und 09–11 bleiben **freiwillige Nebenquests**. Sie dürfen die Spielweltreise nicht blockieren.
+**Aktuelle Entscheidung (19.11.2026):** Alle 16 Stationen sind verpflichtend und werden strikt nacheinander freigeschaltet. Die bisher freiwilligen Quests 03–06 und 09–11 gehören nun ebenfalls zur Einführungsroute. Der aktive FTB-Import besitzt genau ein Kapitel im 4×4-Schlangenlayout.
 
 ## Neue vier Abschlussstationen
 
@@ -53,3 +53,7 @@ Alle 16 Quest-NPCs der Einführungsreihe besitzen jetzt eine erfasste NPC-UUID. 
 ## Status nach Erfassung aller 16 Dialog-IDs (19.11.2026)
 
 Die IDs aller 16 Quest-NPCs und ihrer Standarddialoge sind nun im aktiven Layout und NPC-Register gespeichert. Der Arbeitsablauf kann von `npc_collection` zu `ready_for_ftb_task_integration` wechseln. Dies bedeutet **nicht**, dass bereits FTB-Questaufgaben automatisch an EasyNPC gebunden wurden oder der Teleport funktioniert. Zuerst müssen die echten FTB-Quests mit gültigen IDs und Abhängigkeiten erzeugt bzw. konvertiert werden; zusätzlich sind Spielweltname, sichere Koordinaten und die notwendige serverseitige Teleport-Aktion zu prüfen.
+
+## Korrektur – lineare Freischaltung, 19.11.2026
+
+Die neue FTB-Importdatei `ftb-import/lafamilia_willkommen_16.snbt` verwendet 15 direkte Quest-Abhängigkeiten, `progression_mode: "linear"` und `hide_until_deps_complete: 1b`; vor Freischaltung bleiben die Nachfolger verborgen. Die Benutzeranordnung ist eine 4×4-Schlangenlinie. **Alle 16 Quests sind Pflicht.** Die Aufgaben sind weiterhin `checkmark`-Testaufgaben, keine echten NPC-Dialog-Tasks; für diese Integration wird der nachgewiesene EasyNPC Task-Typ der Server-Compat-Mod benötigt. Die vorhandenen FTB-IDs und Belohnungen werden nicht geändert. Ein früherer Testfortschritt bleibt erhalten.
