@@ -6,12 +6,12 @@
 **NPC:** Neuer Kapitän **auf dem kleinen Schiff**; getrennt vom Startkapitän aus Quest 01  
 **NPC-UUID:** `b1e62449-ff6f-40ad-8aca-eeeb3a2d1346`  
 **Dialogname:** `q16_kapitaen_kleines_schiff`  
-**Dialog-ID:** noch einzutragen  
+**Dialog-ID:** `2a381170-c4b7-3a0f-be8a-875991921e9a` (vom Nutzer übermittelt)  
 **FTB-Quest-ID:** noch nicht erzeugt  
 **Einmalige spätere Questbelohnung:** Rang `Deckjunge` (Stage `lafamilia_rank_02_deckjunge`, nach serverseitiger Verifikation)  
 **Teleport-Zielwelt:** noch unbekannt  
 **Sichere Zielkoordinaten / Spawn:** noch unbekannt  
-**Status:** NPC-UUID erfasst. EasyNPC-Dialog-ID, FTB-Abschluss/Rangbelohnung und Teleportfunktion sind noch nicht eingerichtet.
+**Status:** NPC-UUID und EasyNPC-Dialog-ID vollständig erfasst. FTB-Abschluss/Rangbelohnung und Teleportfunktion sind noch nicht eingerichtet.
 
 ## Einziger Dialog
 
@@ -60,7 +60,7 @@ Noch nicht, Kapitän. Ich bleibe vorerst im Hafen!
 2. Einen Standarddialog mit dem Namen `q16_kapitaen_kleines_schiff` anlegen.
 3. Den Erklärungstext oben und **zwei Spielerantworten** übernehmen.
 4. **Vorläufig beide Antworten mit `Close Dialog` belegen.** Das ist nur die sichere Übergangslösung – die erste Antwort wird später durch einen funktionierenden serverseitigen Spielwelt-Teleport ersetzt. Nicht behaupten, dass die Reise bereits funktioniert.
-5. Dialog-ID aus EasyNPC kopieren und an uns übermitteln; danach sind alle 16 NPC-/Dialog-IDs vollständig erfasst.
+5. Die EasyNPC-Dialog-ID `2a381170-c4b7-3a0f-be8a-875991921e9a` wurde erfasst; alle 16 NPC-UUIDs und Dialog-IDs sind nun vollständig dokumentiert.
 6. Die erste Öffnung des Dialogs soll später die finale FTB-Quest 16 einmalig abschließen; die `Deckjunge`-Stage ist eine geplante einmalige Questbelohnung. Ein erneutes Gespräch soll den Teleport erneut anbieten, ohne erneute Rangbelohnung.
 
 **Offen:** Exakter Spielwelt-/Dimensionsname und sichere Zielkoordinaten inklusive Spawnprüfung; technische Auswahl einer erlaubnisarmen serverseitigen Teleportaktion für den Button.
