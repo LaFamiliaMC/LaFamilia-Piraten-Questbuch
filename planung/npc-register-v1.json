@@ -328,6 +328,19 @@
       "dialog_document": "dialoge/netherportalwaechter-quest14.md",
       "dialog_role": "q14_netherportalwaechter – ein Erklärdialog, FTB-Questabschluss später beim Öffnen",
       "note": "Zusätzlicher EasyNPC für Quest 14 ohne Shop- oder Spendenfunktion; bestehender Nether-Spenden-NPC und Portal bleiben unberührt."
+    },
+    {
+      "name": "Endportal-Wächter",
+      "uuid": "c23edf20-1e79-4a98-8680-b0417f8e4f26",
+      "category": "hauptgeschichte",
+      "plan_quest_id": "LF-L03-Q03",
+      "ftb_hex_id": null,
+      "source": "user_supplied_npc_uuid",
+      "dialog_status": "single_dialog_id_pending; final_FTB_task_integration_deferred",
+      "dialog_id": null,
+      "dialog_document": "dialoge/endportalwaechter-quest15.md",
+      "dialog_role": "q15_endportalwaechter – einziger Erklärdialog; späterer FTB-Abschluss beim Öffnen",
+      "note": "Eigenständiger Quest-NPC ohne Spenden- oder Shopfunktion neben dem Endportal; vorhandener End-Spenden-NPC, Portal und Freischaltung bleiben unverändert."
     }
   ],
   "note": "EasyNPC dialogue tasks require the actual generated dialog ID from the NPC editor in addition to NPC UUID. Do not claim the conversation task is automatic until it is configured and tested.",
@@ -341,6 +354,6 @@
     "chapter2_quest_npcs": "Quest 07 benötigt einen eigenen Quartiermeister mit separater NPC-UUID. Quest 08–12: Händler bleiben shop-only; separate Questsprecher oder item-basierte Tasks sind noch festzulegen.",
     "chapter2_quest_07_approach": "Nur ein Dialog beim Quartiermeister draußen vor dem Handelsgebäude. Dieser stellt Fässer & Schiffsvorräte, Geschirr & Küchenwaren und Naturdeko vor. Der Dialog wird später selbst zum Quest 07 EasyNPC FTB-Task (beim Öffnen). Kein zweites Gespräch, keine Shopkontrolle, keine Scoreboards. Shops unverändert.",
     "chapter2_quest_07_status": "Quartiermeister-NPC UUID und einziger Erklärdialog q07_quartiermeister inkl. Dialog-ID gespeichert; erst später FTB Task verknüpfen.",
-    "intro_revision": "Einführung 16 Quests: Quests 01–14 mit NPC- und Dialog-IDs vollständig dokumentiert, Quest 15 Endportal und Quest 16 Kapitän kleines Schiff noch ohne NPC-UUID/Dialog-ID. FTB-Task-Integration am Ende."
+    "intro_revision": "16-Quest-Einführung: Quest 01–14 NPC- und Dialog-IDs erfasst; Quest 15 Endportal NPC-UUID erfasst, Dialog-ID offen; Quest 16 Kapitän kleines Schiff noch ohne NPC-UUID/Dialog-ID. Finale FTB-Task-Integration erst nach kompletter Erfassung."
   }
 }
