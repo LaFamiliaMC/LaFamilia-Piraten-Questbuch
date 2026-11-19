@@ -6,9 +6,9 @@
 **NPC:** Separater Endportal-Wächter nahe dem bestehenden Endportal (nicht den Spenden-NPC ersetzen)  
 **NPC-UUID:** `c23edf20-1e79-4a98-8680-b0417f8e4f26`  
 **Dialogname:** `q15_endportalwaechter`  
-**Dialog-ID:** noch einzutragen  
+**Dialog-ID:** `1ecb05cb-dbcd-340d-a4ae-18e662d7b12d` (vom Nutzer übermittelt)  
 **FTB-Quest-ID:** noch nicht erzeugt  
-**Status:** NPC-UUID dokumentiert, Dialog-ID noch ausstehend. FTB-Aufgabe und Spendenportal auf dem Server durch diese Planungsänderung nicht verändert.
+**Status:** NPC-UUID und Dialog-ID dokumentiert; automatische FTB-Aufgabenverknüpfung noch nicht eingerichtet. Spendenportal unverändert.
 
 ## Einziger Dialog
 
@@ -41,5 +41,5 @@ Aye, Wächter! Ich kenne nun auch das Geheimnis des Endportals!
 1. Den eigenständigen Endportal-Wächter `c23edf20-1e79-4a98-8680-b0417f8e4f26` im EasyNPC-Editor öffnen.
 2. Genau **einen Standarddialog** `q15_endportalwaechter` anlegen.
 3. Den obigen Dialogtext mit einem einzigen Antwortknopf `Close Dialog` eintragen.
-4. Die erzeugte **Dialog-ID** für Quest 15 weitergeben.
+4. EasyNPC-Dialog-ID `1ecb05cb-dbcd-340d-a4ae-18e662d7b12d` ist erfasst und für die spätere FTB-Aufgabenverknüpfung gespeichert.
 5. Erst nach vollständiger Sammlung aller Dialog-IDs die FTB-Questverknüpfung einrichten; Voraussetzung ist Quest 14. Keine Spenden- oder Portalreiseprüfung für Quest 15.
