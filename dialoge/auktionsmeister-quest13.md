@@ -6,9 +6,9 @@
 **NPC:** Auktionsmeister, eigenständiger Dialog-NPC direkt beim Auktionshaus  
 **NPC-UUID:** `b0269d82-742e-422b-b730-dbffa19e423c`  
 **Dialogname:** `q13_auktionsmeister`  
-**Dialog-ID:** noch einzutragen  
+**Dialog-ID:** `7edc2203-9e3c-3d8c-9011-055ccb05b05c` (vom Nutzer übermittelt)  
 **FTB-Quest-ID:** wird beim Anlegen des echten FTB-Kapitels vergeben  
-**Status:** NPC-UUID dokumentiert; Dialog-ID noch offen. FTB-Quest und Aufgabenverknüpfung auf dem Server noch nicht eingerichtet.
+**Status:** NPC-UUID und Dialog-ID dokumentiert. FTB-Quest und Aufgabenverknüpfung auf dem Server noch nicht eingerichtet.
 
 ## Einziger Dialog
 
@@ -36,4 +36,4 @@ Aye, Auktionsmeister! Ich werde im Auktionshaus die Augen offen halten!
 
 **Nächste Quest:** 14 „Das Tor zum Nether“.
 
-**EasyNPC-Einrichtung:** Beim NPC mit obiger UUID genau einen Standarddialog namens `q13_auktionsmeister` anlegen, Text übernehmen, einen Antwortknopf mit `Close Dialog` erstellen. Anschließend die von EasyNPC erzeugte Dialog-ID erfassen. Die FTB-Aufgabe wird erst später verbunden.
+**EasyNPC-Einrichtung:** Beim NPC mit obiger UUID genau einen Standarddialog namens `q13_auktionsmeister` anlegen, Text übernehmen, einen Antwortknopf mit `Close Dialog` erstellen. EasyNPC-Dialog-ID `7edc2203-9e3c-3d8c-9011-055ccb05b05c` ist erfasst. Die FTB-Aufgabe wird erst später verbunden.
