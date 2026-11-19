@@ -5,23 +5,25 @@
 	group: "0F230595FEF55D6F"
 	id: "FA16016A20261119"
 	images: [ ]
-	order_index: 0
+	order_index: -100
 	quest_links: [ ]
 	quests: [
 		{
 			id: "FA10010300010000"
-			progression_mode: "linear"
-			hide_details_until_startable: 1b
-			hide_until_deps_complete: 1b
 			x: 0.0d
 			y: 0.0d
+			progression_mode: "linear"
+			hide_until_deps_complete: 0b
+			hide_details_until_startable: 0b
 			shape: "hexagon"
 			size: 1.5d
 			icon: { count: 1, id: "minecraft:compass" }
 			tasks: [
 				{
 					id: "FA16017B00010000"
-					type: "checkmark"
+					type: "easynpc_ftbq_compat:easy_npc_task"
+					dialogId: "addaae3c-bd31-37a4-8e70-188d7680f404"
+					npcUuid: "8c658830-313e-4f63-8dc2-f7ff4a51b669"
 				}
 			]
 			rewards: [
@@ -40,19 +42,21 @@
 		}
 		{
 			id: "FA10010300020000"
-			progression_mode: "linear"
-			hide_details_until_startable: 1b
-			hide_until_deps_complete: 1b
-			dependencies: ["FA10010300010000"]
-			x: 8.0d
+			x: 9.0d
 			y: 0.0d
+			dependencies: ["FA10010300010000"]
+			progression_mode: "linear"
+			hide_until_deps_complete: 0b
+			hide_details_until_startable: 0b
 			shape: "hexagon"
 			size: 1.5d
 			icon: { count: 1, id: "minecraft:map" }
 			tasks: [
 				{
 					id: "FA16017B00020000"
-					type: "checkmark"
+					type: "easynpc_ftbq_compat:easy_npc_task"
+					dialogId: "09301480-fd54-3179-bb8b-c2603fe58c6e"
+					npcUuid: "aaa51318-0fd4-47af-baca-8f8c4d727499"
 				}
 			]
 			rewards: [
@@ -71,19 +75,21 @@
 		}
 		{
 			id: "FA10010300030000"
-			progression_mode: "linear"
-			hide_details_until_startable: 1b
-			hide_until_deps_complete: 1b
-			dependencies: ["FA10010300020000"]
-			x: 16.0d
+			x: 18.0d
 			y: 0.0d
-			shape: "circle"
-			size: 1.0d
+			dependencies: ["FA10010300020000"]
+			progression_mode: "linear"
+			hide_until_deps_complete: 0b
+			hide_details_until_startable: 0b
+			shape: "hexagon"
+			size: 1.5d
 			icon: { count: 1, id: "minecraft:shield" }
 			tasks: [
 				{
 					id: "FA16017B00030000"
-					type: "checkmark"
+					type: "easynpc_ftbq_compat:easy_npc_task"
+					dialogId: "666df7d2-8638-37b7-a4d9-efd806c8eceb"
+					npcUuid: "04df3e39-1e9e-468e-8d23-94454743bbce"
 				}
 			]
 			rewards: [
@@ -102,19 +108,21 @@
 		}
 		{
 			id: "FA10010300040000"
-			progression_mode: "linear"
-			hide_details_until_startable: 1b
-			hide_until_deps_complete: 1b
-			dependencies: ["FA10010300030000"]
-			x: 24.0d
+			x: 27.0d
 			y: 0.0d
-			shape: "circle"
-			size: 1.0d
+			dependencies: ["FA10010300030000"]
+			progression_mode: "linear"
+			hide_until_deps_complete: 0b
+			hide_details_until_startable: 0b
+			shape: "hexagon"
+			size: 1.5d
 			icon: { count: 1, id: "minecraft:book" }
 			tasks: [
 				{
 					id: "FA16017B00040000"
-					type: "checkmark"
+					type: "easynpc_ftbq_compat:easy_npc_task"
+					dialogId: "23b56d3e-5da3-338a-b351-07b485ef88fe"
+					npcUuid: "0ddeb1e3-8414-4a10-ac46-22263e28bc26"
 				}
 			]
 			rewards: [
@@ -133,19 +141,21 @@
 		}
 		{
 			id: "FA10010300050000"
-			progression_mode: "linear"
-			hide_details_until_startable: 1b
-			hide_until_deps_complete: 1b
+			x: 27.0d
+			y: 9.0d
 			dependencies: ["FA10010300040000"]
-			x: 24.0d
-			y: 8.0d
-			shape: "circle"
-			size: 1.0d
+			progression_mode: "linear"
+			hide_until_deps_complete: 0b
+			hide_details_until_startable: 0b
+			shape: "hexagon"
+			size: 1.5d
 			icon: { count: 1, id: "minecraft:oak_boat" }
 			tasks: [
 				{
 					id: "FA16017B00050000"
-					type: "checkmark"
+					type: "easynpc_ftbq_compat:easy_npc_task"
+					dialogId: "fc757df3-d218-3b94-892e-29f55513e646"
+					npcUuid: "f5e8ef08-d548-47c2-88c0-d473843b9c65"
 				}
 			]
 			rewards: [
@@ -164,19 +174,21 @@
 		}
 		{
 			id: "FA10010300060000"
-			progression_mode: "linear"
-			hide_details_until_startable: 1b
-			hide_until_deps_complete: 1b
+			x: 18.0d
+			y: 9.0d
 			dependencies: ["FA10010300050000"]
-			x: 16.0d
-			y: 8.0d
-			shape: "circle"
-			size: 1.0d
+			progression_mode: "linear"
+			hide_until_deps_complete: 0b
+			hide_details_until_startable: 0b
+			shape: "hexagon"
+			size: 1.5d
 			icon: { count: 1, id: "minecraft:bell" }
 			tasks: [
 				{
 					id: "FA16017B00060000"
-					type: "checkmark"
+					type: "easynpc_ftbq_compat:easy_npc_task"
+					dialogId: "5087c3db-a43a-35b5-b26e-0108686bbfb4"
+					npcUuid: "f410950f-02e6-4731-a239-3dc06c486e61"
 				}
 			]
 			rewards: [
@@ -195,19 +207,21 @@
 		}
 		{
 			id: "FA10010300070000"
-			progression_mode: "linear"
-			hide_details_until_startable: 1b
-			hide_until_deps_complete: 1b
+			x: 9.0d
+			y: 9.0d
 			dependencies: ["FA10010300060000"]
-			x: 8.0d
-			y: 8.0d
+			progression_mode: "linear"
+			hide_until_deps_complete: 0b
+			hide_details_until_startable: 0b
 			shape: "hexagon"
 			size: 1.5d
 			icon: { count: 1, id: "minecraft:barrel" }
 			tasks: [
 				{
 					id: "FA16017B00070000"
-					type: "checkmark"
+					type: "easynpc_ftbq_compat:easy_npc_task"
+					dialogId: "ffab60c6-f23e-3594-bdef-e94c5c82ba42"
+					npcUuid: "10bbc089-6e58-4d92-b3c0-c1cf911f8d74"
 				}
 			]
 			rewards: [
@@ -226,19 +240,21 @@
 		}
 		{
 			id: "FA10010300080000"
-			progression_mode: "linear"
-			hide_details_until_startable: 1b
-			hide_until_deps_complete: 1b
-			dependencies: ["FA10010300070000"]
 			x: 0.0d
-			y: 8.0d
+			y: 9.0d
+			dependencies: ["FA10010300070000"]
+			progression_mode: "linear"
+			hide_until_deps_complete: 0b
+			hide_details_until_startable: 0b
 			shape: "hexagon"
 			size: 1.5d
 			icon: { count: 1, id: "minecraft:iron_axe" }
 			tasks: [
 				{
 					id: "FA16017B00080000"
-					type: "checkmark"
+					type: "easynpc_ftbq_compat:easy_npc_task"
+					dialogId: "325abe87-2b95-35ab-8910-924352962719"
+					npcUuid: "07f6f682-8be6-4a91-aa99-4c3ec711d25d"
 				}
 			]
 			rewards: [
@@ -257,19 +273,21 @@
 		}
 		{
 			id: "FA10010300090000"
-			progression_mode: "linear"
-			hide_details_until_startable: 1b
-			hide_until_deps_complete: 1b
-			dependencies: ["FA10010300080000"]
 			x: 0.0d
-			y: 16.0d
-			shape: "circle"
-			size: 1.0d
+			y: 18.0d
+			dependencies: ["FA10010300080000"]
+			progression_mode: "linear"
+			hide_until_deps_complete: 0b
+			hide_details_until_startable: 0b
+			shape: "hexagon"
+			size: 1.5d
 			icon: { count: 1, id: "minecraft:chest" }
 			tasks: [
 				{
 					id: "FA16017B00090000"
-					type: "checkmark"
+					type: "easynpc_ftbq_compat:easy_npc_task"
+					dialogId: "98258fb6-9e43-371a-a51c-433c0248c504"
+					npcUuid: "da5f8bc7-e0d5-48ed-9a1a-91a582458327"
 				}
 			]
 			rewards: [
@@ -288,19 +306,21 @@
 		}
 		{
 			id: "FA10010300100000"
-			progression_mode: "linear"
-			hide_details_until_startable: 1b
-			hide_until_deps_complete: 1b
+			x: 9.0d
+			y: 18.0d
 			dependencies: ["FA10010300090000"]
-			x: 8.0d
-			y: 16.0d
-			shape: "circle"
-			size: 1.0d
+			progression_mode: "linear"
+			hide_until_deps_complete: 0b
+			hide_details_until_startable: 0b
+			shape: "hexagon"
+			size: 1.5d
 			icon: { count: 1, id: "minecraft:bread" }
 			tasks: [
 				{
 					id: "FA16017B00100000"
-					type: "checkmark"
+					type: "easynpc_ftbq_compat:easy_npc_task"
+					dialogId: "28fe37f8-7908-328a-811c-16d363f92f03"
+					npcUuid: "af4c5c5e-aa26-453b-8962-b740932a8143"
 				}
 			]
 			rewards: [
@@ -319,19 +339,21 @@
 		}
 		{
 			id: "FA10010300110000"
-			progression_mode: "linear"
-			hide_details_until_startable: 1b
-			hide_until_deps_complete: 1b
+			x: 18.0d
+			y: 18.0d
 			dependencies: ["FA10010300100000"]
-			x: 16.0d
-			y: 16.0d
-			shape: "circle"
-			size: 1.0d
+			progression_mode: "linear"
+			hide_until_deps_complete: 0b
+			hide_details_until_startable: 0b
+			shape: "hexagon"
+			size: 1.5d
 			icon: { count: 1, id: "minecraft:red_bed" }
 			tasks: [
 				{
 					id: "FA16017B00110000"
-					type: "checkmark"
+					type: "easynpc_ftbq_compat:easy_npc_task"
+					dialogId: "f7ad98f2-9ca4-379f-aa04-94854ef04bc2"
+					npcUuid: "a20fafc8-1146-4855-a55d-be29bad42ef1"
 				}
 			]
 			rewards: [
@@ -350,19 +372,21 @@
 		}
 		{
 			id: "FA10010300120000"
-			progression_mode: "linear"
-			hide_details_until_startable: 1b
-			hide_until_deps_complete: 1b
+			x: 27.0d
+			y: 18.0d
 			dependencies: ["FA10010300110000"]
-			x: 24.0d
-			y: 16.0d
+			progression_mode: "linear"
+			hide_until_deps_complete: 0b
+			hide_details_until_startable: 0b
 			shape: "hexagon"
 			size: 1.5d
 			icon: { count: 1, id: "minecraft:lantern" }
 			tasks: [
 				{
 					id: "FA16017B00120000"
-					type: "checkmark"
+					type: "easynpc_ftbq_compat:easy_npc_task"
+					dialogId: "c636022c-fb3e-3b71-b5c1-d4d0be8eda9a"
+					npcUuid: "cf2887c7-a332-4bf0-8ebb-03ef60bcc486"
 				}
 			]
 			rewards: [
@@ -381,19 +405,21 @@
 		}
 		{
 			id: "FA10010300130000"
-			progression_mode: "linear"
-			hide_details_until_startable: 1b
-			hide_until_deps_complete: 1b
+			x: 27.0d
+			y: 27.0d
 			dependencies: ["FA10010300120000"]
-			x: 24.0d
-			y: 24.0d
+			progression_mode: "linear"
+			hide_until_deps_complete: 0b
+			hide_details_until_startable: 0b
 			shape: "hexagon"
 			size: 1.5d
 			icon: { count: 1, id: "minecraft:emerald" }
 			tasks: [
 				{
 					id: "FA16017B00130000"
-					type: "checkmark"
+					type: "easynpc_ftbq_compat:easy_npc_task"
+					dialogId: "7edc2203-9e3c-3d8c-9011-055ccb05b05c"
+					npcUuid: "b0269d82-742e-422b-b730-dbffa19e423c"
 				}
 			]
 			rewards: [
@@ -412,19 +438,21 @@
 		}
 		{
 			id: "FA10010300140000"
-			progression_mode: "linear"
-			hide_details_until_startable: 1b
-			hide_until_deps_complete: 1b
+			x: 18.0d
+			y: 27.0d
 			dependencies: ["FA10010300130000"]
-			x: 16.0d
-			y: 24.0d
+			progression_mode: "linear"
+			hide_until_deps_complete: 0b
+			hide_details_until_startable: 0b
 			shape: "hexagon"
 			size: 1.5d
 			icon: { count: 1, id: "minecraft:obsidian" }
 			tasks: [
 				{
 					id: "FA16017B00140000"
-					type: "checkmark"
+					type: "easynpc_ftbq_compat:easy_npc_task"
+					dialogId: "55daa677-e99b-3859-932c-7b3ed2853f97"
+					npcUuid: "f13b074e-ef9b-4710-a1ed-51c1b1260330"
 				}
 			]
 			rewards: [
@@ -443,19 +471,21 @@
 		}
 		{
 			id: "FA10010300150000"
-			progression_mode: "linear"
-			hide_details_until_startable: 1b
-			hide_until_deps_complete: 1b
+			x: 9.0d
+			y: 27.0d
 			dependencies: ["FA10010300140000"]
-			x: 8.0d
-			y: 24.0d
+			progression_mode: "linear"
+			hide_until_deps_complete: 0b
+			hide_details_until_startable: 0b
 			shape: "hexagon"
 			size: 1.5d
 			icon: { count: 1, id: "minecraft:ender_eye" }
 			tasks: [
 				{
 					id: "FA16017B00150000"
-					type: "checkmark"
+					type: "easynpc_ftbq_compat:easy_npc_task"
+					dialogId: "1ecb05cb-dbcd-340d-a4ae-18e662d7b12d"
+					npcUuid: "c23edf20-1e79-4a98-8680-b0417f8e4f26"
 				}
 			]
 			rewards: [
@@ -474,19 +504,21 @@
 		}
 		{
 			id: "FA10010300160000"
-			progression_mode: "linear"
-			hide_details_until_startable: 1b
-			hide_until_deps_complete: 1b
-			dependencies: ["FA10010300150000"]
 			x: 0.0d
-			y: 24.0d
+			y: 27.0d
+			dependencies: ["FA10010300150000"]
+			progression_mode: "linear"
+			hide_until_deps_complete: 0b
+			hide_details_until_startable: 0b
 			shape: "hexagon"
 			size: 1.5d
 			icon: { count: 1, id: "minecraft:heart_of_the_sea" }
 			tasks: [
 				{
 					id: "FA16017B00160000"
-					type: "checkmark"
+					type: "easynpc_ftbq_compat:easy_npc_task"
+					dialogId: "2a381170-c4b7-3a0f-be8a-875991921e9a"
+					npcUuid: "b1e62449-ff6f-40ad-8aca-eeeb3a2d1346"
 				}
 			]
 			rewards: [
