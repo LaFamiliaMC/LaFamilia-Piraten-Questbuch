@@ -296,12 +296,12 @@
           "internal_plan_id": "LF-L02-Q06",
           "hex_quest_id": "FA10010300120000",
           "title": "Licht für den Hafen",
-          "task": "ftbquests:checkmark (current TEST build); future EasyNPC task on opening q12_hafenlaternenwaerter, binding deferred",
+          "task": "ftbquests:checkmark (current TEST build); future EasyNPC quest task on opening dialog c636022c-fb3e-3b71-b5c1-d4d0be8eda9a; binding deferred",
           "icon_asset": "assets/lafamilia/textures/ftbquests/haendler/kerzen_laternen.png",
           "merchant_uuid": "492d0ebe-2b7c-4b18-b7e5-5276e8e5a21f",
-          "needs_easy_npc_dialog_id": true,
+          "needs_easy_npc_dialog_id": false,
           "npc_uuid": "cf2887c7-a332-4bf0-8ebb-03ef60bcc486",
-          "dialog_id": null,
+          "dialog_id": "c636022c-fb3e-3b71-b5c1-d4d0be8eda9a",
           "needs_dedicated_quest_npc": false,
           "merchant_shop_only": true,
           "shop_reference_uuid": "492d0ebe-2b7c-4b18-b7e5-5276e8e5a21f",
@@ -411,8 +411,9 @@
     "FA10010300120000": {
       "npc_uuid": "cf2887c7-a332-4bf0-8ebb-03ef60bcc486",
       "npc_role": "Hafenlaternenwärter",
-      "dialog_id": null,
-      "status": "NPC-UUID erfasst; Dialog-ID ausstehend; FTB-Anbindung noch nicht aktiv"
+      "dialog_id": "c636022c-fb3e-3b71-b5c1-d4d0be8eda9a",
+      "dialog_role": "q12_hafenlaternenwaerter – einziger Erklärdialog",
+      "status": "NPC-/Dialog-UUID dokumentiert; FTB-EasyNPC-Verknüpfung noch nicht aktiv; Quest 12 ist geplanter obligatorischer Übergang zu Quest 13"
     }
   },
   "deployment_workflow": {
