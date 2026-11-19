@@ -659,12 +659,12 @@
           "optional": false,
           "type": "hauptquest",
           "dialog_id": null,
-          "npc_uuid": null,
+          "npc_uuid": "c23edf20-1e79-4a98-8680-b0417f8e4f26",
           "dialog_count": 1,
           "ftb_quest_id_hex": null,
           "ftb_quest_id_status": "pending_quest_creation_in_FTB_Quests",
-          "npc_status": "noch separat platzieren, NPC-UUID und danach Dialog-ID erfassen",
-          "status": "planning_only; EasyNPC/FTB binding deferred until all NPCs are collected",
+          "npc_status": "Endportal-Wächter NPC-UUID gespeichert, Dialog-ID aus EasyNPC ausstehend",
+          "status": "NPC registriert, noch keine FTB-Quest-ID und keine automatische EasyNPC-Task-Bindung",
           "planning_id": "LF-L03-Q03",
           "global_number": 15,
           "title": "Das Tor zum End",
@@ -700,7 +700,8 @@
             "no_purchase_requirement": true,
             "no_donation_requirement": true,
             "ftb_integration_deferred": true
-          }
+          },
+          "portal_spenden_policy": "Die bestehenden Endportal-Spendenmechanismen und -NPCs bleiben unverändert. Quest 15 verlangt keine tatsächliche Münzspende oder Portalaktivierung."
         },
         {
           "optional": false,
