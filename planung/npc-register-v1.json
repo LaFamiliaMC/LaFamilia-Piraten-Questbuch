@@ -302,6 +302,19 @@
       "dialog_document": "dialoge/hafenlaternenwaerter-quest12.md",
       "dialog_role": "q12_hafenlaternenwaerter – ein Erklärdialog, FTB-Aufgabe später bei Dialogöffnung",
       "note": "Separater Quest-NPC nahe dem bestehenden Händler für Kerzen & Laternen; keine Shopfunktion und keine Pflicht zum Kauf oder Platzieren von Lichtquellen. Quest 12 nach Kürzung auf 16 zur notwendigen Hauptquest / Übergang zur letzten Kapitelreihe."
+    },
+    {
+      "name": "Auktionsmeister",
+      "uuid": "b0269d82-742e-422b-b730-dbffa19e423c",
+      "category": "hauptgeschichte",
+      "plan_quest_id": "LF-L03-Q01",
+      "ftb_hex_id": null,
+      "source": "user_supplied_npc_uuid",
+      "dialog_status": "single_dialog_id_pending; final_FTB_task_integration_deferred",
+      "dialog_id": null,
+      "dialog_document": "dialoge/auktionsmeister-quest13.md",
+      "dialog_role": "q13_auktionsmeister – ein Erklärdialog; FTB-Questabschluss später beim Öffnen",
+      "note": "Eigenständiger Dialog-NPC neben dem Auktionshaus, ohne Shopfunktion. Die Auktionhaus-Mod bleibt unverändert; kein Gebot, Kauf oder Verkauf für Quest erforderlich."
     }
   ],
   "note": "EasyNPC dialogue tasks require the actual generated dialog ID from the NPC editor in addition to NPC UUID. Do not claim the conversation task is automatic until it is configured and tested.",
@@ -315,6 +328,6 @@
     "chapter2_quest_npcs": "Quest 07 benötigt einen eigenen Quartiermeister mit separater NPC-UUID. Quest 08–12: Händler bleiben shop-only; separate Questsprecher oder item-basierte Tasks sind noch festzulegen.",
     "chapter2_quest_07_approach": "Nur ein Dialog beim Quartiermeister draußen vor dem Handelsgebäude. Dieser stellt Fässer & Schiffsvorräte, Geschirr & Küchenwaren und Naturdeko vor. Der Dialog wird später selbst zum Quest 07 EasyNPC FTB-Task (beim Öffnen). Kein zweites Gespräch, keine Shopkontrolle, keine Scoreboards. Shops unverändert.",
     "chapter2_quest_07_status": "Quartiermeister-NPC UUID und einziger Erklärdialog q07_quartiermeister inkl. Dialog-ID gespeichert; erst später FTB Task verknüpfen.",
-    "intro_revision": "Einführungsreihe 16 statt 48. Quest 12 wird verpflichtender Übergang; Quest 13 Auktionshaus, Quest 14 Netherportal, Quest 15 Endportal, Quest 16 Kapitän auf dem kleinen Schiff zur Spielwelt. NPCs und Dialog-IDs für 13–16 noch ausstehend. FTB Task-Integration weiterhin bis zum Sammelabschluss verschoben."
+    "intro_revision": "Einführungsreihe 16 statt 48. Quest 12 Übergang mit NPC-/Dialog-ID abgeschlossen, Quest 13 Auktionsmeister NPC-UUID erfasst und Dialog-ID offen, Quest 14 Netherportal und Quest 15 Endportal sowie Quest 16 Kapitän kleines Schiff noch ohne NPC-UUID. FTB-Aufgabenintegration erst nach abgeschlossener Sammlung."
   }
 }
