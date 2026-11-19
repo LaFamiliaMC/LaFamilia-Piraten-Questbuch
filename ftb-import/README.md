@@ -1,19 +1,11 @@
-# La Familia – Willkommen in La Familia (16 Quests)
+# La Familia – 16 NPC-Quests, neuer Import (19.11.2026)
 
-Minecraft Fabric 1.21.1 / FTB Quests.
+Aktueller Stand für Fabric 1.21.1: **16 Quests in einem einzelnen FTB-Kapitel** mit einer einzigen linearen Hauptfolge (`01 → 02 → ... → 16`), einem 4×4-Schlangenlayout und exakt 16 EasyNPC-Dialogaufgaben. Keine Checkmark-Testaufgaben mehr. Die Quest- und Reward-IDs entsprechen dem bisherigen Einführungsimport (keine Duplikate anlegen). Die Quelle ist `ftb-import/lafamilia_willkommen_16.snbt`.
 
-Hier liegen **die neue FTB-Kapiteldatei mit 16 Quests** und eine Zuordnung aller EasyNPC-NPC- und Dialog-UUIDs. Die Questreihe gehört zur bestehenden Kapitelgruppe `Piraten-Hauptgeschichte` (Gruppe `0F230595FEF55D6F`).
+**NPC-Aufgaben:** `type: "easynpc_ftbq_compat:easy_npc_task"` plus `dialogId` und `npcUuid`. Die Zuordnungen stammen aus `planung/quest-layout-willkommen-v1.json`. Diese SNBT-Task-Kennung ist anhand der Mod-Dokumentation und Ressourcen abgeleitet, aber noch **nicht auf dem tatsächlichen Server** mit der dort installierten Kompatibilitätsmod getestet. Ein Live-Server-Test mit Quest 01 ist erforderlich.
 
-Die tatsächliche Serverdatei liegt nach dem Import unter `config/ftbquests/quests/chapters/lafamilia_willkommen_16.snbt`. Die vorhandenen Sprachdateien `de_de.snbt` und `en_us.snbt` müssen **um die Questtexte erweitert werden**, sonst fehlen Titel/Beschreibungen.
+**WICHTIG: QUESTTEXTE** liegen bei FTB Quests 1.21.1 in `quests/lang/de_de.snbt` beziehungsweise `en_us.snbt`, **nicht nur** in der Questdatei. Eine reine Kapiteldatei von GitHub reicht daher nicht, um Texte anzuzeigen. Das vollständige Installationspaket wurde im Chat als `LaFamilia_16_NPC_Quests_NEUSTART.zip` erstellt und enthält 66 neue deutsche Übersetzungsschlüssel, die englische Fallback-Datei sowie ein PowerShell-Skript, das die aktuellen Sprachdateien zusammenführt und vorher sichert. Verwende dafür das ZIP statt nur die Kapiteldatei.
 
-**Wichtig:** Dieses Repository enthält die neue Kapitelquelle und ID-Zuordnung. Das vollständige **zusammengeführte ZIP** aus der aktuell vom Nutzer bereitgestellten `quests.zip` wurde separat im Chat erzeugt. Es lässt alle Originalkapitel unangetastet und erweitert nur die Lokalisierungsdateien. Dieses GitHub-Verzeichnis ersetzt **nicht** das vollständige ZIP.
+**Rang und Reise:** Die je Quest festgelegten Item- und XP-Belohnungen sind enthalten. `Landratte` und `Deckjunge` sind in den Texten angekündigt, aber die serverseitige Rangvergabe ist noch nicht programmiert. Beim letzten Kapitän kann der Welt-Teleport erst aktiviert werden, wenn Spielwelt-ID, sichere Koordinaten und ausführender Serverbefehl bekannt sind. Bestehende Nether-/End-Spendenportale bleiben unverändert.
 
-**Test-Stand:** Aufgaben in der neuen Kapiteldatei sind `checkmark`-Platzhalter. Erst im FTB-Editor durch `EasyNPC Task` ersetzen und die Dialog-ID der CSV zuordnen. Erst danach ist ein NPC-Gespräch die echte Abschlussbedingung. Einmalige Item-/XP-Belohnungen sind angelegt; die Rang-Stages `Landratte` und `Deckjunge` werden erst nach Prüfung der serverseitigen Stage-Unterstützung integriert. Der Kapitäns-Teleport ist weiterhin **nicht konfiguriert**, da Weltname und sichere Zielkoordinaten noch nicht vorliegen. Nicht ohne Test auf Live-Server übernehmen.
-
-## Reihenfolge und Layout – Korrektur 19.11.2026
-
-**Ab sofort alle 16 Quests zwingend nacheinander:** `01 → 02 → 03 → ... → 16`. Es gibt keine Nebenquest-Abzweigungen mehr. Jede Quest verlangt die **vorige** Quest als einzige Voraussetzung, besitzt `progression_mode: "linear"`, `hide_until_deps_complete: 1b` und `hide_details_until_startable: 1b`. Die Anordnung ist eine übersichtliche 4×4-Schlangenlinie (oben nach rechts, in der nächsten Zeile zurück nach links). Außerdem wurden die angezeigten Vanilla-Icons an den jeweiligen NPC angepasst.
-
-**Installation:** Die empfohlene Korrektur ist ein separates kleines Patch-ZIP aus diesem Chat: nur `quests/chapters/lafamilia_willkommen_16.snbt` ersetzen, nachdem der Server gestoppt und `config/ftbquests/quests` gesichert wurde. Das alternative Komplettpaket ergänzt auch die Sprachdatei-Texte, kann aber seitdem geänderte Übersetzungen überschreiben. Quest-IDs und Reward-IDs bleiben bestehen; bereits gespeicherte Fortschritte werden nicht automatisch gelöscht. Ohne OP-/FTB-Editorrechte mit frischem Testspieler prüfen.
-
-**Noch offen:** Der Aufgabentyp `checkmark` bleibt ein manuell anklickbarer TEST-Platzhalter. Für tatsächlichen Abschluss durch NPC-Gespräch diese Aufgaben im FTB-Editor durch `EasyNPC Task` der installierten Compat-Mod ersetzen und die Dialog-IDs aus der CSV eintragen. Der Teleport und die Rang-Stage-Rewards sind noch nicht aktiv.
+**Bitte keine früheren Komplettpakete mit leeren Kapiteldateien erneut importieren.**
